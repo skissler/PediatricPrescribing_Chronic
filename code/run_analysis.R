@@ -1,6 +1,7 @@
 # =============================================================================
 # Import
 # =============================================================================
+# Note: the following requires the files that are generated in the 'extract_data' directory. 
 
 library(tidyverse) 
 library(broom)
@@ -184,68 +185,6 @@ rxrate3 <- combdat_abx %>%
 
 temp <- rx_df_drug[ISABX==1][
 	,.(NRX=sum(WEIGHT_INDIV_STATEGROUP_NOYEAR)),by=.(STATE)]
-
-
-# ==============================================================================
-# Figure 1C: Prescribing histogram
-# ==============================================================================
-
-
-# fig_cumrx_summ <- rx_df_drug[,.(ENROLID,ISRX=1)][
-# 	memb_df[,.(ENROLID)], on=.(ENROLID)][
-# 	is.na(ISRX),ISRX:=0][
-# 	,.(NRX=sum(ISRX)),by=.(ENROLID)] %>% 
-# 	as_tibble() %>% 
-# 	ggplot(aes(x=NRX)) + 
-# 		geom_histogram(aes(y=..density..), binwidth=1, fill=NA, col="lightgray", alpha=0.2) + 
-# 		geom_density(adjust=2) + 
-# 		scale_x_continuous(limits=c(0,100)) + 
-# 		theme_classic()
-
-
-cumrx_summ_overall <- rx_df_drug[ISABX==1][
-	,.(ENROLID,ISRX=1)][
-	memb_df[,.(ENROLID)], on=.(ENROLID)][
-	is.na(ISRX),ISRX:=0][
-	,.(NRX=sum(ISRX)),by=.(ENROLID)] %>% 
-	as_tibble() %>% 
-	mutate(Indication="All conditions")
-
-cumrx_summ_resp <- rx_df_drug_resp[ISABX==1][
-	,.(ENROLID,ISRX=1)][
-	memb_df[,.(ENROLID)], on=.(ENROLID)][
-	is.na(ISRX),ISRX:=0][
-	,.(NRX=sum(ISRX)),by=.(ENROLID)] %>% 
-	as_tibble() %>% 
-	mutate(Indication="Respiratory infections")
-
-cumrx_summ_nonresp <- rx_df_drug_nonresp[ISABX==1][
-	,.(ENROLID,ISRX=1)][
-	memb_df[,.(ENROLID)], on=.(ENROLID)][
-	is.na(ISRX),ISRX:=0][
-	,.(NRX=sum(ISRX)),by=.(ENROLID)] %>% 
-	as_tibble() %>% 
-	mutate(Indication="Other conditions")
-
-cumrx_summ <- rbind(cumrx_summ_overall, cumrx_summ_resp, cumrx_summ_nonresp)
-
-fig_cumrx_summ <- cumrx_summ %>% 
-	ggplot(aes(x=NRX, fill=Indication, col=Indication, lty=Indication)) + 
-		# geom_histogram(aes(y=..density..), position="identity", binwidth=1, alpha=0.2) + 
-		geom_density(adjust=5, alpha=0.4) + 
-		scale_x_continuous(limits=c(0,40)) + 
-		scale_color_manual(values=c("All conditions"="black","Respiratory infections"="blue","Other conditions"="blue")) + 
-		scale_fill_manual(values=c("All conditions"="black","Respiratory infections"="blue","Other conditions"="blue")) + 
-		scale_linetype_manual(values=c("All conditions"="solid","Respiratory infections"="solid","Other conditions"="dashed")) + 
-		theme_classic() + 
-		theme(text=element_text(size=10)) + 
-		labs(x="Number of antibiotic prescriptions", y="Proportion of children (as density)")
-
-ggsave(fig_cumrx_summ, file="figures/resp/cumrx_summ.pdf",width=figwidth, height=figwidth,dpi=figres)
-ggsave(fig_cumrx_summ, file="figures/resp/cumrx_summ.png",width=figwidth, height=figwidth,dpi=figres)
-
-ggsave(fig_cumrx_summ + theme(legend.position="none"), file="figures/resp/cumrx_summ_nokey.pdf",width=figwidth, height=figwidth,dpi=figres)
-ggsave(fig_cumrx_summ + theme(legend.position="none"), file="figures/resp/cumrx_summ_nokey.png",width=figwidth, height=figwidth,dpi=figres)
 
 # =============================================================================
 # Figure 1B: Time to first prescription
@@ -450,7 +389,53 @@ combdat_abx %>%
 	filter(AGE_DAYS_ROUNDED==1800) %>% 
 	select(AGE_DAYS_ROUNDED, Indication, NRX, lwr, upr)
 
+# ==============================================================================
+# Figure 1C: Prescribing histogram
+# ==============================================================================
 
+cumrx_summ_overall <- rx_df_drug[ISABX==1][
+	,.(ENROLID,ISRX=1)][
+	memb_df[,.(ENROLID)], on=.(ENROLID)][
+	is.na(ISRX),ISRX:=0][
+	,.(NRX=sum(ISRX)),by=.(ENROLID)] %>% 
+	as_tibble() %>% 
+	mutate(Indication="All conditions")
+
+cumrx_summ_resp <- rx_df_drug_resp[ISABX==1][
+	,.(ENROLID,ISRX=1)][
+	memb_df[,.(ENROLID)], on=.(ENROLID)][
+	is.na(ISRX),ISRX:=0][
+	,.(NRX=sum(ISRX)),by=.(ENROLID)] %>% 
+	as_tibble() %>% 
+	mutate(Indication="Respiratory infections")
+
+cumrx_summ_nonresp <- rx_df_drug_nonresp[ISABX==1][
+	,.(ENROLID,ISRX=1)][
+	memb_df[,.(ENROLID)], on=.(ENROLID)][
+	is.na(ISRX),ISRX:=0][
+	,.(NRX=sum(ISRX)),by=.(ENROLID)] %>% 
+	as_tibble() %>% 
+	mutate(Indication="Other conditions")
+
+cumrx_summ <- rbind(cumrx_summ_overall, cumrx_summ_resp, cumrx_summ_nonresp)
+
+fig_cumrx_summ <- cumrx_summ %>% 
+	ggplot(aes(x=NRX, fill=Indication, col=Indication, lty=Indication)) + 
+		# geom_histogram(aes(y=..density..), position="identity", binwidth=1, alpha=0.2) + 
+		geom_density(adjust=5, alpha=0.4) + 
+		scale_x_continuous(limits=c(0,40)) + 
+		scale_color_manual(values=c("All conditions"="black","Respiratory infections"="blue","Other conditions"="blue")) + 
+		scale_fill_manual(values=c("All conditions"="black","Respiratory infections"="blue","Other conditions"="blue")) + 
+		scale_linetype_manual(values=c("All conditions"="solid","Respiratory infections"="solid","Other conditions"="dashed")) + 
+		theme_classic() + 
+		theme(text=element_text(size=10)) + 
+		labs(x="Number of antibiotic prescriptions", y="Proportion of children (as density)")
+
+ggsave(fig_cumrx_summ, file="figures/resp/cumrx_summ.pdf",width=figwidth, height=figwidth,dpi=figres)
+ggsave(fig_cumrx_summ, file="figures/resp/cumrx_summ.png",width=figwidth, height=figwidth,dpi=figres)
+
+ggsave(fig_cumrx_summ + theme(legend.position="none"), file="figures/resp/cumrx_summ_nokey.pdf",width=figwidth, height=figwidth,dpi=figres)
+ggsave(fig_cumrx_summ + theme(legend.position="none"), file="figures/resp/cumrx_summ_nokey.png",width=figwidth, height=figwidth,dpi=figres)
 
 # ==============================================================================
 # Asymmetry in prescribing
@@ -566,12 +551,6 @@ superuserdf <- rxrankdf_drug_overall_abx %>%
 	filter(PRANK_WEIGHTED<=0.2)
 setDT(superuserdf)
 
-# I think the next step might be to use logistic regrression to 'predict' who will be a super-user. Categories include: state, sex, chronic conditions. Do this for each birth year separately (I anticipate that the results will be similar). 
-
-# temp <- chronicconddf[,.(DX2=DX, BODY_SYSTEM2=BODY_SYSTEM, ICD)][
-# 	chronicconddf[,.(DX1=DX, BODY_SYSTEM1=BODY_SYSTEM, ICD)][
-# 	visit_df[,.(ENROLID,DX1,DX2,ICD)],on=.(DX1,ICD)],on=.(DX2,ICD)]
-
 temp1 <- chronicconddf[,.(DX, BODY_SYSTEM, ICD)][
 	visit_df[,.(ENROLID,DX=DX1,ICD)],on=.(DX,ICD)]
 temp2 <- chronicconddf[,.(DX, BODY_SYSTEM, ICD)][
@@ -605,7 +584,6 @@ tempcount_clean_10$pulmonary_respiratory
 tempcount_clean_10$otologic
 tempcount_clean_10$immunological
 
-
 #  tempcount$pulmonary_respiratory
 # # A tibble: 160 × 5
 #    ICD   DX     NVISITS DESC_LONG.9                                  DESC_LONG.0
@@ -619,7 +597,6 @@ tempcount_clean_10$immunological
 tempcount$otologic
 tempcount$immunological$DESC_LONG.0
 
-
 tempcount_ccs <- temp[!is.na(BODY_SYSTEM)][
 	,.(NVISITS=.N),by=.(ICD,DX,BODY_SYSTEM)] %>% 
 	as_tibble() %>% 
@@ -631,7 +608,6 @@ tempcount_ccs <- temp[!is.na(BODY_SYSTEM)][
 
 tempcount_ccs$pulmonary_respiratory
 tempcount_ccs$otologic
-
 
 rxrankdf_full <-  rxrankdf_drug_overall_abx %>% 
 	mutate(SUPERUSER=case_when(PRANK_WEIGHTED<=0.2~1,TRUE~0)) %>% 
@@ -754,7 +730,6 @@ superlogistictab <- superlogisticdf %>%
 		))
 
 write_csv(superlogistictab, file="figures/resp/superlogistictab.csv")
-
 
 # ==============================================================================
 # Geography
