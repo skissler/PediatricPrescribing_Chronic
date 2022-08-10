@@ -33,29 +33,26 @@ for(t in seq(from=0, to=30*60, by=30)){
 }
 cumrx_df_drug <- cumrx_df_drug[,NMEMB:=nrow(memb_df)]
 
-cumrx_df_drug <- as_tibble(cumrx_df_drug)
-fig_cumrx_drug <- cumrx_df_drug %>% 
-	mutate(rawmean=NOBS/NMEMB) %>% 
-	mutate(rawlwr=qgamma(alphasig/2,NOBS,1)/NMEMB) %>%
-	mutate(rawupr=qgamma(1-alphasig/2,NOBS+1,1)/NMEMB) %>%
-	mutate(proplwr=(rawmean-rawlwr)/rawmean) %>% 
-	mutate(propupr=(rawupr-rawmean)/rawmean) %>% 
-	mutate(lwr=NRX-proplwr*NRX) %>% 
-	mutate(upr=NRX+propupr*NRX) %>% 
-	mutate(ISABX=factor(ISABX)) %>% 
-	# select(BIRTH_YEAR, NOBS, NRX, rawmean, lwr, upr) %>% 
-	ggplot(aes(x=AGE_DAYS_ROUNDED, y=NRX, col=factor(ISABX),fill=factor(ISABX))) + 
-		geom_ribbon(aes(ymin=lwr,ymax=upr),alpha=0.4) + 
-		geom_line() + 
-		scale_x_continuous(breaks=seq(from=0, to=1800, by=360)) + 
-		theme_classic() + 
-		labs(x="Days from birth", y=paste0("Cumulative prescriptions"), col="Drug class", fill="Drug class") + 
-		scale_color_manual(values=c("Gray","Blue"),labels=c("0"="Non-antibiotics","1"="Antibiotics")) + 
-		scale_fill_manual(values=c("Gray","Blue"),labels=c("0"="Non-antibiotics","1"="Antibiotics")) +
-		theme(text=element_text(size=16))
-
-# ---------------------------------------------------------------------------
-# What if we stratify by repiratory infections? 
+# cumrx_df_drug <- as_tibble(cumrx_df_drug)
+# fig_cumrx_drug <- cumrx_df_drug %>% 
+# 	mutate(rawmean=NOBS/NMEMB) %>% 
+# 	mutate(rawlwr=qgamma(alphasig/2,NOBS,1)/NMEMB) %>%
+# 	mutate(rawupr=qgamma(1-alphasig/2,NOBS+1,1)/NMEMB) %>%
+# 	mutate(proplwr=(rawmean-rawlwr)/rawmean) %>% 
+# 	mutate(propupr=(rawupr-rawmean)/rawmean) %>% 
+# 	mutate(lwr=NRX-proplwr*NRX) %>% 
+# 	mutate(upr=NRX+propupr*NRX) %>% 
+# 	mutate(ISABX=factor(ISABX)) %>% 
+# 	# select(BIRTH_YEAR, NOBS, NRX, rawmean, lwr, upr) %>% 
+# 	ggplot(aes(x=AGE_DAYS_ROUNDED, y=NRX, col=factor(ISABX),fill=factor(ISABX))) + 
+# 		geom_ribbon(aes(ymin=lwr,ymax=upr),alpha=0.4) + 
+# 		geom_line() + 
+# 		scale_x_continuous(breaks=seq(from=0, to=1800, by=360)) + 
+# 		theme_classic() + 
+# 		labs(x="Days from birth", y=paste0("Cumulative prescriptions"), col="Drug class", fill="Drug class") + 
+# 		scale_color_manual(values=c("Gray","Blue"),labels=c("0"="Non-antibiotics","1"="Antibiotics")) + 
+# 		scale_fill_manual(values=c("Gray","Blue"),labels=c("0"="Non-antibiotics","1"="Antibiotics")) +
+# 		theme(text=element_text(size=16))
 
 rx_df_drug_resp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
@@ -136,7 +133,6 @@ ggsave(fig_cumrx_respnonresp_abx, file="figures/resp/cumrx.png", width=figwidth,
 ggsave(fig_cumrx_respnonresp_abx + theme(legend.position='none'), file="figures/resp/cumrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
 ggsave(fig_cumrx_respnonresp_abx + theme(legend.position='none'), file="figures/resp/cumrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
 
-
 # prescriptions by age 5: 
 combdat_abx %>% 
 	filter(AGE_DAYS_ROUNDED==1800) %>% 
@@ -182,7 +178,6 @@ rxrate3 <- combdat_abx %>%
 	select(-AGE_DAYS_ROUNDED)	
 
 # By region: 
-
 temp <- rx_df_drug[ISABX==1][
 	,.(NRX=sum(WEIGHT_INDIV_STATEGROUP_NOYEAR)),by=.(STATE)]
 
