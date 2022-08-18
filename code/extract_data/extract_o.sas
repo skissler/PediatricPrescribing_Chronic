@@ -4,13 +4,13 @@
 
 proc datasets lib=work nolist kill; quit; run;
 
-proc printto log="/home/kissler/MarketScanPrescribing/logs/olog.txt" new;
+proc printto log="/home/kissler/PediatricPrescribing_Chronic/logs/olog.txt" new;
 run;
 
-proc printto print="/home/kissler/MarketScanPrescribing/logs/oout.txt" new;
+proc printto print="/home/kissler/PediatricPrescribing_Chronic/logs/oout.txt" new;
 run;
 
-libname out "/home/kissler/MarketScanPrescribing/output/buildfiles/letter/";
+libname out "/home/kissler/PediatricPrescribing_Chronic/output/buildfiles/";
 libname dat08 "/data/markscan_authorized/data/commercial/2008";
 libname dat09 "/data/markscan_authorized/data/commercial/2009";
 libname dat10 "/data/markscan_authorized/data/commercial/2010";
@@ -23,7 +23,7 @@ libname dat16 "/data/markscan_authorized/data/commercial/2016";
 libname dat17 "/data/markscan_authorized/data/commercial/2017";
 libname dat18 "/data/markscan_authorized/data/commercial/2018";
 
-proc import datafile="/home/kissler/MarketScanPrescribing/data/vaxcodes.csv"
+proc import datafile="/home/kissler/PediatricPrescribing_Chronic/data/vaxcodes.csv"
         out=out.vaxcodes
         dbms=csv
         replace;
@@ -198,7 +198,7 @@ proc delete data=vax_df17; run;
 proc delete data=vax_df18; run; 
 
 proc export data=visit_df
-	outfile='/home/kissler/MarketScanPrescribing/output/buildfiles/letter/visit_df.csv'
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/buildfiles/visit_df.csv'
 	dbms=csv
 	replace;
 run;
@@ -206,7 +206,7 @@ run;
 * proc delete data=visit_df; * run; 
 
 proc export data=vax_df
-	outfile='/home/kissler/MarketScanPrescribing/output/buildfiles/letter/vax_df.csv'
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/buildfiles/vax_df.csv'
 	dbms=csv
 	replace;
 run;

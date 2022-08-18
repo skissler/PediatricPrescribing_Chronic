@@ -196,7 +196,7 @@ memb_df <- memb_df[,NDAYS:=as.integer(difftime(CENSOR_DATE,BIRTH_DATE,units="day
 # 	,NDAYS:=maxdays][
 # 	,.(ENROLID,STATE,MSA,SEX,BIRTH_DATE,CENSOR_DATE,NDAYS)]
 
-write_csv(memb_df, path="output/buildfiles/letter/memb_df.csv")
+write_csv(memb_df, path="output/buildfiles/memb_df.csv")
 
 printtime(msg='    Finished reduction')
 

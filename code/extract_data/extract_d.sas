@@ -4,13 +4,13 @@
 
 proc datasets lib=work nolist kill; quit; run;
 
-proc printto log="/home/kissler/MarketScanPrescribing/logs/dlog.txt" new;
+proc printto log="/home/kissler/PediatricPrescribing_Chronic/logs/dlog.txt" new;
 run;
 
-proc printto print="/home/kissler/MarketScanPrescribing/logs/dout.txt" new;
+proc printto print="/home/kissler/PediatricPrescribing_Chronic/logs/dout.txt" new;
 run;
 
-libname out "/home/kissler/MarketScanPrescribing/output/buildfiles/letter/";
+libname out "/home/kissler/PediatricPrescribing_Chronic/output/buildfiles/";
 libname dat08 "/data/markscan_authorized/data/commercial/2008";
 libname dat09 "/data/markscan_authorized/data/commercial/2009";
 libname dat10 "/data/markscan_authorized/data/commercial/2010";
@@ -88,7 +88,7 @@ proc delete data=d17; run;
 proc delete data=d18; run; 
 
 proc export data=d
-	outfile='/home/kissler/MarketScanPrescribing/output/buildfiles/letter/rx_df.csv'  
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/buildfiles/rx_df.csv'  
 	dbms=csv
 	replace;
 run;
