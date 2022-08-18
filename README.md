@@ -1,4 +1,4 @@
-# Code and data for "Volume and variability of pediatric antibiotic consumption in the United States"
+# Code and data for: <br> Volume and variability of pediatric antibiotic consumption in the United States"
 
 [Stephen M. Kissler](mailto:skissler@hsph.harvard.edu), Bill Wang, Ateev Mehrotra, Michael Barnett, Yonatan H. Grad
 
