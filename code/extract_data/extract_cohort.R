@@ -29,7 +29,7 @@ for(y in match(c("08","09","10","11","12","13","14","15","16","17","18"), yearli
 	# --- ~10min/block --------------------------------------------------------
 
 	# --- Import 's' (inpatient services) table: ------------------------------
-	s_df <- read_sas(filenames_s_sam[y],
+	s_df <- read_sas(filenames_s[y],
 		col_select=c(
 			'AGE',
 			'DX1',
@@ -84,7 +84,7 @@ memb_df <- setDT(data.frame())
 for(y in match(c("08","09","10","11","12","13","14","15","16","17","18"), yearlist)){
 
 	# --- Import 't' (membership detail) table: ~??min ------------------------
-	t_df <- read_sas(filenames_t_sam[y],
+	t_df <- read_sas(filenames_t[y],
 		col_select=c(
 			'AGE',
 			'DTEND',
