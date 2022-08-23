@@ -119,8 +119,12 @@ run;
 	run;
 
 	* Restrict to those with a birth date;
-
-
+	proc sql;
+		create table Cohort&year. as
+		select a.DT_MONTH, a.DT_YEAR, a.EGEOLOC, a.MSA, a.MEMDAYS, a.SEX, b.DOB from Cohort&year. a
+			inner join CohortBirthdates b
+			on a.ENROLID = b.ENROLID;
+	quit;	
 
 	* Restrict to valid states;
 	proc sort data=Cohort&year.;
