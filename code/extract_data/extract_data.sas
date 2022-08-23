@@ -167,7 +167,7 @@ run;
 		by ENROLID DT_YEAR DT_MONTH;
 	run;
 
-	data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE);
+	data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE COUNT);
 		set Cohort;
 		COUNT + 1;
 		by ENROLID;
