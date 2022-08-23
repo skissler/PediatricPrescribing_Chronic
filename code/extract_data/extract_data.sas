@@ -113,7 +113,7 @@ run;
 
 	* Initial import, ensuring we have RX data and age <= 3;
 	data Cohort&year. (keep=DT_MONTH DT_YEAR EGEOLOC MSA ENROLID MEMDAYS SEX);
-		set dat&year..ccaet&year.&yeartag. (keep=AGE DTSTART EGEOLOC MSA ENROLID MEMDAYS SEX where=(RX="1" and AGE<5));
+		set dat&year..ccaet&year.&yeartag. (keep=AGE RX DTSTART EGEOLOC MSA ENROLID MEMDAYS SEX where=(RX="1" and AGE<5));
 		DT_MONTH=month(DTSTART);
 		DT_YEAR=year(DTSTART);
 	run;
