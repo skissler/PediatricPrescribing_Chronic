@@ -117,6 +117,7 @@ run;
 		DT_MONTH=month(DTSTART);
 		DT_YEAR=year(DTSTART);
 	run;
+
 	* Restrict to valid states;
 	proc sort data=Cohort&year.;
 		by EGEOLOC;
@@ -151,6 +152,11 @@ run;
 		Cohort&year. (in=inright);
 		by DT_MONTH;
 		IF inleft & inright;
+	run;
+
+	* Keep only relevant columns;
+	data Cohort&year.;
+		set Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE);
 	run;
 
 %mend;
