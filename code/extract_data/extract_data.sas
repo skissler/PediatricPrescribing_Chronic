@@ -6,18 +6,18 @@
 proc datasets lib=work nolist kill; quit; run;
 
 * Set path for log; 
-proc printto log="/home/kissler/MarketScanPrescribing/logs/extract_geography_log.txt" new;
+proc printto log="/home/kissler/PediatricPrescribing_Chronic/logs/extract_geography_log.txt" new;
 run;
 
 * Set path for printing output;
-proc printto print="/home/kissler/MarketScanPrescribing/logs/extract_geography_out.txt" new;
+proc printto print="/home/kissler/PediatricPrescribing_Chronic/logs/extract_geography_out.txt" new;
 run;
 
 * Set path for saving output;
 libname out "/home/kissler/PediatricPrescribing_Chronic/output/buildfiles/";
 
 * Import and process table of days per month --------------------------------; 
-proc import datafile="/home/kissler/MarketScanPrescribing/data/dayspermonth.csv"
+proc import datafile="/home/kissler/PediatricPrescribing_Chronic/data/dayspermonth.csv"
         out=dayspermonth
         dbms=csv
         replace;
@@ -28,7 +28,7 @@ proc sort data=dayspermonth;
 run;
 
 * Import and process list of NDC codes to extract -----------------------------; 
-proc import datafile="/home/kissler/MarketScanPrescribing/data/ndc_to_extract_geography.csv"
+proc import datafile="/home/kissler/PediatricPrescribing_Chronic/data/ndc_to_extract_geography.csv"
         out=ndctoextract
         dbms=csv
         replace;
@@ -39,7 +39,7 @@ proc sort data=ndctoextract;
 run;
 
 * Import and process table of US states --------------------------------------;
-proc import datafile="/home/kissler/MarketScanPrescribing/data/EGEOLOClist_char.csv"
+proc import datafile="/home/kissler/PediatricPrescribing_Chronic/data/EGEOLOClist_char.csv"
         out=EGEOLOClist
         dbms=csv
         replace;
