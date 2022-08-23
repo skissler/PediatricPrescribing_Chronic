@@ -16,6 +16,14 @@ run;
 * Set path for saving output;
 libname out "/home/kissler/PediatricPrescribing_Chronic/output/buildfiles/";
 
+* Specify data libraries;
+libname dathome "/data/markscan_authorized/data";
+libname dat15 "/data/markscan_authorized/data/commercial/2015";
+libname dat16 "/data/markscan_authorized/data/commercial/2016";
+libname dat17 "/data/markscan_authorized/data/commercial/2017";
+libname dat18 "/data/markscan_authorized/data/commercial/2018";
+libname dat19 "/data/markscan_authorized/data/commercial/2019";
+
 * Import and process table of days per month --------------------------------; 
 proc import datafile="/home/kissler/PediatricPrescribing_Chronic/data/dayspermonth.csv"
         out=dayspermonth
