@@ -141,7 +141,7 @@ run;
 		IF inleft & inright; 
 	run;
 
-	* Keep only rows corresponding to full months or the birth month: 
+	* Keep only rows corresponding to full months or the birth month;
 	proc sort data=Cohort&year.;
 		by DT_MONTH;
 	run;
