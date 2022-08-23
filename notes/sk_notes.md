@@ -32,3 +32,8 @@ Might need multiple datasets for each of these figures - maybe best to just rele
 
 Working now to get a comprehensive set of extraction code for the analysis - rather than the disparate pieces where things currently are. 
 
+---
+
+I've gotten the birth dates extracted at least, in `code/extract_data/extract_data.sas`
+
+Next step is to try to get the full cohort extracted - but the server says it needs maintenance at noon, so I think I'm going to regroup and take care of that later. 
