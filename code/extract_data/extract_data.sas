@@ -100,11 +100,11 @@ run;
 	run;
 
 	* For each person, pull out the earliest date (the birth date);
-	* data CohortBirthdates&year. (keep=ENROLID DX1 DX2 SVCDATE);
-	* 	set CohortBirthdates&year.;
-	* 	by ENROLID;
-	* 	if first.ENROLID;
-	* run;
+	data CohortBirthdates&year. (keep=ENROLID DX1 DX2 SVCDATE);
+		set CohortBirthdates&year.;
+		by ENROLID;
+		if first.ENROLID;
+	run;
 
 %mend;
 
