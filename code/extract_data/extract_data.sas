@@ -113,7 +113,7 @@ run;
 
 	* Initial import, ensuring we have RX data and age <= 3;
 	data Cohort&year. (keep=DT_MONTH EGEOLOC MSA ENROLID MEMDAYS SEX);
-		set dat&year..ccaet&year.&yeartag. (keep=AGE DTSTART EGEOLOC MSA ENROLID MEMDAYS RX SEX where=(RX="1" and AGE<=3));
+		set dat&year..ccaet&year.&yeartag. (keep=AGE DTSTART EGEOLOC MSA ENROLID MEMDAYS SEX where=(AGE<=3));
 		DT_MONTH=month(DTSTART);
 	run;
 
@@ -141,17 +141,40 @@ run;
 * restrict to individuals represented for their full first two years;
 * continue with the year-by-year extractions for these individuals; 
 
+%getbirthdates(year=16, yeartag=1sam); *1sam;
 %getbirthdates(year=17, yeartag=1sam); *1sam;
-%getcohort(year=17, yeartag=1sam); *1sam;
+%getbirthdates(year=18, yeartag=1sam); *1sam;
 
-proc export data=CohortBirthdates17
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/CohortBirthdates17_2022-02-18.csv'
+data CohortBirthdates;
+	set CohortBirthdates16
+		CohortBirthdates17
+		CohortBirthdates18;
+run;
+proc delete data=CohortBirthdates16; run; 
+proc delete data=CohortBirthdates17; run; 
+proc delete data=CohortBirthdates18; run; 
+
+%getcohort(year=16, yeartag=1sam); *1sam;
+%getcohort(year=17, yeartag=1sam); *1sam;
+%getcohort(year=18, yeartag=1sam); *1sam;
+
+data Cohort;
+	set Cohort16
+		Cohort17
+		Cohort18;
+run;
+proc delete data=Cohort16; run; 
+proc delete data=Cohort17; run; 
+proc delete data=Cohort18; run; 
+
+proc export data=CohortBirthdates
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/CohortBirthdates_2022-08-23.csv'
 	dbms=csv
 	replace;
 run;
 
-proc export data=Cohort17
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/Cohort17_2022-02-18.csv'
+proc export data=Cohort
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/Cohort_2022-08-23.csv'
 	dbms=csv
 	replace;
 run;
