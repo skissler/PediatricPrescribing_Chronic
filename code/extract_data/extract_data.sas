@@ -155,8 +155,8 @@ run;
 	run;
 
 	* Keep only relevant columns;
-	data Cohort&year.;
-		set Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE);
+	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE);
+		set Cohort&year.;
 	run;
 
 %mend;
