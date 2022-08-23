@@ -96,7 +96,7 @@ run;
 
 	* Sort by visit date;
 	proc sort data=CohortBirthdates&year.;
-		by SVCDATE;
+		by ENROLID SVCDATE;
 	run;
 
 	* For each person, pull out the earliest date (the birth date);
