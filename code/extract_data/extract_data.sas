@@ -163,10 +163,12 @@ run;
 * Reduce to individuals who are present for five straight years;
 %macro refinecohort();
 
+	* Sort the cohort table;
 	proc sort data=Cohort;
 		by ENROLID DT_YEAR DT_MONTH;
 	run;
 
+	* Count months from birth;
 	data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE COUNT);
 		set Cohort;
 		COUNT + 1;
@@ -174,13 +176,25 @@ run;
 		if first.ENROLID then COUNT = 1;
 	run;
 
+	* Append an index column;
 	data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
 		set Cohort;
 		BIRTHDIFF=12*(DT_YEAR-year(BIRTH_DATE))+(DT_MONTH-month(BIRTH_DATE))+1;
 	run;
 
+	* keep only rows where index = months from birth, which gives contiguous months from birth;
 	data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF where=(COUNT=BIRTHDIFF));
 		set Cohort;
+	run;
+
+	* keep only the last row;
+	proc sort data=Cohort;
+		by ENROLID COUNT;
+	run;
+
+	data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
+		set Cohort;
+		if last.COUNT;
 	run;
 
 %mend;
