@@ -1,0 +1,377 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+11         
+12         * Set path for printing output;
+13         proc printto print="/home/kissler/PediatricPrescribing_Chronic/logs/extract_geography_out.txt" new;
+14         run;
+
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+15         
+16         * Set path for saving output;
+17         libname out "/home/kissler/PediatricPrescribing_Chronic/output/buildfiles/";
+NOTE: Libref OUT was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /home/kissler/PediatricPrescribing_Chronic/output/buildfiles
+18         
+19         * Import and process table of days per month --------------------------------;
+20         proc import datafile="/home/kissler/PediatricPrescribing_Chronic/data/dayspermonth.csv"
+21                 out=dayspermonth
+22                 dbms=csv
+23                 replace;
+24         run;
+
+25          /**********************************************************************
+26          *   PRODUCT:   SAS
+27          *   VERSION:   9.4
+28          *   CREATOR:   External File Interface
+29          *   DATE:      23AUG22
+30          *   DESC:      Generated SAS Datastep Code
+31          *   TEMPLATE SOURCE:  (None Specified.)
+32          ***********************************************************************/
+33             data WORK.DAYSPERMONTH    ;
+34             %let _EFIERR_ = 0; /* set the ERROR detection macro variable */
+35             infile '/home/kissler/PediatricPrescribing_Chronic/data/dayspermonth.csv' delimiter = ',' MISSOVER DSD lrecl=32767
+35       ! firstobs=2 ;
+36                informat DT_MONTH best32. ;
+37                informat NDAYS best32. ;
+38                format DT_MONTH best12. ;
+39                format NDAYS best12. ;
+40             input
+41                         DT_MONTH
+42                         NDAYS
+43             ;
+44             if _ERROR_ then call symputx('_EFIERR_',1);  /* set ERROR detection macro variable */
+45             run;
+
+NOTE: The infile '/home/kissler/PediatricPrescribing_Chronic/data/dayspermonth.csv' is:
+      Filename=/home/kissler/PediatricPrescribing_Chronic/data/dayspermonth.csv,
+      Owner Name=kissler,Group Name=users,
+      Access Permission=-rwx------,
+3                                                          The SAS System                             11:04 Tuesday, August 23, 2022
+
+      Last Modified=18Aug2022:11:12:59,
+      File Size (bytes)=89
+
+NOTE: 12 records were read from the infile '/home/kissler/PediatricPrescribing_Chronic/data/dayspermonth.csv'.
+      The minimum record length was 4.
+      The maximum record length was 5.
+NOTE: The data set WORK.DAYSPERMONTH has 12 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+12 rows created in WORK.DAYSPERMONTH from /home/kissler/PediatricPrescribing_Chronic/data/dayspermonth.csv.
+  
+  
+  
+NOTE: WORK.DAYSPERMONTH data set was successfully created.
+NOTE: The data set WORK.DAYSPERMONTH has 12 observations and 2 variables.
+NOTE: PROCEDURE IMPORT used (Total process time):
+      real time           0.08 seconds
+      cpu time            0.06 seconds
+      
+
+46         
+47         proc sort data=dayspermonth;
+48         	by DT_MONTH;
+49         run;
+
+NOTE: There were 12 observations read from the data set WORK.DAYSPERMONTH.
+NOTE: The data set WORK.DAYSPERMONTH has 12 observations and 2 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+50         
+51         * Import and process list of NDC codes to extract -----------------------------;
+52         proc import datafile="/home/kissler/PediatricPrescribing_Chronic/data/ndc_to_extract_geography.csv"
+53                 out=ndctoextract
+54                 dbms=csv
+55                 replace;
+56         run;
+
+ERROR: Physical file does not exist, /home/kissler/PediatricPrescribing_Chronic/data/ndc_to_extract_geography.csv. 
+ERROR: Import unsuccessful.  See SAS Log for details.
+NOTE: The SAS System stopped processing this step because of errors.
+NOTE: PROCEDURE IMPORT used (Total process time):
+      real time           0.03 seconds
+      cpu time            0.02 seconds
+      
+57         
+
+
+58         proc sort data=ndctoextract;
+ERROR: File WORK.NDCTOEXTRACT.DATA does not exist.
+59         	by NDCNUM;
+60         run;
+
+4                                                          The SAS System                             11:04 Tuesday, August 23, 2022
+
+NOTE: The SAS System stopped processing this step because of errors.
+NOTE: Due to ERROR(s) above, SAS set option OBS=0, enabling syntax check mode. 
+      This prevents execution of subsequent data modification statements.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+61         
+62         * Import and process table of US states --------------------------------------;
+
+
+NOTE: PROCEDURE IMPORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+NOTE: The SAS System stopped processing this step because of errors.
+63         proc import datafile="/home/kissler/PediatricPrescribing_Chronic/data/EGEOLOClist_char.csv"
+64                 out=EGEOLOClist
+65                 dbms=csv
+66                 replace;
+67         run;
+68         
+69         * Make sure variable lengths are sufficient to avoid truncation:;
+
+
+70         data EGEOLOClist;
+71         	length STATE $30;
+72             set EGEOLOClist(rename=(STATE=STATE_orig));
+ERROR: File WORK.EGEOLOCLIST.DATA does not exist.
+73             STATE=STATE_orig;
+74         run;
+
+NOTE: The SAS System stopped processing this step because of errors.
+WARNING: The data set WORK.EGEOLOCLIST may be incomplete.  When this step was stopped there were 0 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+75         
+76         proc sort data=EGEOLOClist;
+77         	by EGEOLOC;
+ERROR: Variable EGEOLOC not found.
+78         run;
+
+NOTE: The SAS System stopped processing this step because of errors.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+79         
+80         * START CHECKING FROM HERE;
+81         * ============================================================================;
+82         * Define extraction/reduction scripts;
+83         * ============================================================================;
+84         
+85         * Extract birth dates;
+86         %macro getbirthdates(year=,yeartag=);
+5                                                          The SAS System                             11:04 Tuesday, August 23, 2022
+
+87         
+88         	* Initial import of inpatient services table;
+89         	data CohortBirthdates&year. (keep=DX1 DX2 ENROLID SVCDATE);
+90         		set dat&year..ccaes&year.&yeartag. (keep=AGE DX1 DX2 ENROLID SVCDATE where=(AGE=0 and (startsWith(DX1, "V30") or
+91         				startsWith(DX1, "V31") or
+92         				startsWith(DX1, "V32") or
+93         				startsWith(DX1, "V33") or
+94         				startsWith(DX1, "V34") or
+95         				startsWith(DX1, "V35") or
+96         				startsWith(DX1, "V36") or
+97         				startsWith(DX1, "V37") or
+98         				startsWith(DX1, "Z38") or
+99         				startsWith(DX2, "V30") or
+100        				startsWith(DX2, "V31") or
+101        				startsWith(DX2, "V32") or
+102        				startsWith(DX2, "V33") or
+103        				startsWith(DX2, "V34") or
+104        				startsWith(DX2, "V35") or
+105        				startsWith(DX2, "V36") or
+106        				startsWith(DX2, "V37") or
+107        				startsWith(DX2, "Z38"))));
+108        	run;
+109        
+110        	* Sort by visit date;
+111        	proc sort data=CohortBirthdates&year.;
+112        		by SVCDATE;
+113        	run;
+114        
+115        	* For each person, pull out the earliest date (the birth date);
+116        	* data CohortBirthdates&year. (keep=ENROLID DX1 DX2 SVCDATE);
+117        	* 	set CohortBirthdates&year.;
+118        	* 	by ENROLID;
+119        	* 	if first.ENROLID;
+120        	* run;
+121        
+122        %mend;
+123        
+124        * ============================================================================;
+125        * Run the extraction;
+126        * ============================================================================;
+127        
+128        %getbirthdates(year=17, yeartag=1sam); *1sam;
+
+
+ERROR: Libref DAT17 is not assigned.
+ERROR: Libref DAT17 is not assigned.
+
+WARNING: The variable DX1 in the DROP, KEEP, or RENAME list has never been referenced.
+WARNING: The variable DX2 in the DROP, KEEP, or RENAME list has never been referenced.
+WARNING: The variable ENROLID in the DROP, KEEP, or RENAME list has never been referenced.
+WARNING: The variable SVCDATE in the DROP, KEEP, or RENAME list has never been referenced.
+NOTE: The SAS System stopped processing this step because of errors.
+WARNING: The data set WORK.COHORTBIRTHDATES17 may be incomplete.  When this step was stopped there were 0 observations and 0 
+         variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+6                                                          The SAS System                             11:04 Tuesday, August 23, 2022
+
+
+ERROR: Variable SVCDATE not found.
+
+NOTE: The SAS System stopped processing this step because of errors.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+129        
+
+
+NOTE: PROCEDURE EXPORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+NOTE: The SAS System stopped processing this step because of errors.
+130        proc export data=CohortBirthdates17
+131        	outfile='/home/kissler/PediatricPrescribing_Chronic/output/CohortBirthdates17_2022-02-18.csv'
+132        	dbms=csv
+133        	replace;
+134        run;
+135        
+136        
+137        
+138        
+139        
+140        
+141        
+142        
+143        
+144        
+145        
+146        
+147        
+148        
+149        
+150        
+151        
+152        
+153        
+154        
+155        
+156        
+157        
+158        
+159        
+160        
+161        
+162        
+163        
+164        
+165        
+166        
+167        * * Extract cohort of people who are represented for the entire year;
+168        * %macro getcohort(year=,yeartag=);
+169        
+170        * 	* Initial import, ensuring we have RX data;
+171        * 	data GeoCohort&year. (keep=AGE DT_MONTH EGEOLOC MSA ENROLID MEMDAYS SEX);
+7                                                          The SAS System                             11:04 Tuesday, August 23, 2022
+
+172        * 		set dat&year..ccaet&year.&yeartag. (keep=AGE DTSTART EGEOLOC MSA ENROLID MEMDAYS RX SEX where=(RX="1"));
+173        * 		DT_MONTH=month(DTSTART);
+174        * 	run;
+175        
+176        * 	* Restrict to valid states;
+177        * 	proc sort data=GeoCohort&year.;
+178        * 		by EGEOLOC;
+179        * 	run;
+180        
+181        * 	data GeoCohort&year. (keep=AGE DT_MONTH STATE MSA ENROLID MEMDAYS SEX);
+182        * 		merge EGEOLOClist (in=inleft)
+183        * 		GeoCohort&year. (in=inright);
+184        * 		by EGEOLOC;
+185        * 		IF inleft & inright;
+186        * 	run;
+187        
+188        * 	* Restrict to those with complete coverage through the year;
+189        * 	proc sort data=GeoCohort&year.;
+190        * 		by DT_MONTH;
+191        * 	run;
+192        
+193        * 	data GeoCohort&year. (keep=AGE DT_MONTH STATE MSA ENROLID MEMDAYS SEX NDAYS where=(MEMDAYS>=NDAYS));
+194        * 		merge dayspermonth (in=inleft)
+195        * 		GeoCohort&year. (in=inright);
+196        * 		by DT_MONTH;
+197        * 		IF inleft & inright;
+198        * 	run;
+199        
+200        * 	* Sort so that we extract age in January;
+201        * 	proc sort data=GeoCohort&year.;
+202        * 		by ENROLID descending DT_MONTH;
+203        * 	run;	
+204        
+205        * 	* Count months of enrollment and only keep those with 12;
+206        * 	* https://stats.idre.ucla.edu/sas/faq/how-can-i-create-an-enumeration-variable-by-groups/;
+207        * 	data GeoCohort&year. (keep=AGE DT_MONTH STATE MSA ENROLID SEX COUNT where=(COUNT=12));
+208        * 		set GeoCohort&year.;
+209        * 		COUNT + 1;
+210        * 		by ENROLID;
+211        * 		if first.ENROLID then COUNT = 1;
+212        * 	run;
+213        
+214        * 	* Turn age into age groups;
+215        * 	data GeoCohort&year. (keep=AGEGRP STATE MSA ENROLID SEX);
+216        * 		set GeoCohort&year.;
+217        * 		* if MSA="" then MSA="00000";
+218        * 		if missing(MSA) then MSA=0;
+219        * 		if AGE>=80 then AGEGRP="80plus";
+220        * 		else if AGE>=75 then AGEGRP="75_79";
+221        * 		else if AGE>=70 then AGEGRP="70_74";
+222        * 		else if AGE>=65 then AGEGRP="65_69";
+223        * 		else if AGE>=60 then AGEGRP="60_64";
+224        * 		else if AGE>=55 then AGEGRP="55_59";
+225        * 		else if AGE>=50 then AGEGRP="50_54";
+226        * 		else if AGE>=45 then AGEGRP="45_49";
+227        * 		else if AGE>=40 then AGEGRP="40_44";
+228        * 		else if AGE>=35 then AGEGRP="35_39";
+229        * 		else if AGE>=30 then AGEGRP="30_34";
+8                                                          The SAS System                             11:04 Tuesday, August 23, 2022
+
+230        * 		else if AGE>=25 then AGEGRP="25_29";
+231        * 		else if AGE>=20 then AGEGRP="20_24";
+232        * 		else if AGE>=15 then AGEGRP="15_19";
+233        * 		else if AGE>=10 then AGEGRP="10_14";
+234        * 		else if AGE>=5 then AGEGRP="05_09";
+235        * 		else if AGE>=0 then AGEGRP="00_04";
+236        * 	run;
+237        
+238        * 	* Sort cohort table by ENROLID for joining later;
+239        * 	proc sort data=GeoCohort&year.;
+240        * 		by ENROLID;
+241        * 	run;
+242        
+243        * %mend;
+244        
+245        
+246        
+
+

@@ -1,0 +1,69 @@
+1                                                          The SAS System                             11:24 Tuesday, August 23, 2022
+
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS1M7) 
+      Licensed to HARVARD UNIVERSITY - SFA T&R, Site 70106881.
+NOTE: This session is executing on the Linux 4.18.0-372.16.1.el8_6.x86_64 (LIN X64) platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 15.2
+      SAS/ETS 15.2
+      SAS/OR 15.2
+      SAS/IML 15.2
+      SAS/QC 15.2
+
+NOTE: Additional host information:
+
+ Linux LIN X64 4.18.0-372.16.1.el8_6.x86_64 #1 SMP Tue Jun 28 03:02:21 EDT 2022 x86_64 Red Hat Enterprise Linux release 8.6 (Ootpa) 
+
+You are running SAS 9. Some SAS 8 files will be automatically converted 
+by the V9 engine; others are incompatible.  Please see 
+http://support.sas.com/rnd/migration/planning/platform/64bit.html
+
+PROC MIGRATE will preserve current SAS file attributes and is 
+recommended for converting all your SAS libraries from any 
+SAS 8 release to SAS 9.  For details and examples, please see
+http://support.sas.com/rnd/migration/index.html
+
+
+This message is contained in the SAS news file, and is presented upon
+initialization.  Edit the file "news" in the "misc/base" directory to
+display site-specific news and information in the program log.
+The command line option "-nonews" will prevent this display.
+
+
+
+
+NOTE: SAS initialization used:
+      real time           0.05 seconds
+      cpu time            0.03 seconds
+      
+1          * ============================================================================;
+2          * Setup;
+3          * ============================================================================;
+4          
+5          * Make sure there's nothing in the 'work' library;
+6          proc datasets lib=work nolist kill;
+6        !                                     quit;
+
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.03 seconds
+      
+
+6        !                                           run;
+7          
+8          * Set path for log;
+9          proc printto log="/home/kissler/PediatricPrescribing_Chronic/logs/extract_data_log.txt" new;
+2                                                          The SAS System                             11:24 Tuesday, August 23, 2022
+
+10         run;
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           0.43 seconds
+      cpu time            0.33 seconds
+      
