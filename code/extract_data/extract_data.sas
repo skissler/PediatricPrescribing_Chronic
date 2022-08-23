@@ -100,7 +100,7 @@ run;
 
 	* For each person, pull out the earliest date (the birth date);
 	data CohortBirthdates&year. (keep=ENROLID SVCDATE);
-		set CohortBirthdates&year.;
+		set CohortBirthdates&year. (rename=(SVCDATE=DOB));
 		by ENROLID;
 		if first.ENROLID;
 	run;
@@ -112,9 +112,10 @@ run;
 %macro getcohort(year=,yeartag=);
 
 	* Initial import, ensuring we have RX data and age <= 3;
-	data Cohort&year. (keep=DT_MONTH EGEOLOC MSA ENROLID MEMDAYS SEX);
+	data Cohort&year. (keep=DT_MONTH DT_YEAR EGEOLOC MSA ENROLID MEMDAYS SEX);
 		set dat&year..ccaet&year.&yeartag. (keep=AGE DTSTART EGEOLOC MSA ENROLID MEMDAYS SEX where=(AGE<=3));
 		DT_MONTH=month(DTSTART);
+		DT_YEAR=year(DTSTART);
 	run;
 
 	* Restrict to valid states;
@@ -122,7 +123,7 @@ run;
 		by EGEOLOC;
 	run;
 
-	data Cohort&year. (keep=DT_MONTH STATE MSA ENROLID MEMDAYS SEX);
+	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX);
 		merge EGEOLOClist (in=inleft)
 		Cohort&year. (in=inright);
 		by EGEOLOC; 
