@@ -118,6 +118,10 @@ run;
 		DT_YEAR=year(DTSTART);
 	run;
 
+	* Restrict to those with a birth date;
+
+
+
 	* Restrict to valid states;
 	proc sort data=Cohort&year.;
 		by EGEOLOC;
@@ -142,23 +146,37 @@ run;
 * restrict to individuals represented for their full first two years;
 * continue with the year-by-year extractions for these individuals; 
 
+* Get birthdates;
 %getbirthdates(year=16, yeartag=1sam); *1sam;
 %getbirthdates(year=17, yeartag=1sam); *1sam;
 %getbirthdates(year=18, yeartag=1sam); *1sam;
 
+* Combine birthdates into a single data table;
 data CohortBirthdates;
 	set CohortBirthdates16
 		CohortBirthdates17
 		CohortBirthdates18;
 run;
+
+* Ensure we've only got one birthdate per person;
+proc sort data=CohortBirthdates;
+	by ENROLID DOB;
+run;
+data CohortBirthdates (keep=ENROLID DOB);
+	set CohortBirthdates;
+	by ENROLID;
+	if first.ENROLID;
+run;
 proc delete data=CohortBirthdates16; run; 
 proc delete data=CohortBirthdates17; run; 
 proc delete data=CohortBirthdates18; run; 
 
+* Get cohorts;
 %getcohort(year=16, yeartag=1sam); *1sam;
 %getcohort(year=17, yeartag=1sam); *1sam;
 %getcohort(year=18, yeartag=1sam); *1sam;
 
+* Combine cohorts into a single data table;
 data Cohort;
 	set Cohort16
 		Cohort17
@@ -167,6 +185,12 @@ run;
 proc delete data=Cohort16; run; 
 proc delete data=Cohort17; run; 
 proc delete data=Cohort18; run; 
+
+
+
+
+
+
 
 proc export data=CohortBirthdates
 	outfile='/home/kissler/PediatricPrescribing_Chronic/output/CohortBirthdates_2022-08-23.csv'
