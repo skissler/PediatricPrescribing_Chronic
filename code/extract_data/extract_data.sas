@@ -194,6 +194,7 @@ run;
 
 	data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
 		set Cohort;
+		by ENROLID;
 		if last.COUNT;
 	run;
 
