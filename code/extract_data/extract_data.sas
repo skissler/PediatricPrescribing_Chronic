@@ -160,7 +160,7 @@ run;
 
 %mend;
 
-Reduce to individuals who are present for five straight years;
+* Reduce to individuals who are present for five straight years;
 %macro refinecohort();
 
 	proc sort data=Cohort;
@@ -226,7 +226,6 @@ run;
 proc delete data=Cohort16; run; 
 proc delete data=Cohort17; run; 
 proc delete data=Cohort18; run; 
-
 
 
 * Refine to a cohort of people present for five straight years;
