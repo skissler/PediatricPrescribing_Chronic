@@ -1,5 +1,6 @@
 __Jump to:__
 -[9 Aug 2022](#9-Aug-2022)
+-[23 Aug 2022](#23-Aug-2022)
 
 # 9 Aug 2022
 To do: 
@@ -27,4 +28,7 @@ Age (1/2/5)- MSA - chronic condition / not that chronic condition - resp/non-res
 Might need multiple datasets for each of these figures - maybe best to just release the underlying data once we've gotten it extracted and cleaned, for each figure. 
 
 
+# 23 Aug 2022 
+
+Working now to get a comprehensive set of extraction code for the analysis - rather than the disparate pieces where things currently are. 
 
