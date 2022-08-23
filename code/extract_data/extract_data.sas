@@ -117,26 +117,33 @@ run;
 		DT_MONTH=month(DTSTART);
 		DT_YEAR=year(DTSTART);
 	run;
-
-	* Restrict to those with a birth date;
-	proc sql;
-		create table Cohort&year. as
-		select a.DT_MONTH, a.DT_YEAR, a.EGEOLOC, a.MSA, a.MEMDAYS, a.SEX, b.DOB from Cohort&year. a
-			inner join CohortBirthdates b
-			on a.ENROLID = b.ENROLID;
-	quit;	
-
 	* Restrict to valid states;
 	proc sort data=Cohort&year.;
 		by EGEOLOC;
 	run;
 
-	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX);
+	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX, DOB);
 		merge EGEOLOClist (in=inleft)
 		Cohort&year. (in=inright);
 		by EGEOLOC; 
 		IF inleft & inright; 
 	run;
+
+	* Restrict to those with a birth date;
+	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX DOB);
+		merge CohortBirthdates (in=inleft)
+		Cohort&year. (in=inright);
+		by ENROLID; 
+		IF inleft & inright; 
+	run;
+
+	* Restrict to those with a birth date;
+	* proc sql;
+	* 	create table Cohort&year. as
+	* 	select a.DT_MONTH, a.DT_YEAR, a.EGEOLOC, a.MSA, a.MEMDAYS, a.SEX, b.DOB from Cohort&year. a
+	* 		inner join CohortBirthdates b
+	* 		on a.ENROLID = b.ENROLID;
+	* quit;	
 
 %mend;
 
