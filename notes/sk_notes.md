@@ -37,3 +37,4 @@ Working now to get a comprehensive set of extraction code for the analysis - rat
 I've gotten the birth dates extracted at least, in `code/extract_data/extract_data.sas`
 
 Next step is to try to get the full cohort extracted - but the server says it needs maintenance at noon, so I think I'm going to regroup and take care of that later. 
+

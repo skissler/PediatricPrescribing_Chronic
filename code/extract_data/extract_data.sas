@@ -64,7 +64,6 @@ proc sort data=EGEOLOClist;
 	by EGEOLOC;
 run;
 
-* START CHECKING FROM HERE; 
 * ============================================================================;
 * Define extraction/reduction scripts;
 * ============================================================================;
@@ -108,14 +107,51 @@ run;
 
 %mend;
 
+* Extract individuals under the age of 3; 
+
+%macro getcohort(year=,yeartag=);
+
+	* Initial import, ensuring we have RX data and age <= 3;
+	data Cohort&year. (keep=DT_MONTH EGEOLOC MSA ENROLID MEMDAYS SEX);
+		set dat&year..ccaet&year.&yeartag. (keep=AGE DTSTART EGEOLOC MSA ENROLID MEMDAYS RX SEX where=(RX="1" and AGE<=3));
+		DT_MONTH=month(DTSTART);
+	run;
+
+	* Restrict to valid states;
+	proc sort data=Cohort&year.;
+		by EGEOLOC;
+	run;
+
+	data Cohort&year. (keep=DT_MONTH STATE MSA ENROLID MEMDAYS SEX);
+		merge EGEOLOClist (in=inleft)
+		Cohort&year. (in=inright);
+		by EGEOLOC; 
+		IF inleft & inright; 
+	run;
+
+%mend;
+
+
 * ============================================================================;
 * Run the extraction;
 * ============================================================================;
 
+* extract all birth dates;
+* extract all individuals;
+* restrict to individuals represented for their full first two years;
+* continue with the year-by-year extractions for these individuals; 
+
 %getbirthdates(year=17, yeartag=1sam); *1sam;
+%getcohort(year=17, yeartag=1sam); *1sam;
 
 proc export data=CohortBirthdates17
 	outfile='/home/kissler/PediatricPrescribing_Chronic/output/CohortBirthdates17_2022-02-18.csv'
+	dbms=csv
+	replace;
+run;
+
+proc export data=Cohort17
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/Cohort17_2022-02-18.csv'
 	dbms=csv
 	replace;
 run;
