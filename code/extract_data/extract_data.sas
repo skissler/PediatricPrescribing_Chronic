@@ -108,7 +108,6 @@ run;
 %mend;
 
 * Extract individuals with prescriptions under the age of 5; 
-
 %macro getcohort(year=,yeartag=);
 
 	* Initial import, ensuring we have RX data and age <= 3;
@@ -159,7 +158,22 @@ run;
 		set Cohort&year.;
 	run;
 
+	proc sort data=Cohort;
+		by ENROLID DT_YEAR DT_MONTH;
+	run;
+
 %mend;
+
+* Reduce to individuals who are present for five straight years;
+* %macro refinecohort();
+
+	
+
+* 	data Cohort (keep=____);
+
+* 	run;
+
+* %mend;
 
 
 * ============================================================================;
@@ -200,6 +214,7 @@ proc delete data=CohortBirthdates18; run;
 %getcohort(year=16, yeartag=1sam); *1sam;
 %getcohort(year=17, yeartag=1sam); *1sam;
 %getcohort(year=18, yeartag=1sam); *1sam;
+proc delete data=CohortBirthdates; run; 
 
 * Combine cohorts into a single data table;
 data Cohort;
@@ -211,17 +226,27 @@ proc delete data=Cohort16; run;
 proc delete data=Cohort17; run; 
 proc delete data=Cohort18; run; 
 
-
-
-
-
-
-
-proc export data=CohortBirthdates
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/CohortBirthdates_2022-08-23.csv'
-	dbms=csv
-	replace;
+* Delete this, just a check;
+proc sort data=Cohort;
+	by ENROLID DT_YEAR DT_MONTH;
 run;
+
+
+* Refine to a cohort of people present for five straight years;
+* %refinecohort(); *1sam;
+
+
+
+
+
+
+
+
+* proc export data=CohortBirthdates
+* 	outfile='/home/kissler/PediatricPrescribing_Chronic/output/CohortBirthdates_2022-08-23.csv'
+* 	dbms=csv
+* 	replace;
+* run;
 
 proc export data=Cohort
 	outfile='/home/kissler/PediatricPrescribing_Chronic/output/Cohort_2022-08-23.csv'
