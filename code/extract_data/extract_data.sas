@@ -158,10 +158,6 @@ run;
 		set Cohort&year.;
 	run;
 
-	proc sort data=Cohort;
-		by ENROLID DT_YEAR DT_MONTH;
-	run;
-
 %mend;
 
 * Reduce to individuals who are present for five straight years;
