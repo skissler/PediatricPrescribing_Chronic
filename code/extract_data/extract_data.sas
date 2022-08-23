@@ -74,24 +74,24 @@ run;
 
 	* Initial import of inpatient services table;
 	data CohortBirthdates&year. (keep=DX1 DX2 ENROLID SVCDATE);
-		set dat&year..ccaes&year.&yeartag. (keep=AGE DX1 DX2 ENROLID SVCDATE where=(AGE=0 and (startsWith(DX1, "V30") or 
-				startsWith(DX1, "V31") or 
-				startsWith(DX1, "V32") or 
-				startsWith(DX1, "V33") or 
-				startsWith(DX1, "V34") or 
-				startsWith(DX1, "V35") or 
-				startsWith(DX1, "V36") or 
-				startsWith(DX1, "V37") or 
-				startsWith(DX1, "Z38") or 
-				startsWith(DX2, "V30") or 
-				startsWith(DX2, "V31") or 
-				startsWith(DX2, "V32") or 
-				startsWith(DX2, "V33") or 
-				startsWith(DX2, "V34") or 
-				startsWith(DX2, "V35") or 
-				startsWith(DX2, "V36") or 
-				startsWith(DX2, "V37") or 
-				startsWith(DX2, "Z38"))));
+		set dat&year..ccaes&year.&yeartag. (keep=AGE DX1 DX2 ENROLID SVCDATE where=(AGE=0 and (substr(DX1,1,3)="V30" or 
+				substr(DX1,1,3)="V31" or 
+				substr(DX1,1,3)="V32" or 
+				substr(DX1,1,3)="V33" or 
+				substr(DX1,1,3)="V34" or 
+				substr(DX1,1,3)="V35" or 
+				substr(DX1,1,3)="V36" or 
+				substr(DX1,1,3)="V37" or 
+				substr(DX1,1,3)="Z38" or 
+				substr(DX2,1,3)="V30" or 
+				substr(DX2,1,3)="V31" or 
+				substr(DX2,1,3)="V32" or 
+				substr(DX2,1,3)="V33" or 
+				substr(DX2,1,3)="V34" or 
+				substr(DX2,1,3)="V35" or 
+				substr(DX2,1,3)="V36" or 
+				substr(DX2,1,3)="V37" or 
+				substr(DX2,1,3)="Z38")));
 	run;
 
 	* Sort by visit date;
