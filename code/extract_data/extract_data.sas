@@ -130,6 +130,10 @@ run;
 	run;
 
 	* Restrict to those with a birth date;
+	proc sort data=Cohort&year.;
+		by ENROLID;
+	run;
+	
 	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX DOB);
 		merge CohortBirthdates (in=inleft)
 		Cohort&year. (in=inright);
