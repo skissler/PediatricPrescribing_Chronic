@@ -99,21 +99,21 @@ run;
 	run;
 
 	* For each person, pull out the earliest date (the birth date);
-	data CohortBirthdates&year. (keep=ENROLID DOB);
-		set CohortBirthdates&year. (rename=(SVCDATE=DOB));
+	data CohortBirthdates&year. (keep=ENROLID BIRTH_DATE);
+		set CohortBirthdates&year. (rename=(SVCDATE=BIRTH_DATE));
 		by ENROLID;
 		if first.ENROLID;
 	run;
 
 %mend;
 
-* Extract individuals under the age of 3; 
+* Extract individuals with prescriptions under the age of 5; 
 
 %macro getcohort(year=,yeartag=);
 
 	* Initial import, ensuring we have RX data and age <= 3;
 	data Cohort&year. (keep=DT_MONTH DT_YEAR EGEOLOC MSA ENROLID MEMDAYS SEX);
-		set dat&year..ccaet&year.&yeartag. (keep=AGE DTSTART EGEOLOC MSA ENROLID MEMDAYS SEX where=(AGE<=3));
+		set dat&year..ccaet&year.&yeartag. (keep=AGE DTSTART EGEOLOC MSA ENROLID MEMDAYS SEX where=(RX="1" and AGE<5));
 		DT_MONTH=month(DTSTART);
 		DT_YEAR=year(DTSTART);
 	run;
@@ -122,7 +122,7 @@ run;
 		by EGEOLOC;
 	run;
 
-	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX, DOB);
+	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX, BIRTH_DATE);
 		merge EGEOLOClist (in=inleft)
 		Cohort&year. (in=inright);
 		by EGEOLOC; 
@@ -133,21 +133,25 @@ run;
 	proc sort data=Cohort&year.;
 		by ENROLID;
 	run;
-	
-	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX DOB);
+
+	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE);
 		merge CohortBirthdates (in=inleft)
 		Cohort&year. (in=inright);
 		by ENROLID; 
 		IF inleft & inright; 
 	run;
 
-	* Restrict to those with a birth date;
-	* proc sql;
-	* 	create table Cohort&year. as
-	* 	select a.DT_MONTH, a.DT_YEAR, a.EGEOLOC, a.MSA, a.MEMDAYS, a.SEX, b.DOB from Cohort&year. a
-	* 		inner join CohortBirthdates b
-	* 		on a.ENROLID = b.ENROLID;
-	* quit;	
+	* Keep only rows corresponding to full months or the birth month: 
+	proc sort data=Cohort&year.;
+		by DT_MONTH;
+	run;
+
+	data Cohort&year. (keep=AGE DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE NDAYS where=((MEMDAYS>=NDAYS) or (month(BIRTH_DATE)=DT_MONTH and year(BIRTH_DATE)=DT_YEAR)));
+		merge dayspermonth (in=inleft)
+		Cohort&year. (in=inright);
+		by DT_MONTH;
+		IF inleft & inright;
+	run;
 
 %mend;
 
@@ -175,9 +179,9 @@ run;
 
 * Ensure we've only got one birthdate per person;
 proc sort data=CohortBirthdates;
-	by ENROLID DOB;
+	by ENROLID BIRTH_DATE;
 run;
-data CohortBirthdates (keep=ENROLID DOB);
+data CohortBirthdates (keep=ENROLID BIRTH_DATE);
 	set CohortBirthdates;
 	by ENROLID;
 	if first.ENROLID;
