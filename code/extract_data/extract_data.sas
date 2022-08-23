@@ -174,6 +174,11 @@ run;
 		if first.ENROLID then COUNT = 1;
 	run;
 
+	data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
+		set Cohort;
+		BIRTHDIFF=12*(DT_YEAR-year(BIRTH_DATE))+(DT_MONTH-month(BIRTH_DATE))+1
+	run;
+
 %mend;
 
 
