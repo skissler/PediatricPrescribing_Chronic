@@ -73,7 +73,7 @@ run;
 %macro getbirthdates(year=,yeartag=);
 
 	* Initial import of inpatient services table;
-	data CohortBirthdates&year. (keep=DX1 DX2 ENROLID SVCDATE);
+	data CohortBirthdates&year. (keep=ENROLID SVCDATE);
 		set dat&year..ccaes&year.&yeartag. (keep=AGE DX1 DX2 ENROLID SVCDATE where=(AGE=0 and (substr(DX1,1,3)="V30" or 
 				substr(DX1,1,3)="V31" or 
 				substr(DX1,1,3)="V32" or 
@@ -100,7 +100,7 @@ run;
 	run;
 
 	* For each person, pull out the earliest date (the birth date);
-	data CohortBirthdates&year. (keep=ENROLID DX1 DX2 SVCDATE);
+	data CohortBirthdates&year. (keep=ENROLID SVCDATE);
 		set CohortBirthdates&year.;
 		by ENROLID;
 		if first.ENROLID;
