@@ -146,7 +146,7 @@ run;
 		by DT_MONTH;
 	run;
 
-	data Cohort&year. (keep=AGE DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE NDAYS where=((MEMDAYS>=NDAYS) or (month(BIRTH_DATE)=DT_MONTH and year(BIRTH_DATE)=DT_YEAR)));
+	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE NDAYS where=((MEMDAYS>=NDAYS) or (month(BIRTH_DATE)=DT_MONTH and year(BIRTH_DATE)=DT_YEAR)));
 		merge dayspermonth (in=inleft)
 		Cohort&year. (in=inright);
 		by DT_MONTH;
