@@ -160,16 +160,21 @@ run;
 
 %mend;
 
-* Reduce to individuals who are present for five straight years;
-* %macro refinecohort();
+Reduce to individuals who are present for five straight years;
+%macro refinecohort();
 
-	
+	proc sort data=Cohort;
+		by ENROLID DT_YEAR DT_MONTH;
+	run;
 
-* 	data Cohort (keep=____);
+	data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE);
+		set Cohort;
+		COUNT + 1;
+		by ENROLID;
+		if first.ENROLID then COUNT = 1;
+	run;
 
-* 	run;
-
-* %mend;
+%mend;
 
 
 * ============================================================================;
@@ -222,14 +227,10 @@ proc delete data=Cohort16; run;
 proc delete data=Cohort17; run; 
 proc delete data=Cohort18; run; 
 
-* Delete this, just a check;
-proc sort data=Cohort;
-	by ENROLID DT_YEAR DT_MONTH;
-run;
 
 
 * Refine to a cohort of people present for five straight years;
-* %refinecohort(); *1sam;
+%refinecohort(); *1sam;
 
 
 
