@@ -188,15 +188,15 @@ run;
 	run;
 
 	* keep only the last row;
-	* proc sort data=Cohort;
-	* 	by ENROLID COUNT;
-	* run;
+	proc sort data=Cohort;
+		by ENROLID COUNT;
+	run;
 
-	* data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
-	* 	set Cohort;
-	* 	by ENROLID;
-	* 	if last.COUNT;
-	* run;
+	data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
+		set Cohort;
+		by ENROLID;
+		if last.ENROLID;
+	run;
 
 %mend;
 
