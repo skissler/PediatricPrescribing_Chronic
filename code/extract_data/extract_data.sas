@@ -198,6 +198,13 @@ run;
 		if last.ENROLID;
 	run;
 
+	data Cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
+		set Cohort;
+		DURATION=DTEND-BIRTH_DATE;
+		by DURATION;
+		if DURATION>=1800;
+	run;
+
 %mend;
 
 
