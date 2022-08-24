@@ -111,10 +111,10 @@ run;
 %macro getcohort(year=,yeartag=);
 
 	* Initial import, ensuring we have RX data and age <= 3;
-	data Cohort&year. (keep=DT_MONTH DT_YEAR EGEOLOC MSA ENROLID MEMDAYS SEX);
-		set dat&year..ccaet&year.&yeartag. (keep=AGE RX DTSTART EGEOLOC MSA ENROLID MEMDAYS SEX where=(RX="1" and AGE<5));
-		DT_MONTH=month(DTSTART);
-		DT_YEAR=year(DTSTART);
+	data Cohort&year. (keep=DT_MONTH DT_YEAR DTEND EGEOLOC MSA ENROLID MEMDAYS SEX);
+		set dat&year..ccaet&year.&yeartag. (keep=AGE RX DTEND EGEOLOC MSA ENROLID MEMDAYS SEX where=(RX="1" and AGE<5));
+		DT_MONTH=month(DTEND);
+		DT_YEAR=year(DTEND);
 	run;
 
 	* Restrict to valid states;
@@ -122,7 +122,7 @@ run;
 		by EGEOLOC;
 	run;
 
-	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX, BIRTH_DATE);
+	data Cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID MEMDAYS SEX, BIRTH_DATE);
 		merge EGEOLOClist (in=inleft)
 		Cohort&year. (in=inright);
 		by EGEOLOC; 
@@ -134,7 +134,7 @@ run;
 		by ENROLID;
 	run;
 
-	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE);
+	data Cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE);
 		merge CohortBirthdates (in=inleft)
 		Cohort&year. (in=inright);
 		by ENROLID; 
@@ -146,7 +146,7 @@ run;
 		by DT_MONTH;
 	run;
 
-	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE NDAYS where=((MEMDAYS>=NDAYS) or (month(BIRTH_DATE)=DT_MONTH and year(BIRTH_DATE)=DT_YEAR)));
+	data Cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE NDAYS where=((MEMDAYS>=NDAYS) or (month(BIRTH_DATE)=DT_MONTH and year(BIRTH_DATE)=DT_YEAR)));
 		merge dayspermonth (in=inleft)
 		Cohort&year. (in=inright);
 		by DT_MONTH;
@@ -154,7 +154,7 @@ run;
 	run;
 
 	* Keep only relevant columns;
-	data Cohort&year. (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE);
+	data Cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE);
 		set Cohort&year.;
 	run;
 
@@ -169,7 +169,7 @@ run;
 	run;
 
 	* Count months from birth;
-	data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE COUNT);
+	data Cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT);
 		set Cohort;
 		COUNT + 1;
 		by ENROLID;
@@ -177,13 +177,13 @@ run;
 	run;
 
 	* Append an index column;
-	data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
+	data Cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
 		set Cohort;
 		BIRTHDIFF=12*(DT_YEAR-year(BIRTH_DATE))+(DT_MONTH-month(BIRTH_DATE))+1;
 	run;
 
 	* keep only rows where index = months from birth, which gives contiguous months from birth;
-	data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF where=(COUNT=BIRTHDIFF));
+	data Cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF where=(COUNT=BIRTHDIFF));
 		set Cohort;
 	run;
 
@@ -192,7 +192,7 @@ run;
 		by ENROLID COUNT;
 	run;
 
-	data Cohort (keep=DT_MONTH DT_YEAR STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
+	data Cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
 		set Cohort;
 		by ENROLID;
 		if last.ENROLID;
