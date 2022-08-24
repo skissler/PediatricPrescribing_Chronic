@@ -198,7 +198,7 @@ run;
 		if last.ENROLID;
 	run;
 
-	data Cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE  DURATION);
+	data Cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE DURATION);
 		set Cohort;
 		DURATION=DTEND-BIRTH_DATE;
 	run;
@@ -207,7 +207,7 @@ run;
 		by DURATION;
 	run;
 
-	data Cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE  DURATION);
+	data Cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE DURATION);
 		set Cohort;
 		by DURATION;
 		if DURATION>=720;
@@ -256,6 +256,14 @@ proc delete data=CohortBirthdates18; run;
 %getcohort(year=18, yeartag=1sam); *1sam;
 proc delete data=CohortBirthdates; run; 
 
+
+proc export data=Cohort17
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/Cohort17_2022-08-23.csv'
+	dbms=csv
+	replace;
+run;
+
+
 * Combine cohorts into a single data table;
 data Cohort;
 	set Cohort16
@@ -269,12 +277,6 @@ proc delete data=Cohort18; run;
 
 * Refine to a cohort of people present for five straight years;
 %refinecohort(); *1sam;
-
-
-
-
-
-
 
 
 * proc export data=CohortBirthdates
