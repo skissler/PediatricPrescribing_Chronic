@@ -216,6 +216,7 @@ run;
 	data Cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE DURATION CENSOR_DATE);
 		set Cohort;
 		CENSOR_DATE=BIRTH_DATE+720;
+		format CENSOR_DATE mmddyys10.;
 	run;
 
 %mend;
