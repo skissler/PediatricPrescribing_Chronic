@@ -183,7 +183,7 @@ run;
 	run;
 
 	* keep only rows where index = months from birth, which gives contiguous months from birth;
-	data Cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF where=(COUNT=BIRTHDIFF));
+	data Cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF where=(COUNT=BIRTHDIFF));
 		set Cohort;
 	run;
 
@@ -192,13 +192,13 @@ run;
 		by ENROLID COUNT;
 	run;
 
-	data Cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE);
+	data Cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE);
 		set Cohort;
 		by ENROLID;
 		if last.ENROLID;
 	run;
 
-	data Cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE  DURATION);
+	data Cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE  DURATION);
 		set Cohort;
 		DURATION=DTEND-BIRTH_DATE;
 	run;
@@ -207,7 +207,7 @@ run;
 		by DURATION;
 	run;
 
-	data Cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE  DURATION);
+	data Cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE  DURATION);
 		set Cohort;
 		by DURATION;
 		if DURATION>=720;
