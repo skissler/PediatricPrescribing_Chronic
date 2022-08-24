@@ -1,6 +1,7 @@
 __Jump to:__
 -[9 Aug 2022](#9-Aug-2022)
 -[23 Aug 2022](#23-Aug-2022)
+-[24 Aug 2022](#24-Aug-2022)
 
 # 9 Aug 2022
 To do: 
@@ -37,4 +38,14 @@ Working now to get a comprehensive set of extraction code for the analysis - rat
 I've gotten the birth dates extracted at least, in `code/extract_data/extract_data.sas`
 
 Next step is to try to get the full cohort extracted - but the server says it needs maintenance at noon, so I think I'm going to regroup and take care of that later. 
+
+# 24 Aug 2022 
+
+Making progress with the cohort extraction. Now trying to just keep individuals who are present for a full five years after birth. 
+
+
+
+
+
+
 
