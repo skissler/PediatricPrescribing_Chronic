@@ -122,7 +122,7 @@ run;
 		by EGEOLOC;
 	run;
 
-	data Cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID MEMDAYS SEX, BIRTH_DATE);
+	data Cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE);
 		merge EGEOLOClist (in=inleft)
 		Cohort&year. (in=inright);
 		by EGEOLOC; 
