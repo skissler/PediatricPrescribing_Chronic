@@ -203,11 +203,15 @@ run;
 		DURATION=DTEND-BIRTH_DATE;
 	run;
 
-	* data Cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF DURATION);
-	* 	set Cohort;
-	* 	by DURATION;
-	* 	if DURATION>1800;
-	* run;
+	proc sort data=Cohort;
+		by DURATION;
+	run;
+
+	data Cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF DURATION);
+		set Cohort;
+		by DURATION;
+		if DURATION>720;
+	run;
 
 %mend;
 
