@@ -213,6 +213,11 @@ run;
 		if DURATION>=720;
 	run;
 
+	data Cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE DURATION CENSOR_DATE);
+		set Cohort;
+		CENSOR_DATE=BIRTH_DATE+720;
+	run;
+
 %mend;
 
 
