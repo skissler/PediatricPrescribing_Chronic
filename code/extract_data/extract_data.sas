@@ -36,15 +36,15 @@ proc sort data=dayspermonth;
 run;
 
 * Import and process list of NDC codes to extract -----------------------------; 
-* proc import datafile="/home/kissler/PediatricPrescribing_Chronic/data/ndc_to_extract_geography.csv"
-*         out=ndctoextract
-*         dbms=csv
-*         replace;
-* run;
+proc import datafile="/home/kissler/PediatricPrescribing_Chronic/data/ndc_to_extract.csv"
+        out=ndctoextract
+        dbms=csv
+        replace;
+run;
 
-* proc sort data=ndctoextract;
-* 	by NDCNUM;
-* run;
+proc sort data=ndctoextract;
+	by NDCNUM;
+run;
 
 * Import and process table of US states --------------------------------------;
 proc import datafile="/home/kissler/PediatricPrescribing_Chronic/data/EGEOLOClist_char.csv"
@@ -221,6 +221,42 @@ run;
 
 %mend;
 
+* Get prescription data;
+%macro getrx(year=,yeartag=);
+
+	* Import 'd' and reduce to those with valid birth date;
+	data d&year. (keep=ENROLID NDCNUM REFILL SVCDATE BIRTH_DATE CENSOR_DATE);
+		merge Cohort (in=inleft)
+		dat&year..ccaed&year.&yeartag. (in=inright keep=ENROLID NDCNUM REFILL SVCDATE); *  where=(REFILL=0);
+		by ENROLID; 
+		IF inleft & inright; 
+	run;
+
+	* Restrict to antibiotic prescriptions;
+	proc sort data=d&year.;
+		by NDCNUM;
+	run;
+
+	data d&year. (keep=ENROLID NDCNUM REFILL SVCDATE BIRTH_DATE CENSOR_DATE);
+		merge ndctoextract (keep=NDCNUM in=inleft)
+		d&year. (in=inright);
+		by NDCNUM; 
+		IF inleft & inright; 
+	run;
+
+	* Keep only records between the birth date and censor date;
+	data d&year. (keep=ENROLID DATE CODE REFILL);
+		rename SVCDATE=DATE NDCNUM=CODE;
+	    set d&year.;
+	    where BIRTH_DATE<=SVCDATE<=CENSOR_DATE;
+	run;
+
+	* Get unique records by person, date, and NDC;
+	proc sort data=d&year. nodupkey;
+		by ENROLID DATE CODE;
+	run;
+
+%mend;
 
 * ============================================================================;
 * Run the extraction;
@@ -270,13 +306,20 @@ proc delete data=Cohort18; run;
 * Refine to a cohort of people present for five straight years ----------------;
 %refinecohort(); *1sam;
 
+* Get prescription data -------------------------------------------------------;
+%getrx(year=16, yeartag=1)
+%getrx(year=17, yeartag=1)
+%getrx(year=18, yeartag=1)
 
-
-
-
-
-
-
+* Combine prescription data into a single data table --------------------------;
+data d;
+	set d16
+		d17
+		d18;
+run;
+proc delete data=d16; run; 
+proc delete data=d17; run; 
+proc delete data=d18; run; 
 
 
 
@@ -285,6 +328,12 @@ proc delete data=Cohort18; run;
 * Save data to output ---------------------------------------------------------;
 proc export data=Cohort
 	outfile='/home/kissler/PediatricPrescribing_Chronic/output/Cohort_2022-08-23.csv'
+	dbms=csv
+	replace;
+run;
+
+proc export data=d
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/d_2022-08-23.csv'
 	dbms=csv
 	replace;
 run;
