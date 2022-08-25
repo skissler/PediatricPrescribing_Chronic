@@ -27,7 +27,7 @@ msasizes <- memb_df[MSA>0][
 bigmsalist <- msasizes %>% filter(N>=100) %>% pull(MSA)
 
 # Store NDCs for key drug classes ---------------------------------------------
-abx_ndcs <- read_csv("data/ndc_to_extract_geography.csv")
+abx_ndcs <- read_csv("data/ndc_to_extract.csv")
 setDT(abx_ndcs)
 setDT(redbook)
 

@@ -397,18 +397,6 @@
 "Influenza","48881",9
 "Influenza","48882",9
 "Influenza","48889",9
-"Tonsillitis","463",9
-"Tonsillitis","4740",9
-"Tonsillitis","47400",9
-"Tonsillitis","47401",9
-"Tonsillitis","47402",9
-"Tonsillitis","47410",9
-"Tonsillitis","47411",9
-"Tonsillitis","47412",9
-"Tonsillitis","4742",9
-"Tonsillitis","4748",9
-"Tonsillitis","4749",9
-"Tonsillitis","475",9
 "Bronchitis (acute)","4660",9
 "Bronchitis (acute)","4661",9
 "Bronchitis (acute)","46611",9
@@ -611,6 +599,7 @@
 "SSTI","6861",9
 "SSTI","6868",9
 "SSTI","6869",9
+"Routine child health exam","V202",9
 "Intestinal infection","A000",0
 "Bacterial infection (other)","A000",0
 "Intestinal infection","A001",0
@@ -1366,13 +1355,7 @@
 "URI (other)","J028",0
 "URI (other)","J029",0
 "Bacterial infection (other)","J0300",0
-"Tonsillitis","J0300",0
 "Bacterial infection (other)","J0301",0
-"Tonsillitis","J0301",0
-"Tonsillitis","J0380",0
-"Tonsillitis","J0381",0
-"Tonsillitis","J0390",0
-"Tonsillitis","J0391",0
 "URI (other)","J040",0
 "URI (other)","J0410",0
 "URI (other)","J0411",0
@@ -1496,15 +1479,6 @@
 "Sinusitis","J324",0
 "Sinusitis","J328",0
 "Sinusitis","J329",0
-"Tonsillitis","J3501",0
-"Tonsillitis","J3502",0
-"Tonsillitis","J3503",0
-"Tonsillitis","J351",0
-"Tonsillitis","J352",0
-"Tonsillitis","J353",0
-"Tonsillitis","J358",0
-"Tonsillitis","J359",0
-"Tonsillitis","J36",0
 "URI (other)","J390",0
 "URI (other)","J391",0
 "Bronchitis (acute)","J40",0
@@ -1860,3 +1834,4 @@
 "Bacterial infection (other)","P368",0
 "Bacterial infection (other)","P369",0
 "Bacterial infection (other)","P372",0
+"Routine child health exam","Z00129",0
