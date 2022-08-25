@@ -307,9 +307,9 @@ proc delete data=Cohort18; run;
 %refinecohort(); *1sam;
 
 * Get prescription data -------------------------------------------------------;
-%getrx(year=16, yeartag=1)
-%getrx(year=17, yeartag=1)
-%getrx(year=18, yeartag=1)
+%getrx(year=16, yeartag=1sam)
+%getrx(year=17, yeartag=1sam)
+%getrx(year=18, yeartag=1sam)
 
 * Combine prescription data into a single data table --------------------------;
 data d;
