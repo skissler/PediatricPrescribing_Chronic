@@ -401,9 +401,9 @@ proc delete data=d17; run;
 proc delete data=d18; run; 
 
 * Get visit data --------------------------------------------------------------;
-%getvisitvax_post15(year=16, yeartag=1sam)
-%getvisitvax_post15(year=17, yeartag=1sam)
-%getvisitvax_post15(year=18, yeartag=1sam)
+%getvisits_post15(year=16, yeartag=1sam)
+%getvisits_post15(year=17, yeartag=1sam)
+%getvisits_post15(year=18, yeartag=1sam)
 
 
 * Combine visit data into a single data table ---------------------------------;
