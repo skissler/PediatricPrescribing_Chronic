@@ -1,4 +1,4 @@
-1                                                          The SAS System                             11:29 Tuesday, August 23, 2022
+1                                                          The SAS System                            11:50 Thursday, August 25, 2022
 
 NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
 NOTE: SAS (r) Proprietary Software 9.4 (TS1M7) 
@@ -58,12 +58,12 @@ NOTE: PROCEDURE DATASETS used (Total process time):
 7          
 8          * Set path for log;
 9          proc printto log="/home/kissler/PediatricPrescribing_Chronic/logs/extract_data_log.txt" new;
-2                                                          The SAS System                             11:29 Tuesday, August 23, 2022
+2                                                          The SAS System                            11:50 Thursday, August 25, 2022
 
 10         run;
 
 NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
 NOTE: The SAS System used:
-      real time           0.44 seconds
-      cpu time            0.33 seconds
+      real time           1:11.73
+      cpu time            1:11.46
       
