@@ -262,6 +262,81 @@ run;
 
 %mend;
 
+* Get visit data;
+
+%macro getvisits_pre15(year=,yeartag=);
+
+	proc sort data=Cohort;
+		by ENROLID;
+	run;
+
+	* Import 'o' and reduce to those with valid birth date;
+	data o&year. (keep=DX1 DX2 ENROLID SVCDATE BIRTH_DATE CENSOR_DATE);
+		merge Cohort (in=inleft)
+		dat&year..ccaeo&year.&yeartag. (in=inright keep=DX1 DX2 ENROLID SVCDATE);
+		by ENROLID; 
+		IF inleft & inright; 
+	run;
+
+	* Keep only visits between birth and censor date;
+	data o&year. (keep=DX1 DX2 ENROLID DATE ICD);
+		rename SVCDATE=DATE;
+		length DX1 $30. DX2 $30.;
+	    set o&year.(rename=(DX1=DX1_orig DX2=DX2_orig));
+	    where BIRTH_DATE<=SVCDATE<=CENSOR_DATE;
+	    ICD="9";
+	    DX1=DX1_orig;
+	    DX2=DX2_orig;
+	run;
+
+	data visit_df&year. (keep=ENROLID DATE DX1 DX2 ICD);
+		set o&year.;
+	run;
+
+	proc sort data=visit_df&year. nodupkey;
+		by ENROLID DATE;
+	run;
+
+	proc delete data=o&year.; run; 
+
+%mend;
+
+%macro getvisits_post15(year=,yeartag=);
+
+	proc sort data=Cohort;
+		by ENROLID;
+	run;
+
+	* Import 'o' and reduce to those with valid birth date;
+	data o&year. (keep=DX1 DX2 ENROLID SVCDATE DXVER BIRTH_DATE CENSOR_DATE);
+		merge Cohort (in=inleft)
+		dat&year..ccaeo&year.&yeartag. (in=inright keep=DX1 DX2 ENROLID SVCDATE DXVER);
+		by ENROLID; 
+		IF inleft & inright; 
+	run;
+
+	* Keep only visits between birth and censor date;
+	data o&year. (keep=DX1 DX2 ENROLID DATE ICD);
+		rename SVCDATE=DATE DXVER=ICD;
+		length DX1 $30 DX2 $30;
+	    set o&year.(rename=(DX1=DX1_orig DX2=DX2_orig));
+	    where BIRTH_DATE<=SVCDATE<=CENSOR_DATE;
+	    DX1=DX1_orig;
+	    DX2=DX2_orig;
+	run;
+
+	data visit_df&year. (keep=ENROLID DATE DX1 DX2 ICD);
+		set o&year.;
+	run;
+
+	proc sort data=visit_df&year. nodupkey;
+		by ENROLID DATE;
+	run;
+
+	proc delete data=o&year.; run; 
+
+%mend;
+
 * ============================================================================;
 * Run the extraction;
 * ============================================================================;
@@ -316,7 +391,7 @@ proc delete data=Cohort18; run;
 %getrx(year=18, yeartag=1sam)
 
 * Combine prescription data into a single data table --------------------------;
-data d;
+data rx_df;
 	set d16
 		d17
 		d18;
@@ -325,7 +400,22 @@ proc delete data=d16; run;
 proc delete data=d17; run; 
 proc delete data=d18; run; 
 
+* Get visit data --------------------------------------------------------------;
+%getvisitvax_post15(year=16, yeartag=1sam)
+%getvisitvax_post15(year=17, yeartag=1sam)
+%getvisitvax_post15(year=18, yeartag=1sam)
 
+
+* Combine visit data into a single data table ---------------------------------;
+data visit_df;
+	set visit_df16 
+		visit_df17 
+		visit_df18;
+run;
+
+proc delete data=visit_df16; run; 
+proc delete data=visit_df17; run; 
+proc delete data=visit_df18; run; 
 
 
 
@@ -336,8 +426,14 @@ proc export data=Cohort
 	replace;
 run;
 
-proc export data=d
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/d_2022-08-23.csv'
+proc export data=rx_df
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/rx_df_2022-08-23.csv'
+	dbms=csv
+	replace;
+run;
+
+proc export data=visit_df
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/visit_df_2022-08-23.csv'
 	dbms=csv
 	replace;
 run;
