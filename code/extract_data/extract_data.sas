@@ -213,7 +213,7 @@ run;
 		if DURATION>=720;
 	run;
 
-	data Cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE DURATION CENSOR_DATE);
+	data Cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE CENSOR_DATE);
 		set Cohort;
 		CENSOR_DATE=BIRTH_DATE+720;
 		format CENSOR_DATE mmddyys10.;
@@ -226,24 +226,19 @@ run;
 * Run the extraction;
 * ============================================================================;
 
-* extract all birth dates;
-* extract all individuals;
-* restrict to individuals represented for their full first two years;
-* continue with the year-by-year extractions for these individuals; 
-
-* Get birthdates;
+* Get birthdates --------------------------------------------------------------;
 %getbirthdates(year=16, yeartag=1sam); *1sam;
 %getbirthdates(year=17, yeartag=1sam); *1sam;
 %getbirthdates(year=18, yeartag=1sam); *1sam;
 
-* Combine birthdates into a single data table;
+* Combine birthdates into a single data table ---------------------------------;
 data CohortBirthdates;
 	set CohortBirthdates16
 		CohortBirthdates17
 		CohortBirthdates18;
 run;
 
-* Ensure we've only got one birthdate per person;
+* Ensure we've only got one birthdate per person ------------------------------;
 proc sort data=CohortBirthdates;
 	by ENROLID BIRTH_DATE;
 run;
@@ -256,21 +251,13 @@ proc delete data=CohortBirthdates16; run;
 proc delete data=CohortBirthdates17; run; 
 proc delete data=CohortBirthdates18; run; 
 
-* Get cohorts;
+* Get yearly cohorts ----------------------------------------------------------;
 %getcohort(year=16, yeartag=1sam); *1sam;
 %getcohort(year=17, yeartag=1sam); *1sam;
 %getcohort(year=18, yeartag=1sam); *1sam;
 proc delete data=CohortBirthdates; run; 
 
-
-proc export data=Cohort17
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/Cohort17_2022-08-23.csv'
-	dbms=csv
-	replace;
-run;
-
-
-* Combine cohorts into a single data table;
+* Combine yearly cohorts into a single data table -----------------------------;
 data Cohort;
 	set Cohort16
 		Cohort17
@@ -280,17 +267,22 @@ proc delete data=Cohort16; run;
 proc delete data=Cohort17; run; 
 proc delete data=Cohort18; run; 
 
-
-* Refine to a cohort of people present for five straight years;
+* Refine to a cohort of people present for five straight years ----------------;
 %refinecohort(); *1sam;
 
 
-* proc export data=CohortBirthdates
-* 	outfile='/home/kissler/PediatricPrescribing_Chronic/output/CohortBirthdates_2022-08-23.csv'
-* 	dbms=csv
-* 	replace;
-* run;
 
+
+
+
+
+
+
+
+
+
+
+* Save data to output ---------------------------------------------------------;
 proc export data=Cohort
 	outfile='/home/kissler/PediatricPrescribing_Chronic/output/Cohort_2022-08-23.csv'
 	dbms=csv
