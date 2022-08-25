@@ -12,6 +12,9 @@ library(sf)
 source('code/utils.R')
 source('code/utils_private.R')
 
+# Data extraction (only needs to be run once):
+system('sas code/extract_data/extract_data.sas')
+
 # Data import:
 source('code/import_fulldata.R')
 source('code/reduce_under5.R')
@@ -127,11 +130,11 @@ fig_cumrx_respnonresp_abx <-
 		scale_linetype_manual(values=c("All conditions"="solid","Respiratory conditions"="solid","Non-respiratory conditions"="dashed")) +
 		theme(text=element_text(size=10))
 
-ggsave(fig_cumrx_respnonresp_abx, file="figures/resp/cumrx.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_cumrx_respnonresp_abx, file="figures/resp/cumrx.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumrx_respnonresp_abx, file="figures/cumrx.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumrx_respnonresp_abx, file="figures/cumrx.png", width=figwidth, height=figwidth, dpi=figres)
 
-ggsave(fig_cumrx_respnonresp_abx + theme(legend.position='none'), file="figures/resp/cumrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_cumrx_respnonresp_abx + theme(legend.position='none'), file="figures/resp/cumrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumrx_respnonresp_abx + theme(legend.position='none'), file="figures/cumrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumrx_respnonresp_abx + theme(legend.position='none'), file="figures/cumrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
 
 # prescriptions by age 5: 
 combdat_abx %>% 
@@ -374,11 +377,11 @@ fig_first_cumrx_respnonresp_abx <-
 		scale_linetype_manual(values=c("All conditions"="solid","Respiratory conditions"="solid","Non-respiratory conditions"="dashed")) +
 		theme(text=element_text(size=10))
 
-ggsave(fig_first_cumrx_respnonresp_abx, file="figures/resp/firstrx.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_first_cumrx_respnonresp_abx, file="figures/resp/firstrx.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_first_cumrx_respnonresp_abx, file="figures/firstrx.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_first_cumrx_respnonresp_abx, file="figures/firstrx.png", width=figwidth, height=figwidth, dpi=figres)
 
-ggsave(fig_first_cumrx_respnonresp_abx+theme(legend.position="none"), file="figures/resp/firstrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_first_cumrx_respnonresp_abx+theme(legend.position="none"), file="figures/resp/firstrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_first_cumrx_respnonresp_abx+theme(legend.position="none"), file="figures/firstrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_first_cumrx_respnonresp_abx+theme(legend.position="none"), file="figures/firstrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
 
 combdat_abx %>% 	
 	filter(AGE_DAYS_ROUNDED==1800) %>% 
@@ -426,11 +429,11 @@ fig_cumrx_summ <- cumrx_summ %>%
 		theme(text=element_text(size=10)) + 
 		labs(x="Number of antibiotic prescriptions", y="Proportion of children (as density)")
 
-ggsave(fig_cumrx_summ, file="figures/resp/cumrx_summ.pdf",width=figwidth, height=figwidth,dpi=figres)
-ggsave(fig_cumrx_summ, file="figures/resp/cumrx_summ.png",width=figwidth, height=figwidth,dpi=figres)
+ggsave(fig_cumrx_summ, file="figures/cumrx_summ.pdf",width=figwidth, height=figwidth,dpi=figres)
+ggsave(fig_cumrx_summ, file="figures/cumrx_summ.png",width=figwidth, height=figwidth,dpi=figres)
 
-ggsave(fig_cumrx_summ + theme(legend.position="none"), file="figures/resp/cumrx_summ_nokey.pdf",width=figwidth, height=figwidth,dpi=figres)
-ggsave(fig_cumrx_summ + theme(legend.position="none"), file="figures/resp/cumrx_summ_nokey.png",width=figwidth, height=figwidth,dpi=figres)
+ggsave(fig_cumrx_summ + theme(legend.position="none"), file="figures/cumrx_summ_nokey.pdf",width=figwidth, height=figwidth,dpi=figres)
+ggsave(fig_cumrx_summ + theme(legend.position="none"), file="figures/cumrx_summ_nokey.png",width=figwidth, height=figwidth,dpi=figres)
 
 # ==============================================================================
 # Asymmetry in prescribing
@@ -532,11 +535,11 @@ fig_rankcurve_respnonresp_abx <- rxrankdf_abx_combined %>%
 		scale_linetype_manual(values=c("All conditions"="solid","Respiratory conditions"="solid","Non-respiratory conditions"="dashed")) +
 		theme(text=element_text(size=10))
 
-ggsave(fig_rankcurve_respnonresp_abx, file="figures/resp/rankcurve.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_rankcurve_respnonresp_abx, file="figures/resp/rankcurve.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_rankcurve_respnonresp_abx, file="figures/rankcurve.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_rankcurve_respnonresp_abx, file="figures/rankcurve.png", width=figwidth, height=figwidth, dpi=figres)
 
-ggsave(fig_rankcurve_respnonresp_abx+theme(legend.position="none"), file="figures/resp/rankcurve_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_rankcurve_respnonresp_abx+theme(legend.position="none"), file="figures/resp/rankcurve_nokey.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_rankcurve_respnonresp_abx+theme(legend.position="none"), file="figures/rankcurve_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_rankcurve_respnonresp_abx+theme(legend.position="none"), file="figures/rankcurve_nokey.png", width=figwidth, height=figwidth, dpi=figres)
 
 # ==============================================================================
 # Chronic condition analysis
@@ -724,7 +727,7 @@ superlogistictab <- superlogisticdf %>%
 		TRUE~"N.S."
 		))
 
-write_csv(superlogistictab, file="figures/resp/superlogistictab.csv")
+write_csv(superlogistictab, file="figures/superlogistictab.csv")
 
 # ==============================================================================
 # Geography
@@ -754,8 +757,8 @@ rx_summ_msa_nonresp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	select(HHS, STATE, MSA, MSA_POP, MSA_NAME, ISABX, NRX) %>% 
 	filter(ISABX==1)
 
-write_csv(rx_summ_msa_resp, path="figures/resp/rx_summ_msa_resp.csv")
-write_csv(rx_summ_msa_nonresp, path="figures/resp/rx_summ_msa_nonresp.csv")
+write_csv(rx_summ_msa_resp, path="figures/rx_summ_msa_resp.csv")
+write_csv(rx_summ_msa_nonresp, path="figures/rx_summ_msa_nonresp.csv")
 
 first_rx_msa_resp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
@@ -785,6 +788,6 @@ first_rx_msa_nonresp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	as_tibble() %>% 
 	filter(ISABX==1)
 
-write_csv(first_rx_msa_resp, path="figures/resp/first_rx_msa_resp.csv")
-write_csv(first_rx_msa_nonresp, path="figures/resp/first_rx_msa_nonresp.csv")
+write_csv(first_rx_msa_resp, path="figures/first_rx_msa_resp.csv")
+write_csv(first_rx_msa_nonresp, path="figures/first_rx_msa_nonresp.csv")
 

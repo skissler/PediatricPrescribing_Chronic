@@ -1,0 +1,1856 @@
+"COND","DX","ICD"
+"Bacterial infection (other)","0200",9
+"Bacterial infection (other)","0208",9
+"Bacterial infection (other)","0209",9
+"Bacterial infection (other)","0218",9
+"Bacterial infection (other)","0219",9
+"Bacterial infection (other)","0228",9
+"Bacterial infection (other)","0229",9
+"Bacterial infection (other)","0230",9
+"Bacterial infection (other)","0231",9
+"Bacterial infection (other)","0232",9
+"Bacterial infection (other)","0233",9
+"Bacterial infection (other)","0238",9
+"Bacterial infection (other)","0239",9
+"Bacterial infection (other)","024",9
+"Bacterial infection (other)","025",9
+"Bacterial infection (other)","0260",9
+"Bacterial infection (other)","0269",9
+"Bacterial infection (other)","0270",9
+"Bacterial infection (other)","0271",9
+"Bacterial infection (other)","0272",9
+"Bacterial infection (other)","0278",9
+"Bacterial infection (other)","0279",9
+"Bacterial infection (other)","0300",9
+"Bacterial infection (other)","0301",9
+"Bacterial infection (other)","0302",9
+"Bacterial infection (other)","0303",9
+"Bacterial infection (other)","0308",9
+"Bacterial infection (other)","0309",9
+"Bacterial infection (other)","0312",9
+"Bacterial infection (other)","0318",9
+"Bacterial infection (other)","0319",9
+"Bacterial infection (other)","03289",9
+"Bacterial infection (other)","0329",9
+"Bacterial infection (other)","0330",9
+"Bacterial infection (other)","0331",9
+"Bacterial infection (other)","0338",9
+"Bacterial infection (other)","0339",9
+"Bacterial infection (other)","0341",9
+"Bacterial infection (other)","0363",9
+"Bacterial infection (other)","03681",9
+"Bacterial infection (other)","03689",9
+"Bacterial infection (other)","0369",9
+"Bacterial infection (other)","037",9
+"Bacterial infection (other)","0392",9
+"Bacterial infection (other)","0393",9
+"Bacterial infection (other)","0394",9
+"Bacterial infection (other)","0398",9
+"Bacterial infection (other)","0399",9
+"Bacterial infection (other)","0400",9
+"Bacterial infection (other)","0401",9
+"Bacterial infection (other)","0402",9
+"Bacterial infection (other)","0403",9
+"Bacterial infection (other)","04042",9
+"Bacterial infection (other)","04081",9
+"Bacterial infection (other)","04082",9
+"Bacterial infection (other)","04089",9
+"Bacterial infection (other)","0410",9
+"Bacterial infection (other)","04100",9
+"Bacterial infection (other)","04101",9
+"Bacterial infection (other)","04102",9
+"Bacterial infection (other)","04103",9
+"Bacterial infection (other)","04104",9
+"Bacterial infection (other)","04105",9
+"Bacterial infection (other)","04109",9
+"Bacterial infection (other)","0411",9
+"Bacterial infection (other)","04110",9
+"Bacterial infection (other)","04111",9
+"Bacterial infection (other)","04112",9
+"Bacterial infection (other)","04119",9
+"Bacterial infection (other)","0412",9
+"Bacterial infection (other)","0413",9
+"Bacterial infection (other)","0414",9
+"Bacterial infection (other)","04141",9
+"Bacterial infection (other)","04142",9
+"Bacterial infection (other)","04143",9
+"Bacterial infection (other)","04149",9
+"Bacterial infection (other)","0415",9
+"Bacterial infection (other)","0416",9
+"Bacterial infection (other)","0417",9
+"Bacterial infection (other)","0418",9
+"Bacterial infection (other)","04181",9
+"Bacterial infection (other)","04182",9
+"Bacterial infection (other)","04183",9
+"Bacterial infection (other)","04184",9
+"Bacterial infection (other)","04185",9
+"Bacterial infection (other)","04186",9
+"Bacterial infection (other)","04189",9
+"Bacterial infection (other)","0419",9
+"Bacterial infection (other)","390",9
+"Bacterial infection (other)","3929",9
+"Bacterial infection (other)","7953",9
+"Bacterial infection (other)","79531",9
+"Bacterial infection (other)","79539",9
+"Bacterial infection (other)","V090",9
+"Bacterial infection (other)","V091",9
+"Bacterial infection (other)","V092",9
+"Bacterial infection (other)","V093",9
+"Bacterial infection (other)","V094",9
+"Bacterial infection (other)","V0950",9
+"Bacterial infection (other)","V0951",9
+"Bacterial infection (other)","V096",9
+"Bacterial infection (other)","V0970",9
+"Bacterial infection (other)","V0971",9
+"Bacterial infection (other)","V0980",9
+"Bacterial infection (other)","V0981",9
+"Bacterial infection (other)","V0990",9
+"Bacterial infection (other)","V0991",9
+"Bacterial infection (other)","V1204",9
+"Viral infection","0500",9
+"Viral infection","0501",9
+"Viral infection","0502",9
+"Viral infection","0509",9
+"Viral infection","0510",9
+"Viral infection","05101",9
+"Viral infection","05102",9
+"Viral infection","0511",9
+"Viral infection","0512",9
+"Viral infection","0519",9
+"Viral infection","0522",9
+"Viral infection","0527",9
+"Viral infection","0528",9
+"Viral infection","0529",9
+"Viral infection","05310",9
+"Viral infection","05311",9
+"Viral infection","05312",9
+"Viral infection","05313",9
+"Viral infection","05314",9
+"Viral infection","05319",9
+"Viral infection","05371",9
+"Viral infection","05379",9
+"Viral infection","0538",9
+"Viral infection","0539",9
+"Viral infection","0540",9
+"Viral infection","05410",9
+"Viral infection","05411",9
+"Viral infection","05412",9
+"Viral infection","05413",9
+"Viral infection","05419",9
+"Viral infection","0542",9
+"Viral infection","0546",9
+"Viral infection","05471",9
+"Viral infection","05473",9
+"Viral infection","05474",9
+"Viral infection","05479",9
+"Viral infection","0548",9
+"Viral infection","0549",9
+"Viral infection","05579",9
+"Viral infection","0558",9
+"Viral infection","0559",9
+"Viral infection","05600",9
+"Viral infection","05609",9
+"Viral infection","05679",9
+"Viral infection","0568",9
+"Viral infection","0569",9
+"Viral infection","0570",9
+"Viral infection","0578",9
+"Viral infection","0579",9
+"Viral infection","05810",9
+"Viral infection","05811",9
+"Viral infection","05812",9
+"Viral infection","05881",9
+"Viral infection","05882",9
+"Viral infection","05889",9
+"Viral infection","05900",9
+"Viral infection","05901",9
+"Viral infection","05909",9
+"Viral infection","05910",9
+"Viral infection","05911",9
+"Viral infection","05912",9
+"Viral infection","05919",9
+"Viral infection","05920",9
+"Viral infection","05921",9
+"Viral infection","05922",9
+"Viral infection","0598",9
+"Viral infection","0599",9
+"Viral infection","0600",9
+"Viral infection","0601",9
+"Viral infection","0609",9
+"Viral infection","061",9
+"Viral infection","0650",9
+"Viral infection","0651",9
+"Viral infection","0652",9
+"Viral infection","0653",9
+"Viral infection","0654",9
+"Viral infection","0658",9
+"Viral infection","0659",9
+"Viral infection","0660",9
+"Viral infection","0661",9
+"Viral infection","0663",9
+"Viral infection","0664",9
+"Viral infection","06640",9
+"Viral infection","06642",9
+"Viral infection","06649",9
+"Viral infection","0668",9
+"Viral infection","0669",9
+"Viral infection","071",9
+"Viral infection","0720",9
+"Viral infection","0723",9
+"Viral infection","07272",9
+"Viral infection","07279",9
+"Viral infection","0728",9
+"Viral infection","0729",9
+"Viral infection","0737",9
+"Viral infection","0738",9
+"Viral infection","0739",9
+"Viral infection","0740",9
+"Viral infection","0741",9
+"Viral infection","0743",9
+"Viral infection","0748",9
+"Viral infection","075",9
+"Viral infection","0780",9
+"Viral infection","0781",9
+"Viral infection","07810",9
+"Viral infection","07811",9
+"Viral infection","07812",9
+"Viral infection","07819",9
+"Viral infection","0782",9
+"Viral infection","0783",9
+"Viral infection","0784",9
+"Viral infection","0785",9
+"Viral infection","0786",9
+"Viral infection","0787",9
+"Viral infection","07881",9
+"Viral infection","07882",9
+"Viral infection","07888",9
+"Viral infection","07889",9
+"Viral infection","0790",9
+"Viral infection","0791",9
+"Viral infection","0792",9
+"Viral infection","0793",9
+"Viral infection","0794",9
+"Viral infection","07950",9
+"Viral infection","07951",9
+"Viral infection","07952",9
+"Viral infection","07959",9
+"Viral infection","0796",9
+"Viral infection","0798",9
+"Viral infection","07981",9
+"Viral infection","07982",9
+"Viral infection","07983",9
+"Viral infection","07988",9
+"Viral infection","07989",9
+"Viral infection","0799",9
+"Viral infection","07998",9
+"Viral infection","07999",9
+"Viral infection","7908",9
+"Other otitis media","0552",9
+"Other otitis media","38100",9
+"Other otitis media","38101",9
+"Other otitis media","38102",9
+"Other otitis media","38103",9
+"Other otitis media","38104",9
+"Other otitis media","38105",9
+"Other otitis media","38106",9
+"Other otitis media","38110",9
+"Other otitis media","38119",9
+"Other otitis media","38120",9
+"Other otitis media","38129",9
+"Other otitis media","3813",9
+"Other otitis media","3814",9
+"Other otitis media","38150",9
+"Other otitis media","38151",9
+"Other otitis media","38152",9
+"Other otitis media","38160",9
+"Other otitis media","38161",9
+"Other otitis media","38162",9
+"Other otitis media","38163",9
+"Other otitis media","3817",9
+"Other otitis media","38181",9
+"Other otitis media","38189",9
+"Other otitis media","3819",9
+"Acute suppurative otitis media","38200",9
+"Acute suppurative otitis media","38201",9
+"Acute suppurative otitis media","38202",9
+"Other otitis media","3821",9
+"Other otitis media","3822",9
+"Other otitis media","3823",9
+"Other otitis media","3824",9
+"Other otitis media","3829",9
+"Acute mastoiditis","38300",9
+"Acute mastoiditis","38301",9
+"Acute mastoiditis","38302",9
+"Other otitis media","3831",9
+"Other otitis media","38320",9
+"Acute petrositis","38321",9
+"Other otitis media","38322",9
+"Other otitis media","38330",9
+"Other otitis media","38331",9
+"Other otitis media","38332",9
+"Other otitis media","38333",9
+"Other otitis media","38381",9
+"Other otitis media","38389",9
+"Other otitis media","3839",9
+"Other otitis media","38420",9
+"Other otitis media","38421",9
+"Other otitis media","38422",9
+"Other otitis media","38423",9
+"Other otitis media","38424",9
+"Other otitis media","38425",9
+"Other otitis media","38481",9
+"Other otitis media","38482",9
+"Other otitis media","3849",9
+"Other otitis media","38500",9
+"Other otitis media","38501",9
+"Other otitis media","38502",9
+"Other otitis media","38503",9
+"Other otitis media","38509",9
+"Other otitis media","38510",9
+"Other otitis media","38511",9
+"Other otitis media","38512",9
+"Other otitis media","38513",9
+"Other otitis media","38519",9
+"Other otitis media","38521",9
+"Other otitis media","38522",9
+"Other otitis media","38523",9
+"Other otitis media","38524",9
+"Other otitis media","3870",9
+"Other otitis media","3871",9
+"Other otitis media","3872",9
+"Other otitis media","3878",9
+"Other otitis media","3879",9
+"Suppurative labyrinthitis","38633",9
+"Pneumonia","00322",9
+"Pneumonia","0203",9
+"Pneumonia","0204",9
+"Pneumonia","0205",9
+"Pneumonia","0212",9
+"Pneumonia","0221",9
+"Pneumonia","0310",9
+"Pneumonia","0391",9
+"Pneumonia","0521",9
+"Pneumonia","0551",9
+"Pneumonia","0730",9
+"Pneumonia","0830",9
+"Pneumonia","1124",9
+"Pneumonia","1140",9
+"Pneumonia","1144",9
+"Pneumonia","1145",9
+"Pneumonia","11505",9
+"Pneumonia","11515",9
+"Pneumonia","11595",9
+"Pneumonia","1304",9
+"Pneumonia","1363",9
+"Pneumonia","4800",9
+"Pneumonia","4801",9
+"Pneumonia","4802",9
+"Pneumonia","4803",9
+"Pneumonia","4808",9
+"Pneumonia","4809",9
+"Pneumonia","481",9
+"Pneumonia","4820",9
+"Pneumonia","4821",9
+"Pneumonia","4822",9
+"Pneumonia","4823",9
+"Pneumonia","48230",9
+"Pneumonia","48231",9
+"Pneumonia","48232",9
+"Pneumonia","48239",9
+"Pneumonia","4824",9
+"Pneumonia","48240",9
+"Pneumonia","48241",9
+"Pneumonia","48242",9
+"Pneumonia","48249",9
+"Pneumonia","4828",9
+"Pneumonia","48281",9
+"Pneumonia","48282",9
+"Pneumonia","48283",9
+"Pneumonia","48284",9
+"Pneumonia","48289",9
+"Pneumonia","4829",9
+"Pneumonia","483",9
+"Pneumonia","4830",9
+"Pneumonia","4831",9
+"Pneumonia","4838",9
+"Pneumonia","4841",9
+"Pneumonia","4843",9
+"Pneumonia","4845",9
+"Pneumonia","4846",9
+"Pneumonia","4847",9
+"Pneumonia","4848",9
+"Pneumonia","485",9
+"Pneumonia","486",9
+"Pneumonia","5130",9
+"Pneumonia","5171",9
+"Influenza","4870",9
+"Influenza","4871",9
+"Influenza","4878",9
+"Influenza","488",9
+"Influenza","4880",9
+"Influenza","48801",9
+"Influenza","48802",9
+"Influenza","48809",9
+"Influenza","4881",9
+"Influenza","48811",9
+"Influenza","48812",9
+"Influenza","48819",9
+"Influenza","48881",9
+"Influenza","48882",9
+"Influenza","48889",9
+"Bronchitis (acute)","4660",9
+"Bronchitis (acute)","4661",9
+"Bronchitis (acute)","46611",9
+"Bronchitis (acute)","46619",9
+"URI (other)","0320",9
+"URI (other)","0321",9
+"URI (other)","0322",9
+"URI (other)","0323",9
+"Strep pharyngitis","0340",9
+"URI (other)","460",9
+"Sinusitis","4610",9
+"Sinusitis","4611",9
+"Sinusitis","4612",9
+"Sinusitis","4613",9
+"Sinusitis","4618",9
+"Sinusitis","4619",9
+"URI (other)","462",9
+"URI (other)","4640",9
+"URI (other)","46400",9
+"URI (other)","46401",9
+"URI (other)","46410",9
+"URI (other)","46411",9
+"URI (other)","46420",9
+"URI (other)","46421",9
+"URI (other)","46430",9
+"URI (other)","46431",9
+"URI (other)","4644",9
+"URI (other)","46450",9
+"URI (other)","46451",9
+"URI (other)","4650",9
+"URI (other)","4658",9
+"URI (other)","4659",9
+"Sinusitis","4730",9
+"Sinusitis","4731",9
+"Sinusitis","4732",9
+"Sinusitis","4733",9
+"Sinusitis","4738",9
+"Sinusitis","4739",9
+"URI (other)","78491",9
+"Asthma","49300",9
+"Asthma","49301",9
+"Asthma","49302",9
+"Asthma","49310",9
+"Asthma","49311",9
+"Asthma","49312",9
+"Asthma","49320",9
+"Asthma","49321",9
+"Asthma","49322",9
+"Asthma","49381",9
+"Asthma","49382",9
+"Asthma","49390",9
+"Asthma","49391",9
+"Asthma","49392",9
+"Intestinal infection","0010",9
+"Intestinal infection","0011",9
+"Intestinal infection","0019",9
+"Intestinal infection","0020",9
+"Intestinal infection","0021",9
+"Intestinal infection","0022",9
+"Intestinal infection","0023",9
+"Intestinal infection","0029",9
+"Intestinal infection","0030",9
+"Intestinal infection","00320",9
+"Intestinal infection","00329",9
+"Intestinal infection","0038",9
+"Intestinal infection","0039",9
+"Intestinal infection","0040",9
+"Intestinal infection","0041",9
+"Intestinal infection","0042",9
+"Intestinal infection","0043",9
+"Intestinal infection","0048",9
+"Intestinal infection","0049",9
+"Intestinal infection","0050",9
+"Intestinal infection","0051",9
+"Intestinal infection","0052",9
+"Intestinal infection","0053",9
+"Intestinal infection","0054",9
+"Intestinal infection","0058",9
+"Intestinal infection","00581",9
+"Intestinal infection","00589",9
+"Intestinal infection","0059",9
+"Intestinal infection","0060",9
+"Intestinal infection","0061",9
+"Intestinal infection","0062",9
+"Intestinal infection","0063",9
+"Intestinal infection","0064",9
+"Intestinal infection","0065",9
+"Intestinal infection","0066",9
+"Intestinal infection","0068",9
+"Intestinal infection","0069",9
+"Intestinal infection","0070",9
+"Intestinal infection","0071",9
+"Intestinal infection","0072",9
+"Intestinal infection","0073",9
+"Intestinal infection","0074",9
+"Intestinal infection","0075",9
+"Intestinal infection","0078",9
+"Intestinal infection","0079",9
+"Intestinal infection","0080",9
+"Intestinal infection","00800",9
+"Intestinal infection","00801",9
+"Intestinal infection","00802",9
+"Intestinal infection","00803",9
+"Intestinal infection","00804",9
+"Intestinal infection","00809",9
+"Intestinal infection","0081",9
+"Intestinal infection","0082",9
+"Intestinal infection","0083",9
+"Intestinal infection","00841",9
+"Intestinal infection","00842",9
+"Intestinal infection","00843",9
+"Intestinal infection","00844",9
+"Intestinal infection","00845",9
+"Intestinal infection","00846",9
+"Intestinal infection","00847",9
+"Intestinal infection","00849",9
+"Intestinal infection","0085",9
+"Intestinal infection","0086",9
+"Intestinal infection","00861",9
+"Intestinal infection","00862",9
+"Intestinal infection","00863",9
+"Intestinal infection","00864",9
+"Intestinal infection","00865",9
+"Intestinal infection","00866",9
+"Intestinal infection","00867",9
+"Intestinal infection","00869",9
+"Intestinal infection","0088",9
+"Intestinal infection","0090",9
+"Intestinal infection","0091",9
+"Intestinal infection","0092",9
+"Intestinal infection","0093",9
+"Intestinal infection","0211",9
+"Intestinal infection","0222",9
+"UTI","03284",9
+"UTI","59000",9
+"UTI","59001",9
+"UTI","59010",9
+"UTI","59011",9
+"UTI","5902",9
+"UTI","5903",9
+"UTI","59080",9
+"UTI","59081",9
+"UTI","5909",9
+"UTI","5950",9
+"UTI","5951",9
+"UTI","5952",9
+"UTI","5953",9
+"UTI","5954",9
+"UTI","59581",9
+"UTI","59582",9
+"UTI","59589",9
+"UTI","5959",9
+"UTI","5970",9
+"UTI","59780",9
+"UTI","59781",9
+"UTI","59789",9
+"UTI","59800",9
+"UTI","59801",9
+"UTI","5990",9
+"SSTI","0201",9
+"SSTI","0210",9
+"SSTI","0220",9
+"SSTI","0311",9
+"SSTI","03285",9
+"SSTI","035",9
+"SSTI","0390",9
+"SSTI","6800",9
+"SSTI","6801",9
+"SSTI","6802",9
+"SSTI","6803",9
+"SSTI","6804",9
+"SSTI","6805",9
+"SSTI","6806",9
+"SSTI","6807",9
+"SSTI","6808",9
+"SSTI","6809",9
+"SSTI","68100",9
+"SSTI","68101",9
+"SSTI","68102",9
+"SSTI","68110",9
+"SSTI","68111",9
+"SSTI","6819",9
+"SSTI","6820",9
+"SSTI","6821",9
+"SSTI","6822",9
+"SSTI","6823",9
+"SSTI","6824",9
+"SSTI","6825",9
+"SSTI","6826",9
+"SSTI","6827",9
+"SSTI","6828",9
+"SSTI","6829",9
+"SSTI","684",9
+"SSTI","6850",9
+"SSTI","6851",9
+"SSTI","6860",9
+"SSTI","68600",9
+"SSTI","68601",9
+"SSTI","68609",9
+"SSTI","6861",9
+"SSTI","6868",9
+"SSTI","6869",9
+"Intestinal infection","A000",0
+"Bacterial infection (other)","A000",0
+"Intestinal infection","A001",0
+"Bacterial infection (other)","A001",0
+"Intestinal infection","A009",0
+"Bacterial infection (other)","A009",0
+"Intestinal infection","A0100",0
+"Bacterial infection (other)","A0100",0
+"Bacterial infection (other)","A0101",0
+"Bacterial infection (other)","A0102",0
+"Bacterial infection (other)","A0103",0
+"Pneumonia","A0103",0
+"Bacterial infection (other)","A0104",0
+"Bacterial infection (other)","A0105",0
+"Intestinal infection","A0109",0
+"Bacterial infection (other)","A0109",0
+"Intestinal infection","A011",0
+"Bacterial infection (other)","A011",0
+"Intestinal infection","A012",0
+"Bacterial infection (other)","A012",0
+"Intestinal infection","A013",0
+"Bacterial infection (other)","A013",0
+"Intestinal infection","A014",0
+"Bacterial infection (other)","A014",0
+"Intestinal infection","A020",0
+"Bacterial infection (other)","A020",0
+"Bacterial infection (other)","A021",0
+"Bacterial infection (other)","A0220",0
+"Bacterial infection (other)","A0221",0
+"Bacterial infection (other)","A0222",0
+"Pneumonia","A0222",0
+"Bacterial infection (other)","A0223",0
+"Bacterial infection (other)","A0224",0
+"UTI","A0225",0
+"Bacterial infection (other)","A0225",0
+"Intestinal infection","A0229",0
+"Bacterial infection (other)","A0229",0
+"Bacterial infection (other)","A028",0
+"Intestinal infection","A029",0
+"Bacterial infection (other)","A029",0
+"Intestinal infection","A030",0
+"Bacterial infection (other)","A030",0
+"Intestinal infection","A031",0
+"Bacterial infection (other)","A031",0
+"Intestinal infection","A032",0
+"Bacterial infection (other)","A032",0
+"Intestinal infection","A033",0
+"Bacterial infection (other)","A033",0
+"Intestinal infection","A038",0
+"Bacterial infection (other)","A038",0
+"Intestinal infection","A039",0
+"Bacterial infection (other)","A039",0
+"Intestinal infection","A040",0
+"Bacterial infection (other)","A040",0
+"Intestinal infection","A041",0
+"Bacterial infection (other)","A041",0
+"Intestinal infection","A042",0
+"Bacterial infection (other)","A042",0
+"Intestinal infection","A043",0
+"Bacterial infection (other)","A043",0
+"Intestinal infection","A044",0
+"Bacterial infection (other)","A044",0
+"Intestinal infection","A045",0
+"Bacterial infection (other)","A045",0
+"Intestinal infection","A046",0
+"Bacterial infection (other)","A046",0
+"Intestinal infection","A047",0
+"Bacterial infection (other)","A047",0
+"Intestinal infection","A0471",0
+"Bacterial infection (other)","A0471",0
+"Intestinal infection","A0472",0
+"Bacterial infection (other)","A0472",0
+"Intestinal infection","A048",0
+"Bacterial infection (other)","A048",0
+"Intestinal infection","A049",0
+"Bacterial infection (other)","A049",0
+"Intestinal infection","A060",0
+"Intestinal infection","A061",0
+"Intestinal infection","A062",0
+"Intestinal infection","A063",0
+"Intestinal infection","A064",0
+"Intestinal infection","A069",0
+"Intestinal infection","A070",0
+"Intestinal infection","A071",0
+"Intestinal infection","A072",0
+"Intestinal infection","A073",0
+"Intestinal infection","A074",0
+"Intestinal infection","A078",0
+"Intestinal infection","A079",0
+"Intestinal infection","A080",0
+"Viral infection","A080",0
+"Intestinal infection","A0811",0
+"Viral infection","A0811",0
+"Intestinal infection","A0819",0
+"Viral infection","A0819",0
+"Intestinal infection","A082",0
+"Viral infection","A082",0
+"Intestinal infection","A0831",0
+"Viral infection","A0831",0
+"Intestinal infection","A0832",0
+"Viral infection","A0832",0
+"Intestinal infection","A0839",0
+"Viral infection","A0839",0
+"Intestinal infection","A084",0
+"Viral infection","A084",0
+"Intestinal infection","A088",0
+"Viral infection","A088",0
+"Intestinal infection","A09",0
+"URI (other)","A155",0
+"UTI","A1810",0
+"UTI","A1813",0
+"Intestinal infection","A1832",0
+"Bacterial infection (other)","A200",0
+"Bacterial infection (other)","A201",0
+"SSTI","A201",0
+"Bacterial infection (other)","A202",0
+"Pneumonia","A202",0
+"Bacterial infection (other)","A203",0
+"Bacterial infection (other)","A207",0
+"Bacterial infection (other)","A208",0
+"Bacterial infection (other)","A209",0
+"Bacterial infection (other)","A210",0
+"SSTI","A210",0
+"Bacterial infection (other)","A211",0
+"Bacterial infection (other)","A212",0
+"Pneumonia","A212",0
+"Intestinal infection","A213",0
+"Bacterial infection (other)","A213",0
+"Bacterial infection (other)","A217",0
+"Bacterial infection (other)","A218",0
+"Bacterial infection (other)","A219",0
+"Bacterial infection (other)","A220",0
+"SSTI","A220",0
+"Bacterial infection (other)","A221",0
+"Pneumonia","A221",0
+"Intestinal infection","A222",0
+"Bacterial infection (other)","A222",0
+"Bacterial infection (other)","A227",0
+"Bacterial infection (other)","A228",0
+"Bacterial infection (other)","A229",0
+"Bacterial infection (other)","A230",0
+"Bacterial infection (other)","A231",0
+"Bacterial infection (other)","A232",0
+"Bacterial infection (other)","A233",0
+"Bacterial infection (other)","A238",0
+"Bacterial infection (other)","A239",0
+"Bacterial infection (other)","A240",0
+"Bacterial infection (other)","A241",0
+"Bacterial infection (other)","A242",0
+"Bacterial infection (other)","A243",0
+"Bacterial infection (other)","A249",0
+"Bacterial infection (other)","A250",0
+"Bacterial infection (other)","A251",0
+"Bacterial infection (other)","A259",0
+"Bacterial infection (other)","A260",0
+"Bacterial infection (other)","A267",0
+"Bacterial infection (other)","A268",0
+"Bacterial infection (other)","A269",0
+"Bacterial infection (other)","A270",0
+"Bacterial infection (other)","A2781",0
+"Bacterial infection (other)","A2789",0
+"Bacterial infection (other)","A279",0
+"Bacterial infection (other)","A280",0
+"Bacterial infection (other)","A281",0
+"Bacterial infection (other)","A282",0
+"Bacterial infection (other)","A288",0
+"Bacterial infection (other)","A289",0
+"Bacterial infection (other)","A300",0
+"Bacterial infection (other)","A301",0
+"Bacterial infection (other)","A302",0
+"Bacterial infection (other)","A303",0
+"Bacterial infection (other)","A304",0
+"Bacterial infection (other)","A305",0
+"Bacterial infection (other)","A308",0
+"Bacterial infection (other)","A309",0
+"Bacterial infection (other)","A310",0
+"Pneumonia","A310",0
+"Bacterial infection (other)","A311",0
+"SSTI","A311",0
+"Bacterial infection (other)","A312",0
+"Bacterial infection (other)","A318",0
+"Bacterial infection (other)","A319",0
+"Bacterial infection (other)","A320",0
+"Bacterial infection (other)","A3211",0
+"Bacterial infection (other)","A3212",0
+"Bacterial infection (other)","A327",0
+"Bacterial infection (other)","A3281",0
+"Bacterial infection (other)","A3282",0
+"Bacterial infection (other)","A3289",0
+"Bacterial infection (other)","A329",0
+"Bacterial infection (other)","A33",0
+"Bacterial infection (other)","A34",0
+"Bacterial infection (other)","A35",0
+"Bacterial infection (other)","A360",0
+"URI (other)","A360",0
+"Bacterial infection (other)","A361",0
+"URI (other)","A361",0
+"Bacterial infection (other)","A362",0
+"URI (other)","A362",0
+"Bacterial infection (other)","A363",0
+"SSTI","A363",0
+"Bacterial infection (other)","A3681",0
+"Bacterial infection (other)","A3682",0
+"Bacterial infection (other)","A3683",0
+"Bacterial infection (other)","A3684",0
+"UTI","A3685",0
+"Bacterial infection (other)","A3685",0
+"Bacterial infection (other)","A3686",0
+"Bacterial infection (other)","A3689",0
+"Bacterial infection (other)","A369",0
+"Bacterial infection (other)","A3700",0
+"Bacterial infection (other)","A3701",0
+"Pneumonia","A3701",0
+"Bacterial infection (other)","A3710",0
+"Bacterial infection (other)","A3711",0
+"Pneumonia","A3711",0
+"Bacterial infection (other)","A3780",0
+"Bacterial infection (other)","A3781",0
+"Pneumonia","A3781",0
+"Bacterial infection (other)","A3790",0
+"Bacterial infection (other)","A3791",0
+"Pneumonia","A3791",0
+"Other otitis media","A380",0
+"Bacterial infection (other)","A380",0
+"Bacterial infection (other)","A381",0
+"Bacterial infection (other)","A388",0
+"Bacterial infection (other)","A389",0
+"Bacterial infection (other)","A390",0
+"Bacterial infection (other)","A391",0
+"Bacterial infection (other)","A392",0
+"Bacterial infection (other)","A393",0
+"Bacterial infection (other)","A394",0
+"Bacterial infection (other)","A3950",0
+"Bacterial infection (other)","A3951",0
+"Bacterial infection (other)","A3952",0
+"Bacterial infection (other)","A3953",0
+"Bacterial infection (other)","A3981",0
+"Bacterial infection (other)","A3982",0
+"Bacterial infection (other)","A3983",0
+"Bacterial infection (other)","A3984",0
+"Bacterial infection (other)","A3989",0
+"Bacterial infection (other)","A399",0
+"Bacterial infection (other)","A400",0
+"Bacterial infection (other)","A401",0
+"Bacterial infection (other)","A403",0
+"Bacterial infection (other)","A408",0
+"Bacterial infection (other)","A409",0
+"Bacterial infection (other)","A4101",0
+"Bacterial infection (other)","A4102",0
+"Bacterial infection (other)","A411",0
+"Bacterial infection (other)","A412",0
+"Bacterial infection (other)","A413",0
+"Bacterial infection (other)","A414",0
+"Bacterial infection (other)","A4150",0
+"Bacterial infection (other)","A4151",0
+"Bacterial infection (other)","A4152",0
+"Bacterial infection (other)","A4153",0
+"Bacterial infection (other)","A4159",0
+"Bacterial infection (other)","A4181",0
+"Bacterial infection (other)","A4189",0
+"Bacterial infection (other)","A419",0
+"Bacterial infection (other)","A420",0
+"Bacterial infection (other)","A421",0
+"Bacterial infection (other)","A422",0
+"Bacterial infection (other)","A427",0
+"Bacterial infection (other)","A4281",0
+"Bacterial infection (other)","A4282",0
+"Bacterial infection (other)","A4289",0
+"Bacterial infection (other)","A429",0
+"Bacterial infection (other)","A430",0
+"Pneumonia","A430",0
+"Bacterial infection (other)","A431",0
+"SSTI","A431",0
+"Bacterial infection (other)","A438",0
+"Bacterial infection (other)","A439",0
+"Bacterial infection (other)","A440",0
+"Bacterial infection (other)","A441",0
+"Bacterial infection (other)","A448",0
+"Bacterial infection (other)","A449",0
+"Bacterial infection (other)","A46",0
+"SSTI","A46",0
+"Bacterial infection (other)","A480",0
+"Bacterial infection (other)","A481",0
+"Pneumonia","A481",0
+"Bacterial infection (other)","A482",0
+"Bacterial infection (other)","A483",0
+"Bacterial infection (other)","A484",0
+"Bacterial infection (other)","A4852",0
+"Bacterial infection (other)","A488",0
+"Bacterial infection (other)","A4901",0
+"Bacterial infection (other)","A4902",0
+"Bacterial infection (other)","A491",0
+"Bacterial infection (other)","A492",0
+"Bacterial infection (other)","A493",0
+"Bacterial infection (other)","A498",0
+"Bacterial infection (other)","A499",0
+"URI (other)","A5003",0
+"Pneumonia","A5004",0
+"SSTI","A5139",0
+"Pneumonia","A5272",0
+"URI (other)","A5273",0
+"UTI","A5275",0
+"UTI","A5401",0
+"URI (other)","A545",0
+"Pneumonia","A5484",0
+"UTI","A5601",0
+"URI (other)","A564",0
+"UTI","A5903",0
+"Viral infection","A6000",0
+"Viral infection","A6001",0
+"Viral infection","A6002",0
+"Viral infection","A6003",0
+"Viral infection","A6004",0
+"Viral infection","A6009",0
+"Viral infection","A601",0
+"Viral infection","A609",0
+"Viral infection","A630",0
+"Bacterial infection (other)","A70",0
+"Bacterial infection (other)","A710",0
+"Bacterial infection (other)","A711",0
+"Bacterial infection (other)","A719",0
+"Bacterial infection (other)","A740",0
+"Bacterial infection (other)","A7481",0
+"Bacterial infection (other)","A7489",0
+"Bacterial infection (other)","A749",0
+"Bacterial infection (other)","A78",0
+"Viral infection","A800",0
+"Viral infection","A801",0
+"Viral infection","A802",0
+"Viral infection","A8030",0
+"Viral infection","A8039",0
+"Viral infection","A804",0
+"Viral infection","A809",0
+"Viral infection","A8100",0
+"Viral infection","A8101",0
+"Viral infection","A8109",0
+"Viral infection","A811",0
+"Viral infection","A812",0
+"Viral infection","A8181",0
+"Viral infection","A8182",0
+"Viral infection","A8183",0
+"Viral infection","A8189",0
+"Viral infection","A819",0
+"Viral infection","A820",0
+"Viral infection","A821",0
+"Viral infection","A829",0
+"Viral infection","A830",0
+"Viral infection","A831",0
+"Viral infection","A832",0
+"Viral infection","A833",0
+"Viral infection","A834",0
+"Viral infection","A835",0
+"Viral infection","A836",0
+"Viral infection","A838",0
+"Viral infection","A839",0
+"Viral infection","A840",0
+"Viral infection","A841",0
+"Viral infection","A848",0
+"Viral infection","A8481",0
+"Viral infection","A8489",0
+"Viral infection","A849",0
+"Viral infection","A850",0
+"Viral infection","A851",0
+"Viral infection","A852",0
+"Viral infection","A858",0
+"Viral infection","A86",0
+"Viral infection","A870",0
+"Viral infection","A871",0
+"Viral infection","A872",0
+"Viral infection","A878",0
+"Viral infection","A879",0
+"Viral infection","A880",0
+"Viral infection","A881",0
+"Viral infection","A888",0
+"Viral infection","A89",0
+"Viral infection","A90",0
+"Viral infection","A91",0
+"Viral infection","A920",0
+"Viral infection","A921",0
+"Viral infection","A922",0
+"Viral infection","A9230",0
+"Viral infection","A9231",0
+"Viral infection","A9232",0
+"Viral infection","A9239",0
+"Viral infection","A924",0
+"Viral infection","A925",0
+"Viral infection","A928",0
+"Viral infection","A929",0
+"Viral infection","A930",0
+"Viral infection","A931",0
+"Viral infection","A932",0
+"Viral infection","A938",0
+"Viral infection","A94",0
+"Viral infection","A950",0
+"Viral infection","A951",0
+"Viral infection","A959",0
+"Viral infection","A960",0
+"Viral infection","A961",0
+"Viral infection","A962",0
+"Viral infection","A968",0
+"Viral infection","A969",0
+"Viral infection","A980",0
+"Viral infection","A981",0
+"Viral infection","A982",0
+"Viral infection","A983",0
+"Viral infection","A984",0
+"Viral infection","A985",0
+"Viral infection","A988",0
+"Viral infection","A99",0
+"Viral infection","B000",0
+"Viral infection","B001",0
+"Viral infection","B002",0
+"URI (other)","B002",0
+"Viral infection","B003",0
+"Viral infection","B004",0
+"Viral infection","B0050",0
+"Viral infection","B0051",0
+"Viral infection","B0052",0
+"Viral infection","B0053",0
+"Viral infection","B0059",0
+"Viral infection","B007",0
+"Viral infection","B0081",0
+"Viral infection","B0082",0
+"Viral infection","B0089",0
+"Viral infection","B009",0
+"Viral infection","B010",0
+"Viral infection","B0111",0
+"Viral infection","B0112",0
+"Viral infection","B012",0
+"Pneumonia","B012",0
+"Viral infection","B0181",0
+"Viral infection","B0189",0
+"Viral infection","B019",0
+"Viral infection","B020",0
+"Viral infection","B021",0
+"Viral infection","B0221",0
+"Viral infection","B0222",0
+"Viral infection","B0223",0
+"Viral infection","B0224",0
+"Viral infection","B0229",0
+"Viral infection","B0230",0
+"Viral infection","B0231",0
+"Viral infection","B0232",0
+"Viral infection","B0233",0
+"Viral infection","B0234",0
+"Viral infection","B0239",0
+"Viral infection","B027",0
+"Viral infection","B028",0
+"Viral infection","B029",0
+"Viral infection","B03",0
+"Viral infection","B04",0
+"Viral infection","B050",0
+"Viral infection","B051",0
+"Viral infection","B052",0
+"Pneumonia","B052",0
+"Other otitis media","B053",0
+"Viral infection","B053",0
+"Viral infection","B054",0
+"Viral infection","B0581",0
+"Viral infection","B0589",0
+"Viral infection","B059",0
+"Viral infection","B0600",0
+"Viral infection","B0601",0
+"Viral infection","B0602",0
+"Viral infection","B0609",0
+"Viral infection","B0681",0
+"Pneumonia","B0681",0
+"Viral infection","B0682",0
+"Viral infection","B0689",0
+"Viral infection","B069",0
+"Viral infection","B070",0
+"Viral infection","B078",0
+"Viral infection","B079",0
+"Viral infection","B08010",0
+"Viral infection","B08011",0
+"Viral infection","B0802",0
+"Viral infection","B0803",0
+"Viral infection","B0804",0
+"Viral infection","B0809",0
+"Viral infection","B081",0
+"Viral infection","B0820",0
+"Viral infection","B0821",0
+"Viral infection","B0822",0
+"Viral infection","B083",0
+"Viral infection","B084",0
+"Viral infection","B085",0
+"URI (other)","B085",0
+"Viral infection","B0860",0
+"Viral infection","B0861",0
+"Viral infection","B0862",0
+"Viral infection","B0869",0
+"Viral infection","B0870",0
+"Viral infection","B0871",0
+"Viral infection","B0872",0
+"Viral infection","B0879",0
+"Viral infection","B088",0
+"Viral infection","B09",0
+"Viral infection","B1001",0
+"Viral infection","B1009",0
+"Viral infection","B1081",0
+"Viral infection","B1082",0
+"Viral infection","B1089",0
+"Viral infection","B150",0
+"Viral infection","B159",0
+"Viral infection","B160",0
+"Viral infection","B161",0
+"Viral infection","B162",0
+"Viral infection","B169",0
+"Viral infection","B170",0
+"Viral infection","B1710",0
+"Viral infection","B1711",0
+"Viral infection","B172",0
+"Viral infection","B178",0
+"Viral infection","B179",0
+"Viral infection","B180",0
+"Viral infection","B181",0
+"Viral infection","B182",0
+"Viral infection","B188",0
+"Viral infection","B189",0
+"Viral infection","B190",0
+"Viral infection","B1910",0
+"Viral infection","B1911",0
+"Viral infection","B1920",0
+"Viral infection","B1921",0
+"Viral infection","B199",0
+"Viral infection","B250",0
+"Pneumonia","B250",0
+"Viral infection","B251",0
+"Viral infection","B252",0
+"Viral infection","B258",0
+"Viral infection","B259",0
+"Viral infection","B260",0
+"Viral infection","B261",0
+"Viral infection","B262",0
+"Viral infection","B263",0
+"Viral infection","B2681",0
+"Viral infection","B2682",0
+"Viral infection","B2683",0
+"Viral infection","B2684",0
+"Viral infection","B2685",0
+"Viral infection","B2689",0
+"Viral infection","B269",0
+"Viral infection","B2700",0
+"Viral infection","B2701",0
+"Viral infection","B2702",0
+"Viral infection","B2709",0
+"Viral infection","B2710",0
+"Viral infection","B2711",0
+"Viral infection","B2712",0
+"Viral infection","B2719",0
+"Viral infection","B2780",0
+"Viral infection","B2781",0
+"Viral infection","B2782",0
+"Viral infection","B2789",0
+"Viral infection","B2790",0
+"Viral infection","B2791",0
+"Viral infection","B2792",0
+"Viral infection","B2799",0
+"Viral infection","B300",0
+"Viral infection","B301",0
+"Viral infection","B302",0
+"Viral infection","B303",0
+"Viral infection","B308",0
+"Viral infection","B309",0
+"Viral infection","B330",0
+"Viral infection","B331",0
+"Viral infection","B3320",0
+"Viral infection","B3321",0
+"Viral infection","B3322",0
+"Viral infection","B3323",0
+"Viral infection","B3324",0
+"Viral infection","B333",0
+"Viral infection","B334",0
+"Viral infection","B338",0
+"Viral infection","B340",0
+"Viral infection","B341",0
+"Viral infection","B342",0
+"Viral infection","B343",0
+"Viral infection","B344",0
+"Viral infection","B348",0
+"Viral infection","B349",0
+"Pneumonia","B371",0
+"UTI","B3741",0
+"UTI","B3749",0
+"Intestinal infection","B3782",0
+"Pneumonia","B380",0
+"Pneumonia","B381",0
+"Pneumonia","B382",0
+"Pneumonia","B390",0
+"Pneumonia","B391",0
+"Pneumonia","B392",0
+"Pneumonia","B583",0
+"Pneumonia","B59",0
+"Pneumonia","B7781",0
+"Bacterial infection (other)","B950",0
+"Bacterial infection (other)","B951",0
+"Bacterial infection (other)","B952",0
+"Bacterial infection (other)","B953",0
+"Bacterial infection (other)","B954",0
+"Bacterial infection (other)","B955",0
+"Bacterial infection (other)","B9561",0
+"Bacterial infection (other)","B9562",0
+"Bacterial infection (other)","B957",0
+"Bacterial infection (other)","B958",0
+"Bacterial infection (other)","B960",0
+"Bacterial infection (other)","B961",0
+"Bacterial infection (other)","B9620",0
+"Bacterial infection (other)","B9621",0
+"Bacterial infection (other)","B9622",0
+"Bacterial infection (other)","B9623",0
+"Bacterial infection (other)","B9629",0
+"Bacterial infection (other)","B963",0
+"Bacterial infection (other)","B964",0
+"Bacterial infection (other)","B965",0
+"Bacterial infection (other)","B966",0
+"Bacterial infection (other)","B967",0
+"Bacterial infection (other)","B9681",0
+"Bacterial infection (other)","B9682",0
+"Bacterial infection (other)","B9689",0
+"Viral infection","B970",0
+"Viral infection","B9710",0
+"Viral infection","B9711",0
+"Viral infection","B9712",0
+"Viral infection","B9719",0
+"Viral infection","B9721",0
+"Viral infection","B9729",0
+"Viral infection","B9730",0
+"Viral infection","B9731",0
+"Viral infection","B9732",0
+"Viral infection","B9733",0
+"Viral infection","B9734",0
+"Viral infection","B9739",0
+"Viral infection","B974",0
+"Viral infection","B975",0
+"Viral infection","B976",0
+"Viral infection","B977",0
+"Viral infection","B9781",0
+"Viral infection","B9789",0
+"Bacterial infection (other)","G000",0
+"Bacterial infection (other)","G001",0
+"Bacterial infection (other)","G002",0
+"Bacterial infection (other)","G003",0
+"Bacterial infection (other)","G008",0
+"Bacterial infection (other)","G009",0
+"Bacterial infection (other)","G01",0
+"Bacterial infection (other)","G042",0
+"SSTI","H05011",0
+"SSTI","H05012",0
+"SSTI","H05013",0
+"SSTI","H05019",0
+"Other otitis media","H6500",0
+"Other otitis media","H6501",0
+"Other otitis media","H6502",0
+"Other otitis media","H6503",0
+"Other otitis media","H6504",0
+"Other otitis media","H6505",0
+"Other otitis media","H6506",0
+"Other otitis media","H6507",0
+"Other otitis media","H65111",0
+"Other otitis media","H65112",0
+"Other otitis media","H65113",0
+"Other otitis media","H65114",0
+"Other otitis media","H65115",0
+"Other otitis media","H65116",0
+"Other otitis media","H65117",0
+"Other otitis media","H65119",0
+"Other otitis media","H65191",0
+"Other otitis media","H65192",0
+"Other otitis media","H65193",0
+"Other otitis media","H65194",0
+"Other otitis media","H65195",0
+"Other otitis media","H65196",0
+"Other otitis media","H65197",0
+"Other otitis media","H65199",0
+"Other otitis media","H6520",0
+"Other otitis media","H6521",0
+"Other otitis media","H6522",0
+"Other otitis media","H6523",0
+"Other otitis media","H6530",0
+"Other otitis media","H6531",0
+"Other otitis media","H6532",0
+"Other otitis media","H6533",0
+"Other otitis media","H65411",0
+"Other otitis media","H65412",0
+"Other otitis media","H65413",0
+"Other otitis media","H65419",0
+"Other otitis media","H65491",0
+"Other otitis media","H65492",0
+"Other otitis media","H65493",0
+"Other otitis media","H65499",0
+"Other otitis media","H6590",0
+"Other otitis media","H6591",0
+"Other otitis media","H6592",0
+"Other otitis media","H6593",0
+"Acute suppurative otitis media","H66001",0
+"Acute suppurative otitis media","H66002",0
+"Acute suppurative otitis media","H66003",0
+"Acute suppurative otitis media","H66004",0
+"Acute suppurative otitis media","H66005",0
+"Acute suppurative otitis media","H66006",0
+"Acute suppurative otitis media","H66007",0
+"Acute suppurative otitis media","H66009",0
+"Acute suppurative otitis media","H66011",0
+"Acute suppurative otitis media","H66012",0
+"Acute suppurative otitis media","H66013",0
+"Acute suppurative otitis media","H66014",0
+"Acute suppurative otitis media","H66015",0
+"Acute suppurative otitis media","H66016",0
+"Acute suppurative otitis media","H66017",0
+"Acute suppurative otitis media","H66019",0
+"Other otitis media","H6610",0
+"Other otitis media","H6611",0
+"Other otitis media","H6612",0
+"Other otitis media","H6613",0
+"Other otitis media","H6620",0
+"Other otitis media","H6621",0
+"Other otitis media","H6622",0
+"Other otitis media","H6623",0
+"Other otitis media","H663X1",0
+"Other otitis media","H663X2",0
+"Other otitis media","H663X3",0
+"Other otitis media","H663X9",0
+"Other otitis media","H6640",0
+"Other otitis media","H6641",0
+"Other otitis media","H6642",0
+"Other otitis media","H6643",0
+"Other otitis media","H6690",0
+"Other otitis media","H6691",0
+"Other otitis media","H6692",0
+"Other otitis media","H6693",0
+"Acute suppurative otitis media","H671",0
+"Acute suppurative otitis media","H672",0
+"Acute suppurative otitis media","H673",0
+"Acute suppurative otitis media","H679",0
+"Acute mastoiditis","H70001",0
+"Acute mastoiditis","H70002",0
+"Acute mastoiditis","H70003",0
+"Acute mastoiditis","H70009",0
+"Acute mastoiditis","H70011",0
+"Acute mastoiditis","H70012",0
+"Acute mastoiditis","H70013",0
+"Acute mastoiditis","H70019",0
+"Acute mastoiditis","H70091",0
+"Acute mastoiditis","H70092",0
+"Acute mastoiditis","H70093",0
+"Acute mastoiditis","H70099",0
+"Acute petrositis","H70211",0
+"Acute petrositis","H70212",0
+"Acute petrositis","H70213",0
+"Acute petrositis","H70219",0
+"Suppurative labyrinthitis",H8301",0
+"Suppurative labyrinthitis",H8302",0
+"Suppurative labyrinthitis",H8303",0
+"Suppurative labyrinthitis",H8309",0
+"Bacterial infection (other)","I00",0
+"Bacterial infection (other)","I029",0
+"URI (other)","J00",0
+"Sinusitis","J0100",0
+"Sinusitis","J0101",0
+"Sinusitis","J0110",0
+"Sinusitis","J0111",0
+"Sinusitis","J0120",0
+"Sinusitis","J0121",0
+"Sinusitis","J0130",0
+"Sinusitis","J0131",0
+"Sinusitis","J0140",0
+"Sinusitis","J0141",0
+"Sinusitis","J0180",0
+"Sinusitis","J0181",0
+"Sinusitis","J0190",0
+"Sinusitis","J0191",0
+"Strep pharyngitis","J020",0
+"URI (other)","J028",0
+"URI (other)","J029",0
+"Bacterial infection (other)","J0300",0
+"Bacterial infection (other)","J0301",0
+"URI (other)","J040",0
+"URI (other)","J0410",0
+"URI (other)","J0411",0
+"URI (other)","J042",0
+"URI (other)","J0430",0
+"URI (other)","J0431",0
+"URI (other)","J050",0
+"URI (other)","J0510",0
+"URI (other)","J0511",0
+"URI (other)","J060",0
+"URI (other)","J069",0
+"Pneumonia","J09X1",0
+"Influenza","J09X1",0
+"Influenza","J09X2",0
+"Influenza","J09X3",0
+"Influenza","J09X9",0
+"Pneumonia","J1000",0
+"Influenza","J1000",0
+"Pneumonia","J1001",0
+"Influenza","J1001",0
+"Pneumonia","J1008",0
+"Influenza","J1008",0
+"Influenza","J101",0
+"Influenza","J102",0
+"Influenza","J1081",0
+"Influenza","J1082",0
+"Other otitis media","J1083",0
+"Influenza","J1083",0
+"Influenza","J1089",0
+"Pneumonia","J1100",0
+"Influenza","J1100",0
+"Pneumonia","J1108",0
+"Influenza","J1108",0
+"Influenza","J111",0
+"Influenza","J112",0
+"Influenza","J1181",0
+"Influenza","J1182",0
+"Other otitis media","J1183",0
+"Influenza","J1183",0
+"Influenza","J1189",0
+"Viral infection","J120",0
+"Pneumonia","J120",0
+"Viral infection","J121",0
+"Pneumonia","J121",0
+"Viral infection","J122",0
+"Pneumonia","J122",0
+"Viral infection","J123",0
+"Pneumonia","J123",0
+"Viral infection","J1281",0
+"Pneumonia","J1281",0
+"Viral infection","J1289",0
+"Pneumonia","J1289",0
+"Viral infection","J129",0
+"Pneumonia","J129",0
+"Bacterial infection (other)","J13",0
+"Pneumonia","J13",0
+"Bacterial infection (other)","J14",0
+"Pneumonia","J14",0
+"Bacterial infection (other)","J150",0
+"Pneumonia","J150",0
+"Bacterial infection (other)","J151",0
+"Pneumonia","J151",0
+"Bacterial infection (other)","J1520",0
+"Pneumonia","J1520",0
+"Bacterial infection (other)","J15211",0
+"Pneumonia","J15211",0
+"Bacterial infection (other)","J15212",0
+"Pneumonia","J15212",0
+"Bacterial infection (other)","J1529",0
+"Pneumonia","J1529",0
+"Bacterial infection (other)","J153",0
+"Pneumonia","J153",0
+"Bacterial infection (other)","J154",0
+"Pneumonia","J154",0
+"Bacterial infection (other)","J155",0
+"Pneumonia","J155",0
+"Bacterial infection (other)","J156",0
+"Pneumonia","J156",0
+"Bacterial infection (other)","J157",0
+"Pneumonia","J157",0
+"Bacterial infection (other)","J158",0
+"Pneumonia","J158",0
+"Bacterial infection (other)","J159",0
+"Pneumonia","J159",0
+"Bacterial infection (other)","J160",0
+"Pneumonia","J160",0
+"Pneumonia","J168",0
+"Pneumonia","J17",0
+"Pneumonia","J180",0
+"Pneumonia","J181",0
+"Pneumonia","J188",0
+"Pneumonia","J189",0
+"Bacterial infection (other)","J200",0
+"Bronchitis (acute)","J200",0
+"Bacterial infection (other)","J201",0
+"Bronchitis (acute)","J201",0
+"Bacterial infection (other)","J202",0
+"Bronchitis (acute)","J202",0
+"Viral infection","J203",0
+"Bronchitis (acute)","J203",0
+"Viral infection","J204",0
+"Bronchitis (acute)","J204",0
+"Viral infection","J205",0
+"Bronchitis (acute)","J205",0
+"Viral infection","J206",0
+"Bronchitis (acute)","J206",0
+"Viral infection","J207",0
+"Bronchitis (acute)","J207",0
+"Bronchitis (acute)","J208",0
+"Bronchitis (acute)","J209",0
+"Viral infection","J210",0
+"Bronchitis (acute)","J210",0
+"Viral infection","J211",0
+"Bronchitis (acute)","J211",0
+"Bronchitis (acute)","J218",0
+"Bronchitis (acute)","J219",0
+"Sinusitis","J320",0
+"Sinusitis","J321",0
+"Sinusitis","J322",0
+"Sinusitis","J323",0
+"Sinusitis","J324",0
+"Sinusitis","J328",0
+"Sinusitis","J329",0
+"URI (other)","J390",0
+"URI (other)","J391",0
+"Bronchitis (acute)","J40",0
+"Asthma","J4520",0
+"Asthma","J4521",0
+"Asthma","J4522",0
+"Asthma","J4530",0
+"Asthma","J4531",0
+"Asthma","J4532",0
+"Asthma","J4540",0
+"Asthma","J4541",0
+"Asthma","J4542",0
+"Asthma","J4550",0
+"Asthma","J4551",0
+"Asthma","J4552",0
+"Asthma","J45901",0
+"Asthma","J45902",0
+"Asthma","J45909",0
+"Asthma","J45990",0
+"Asthma","J45991",0
+"Asthma","J45998",0
+"Pneumonia","J851",0
+"Pneumonia","J95851",0
+"Bacterial infection (other)","K652",0
+"SSTI","L00",0
+"SSTI","L0100",0
+"SSTI","L0101",0
+"SSTI","L0102",0
+"SSTI","L0103",0
+"SSTI","L0109",0
+"SSTI","L011",0
+"SSTI","L0201",0
+"SSTI","L0202",0
+"SSTI","L0203",0
+"SSTI","L0211",0
+"SSTI","L0212",0
+"SSTI","L0213",0
+"SSTI","L02211",0
+"SSTI","L02212",0
+"SSTI","L02213",0
+"SSTI","L02214",0
+"SSTI","L02215",0
+"SSTI","L02216",0
+"SSTI","L02219",0
+"SSTI","L02221",0
+"SSTI","L02222",0
+"SSTI","L02223",0
+"SSTI","L02224",0
+"SSTI","L02225",0
+"SSTI","L02226",0
+"SSTI","L02229",0
+"SSTI","L02231",0
+"SSTI","L02232",0
+"SSTI","L02233",0
+"SSTI","L02234",0
+"SSTI","L02235",0
+"SSTI","L02236",0
+"SSTI","L02239",0
+"SSTI","L0231",0
+"SSTI","L0232",0
+"SSTI","L0233",0
+"SSTI","L02411",0
+"SSTI","L02412",0
+"SSTI","L02413",0
+"SSTI","L02414",0
+"SSTI","L02415",0
+"SSTI","L02416",0
+"SSTI","L02419",0
+"SSTI","L02421",0
+"SSTI","L02422",0
+"SSTI","L02423",0
+"SSTI","L02424",0
+"SSTI","L02425",0
+"SSTI","L02426",0
+"SSTI","L02429",0
+"SSTI","L02431",0
+"SSTI","L02432",0
+"SSTI","L02433",0
+"SSTI","L02434",0
+"SSTI","L02435",0
+"SSTI","L02436",0
+"SSTI","L02439",0
+"SSTI","L02511",0
+"SSTI","L02512",0
+"SSTI","L02519",0
+"SSTI","L02521",0
+"SSTI","L02522",0
+"SSTI","L02529",0
+"SSTI","L02531",0
+"SSTI","L02532",0
+"SSTI","L02539",0
+"SSTI","L02611",0
+"SSTI","L02612",0
+"SSTI","L02619",0
+"SSTI","L02621",0
+"SSTI","L02622",0
+"SSTI","L02629",0
+"SSTI","L02631",0
+"SSTI","L02632",0
+"SSTI","L02639",0
+"SSTI","L02811",0
+"SSTI","L02818",0
+"SSTI","L02821",0
+"SSTI","L02828",0
+"SSTI","L02831",0
+"SSTI","L02838",0
+"SSTI","L0291",0
+"SSTI","L0292",0
+"SSTI","L0293",0
+"SSTI","L03011",0
+"SSTI","L03012",0
+"SSTI","L03019",0
+"SSTI","L03021",0
+"SSTI","L03022",0
+"SSTI","L03029",0
+"SSTI","L03031",0
+"SSTI","L03032",0
+"SSTI","L03039",0
+"SSTI","L03041",0
+"SSTI","L03042",0
+"SSTI","L03049",0
+"SSTI","L03111",0
+"SSTI","L03112",0
+"SSTI","L03113",0
+"SSTI","L03114",0
+"SSTI","L03115",0
+"SSTI","L03116",0
+"SSTI","L03119",0
+"SSTI","L03121",0
+"SSTI","L03122",0
+"SSTI","L03123",0
+"SSTI","L03124",0
+"SSTI","L03125",0
+"SSTI","L03126",0
+"SSTI","L03129",0
+"SSTI","L03211",0
+"SSTI","L03212",0
+"SSTI","L03213",0
+"SSTI","L03221",0
+"SSTI","L03222",0
+"SSTI","L03311",0
+"SSTI","L03312",0
+"SSTI","L03313",0
+"SSTI","L03314",0
+"SSTI","L03315",0
+"SSTI","L03316",0
+"SSTI","L03317",0
+"SSTI","L03319",0
+"SSTI","L03321",0
+"SSTI","L03322",0
+"SSTI","L03323",0
+"SSTI","L03324",0
+"SSTI","L03325",0
+"SSTI","L03326",0
+"SSTI","L03327",0
+"SSTI","L03329",0
+"SSTI","L03811",0
+"SSTI","L03818",0
+"SSTI","L03891",0
+"SSTI","L03898",0
+"SSTI","L0390",0
+"SSTI","L0391",0
+"SSTI","L040",0
+"SSTI","L041",0
+"SSTI","L042",0
+"SSTI","L043",0
+"SSTI","L048",0
+"SSTI","L049",0
+"SSTI","L0501",0
+"SSTI","L0502",0
+"SSTI","L0591",0
+"SSTI","L0592",0
+"SSTI","L080",0
+"SSTI","L081",0
+"SSTI","L0881",0
+"SSTI","L0882",0
+"SSTI","L0889",0
+"SSTI","L089",0
+"SSTI","L303",0
+"Bacterial infection (other)","M0000",0
+"Bacterial infection (other)","M00011",0
+"Bacterial infection (other)","M00012",0
+"Bacterial infection (other)","M00019",0
+"Bacterial infection (other)","M00021",0
+"Bacterial infection (other)","M00022",0
+"Bacterial infection (other)","M00029",0
+"Bacterial infection (other)","M00031",0
+"Bacterial infection (other)","M00032",0
+"Bacterial infection (other)","M00039",0
+"Bacterial infection (other)","M00041",0
+"Bacterial infection (other)","M00042",0
+"Bacterial infection (other)","M00049",0
+"Bacterial infection (other)","M00051",0
+"Bacterial infection (other)","M00052",0
+"Bacterial infection (other)","M00059",0
+"Bacterial infection (other)","M00061",0
+"Bacterial infection (other)","M00062",0
+"Bacterial infection (other)","M00069",0
+"Bacterial infection (other)","M00071",0
+"Bacterial infection (other)","M00072",0
+"Bacterial infection (other)","M00079",0
+"Bacterial infection (other)","M0008",0
+"Bacterial infection (other)","M0009",0
+"Bacterial infection (other)","M0010",0
+"Bacterial infection (other)","M00111",0
+"Bacterial infection (other)","M00112",0
+"Bacterial infection (other)","M00119",0
+"Bacterial infection (other)","M00121",0
+"Bacterial infection (other)","M00122",0
+"Bacterial infection (other)","M00129",0
+"Bacterial infection (other)","M00131",0
+"Bacterial infection (other)","M00132",0
+"Bacterial infection (other)","M00139",0
+"Bacterial infection (other)","M00141",0
+"Bacterial infection (other)","M00142",0
+"Bacterial infection (other)","M00149",0
+"Bacterial infection (other)","M00151",0
+"Bacterial infection (other)","M00152",0
+"Bacterial infection (other)","M00159",0
+"Bacterial infection (other)","M00161",0
+"Bacterial infection (other)","M00162",0
+"Bacterial infection (other)","M00169",0
+"Bacterial infection (other)","M00171",0
+"Bacterial infection (other)","M00172",0
+"Bacterial infection (other)","M00179",0
+"Bacterial infection (other)","M0018",0
+"Bacterial infection (other)","M0019",0
+"Bacterial infection (other)","M0020",0
+"Bacterial infection (other)","M00211",0
+"Bacterial infection (other)","M00212",0
+"Bacterial infection (other)","M00219",0
+"Bacterial infection (other)","M00221",0
+"Bacterial infection (other)","M00222",0
+"Bacterial infection (other)","M00229",0
+"Bacterial infection (other)","M00231",0
+"Bacterial infection (other)","M00232",0
+"Bacterial infection (other)","M00239",0
+"Bacterial infection (other)","M00241",0
+"Bacterial infection (other)","M00242",0
+"Bacterial infection (other)","M00249",0
+"Bacterial infection (other)","M00251",0
+"Bacterial infection (other)","M00252",0
+"Bacterial infection (other)","M00259",0
+"Bacterial infection (other)","M00261",0
+"Bacterial infection (other)","M00262",0
+"Bacterial infection (other)","M00269",0
+"Bacterial infection (other)","M00271",0
+"Bacterial infection (other)","M00272",0
+"Bacterial infection (other)","M00279",0
+"Bacterial infection (other)","M0028",0
+"Bacterial infection (other)","M0029",0
+"Bacterial infection (other)","M0080",0
+"Bacterial infection (other)","M00811",0
+"Bacterial infection (other)","M00812",0
+"Bacterial infection (other)","M00819",0
+"Bacterial infection (other)","M00821",0
+"Bacterial infection (other)","M00822",0
+"Bacterial infection (other)","M00829",0
+"Bacterial infection (other)","M00831",0
+"Bacterial infection (other)","M00832",0
+"Bacterial infection (other)","M00839",0
+"Bacterial infection (other)","M00841",0
+"Bacterial infection (other)","M00842",0
+"Bacterial infection (other)","M00849",0
+"Bacterial infection (other)","M00851",0
+"Bacterial infection (other)","M00852",0
+"Bacterial infection (other)","M00859",0
+"Bacterial infection (other)","M00861",0
+"Bacterial infection (other)","M00862",0
+"Bacterial infection (other)","M00869",0
+"Bacterial infection (other)","M00871",0
+"Bacterial infection (other)","M00872",0
+"Bacterial infection (other)","M00879",0
+"Bacterial infection (other)","M0088",0
+"Bacterial infection (other)","M0089",0
+"Bacterial infection (other)","M009",0
+"UTI","N10",0
+"UTI","N110",0
+"UTI","N111",0
+"UTI","N118",0
+"UTI","N119",0
+"UTI","N12",0
+"UTI","N136",0
+"UTI","N151",0
+"UTI","N3000",0
+"UTI","N3001",0
+"UTI","N3010",0
+"UTI","N3011",0
+"UTI","N3020",0
+"UTI","N3021",0
+"UTI","N3030",0
+"UTI","N3031",0
+"UTI","N3040",0
+"UTI","N3041",0
+"UTI","N3080",0
+"UTI","N3081",0
+"UTI","N3090",0
+"UTI","N3091",0
+"UTI","N340",0
+"UTI","N341",0
+"UTI","N342",0
+"UTI","N343",0
+"UTI","N390",0
+"UTI","O2300",0
+"UTI","O2301",0
+"UTI","O2302",0
+"UTI","O2303",0
+"UTI","O2310",0
+"UTI","O2311",0
+"UTI","O2312",0
+"UTI","O2313",0
+"UTI","O2320",0
+"UTI","O2321",0
+"UTI","O2322",0
+"UTI","O2323",0
+"UTI","O2330",0
+"UTI","O2331",0
+"UTI","O2332",0
+"UTI","O2333",0
+"UTI","O2340",0
+"UTI","O2341",0
+"UTI","O2342",0
+"UTI","O2343",0
+"Viral infection","O2640",0
+"Viral infection","O2641",0
+"Viral infection","O2642",0
+"Viral infection","O2643",0
+"UTI","O8620",0
+"UTI","O8621",0
+"UTI","O8622",0
+"UTI","O8629",0
+"Viral infection","P230",0
+"Bacterial infection (other)","P231",0
+"Bacterial infection (other)","P232",0
+"Bacterial infection (other)","P233",0
+"Bacterial infection (other)","P234",0
+"Bacterial infection (other)","P235",0
+"Bacterial infection (other)","P236",0
+"Viral infection","P350",0
+"Viral infection","P351",0
+"Viral infection","P352",0
+"Viral infection","P354",0
+"Viral infection","P358",0
+"Viral infection","P359",0
+"Bacterial infection (other)","P360",0
+"Bacterial infection (other)","P3610",0
+"Bacterial infection (other)","P3619",0
+"Bacterial infection (other)","P362",0
+"Bacterial infection (other)","P3630",0
+"Bacterial infection (other)","P3639",0
+"Bacterial infection (other)","P364",0
+"Bacterial infection (other)","P365",0
+"Bacterial infection (other)","P368",0
+"Bacterial infection (other)","P369",0
+"Bacterial infection (other)","P372",0
