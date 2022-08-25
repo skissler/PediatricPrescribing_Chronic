@@ -8,7 +8,6 @@ figres <- 600
 memb_df <- memb_df[STATE!='Hawaii']
 rx_df <- memb_df[,.(ENROLID)][rx_df, on=.(ENROLID), nomatch=0]
 visit_df <- memb_df[,.(ENROLID)][visit_df, on=.(ENROLID), nomatch=0]
-vax_df <- memb_df[,.(ENROLID)][vax_df, on=.(ENROLID), nomatch=0]
 
 # Add well child visits to conditions: 
 visit_df[is.na(COND) & (DX1=="V202" | DX2=="V202") & ICD=="9", COND:="Routine health exam"]
