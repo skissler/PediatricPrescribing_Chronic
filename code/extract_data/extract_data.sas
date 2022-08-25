@@ -18,8 +18,8 @@ libname out "/home/kissler/PediatricPrescribing_Chronic/output/buildfiles/";
 
 * Specify data libraries;
 libname dathome "/data/markscan_authorized/data";
-libname dat08 "/data/markscan_authorized_users/dat08";
-libname dat09 "/data/markscan_authorized_users/dat09";
+libname dat08 "/data/markscan_authorized_users/kissler/dat08";
+libname dat09 "/data/markscan_authorized_users/kissler/dat09";
 libname dat10 "/data/markscan_authorized/data/commercial/2010";
 libname dat11 "/data/markscan_authorized/data/commercial/2011";
 libname dat12 "/data/markscan_authorized/data/commercial/2012";
