@@ -72,7 +72,7 @@ run;
 %macro getbirthdates(year=,yeartag=);
 
 	* Initial import of inpatient services table;
-	data CohortBirthdates&year. (keep=ENROLID SVCDATE);
+	data cohortBirthdates&year. (keep=ENROLID SVCDATE);
 		set dat&year..ccaes&year.&yeartag. (keep=AGE DX1 DX2 ENROLID SVCDATE where=(AGE=0 and (substr(DX1,1,3)="V30" or 
 				substr(DX1,1,3)="V31" or 
 				substr(DX1,1,3)="V32" or 
@@ -94,13 +94,13 @@ run;
 	run;
 
 	* Sort by visit date;
-	proc sort data=CohortBirthdates&year.;
+	proc sort data=cohortBirthdates&year.;
 		by ENROLID SVCDATE;
 	run;
 
 	* For each person, pull out the earliest date (the birth date);
-	data CohortBirthdates&year. (keep=ENROLID BIRTH_DATE);
-		set CohortBirthdates&year. (rename=(SVCDATE=BIRTH_DATE));
+	data cohortBirthdates&year. (keep=ENROLID BIRTH_DATE);
+		set cohortBirthdates&year. (rename=(SVCDATE=BIRTH_DATE));
 		by ENROLID;
 		if first.ENROLID;
 	run;
@@ -111,51 +111,51 @@ run;
 %macro getcohort(year=,yeartag=);
 
 	* Initial import, ensuring we have RX data and age <= 5;
-	data Cohort&year. (keep=DT_MONTH DT_YEAR DTEND EGEOLOC MSA ENROLID MEMDAYS SEX);
+	data cohort&year. (keep=DT_MONTH DT_YEAR DTEND EGEOLOC MSA ENROLID MEMDAYS SEX);
 		set dat&year..ccaet&year.&yeartag. (keep=AGE RX DTEND EGEOLOC MSA ENROLID MEMDAYS SEX where=(RX="1" and AGE<=5));
 		DT_MONTH=month(DTEND);
 		DT_YEAR=year(DTEND);
 	run;
 
 	* Restrict to valid states;
-	proc sort data=Cohort&year.;
+	proc sort data=cohort&year.;
 		by EGEOLOC;
 	run;
 
-	data Cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE);
+	data cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE);
 		merge EGEOLOClist (in=inleft)
-		Cohort&year. (in=inright);
+		cohort&year. (in=inright);
 		by EGEOLOC; 
 		IF inleft & inright; 
 	run;
 
 	* Restrict to those with a birth date;
-	proc sort data=Cohort&year.;
+	proc sort data=cohort&year.;
 		by ENROLID;
 	run;
 
-	data Cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE);
-		merge CohortBirthdates (in=inleft)
-		Cohort&year. (in=inright);
+	data cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE);
+		merge cohortBirthdates (in=inleft)
+		cohort&year. (in=inright);
 		by ENROLID; 
 		IF inleft & inright; 
 	run;
 
 	* Keep only rows corresponding to full months or the birth month;
-	proc sort data=Cohort&year.;
+	proc sort data=cohort&year.;
 		by DT_MONTH;
 	run;
 
-	data Cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE NDAYS where=((MEMDAYS>=NDAYS) or (month(BIRTH_DATE)=DT_MONTH and year(BIRTH_DATE)=DT_YEAR)));
+	data cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE NDAYS where=((MEMDAYS>=NDAYS) or (month(BIRTH_DATE)=DT_MONTH and year(BIRTH_DATE)=DT_YEAR)));
 		merge dayspermonth (in=inleft)
-		Cohort&year. (in=inright);
+		cohort&year. (in=inright);
 		by DT_MONTH;
 		IF inleft & inright;
 	run;
 
 	* Keep only relevant columns;
-	data Cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE);
-		set Cohort&year.;
+	data cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE);
+		set cohort&year.;
 	run;
 
 %mend;
@@ -164,59 +164,59 @@ run;
 %macro refinecohort();
 
 	* Sort the cohort table;
-	proc sort data=Cohort;
+	proc sort data=cohort;
 		by ENROLID DT_YEAR DT_MONTH;
 	run;
 
 	* Count months from birth;
-	data Cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT);
-		set Cohort;
+	data cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT);
+		set cohort;
 		COUNT + 1;
 		by ENROLID;
 		if first.ENROLID then COUNT = 1;
 	run;
 
 	* Append an index column;
-	data Cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
-		set Cohort;
+	data cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
+		set cohort;
 		BIRTHDIFF=12*(DT_YEAR-year(BIRTH_DATE))+(DT_MONTH-month(BIRTH_DATE))+1;
 	run;
 
 	* keep only rows where index = months from birth, which gives contiguous months from birth;
-	data Cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF where=(COUNT=BIRTHDIFF));
-		set Cohort;
+	data cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF where=(COUNT=BIRTHDIFF));
+		set cohort;
 	run;
 
 	* keep only one row per person (the last);
-	proc sort data=Cohort;
+	proc sort data=cohort;
 		by ENROLID COUNT;
 	run;
 
-	data Cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE);
-		set Cohort;
+	data cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE);
+		set cohort;
 		by ENROLID;
 		if last.ENROLID;
 	run;
 
 	* Calculate how long each person is followed;
-	data Cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE DURATION);
-		set Cohort;
+	data cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE DURATION);
+		set cohort;
 		DURATION=DTEND-BIRTH_DATE;
 	run;
 
 	* Censor people after 5 years (1825 days);
-	proc sort data=Cohort;
+	proc sort data=cohort;
 		by DURATION;
 	run;
 
-	data Cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE DURATION);
-		set Cohort;
+	data cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE DURATION);
+		set cohort;
 		by DURATION;
 		if DURATION>=1825;
 	run;
 
-	data Cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE CENSOR_DATE);
-		set Cohort;
+	data cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE CENSOR_DATE);
+		set cohort;
 		CENSOR_DATE=BIRTH_DATE+1825;
 		format CENSOR_DATE mmddyys10.;
 	run;
@@ -226,13 +226,13 @@ run;
 * Get prescription data;
 %macro getrx(year=,yeartag=);
 
-	proc sort data=Cohort;
+	proc sort data=cohort;
 		by ENROLID;
 	run;
 
 	* Import 'd' and reduce to those with valid birth date;
 	data d&year. (keep=ENROLID NDCNUM REFILL SVCDATE BIRTH_DATE CENSOR_DATE);
-		merge Cohort (in=inleft)
+		merge cohort (in=inleft)
 		dat&year..ccaed&year.&yeartag. (in=inright keep=ENROLID NDCNUM REFILL SVCDATE); *  where=(REFILL=0);
 		by ENROLID; 
 		IF inleft & inright; 
@@ -267,13 +267,13 @@ run;
 * Get visit data;
 %macro getvisits_pre15(year=,yeartag=);
 
-	proc sort data=Cohort;
+	proc sort data=cohort;
 		by ENROLID;
 	run;
 
 	* Import 'o' and reduce to those with valid birth date;
 	data o&year. (keep=DX1 DX2 ENROLID SVCDATE BIRTH_DATE CENSOR_DATE);
-		merge Cohort (in=inleft)
+		merge cohort (in=inleft)
 		dat&year..ccaeo&year.&yeartag. (in=inright keep=DX1 DX2 ENROLID SVCDATE);
 		by ENROLID; 
 		IF inleft & inright; 
@@ -304,13 +304,13 @@ run;
 
 %macro getvisits_post15(year=,yeartag=);
 
-	proc sort data=Cohort;
+	proc sort data=cohort;
 		by ENROLID;
 	run;
 
 	* Import 'o' and reduce to those with valid birth date;
 	data o&year. (keep=DX1 DX2 ENROLID SVCDATE DXVER BIRTH_DATE CENSOR_DATE);
-		merge Cohort (in=inleft)
+		merge cohort (in=inleft)
 		dat&year..ccaeo&year.&yeartag. (in=inright keep=DX1 DX2 ENROLID SVCDATE DXVER);
 		by ENROLID; 
 		IF inleft & inright; 
@@ -343,65 +343,145 @@ run;
 * ============================================================================;
 
 * Get birthdates --------------------------------------------------------------;
+%getbirthdates(year=08, yeartag=1sam); *1sam;
+%getbirthdates(year=09, yeartag=1sam); *1sam;
+%getbirthdates(year=10, yeartag=1sam); *1sam;
+%getbirthdates(year=11, yeartag=1sam); *1sam;
+%getbirthdates(year=12, yeartag=1sam); *1sam;
+%getbirthdates(year=13, yeartag=1sam); *1sam;
+%getbirthdates(year=14, yeartag=1sam); *1sam;
+%getbirthdates(year=15, yeartag=1sam); *1sam;
 %getbirthdates(year=16, yeartag=1sam); *1sam;
 %getbirthdates(year=17, yeartag=1sam); *1sam;
 %getbirthdates(year=18, yeartag=1sam); *1sam;
 
 * Combine birthdates into a single data table ---------------------------------;
-data CohortBirthdates;
-	set CohortBirthdates16
-		CohortBirthdates17
-		CohortBirthdates18;
+data cohortBirthdates;
+	set cohortBirthdates08
+		cohortBirthdates09
+		cohortBirthdates10
+		cohortBirthdates11
+		cohortBirthdates12
+		cohortBirthdates13
+		cohortBirthdates14
+		cohortBirthdates15
+		cohortBirthdates16
+		cohortBirthdates17
+		cohortBirthdates18;
 run;
 
 * Ensure we've only got one birthdate per person ------------------------------;
-proc sort data=CohortBirthdates;
+proc sort data=cohortBirthdates;
 	by ENROLID BIRTH_DATE;
 run;
-data CohortBirthdates (keep=ENROLID BIRTH_DATE);
-	set CohortBirthdates;
+data cohortBirthdates (keep=ENROLID BIRTH_DATE);
+	set cohortBirthdates;
 	by ENROLID;
 	if first.ENROLID;
 run;
-proc delete data=CohortBirthdates16; run; 
-proc delete data=CohortBirthdates17; run; 
-proc delete data=CohortBirthdates18; run; 
+proc delete data=cohortBirthdates08; run; 
+proc delete data=cohortBirthdates09; run; 
+proc delete data=cohortBirthdates10; run; 
+proc delete data=cohortBirthdates11; run; 
+proc delete data=cohortBirthdates12; run; 
+proc delete data=cohortBirthdates13; run; 
+proc delete data=cohortBirthdates14; run; 
+proc delete data=cohortBirthdates15; run; 
+proc delete data=cohortBirthdates16; run; 
+proc delete data=cohortBirthdates17; run; 
+proc delete data=cohortBirthdates18; run; 
 
 * Get yearly cohorts ----------------------------------------------------------;
+%getcohort(year=08, yeartag=1sam); *1sam;
+%getcohort(year=09, yeartag=1sam); *1sam;
+%getcohort(year=10, yeartag=1sam); *1sam;
+%getcohort(year=11, yeartag=1sam); *1sam;
+%getcohort(year=12, yeartag=1sam); *1sam;
+%getcohort(year=13, yeartag=1sam); *1sam;
+%getcohort(year=14, yeartag=1sam); *1sam;
+%getcohort(year=15, yeartag=1sam); *1sam;
 %getcohort(year=16, yeartag=1sam); *1sam;
 %getcohort(year=17, yeartag=1sam); *1sam;
 %getcohort(year=18, yeartag=1sam); *1sam;
-proc delete data=CohortBirthdates; run; 
+proc delete data=cohortBirthdates; run; 
 
 * Combine yearly cohorts into a single data table -----------------------------;
-data Cohort;
-	set Cohort16
-		Cohort17
-		Cohort18;
+data cohort;
+	set cohort08
+		cohort09
+		cohort10
+		cohort11
+		cohort12
+		cohort13
+		cohort14
+		cohort15
+		cohort16
+		cohort17
+		cohort18;
 run;
-proc delete data=Cohort16; run; 
-proc delete data=Cohort17; run; 
-proc delete data=Cohort18; run; 
+proc delete data=cohort08; run; 
+proc delete data=cohort09; run; 
+proc delete data=cohort10; run; 
+proc delete data=cohort11; run; 
+proc delete data=cohort12; run; 
+proc delete data=cohort13; run; 
+proc delete data=cohort14; run; 
+proc delete data=cohort15; run; 
+proc delete data=cohort16; run; 
+proc delete data=cohort17; run; 
+proc delete data=cohort18; run; 
 
 * Refine to a cohort of people present for five straight years ----------------;
 %refinecohort(); *1sam;
 
 * Get prescription data -------------------------------------------------------;
+%getrx(year=08, yeartag=1sam)
+%getrx(year=09, yeartag=1sam)
+%getrx(year=10, yeartag=1sam)
+%getrx(year=11, yeartag=1sam)
+%getrx(year=12, yeartag=1sam)
+%getrx(year=13, yeartag=1sam)
+%getrx(year=14, yeartag=1sam)
+%getrx(year=15, yeartag=1sam)
 %getrx(year=16, yeartag=1sam)
 %getrx(year=17, yeartag=1sam)
 %getrx(year=18, yeartag=1sam)
 
 * Combine prescription data into a single data table --------------------------;
 data rx_df;
-	set d16
+	set d08
+		d09
+		d10
+		d11
+		d12
+		d13
+		d14
+		d15
+		d16
 		d17
 		d18;
 run;
+proc delete data=d08; run; 
+proc delete data=d09; run; 
+proc delete data=d10; run; 
+proc delete data=d11; run; 
+proc delete data=d12; run; 
+proc delete data=d13; run; 
+proc delete data=d14; run; 
+proc delete data=d15; run; 
 proc delete data=d16; run; 
 proc delete data=d17; run; 
 proc delete data=d18; run; 
 
 * Get visit data --------------------------------------------------------------;
+%getvisits_post15(year=08, yeartag=1sam)
+%getvisits_post15(year=09, yeartag=1sam)
+%getvisits_post15(year=10, yeartag=1sam)
+%getvisits_post15(year=11, yeartag=1sam)
+%getvisits_post15(year=12, yeartag=1sam)
+%getvisits_post15(year=13, yeartag=1sam)
+%getvisits_post15(year=14, yeartag=1sam)
+%getvisits_post15(year=15, yeartag=1sam)
 %getvisits_post15(year=16, yeartag=1sam)
 %getvisits_post15(year=17, yeartag=1sam)
 %getvisits_post15(year=18, yeartag=1sam)
@@ -409,144 +489,48 @@ proc delete data=d18; run;
 
 * Combine visit data into a single data table ---------------------------------;
 data visit_df;
-	set visit_df16 
+	set visit_df08 
+		visit_df09 
+		visit_df10 
+		visit_df11 
+		visit_df12 
+		visit_df13 
+		visit_df14 
+		visit_df15 
+		visit_df16 
 		visit_df17 
 		visit_df18;
 run;
 
+proc delete data=visit_df08; run; 
+proc delete data=visit_df09; run; 
+proc delete data=visit_df10; run; 
+proc delete data=visit_df11; run; 
+proc delete data=visit_df12; run; 
+proc delete data=visit_df13; run; 
+proc delete data=visit_df14; run; 
+proc delete data=visit_df15; run; 
 proc delete data=visit_df16; run; 
 proc delete data=visit_df17; run; 
 proc delete data=visit_df18; run; 
 
 
-
 * Save data to output ---------------------------------------------------------;
-proc export data=Cohort
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/Cohort_2022-08-23.csv'
+proc export data=cohort
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/cohort.csv'
 	dbms=csv
 	replace;
 run;
 
 proc export data=rx_df
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/rx_df_2022-08-23.csv'
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/rx_df.csv'
 	dbms=csv
 	replace;
 run;
 
 proc export data=visit_df
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/visit_df_2022-08-23.csv'
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/visit_df.csv'
 	dbms=csv
 	replace;
 run;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * Extract cohort of people who are represented for the entire year;
-* %macro getcohort(year=,yeartag=);
-
-* 	* Initial import, ensuring we have RX data;
-* 	data GeoCohort&year. (keep=AGE DT_MONTH EGEOLOC MSA ENROLID MEMDAYS SEX);
-* 		set dat&year..ccaet&year.&yeartag. (keep=AGE DTSTART EGEOLOC MSA ENROLID MEMDAYS RX SEX where=(RX="1"));
-* 		DT_MONTH=month(DTSTART);
-* 	run;
-
-* 	* Restrict to valid states;
-* 	proc sort data=GeoCohort&year.;
-* 		by EGEOLOC;
-* 	run;
-
-* 	data GeoCohort&year. (keep=AGE DT_MONTH STATE MSA ENROLID MEMDAYS SEX);
-* 		merge EGEOLOClist (in=inleft)
-* 		GeoCohort&year. (in=inright);
-* 		by EGEOLOC; 
-* 		IF inleft & inright; 
-* 	run;
-
-* 	* Restrict to those with complete coverage through the year; 
-* 	proc sort data=GeoCohort&year.;
-* 		by DT_MONTH;
-* 	run;
-
-* 	data GeoCohort&year. (keep=AGE DT_MONTH STATE MSA ENROLID MEMDAYS SEX NDAYS where=(MEMDAYS>=NDAYS));
-* 		merge dayspermonth (in=inleft)
-* 		GeoCohort&year. (in=inright);
-* 		by DT_MONTH;
-* 		IF inleft & inright;
-* 	run;
-
-* 	* Sort so that we extract age in January;
-* 	proc sort data=GeoCohort&year.;
-* 		by ENROLID descending DT_MONTH;
-* 	run;	
-
-* 	* Count months of enrollment and only keep those with 12;
-* 	* https://stats.idre.ucla.edu/sas/faq/how-can-i-create-an-enumeration-variable-by-groups/;
-* 	data GeoCohort&year. (keep=AGE DT_MONTH STATE MSA ENROLID SEX COUNT where=(COUNT=12));
-* 		set GeoCohort&year.;
-* 		COUNT + 1;
-* 		by ENROLID;
-* 		if first.ENROLID then COUNT = 1;
-* 	run;
-
-* 	* Turn age into age groups; 
-* 	data GeoCohort&year. (keep=AGEGRP STATE MSA ENROLID SEX);
-* 		set GeoCohort&year.;
-* 		* if MSA="" then MSA="00000";
-* 		if missing(MSA) then MSA=0;
-* 		if AGE>=80 then AGEGRP="80plus";
-* 		else if AGE>=75 then AGEGRP="75_79";
-* 		else if AGE>=70 then AGEGRP="70_74";
-* 		else if AGE>=65 then AGEGRP="65_69";
-* 		else if AGE>=60 then AGEGRP="60_64";
-* 		else if AGE>=55 then AGEGRP="55_59";
-* 		else if AGE>=50 then AGEGRP="50_54";
-* 		else if AGE>=45 then AGEGRP="45_49";
-* 		else if AGE>=40 then AGEGRP="40_44";
-* 		else if AGE>=35 then AGEGRP="35_39";
-* 		else if AGE>=30 then AGEGRP="30_34";
-* 		else if AGE>=25 then AGEGRP="25_29";
-* 		else if AGE>=20 then AGEGRP="20_24";
-* 		else if AGE>=15 then AGEGRP="15_19";
-* 		else if AGE>=10 then AGEGRP="10_14";
-* 		else if AGE>=5 then AGEGRP="05_09";
-* 		else if AGE>=0 then AGEGRP="00_04";
-* 	run;
-
-* 	* Sort cohort table by ENROLID for joining later;
-* 	proc sort data=GeoCohort&year.;
-* 		by ENROLID;
-* 	run;
-
-* %mend;
-
-
 
