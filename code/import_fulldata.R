@@ -16,13 +16,13 @@ source('code/utils.R')
 
 printtime(msg='Starting script')
 
-memb_df <- setDT(read_csv("output/buildfiles/letter/memb_df.csv", col_types=list(
+memb_df <- setDT(read_csv("output/memb_df.csv", col_types=list(
 	col_character(), col_character(), col_character(), col_character(), col_date(), col_date(), col_integer())))
-rx_df <- setDT(read_csv("output/buildfiles/letter/rx_df.csv", col_types=list(
+rx_df <- setDT(read_csv("output/rx_df.csv", col_types=list(
 	col_character(), col_character(), col_character(), col_integer())))
-visit_df <- setDT(read_csv("output/buildfiles/letter/visit_df.csv", col_types=list(
+visit_df <- setDT(read_csv("output/visit_df.csv", col_types=list(
 	col_character(), col_character(), col_character(), col_character(), col_character())))
-vax_df <- setDT(read_csv("output/buildfiles/letter/vax_df.csv", col_types=list(col_character(), col_character(), col_character())))
+vax_df <- setDT(read_csv("output/vax_df.csv", col_types=list(col_character(), col_character(), col_character())))
 
 rx_df$DATE <- mdy(rx_df$DATE)
 visit_df$DATE <- mdy(visit_df$DATE)

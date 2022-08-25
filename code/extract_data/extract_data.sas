@@ -524,7 +524,7 @@ proc delete data=visit_df18; run;
 
 * Save data to output ---------------------------------------------------------;
 proc export data=cohort
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/cohort.csv'
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/memb_df.csv'
 	dbms=csv
 	replace;
 run;

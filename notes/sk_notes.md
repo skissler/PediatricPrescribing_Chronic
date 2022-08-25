@@ -50,5 +50,7 @@ Making progress with the cohort extraction. Now trying to just keep individuals 
 
 Got the cohort extraction done, and the rest should be straightforward. Today I'll focus on the revision plan. 
 
+Just got those done, and pulled all the years of data from the sample files. Going to see now if I can do some analysis on the sample files, and then we'll do the full pull. 
+
 
 
