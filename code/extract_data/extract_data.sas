@@ -110,9 +110,9 @@ run;
 * Extract individuals with prescriptions under the age of 5; 
 %macro getcohort(year=,yeartag=);
 
-	* Initial import, ensuring we have RX data and age <= 3;
+	* Initial import, ensuring we have RX data and age <= 5;
 	data Cohort&year. (keep=DT_MONTH DT_YEAR DTEND EGEOLOC MSA ENROLID MEMDAYS SEX);
-		set dat&year..ccaet&year.&yeartag. (keep=AGE RX DTEND EGEOLOC MSA ENROLID MEMDAYS SEX where=(RX="1" and AGE<5));
+		set dat&year..ccaet&year.&yeartag. (keep=AGE RX DTEND EGEOLOC MSA ENROLID MEMDAYS SEX where=(RX="1" and AGE<=5));
 		DT_MONTH=month(DTEND);
 		DT_YEAR=year(DTEND);
 	run;
@@ -187,7 +187,7 @@ run;
 		set Cohort;
 	run;
 
-	* keep only the last row;
+	* keep only one row per person (the last);
 	proc sort data=Cohort;
 		by ENROLID COUNT;
 	run;
@@ -198,11 +198,13 @@ run;
 		if last.ENROLID;
 	run;
 
+	* Calculate how long each person is followed;
 	data Cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE DURATION);
 		set Cohort;
 		DURATION=DTEND-BIRTH_DATE;
 	run;
 
+	* Censor people after 5 years (1825 days);
 	proc sort data=Cohort;
 		by DURATION;
 	run;
@@ -210,12 +212,12 @@ run;
 	data Cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE DURATION);
 		set Cohort;
 		by DURATION;
-		if DURATION>=720;
+		if DURATION>=1825;
 	run;
 
 	data Cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE CENSOR_DATE);
 		set Cohort;
-		CENSOR_DATE=BIRTH_DATE+720;
+		CENSOR_DATE=BIRTH_DATE+1825;
 		format CENSOR_DATE mmddyys10.;
 	run;
 
@@ -263,7 +265,6 @@ run;
 %mend;
 
 * Get visit data;
-
 %macro getvisits_pre15(year=,yeartag=);
 
 	proc sort data=Cohort;

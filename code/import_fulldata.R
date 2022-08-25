@@ -50,28 +50,10 @@ rx_df <- setnames(rx_df, "DATE_RX","DATE")
 
 printtime(msg='Finished linking')
 
-# -----------------------------------------------------------------------------
-# Restrict to people in the data for 1800 continuous days, or 1800 - n*360 days for years after 2014 (comment out if censored data is ok): --------------------
-# maxdays_df <- setDT(data.frame(BIRTH_YEAR=2008:2018, maxdays=c(30*12*5, 30*12*5, 30*12*5, 30*12*5, 30*12*5, 30*12*5, 30*12*5, 30*12*4, 30*12*3, 30*12*2, 30*12*1)))
-# memb_df <- maxdays_df[memb_df[,.(ENROLID, STATE, MSA, SEX, BIRTH_DATE, BIRTH_YEAR=year(BIRTH_DATE), CENSOR_DATE)], on=.(BIRTH_YEAR)][
-# 	difftime(CENSOR_DATE, BIRTH_DATE, units="days")>=maxdays][
-# 	,CENSOR_DATE:=BIRTH_DATE+days(maxdays)][
-# 	,NDAYS:=maxdays][
-# 	,.(ENROLID,STATE,MSA,SEX,BIRTH_DATE,CENSOR_DATE,NDAYS)]
-
-# rx_df <- memb_df[,.(ENROLID)][rx_df, on=.(ENROLID), nomatch=0]
-# visit_df <- memb_df[,.(ENROLID)][visit_df, on=.(ENROLID), nomatch=0]
-# vax_df <- memb_df[,.(ENROLID)][vax_df, on=.(ENROLID), nomatch=0]
 
 # -----------------------------------------------------------------------------
-# Keep only people born before 2013 and in the data for a full 5 years: 
+# Keep only people born before 2013: 
 memb_df <- memb_df[year(BIRTH_DATE)<=2013]
-maxdays_df <- setDT(data.frame(BIRTH_YEAR=2008:2013, maxdays=c(30*12*5, 30*12*5, 30*12*5, 30*12*5, 30*12*5, 30*12*5)))
-memb_df <- maxdays_df[memb_df[,.(ENROLID, STATE, MSA, SEX, BIRTH_DATE, BIRTH_YEAR=year(BIRTH_DATE), CENSOR_DATE)], on=.(BIRTH_YEAR)][
-	difftime(CENSOR_DATE, BIRTH_DATE, units="days")>=maxdays][
-	,CENSOR_DATE:=BIRTH_DATE+days(maxdays)][
-	,NDAYS:=maxdays][
-	,.(ENROLID,STATE,MSA,SEX,BIRTH_DATE,CENSOR_DATE,NDAYS)]
 
 rx_df <- memb_df[,.(ENROLID)][rx_df, on=.(ENROLID), nomatch=0]
 visit_df <- memb_df[,.(ENROLID)][visit_df, on=.(ENROLID), nomatch=0]
