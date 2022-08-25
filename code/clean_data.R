@@ -29,7 +29,7 @@ bigmsalist <- msasizes %>% filter(N>=100) %>% pull(MSA)
 # Store NDCs for key drug classes ---------------------------------------------
 abx_ndcs <- read_csv("data/ndc_to_extract.csv")
 setDT(abx_ndcs)
-setDT(redbook)
+# setDT(redbook)
 
 # Import CCS and diagnosis descriptions ----------------------------------------
 icd9list <- read_csv('data/icd9list.csv') %>% 
