@@ -350,7 +350,7 @@ run;
 * ============================================================================;
 
 * Get birthdates --------------------------------------------------------------;
-%getbirthdates(year=08, yeartag=2sam); *1sam;
+%getbirthdates(year=08, yeartag=2); *1sam;
 %getbirthdates(year=09, yeartag=1sam); *1sam;
 %getbirthdates(year=10, yeartag=1sam); *1sam;
 %getbirthdates(year=11, yeartag=1sam); *1sam;
@@ -399,7 +399,7 @@ proc delete data=cohortBirthdates17; run;
 proc delete data=cohortBirthdates18; run; 
 
 * Get yearly cohorts ----------------------------------------------------------;
-%getcohort(year=08, yeartag=2sam); *1sam;
+%getcohort(year=08, yeartag=2); *1sam;
 %getcohort(year=09, yeartag=1sam); *1sam;
 %getcohort(year=10, yeartag=1sam); *1sam;
 %getcohort(year=11, yeartag=1sam); *1sam;
@@ -442,7 +442,7 @@ proc delete data=cohort18; run;
 %refinecohort(); *1sam;
 
 * Get prescription data -------------------------------------------------------;
-%getrx(year=08, yeartag=2sam)
+%getrx(year=08, yeartag=2)
 %getrx(year=09, yeartag=1sam)
 %getrx(year=10, yeartag=1sam)
 %getrx(year=11, yeartag=1sam)
@@ -481,7 +481,7 @@ proc delete data=d17; run;
 proc delete data=d18; run; 
 
 * Get visit data --------------------------------------------------------------;
-%getvisits_pre15(year=08, yeartag=2sam)
+%getvisits_pre15(year=08, yeartag=2)
 %getvisits_pre15(year=09, yeartag=1sam)
 %getvisits_pre15(year=10, yeartag=1sam)
 %getvisits_pre15(year=11, yeartag=1sam)
