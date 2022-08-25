@@ -224,6 +224,10 @@ run;
 * Get prescription data;
 %macro getrx(year=,yeartag=);
 
+	proc sort data=Cohort;
+		by ENROLID;
+	run;
+
 	* Import 'd' and reduce to those with valid birth date;
 	data d&year. (keep=ENROLID NDCNUM REFILL SVCDATE BIRTH_DATE CENSOR_DATE);
 		merge Cohort (in=inleft)
