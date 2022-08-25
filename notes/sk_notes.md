@@ -1,7 +1,9 @@
 __Jump to:__
--[9 Aug 2022](#9-Aug-2022)
--[23 Aug 2022](#23-Aug-2022)
--[24 Aug 2022](#24-Aug-2022)
+
+- [9 Aug 2022](#9-Aug-2022)
+- [23 Aug 2022](#23-Aug-2022)
+- [24 Aug 2022](#24-Aug-2022)
+- [25 Aug 2022](#25-Aug-2022)
 
 # 9 Aug 2022
 To do: 
@@ -44,8 +46,9 @@ Next step is to try to get the full cohort extracted - but the server says it ne
 Making progress with the cohort extraction. Now trying to just keep individuals who are present for a full five years after birth. 
 
 
+# 25 Aug 2022 
 
-
+Got the cohort extraction done, and the rest should be straightforward. Today I'll focus on the revision plan. 
 
 
 
