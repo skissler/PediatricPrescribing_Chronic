@@ -10,7 +10,7 @@ source('code/utils_private.R')
 
 # redbook <- read_csv("data/redbook18.csv")
 
-ccs_map <- setDT(read_csv("data/letter/ccs_map.csv", col_types=list(col_character(),col_character(),col_character())))
+ccs_map <- setDT(read_csv("data/ccs_map.csv", col_types=list(col_character(),col_character(),col_character())))
 
 # Define CCS priority (get rid of doubles): 
 cond_priority <- setDT(data.frame(
