@@ -16,17 +16,21 @@ source('code/utils.R')
 
 printtime(msg='Starting script')
 
-memb_df <- setDT(read_csv("output/memb_df.csv", col_types=list(
-	col_character(), col_character(), col_character(), col_character(), col_date(), col_date(), col_integer())))
-rx_df <- setDT(read_csv("output/rx_df.csv", col_types=list(
-	col_character(), col_character(), col_character(), col_integer())))
-visit_df <- setDT(read_csv("output/visit_df.csv", col_types=list(
-	col_character(), col_character(), col_character(), col_character(), col_character())))
-vax_df <- setDT(read_csv("output/vax_df.csv", col_types=list(col_character(), col_character(), col_character())))
+memb_df <- read_csv("output/memb_df.csv", col_types=list(
+	col_character(), col_character(), col_character(), col_character(), col_character(), col_character())) %>% 
+	mutate(BIRTH_DATE=mdy(BIRTH_DATE)) %>% 
+	mutate(CENSOR_DATE=mdy(CENSOR_DATE)) %>% 
+	setDT()
 
-rx_df$DATE <- mdy(rx_df$DATE)
-visit_df$DATE <- mdy(visit_df$DATE)
-vax_df$DATE <- mdy(vax_df$DATE)
+rx_df <- read_csv("output/rx_df.csv", col_types=list(
+	col_character(), col_character(), col_character(), col_character())) %>% 
+	mutate(DATE=mdy(DATE)) %>% 
+	setDT() 
+
+visit_df <- read_csv("output/visit_df.csv", col_types=list(
+	col_character(), col_character(), col_character(), col_character(), col_character())) %>% 
+	mutate(DATE=mdy(DATE)) %>% 
+	setDT()
 
 printtime(msg='Imported prescription and visit data')
 
@@ -57,7 +61,6 @@ memb_df <- memb_df[year(BIRTH_DATE)<=2013]
 
 rx_df <- memb_df[,.(ENROLID)][rx_df, on=.(ENROLID), nomatch=0]
 visit_df <- memb_df[,.(ENROLID)][visit_df, on=.(ENROLID), nomatch=0]
-vax_df <- memb_df[,.(ENROLID)][vax_df, on=.(ENROLID), nomatch=0]
 
 printtime(msg='Finished restricting cohorts to continuous enrollment')
 

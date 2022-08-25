@@ -337,6 +337,7 @@ run;
 		set o&year.;
 	run;
 
+	* Keep just one visit per person per date;
 	proc sort data=visit_df&year. nodupkey;
 		by ENROLID DATE;
 	run;
