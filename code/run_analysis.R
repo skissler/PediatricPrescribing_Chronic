@@ -130,11 +130,11 @@ fig_cumrx_respnonresp_abx <-
 		scale_linetype_manual(values=c("All conditions"="solid","Respiratory conditions"="solid","Non-respiratory conditions"="dashed")) +
 		theme(text=element_text(size=10))
 
-ggsave(fig_cumrx_respnonresp_abx, file="figures/cumrx.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_cumrx_respnonresp_abx, file="figures/cumrx.png", width=figwidth, height=figwidth, dpi=figres)
+# ggsave(fig_cumrx_respnonresp_abx, file="figures/cumrx.pdf", width=figwidth, height=figwidth, dpi=figres)
+# ggsave(fig_cumrx_respnonresp_abx, file="figures/cumrx.png", width=figwidth, height=figwidth, dpi=figres)
 
-ggsave(fig_cumrx_respnonresp_abx + theme(legend.position='none'), file="figures/cumrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_cumrx_respnonresp_abx + theme(legend.position='none'), file="figures/cumrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
+# ggsave(fig_cumrx_respnonresp_abx + theme(legend.position='none'), file="figures/cumrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
+# ggsave(fig_cumrx_respnonresp_abx + theme(legend.position='none'), file="figures/cumrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
 
 # prescriptions by age 5: 
 combdat_abx %>% 

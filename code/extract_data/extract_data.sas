@@ -228,6 +228,12 @@ run;
 		format CENSOR_DATE mmddyys10.;
 	run;
 
+	data cohort;
+		set cohort;
+		if STATE="North Carolin" then STATE="North Carolina";
+		if STATE="South Carolin" then STATE="South Carolina";
+	run;
+
 %mend;
 
 * Get prescription data;
