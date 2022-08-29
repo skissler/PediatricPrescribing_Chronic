@@ -21,6 +21,10 @@ source('code/utils_private.R')
 source('code/import_fulldata.R')
 source('code/reduce_under5.R')
 
+figwidth <- 3.2
+figheight <- 3.2*10/16
+figres <- 600
+
 # =============================================================================
 # Figure 1A: Cumulative prescriptions
 # =============================================================================
