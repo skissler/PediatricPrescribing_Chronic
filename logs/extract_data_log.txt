@@ -3019,3 +3019,168 @@ NOTE: PROCEDURE SORT used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
       
+
+NOTE: Data file DAT10.CCAEO101.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+
+NOTE: There were 124787 observations read from the data set WORK.COHORT.
+NOTE: There were 850404030 observations read from the data set DAT10.CCAEO101.
+NOTE: The data set WORK.O10 has 1970830 observations and 6 variables.
+NOTE: DATA statement used (Total process time):
+      real time           13:17.47
+      cpu time            11:21.86
+      
+
+
+NOTE: There were 1970144 observations read from the data set WORK.O10.
+      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
+NOTE: The data set WORK.O10 has 1970144 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.53 seconds
+      cpu time            0.53 seconds
+      
+
+
+NOTE: There were 1970144 observations read from the data set WORK.O10.
+NOTE: The data set WORK.VISIT_DF10 has 1970144 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.24 seconds
+53                                                         The SAS System                              08:59 Monday, August 29, 2022
+
+      cpu time            0.24 seconds
+      
+
+
+NOTE: There were 1970144 observations read from the data set WORK.VISIT_DF10.
+NOTE: 1300189 observations with duplicate key values were deleted.
+NOTE: The data set WORK.VISIT_DF10 has 669955 observations and 5 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.32 seconds
+      cpu time            0.72 seconds
+      
+
+
+NOTE: Deleting WORK.O10 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+557        %getvisits_pre15(year=11, yeartag=1)
+
+NOTE: Input data set is already sorted, no sorting done.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: Data file DAT11.CCAEO111.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+
+NOTE: There were 124787 observations read from the data set WORK.COHORT.
+NOTE: There were 1006649900 observations read from the data set DAT11.CCAEO111.
+NOTE: The data set WORK.O11 has 2335701 observations and 6 variables.
+NOTE: DATA statement used (Total process time):
+      real time           15:29.36
+      cpu time            13:59.58
+      
+
+
+NOTE: There were 2334624 observations read from the data set WORK.O11.
+      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
+NOTE: The data set WORK.O11 has 2334624 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.73 seconds
+      cpu time            0.70 seconds
+      
+
+
+NOTE: There were 2334624 observations read from the data set WORK.O11.
+NOTE: The data set WORK.VISIT_DF11 has 2334624 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.34 seconds
+      cpu time            0.33 seconds
+      
+
+
+NOTE: There were 2334624 observations read from the data set WORK.VISIT_DF11.
+54                                                         The SAS System                              08:59 Monday, August 29, 2022
+
+NOTE: 1526141 observations with duplicate key values were deleted.
+NOTE: The data set WORK.VISIT_DF11 has 808483 observations and 5 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.41 seconds
+      cpu time            0.97 seconds
+      
+
+
+NOTE: Deleting WORK.O11 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+558        %getvisits_pre15(year=12, yeartag=1)
+
+NOTE: Input data set is already sorted, no sorting done.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: Data file DAT12.CCAEO121.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+
+NOTE: There were 124787 observations read from the data set WORK.COHORT.
+NOTE: There were 1055380337 observations read from the data set DAT12.CCAEO121.
+NOTE: The data set WORK.O12 has 2642016 observations and 6 variables.
+NOTE: DATA statement used (Total process time):
+      real time           15:58.62
+      cpu time            14:08.81
+      
+
+
+NOTE: There were 2641359 observations read from the data set WORK.O12.
+      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
+NOTE: The data set WORK.O12 has 2641359 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.73 seconds
+      cpu time            0.74 seconds
+      
+
+
+NOTE: There were 2641359 observations read from the data set WORK.O12.
+NOTE: The data set WORK.VISIT_DF12 has 2641359 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.34 seconds
+      cpu time            0.33 seconds
+      
+
+
+NOTE: There were 2641359 observations read from the data set WORK.VISIT_DF12.
+NOTE: 1731078 observations with duplicate key values were deleted.
+NOTE: The data set WORK.VISIT_DF12 has 910281 observations and 5 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.45 seconds
+      cpu time            1.06 seconds
+55                                                         The SAS System                              08:59 Monday, August 29, 2022
+
+      
+
+
+NOTE: Deleting WORK.O12 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.02 seconds
+      
+
+559        %getvisits_pre15(year=13, yeartag=1)
+
+NOTE: Input data set is already sorted, no sorting done.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
