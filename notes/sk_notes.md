@@ -4,6 +4,7 @@ __Jump to:__
 - [23 Aug 2022](#23-Aug-2022)
 - [24 Aug 2022](#24-Aug-2022)
 - [25 Aug 2022](#25-Aug-2022)
+- [29 Aug 2022](#29-Aug-2022)
 
 # 9 Aug 2022
 To do: 
@@ -55,6 +56,27 @@ Just got those done, and pulled all the years of data from the sample files. Goi
 ---
 
 Extraction is done, and I've gotten all of the preamble code working. Now to just clean up the figure-making code, and we should be in good shape. 
+
+
+# 29 Aug 2022
+
+I'm going for the full extraction now; hopefully things run smoothly. 
+
+While that's running, I'll also work on refining the rest of the code for saving key data files and visualizing the results. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
