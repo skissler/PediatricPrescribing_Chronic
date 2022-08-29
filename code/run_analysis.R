@@ -13,7 +13,7 @@ source('code/utils.R')
 source('code/utils_private.R')
 
 # Data extraction (only needs to be run once):
-system('sas code/extract_data/extract_data.sas')
+# system('sas code/extract_data/extract_data.sas')
 
 # Data import:
 source('code/import_fulldata.R')

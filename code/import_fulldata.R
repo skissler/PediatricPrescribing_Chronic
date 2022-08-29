@@ -23,7 +23,7 @@ memb_df <- read_csv("output/memb_df.csv", col_types=list(
 	mutate(STATE=case_when(
 		STATE=="South Carolin"~"South Carolina",
 		STATE=="North Carolin"~"North Carolina",
-		TRUE~STATE))
+		TRUE~STATE)) %>% 
 	setDT()
 
 rx_df <- read_csv("output/rx_df.csv", col_types=list(
