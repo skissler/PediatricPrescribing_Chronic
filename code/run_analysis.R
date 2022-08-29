@@ -11,17 +11,15 @@ library(scales)
 library(sf)
 source('code/utils.R')
 source('code/utils_private.R')
-source('code/make_chronic.R')
 
 # Data extraction (only needs to be run once):
 # system('sas code/extract_data/extract_data.sas')
+# source('code/get_popsizes_under5.R')
+# source('code/make_chronic.R')
 
 # Data import:
 source('code/import_fulldata.R')
 source('code/reduce_under5.R')
-
-# Data cleaning and setup: 
-source('code/clean_data.R')
 
 # =============================================================================
 # Figure 1A: Cumulative prescriptions
