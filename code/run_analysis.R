@@ -11,6 +11,7 @@ library(scales)
 library(sf)
 source('code/utils.R')
 source('code/utils_private.R')
+source('code/make_chronic.R')
 
 # Data extraction (only needs to be run once):
 # system('sas code/extract_data/extract_data.sas')

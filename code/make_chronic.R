@@ -46,4 +46,4 @@ chronicconddf <- bind_rows(
 	slice(1) %>% 
 	select(-PRIORITY)
 
-write_csv(chronicconddf, file="data/letter/chronicconddf.csv")
+write_csv(chronicconddf, file="data/chronicconddf.csv")
