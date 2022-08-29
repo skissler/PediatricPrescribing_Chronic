@@ -66,6 +66,8 @@ While that's running, I'll also work on refining the rest of the code for saving
 
 Alright it looks like everything is running happily on the sample files - I think next steps are just to take care of the revisions, using the full data under the new extraction. A bit more cleaning to do, and I'll want to generate some data files to reproduce the figures exactly - but that can wait until I've gotten the final set of figures put together. 
 
+Now going to work on cleaning the `run_analysis.R` code to facilitate dealing with reviewer comments. Switching to branch `CleanAnalysis`. 
+
 
 
 
