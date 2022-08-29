@@ -68,6 +68,10 @@ Alright it looks like everything is running happily on the sample files - I thin
 
 Now going to work on cleaning the `run_analysis.R` code to facilitate dealing with reviewer comments. Switching to branch `CleanAnalysis`. 
 
+Alright, the reduction code is cleaned and things still seem to be running happily. The full extraction code is still running. Enough for the morning; will return later. 
+
+
+
 
 
 

@@ -226,7 +226,7 @@ tab_firstrx_df_drug <- first_cumrx_df_drug %>%
 	mutate(upr=paste0(as.character(round(upr*100,1)),")")) %>% 
 	select(ISABX,AGE,NRX,lwr,upr) 
 
-# write_csv(tab_firstrx_df_drug, path="figures/letter_binary/firstrx_df_drug.csv")
+# write_csv(tab_firstrx_df_drug, file="figures/letter_binary/firstrx_df_drug.csv")
 
 # ------------------------------------------------------------------------------
 # For respiratory conditions: 
@@ -739,8 +739,8 @@ rx_summ_msa_nonresp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	select(HHS, STATE, MSA, MSA_POP, MSA_NAME, ISABX, NRX) %>% 
 	filter(ISABX==1)
 
-write_csv(rx_summ_msa_resp, path="figures/rx_summ_msa_resp.csv")
-write_csv(rx_summ_msa_nonresp, path="figures/rx_summ_msa_nonresp.csv")
+write_csv(rx_summ_msa_resp, file="figures/rx_summ_msa_resp.csv")
+write_csv(rx_summ_msa_nonresp, file="figures/rx_summ_msa_nonresp.csv")
 
 first_rx_msa_resp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
@@ -770,6 +770,6 @@ first_rx_msa_nonresp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	as_tibble() %>% 
 	filter(ISABX==1)
 
-write_csv(first_rx_msa_resp, path="figures/first_rx_msa_resp.csv")
-write_csv(first_rx_msa_nonresp, path="figures/first_rx_msa_nonresp.csv")
+write_csv(first_rx_msa_resp, file="figures/first_rx_msa_resp.csv")
+write_csv(first_rx_msa_nonresp, file="figures/first_rx_msa_nonresp.csv")
 
