@@ -96,6 +96,10 @@ For diagnoses beyond positions 1 and 2, it looks like this occurs in:
 
 but not 2008, and we don't have the documentation for 2009. I think we can just pull them for 2010 onward. 
 
+Right - I'm starting a new branch, `AdditionalPulls`, to take care of these things. I've merged everything into `main` up to this point, so if things go haywire, just go back there. 
+
+First step is to get diagnosis codes for positions 3 and 4. 
+
 
 
 

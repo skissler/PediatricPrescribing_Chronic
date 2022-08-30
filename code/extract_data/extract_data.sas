@@ -280,7 +280,8 @@ run;
 %mend;
 
 * Get visit data;
-%macro getvisits_pre15(year=,yeartag=);
+
+%macro getvisits_pre10(year=,yeartag=);
 
 	proc sort data=cohort;
 		by ENROLID;
@@ -295,7 +296,7 @@ run;
 	run;
 
 	* Keep only visits between birth and censor date;
-	data o&year. (keep=DX1 DX2 ENROLID DATE ICD);
+	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID DATE ICD);
 		rename SVCDATE=DATE;
 		length DX1 $30. DX2 $30.;
 	    set o&year.(rename=(DX1=DX1_orig DX2=DX2_orig));
@@ -303,9 +304,51 @@ run;
 	    ICD="9";
 	    DX1=DX1_orig;
 	    DX2=DX2_orig;
+	    DX3="NA";
+	    DX4="NA";
 	run;
 
-	data visit_df&year. (keep=ENROLID DATE DX1 DX2 ICD);
+	data visit_df&year. (keep=ENROLID DATE DX1 DX2 DX3 DX4 ICD);
+		set o&year.;
+	run;
+
+	proc sort data=visit_df&year. nodupkey;
+		by ENROLID DATE;
+	run;
+
+	proc delete data=o&year.; run; 
+
+%mend;
+
+
+%macro getvisits_pre15(year=,yeartag=);
+
+	proc sort data=cohort;
+		by ENROLID;
+	run;
+
+	* Import 'o' and reduce to those with valid birth date;
+	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID SVCDATE BIRTH_DATE CENSOR_DATE);
+		merge cohort (in=inleft)
+		dat&year..ccaeo&year.&yeartag. (in=inright keep=DX1 DX2 DX3 DX4 ENROLID SVCDATE);
+		by ENROLID; 
+		IF inleft & inright; 
+	run;
+
+	* Keep only visits between birth and censor date;
+	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID DATE ICD);
+		rename SVCDATE=DATE;
+		length DX1 $30. DX2 $30. DX3 $30. DX4 $30.;
+	    set o&year.(rename=(DX1=DX1_orig DX2=DX2_orig DX3=DX3_orig DX4=DX4_orig));
+	    where BIRTH_DATE<=SVCDATE<=CENSOR_DATE;
+	    ICD="9";
+	    DX1=DX1_orig;
+	    DX2=DX2_orig;
+	    DX3=DX3_orig;
+	    DX4=DX4_orig;
+	run;
+
+	data visit_df&year. (keep=ENROLID DATE DX1 DX2 DX3 DX4 ICD);
 		set o&year.;
 	run;
 
@@ -324,24 +367,26 @@ run;
 	run;
 
 	* Import 'o' and reduce to those with valid birth date;
-	data o&year. (keep=DX1 DX2 ENROLID SVCDATE DXVER BIRTH_DATE CENSOR_DATE);
+	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID SVCDATE DXVER BIRTH_DATE CENSOR_DATE);
 		merge cohort (in=inleft)
-		dat&year..ccaeo&year.&yeartag. (in=inright keep=DX1 DX2 ENROLID SVCDATE DXVER);
+		dat&year..ccaeo&year.&yeartag. (in=inright keep=DX1 DX2 DX3 DX4 ENROLID SVCDATE DXVER);
 		by ENROLID; 
 		IF inleft & inright; 
 	run;
 
 	* Keep only visits between birth and censor date;
-	data o&year. (keep=DX1 DX2 ENROLID DATE ICD);
+	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID DATE ICD);
 		rename SVCDATE=DATE DXVER=ICD;
-		length DX1 $30 DX2 $30;
-	    set o&year.(rename=(DX1=DX1_orig DX2=DX2_orig));
+		length DX1 $30 DX2 $30 DX3 $30 DX4 $30;
+	    set o&year.(rename=(DX1=DX1_orig DX2=DX2_orig DX3=DX3_orig DX4=DX4_orig));
 	    where BIRTH_DATE<=SVCDATE<=CENSOR_DATE;
 	    DX1=DX1_orig;
 	    DX2=DX2_orig;
+	    DX3=DX3_orig;
+	    DX4=DX4_orig;
 	run;
 
-	data visit_df&year. (keep=ENROLID DATE DX1 DX2 ICD);
+	data visit_df&year. (keep=ENROLID DATE DX1 DX2 DX3 DX4 ICD);
 		set o&year.;
 	run;
 
@@ -359,17 +404,17 @@ run;
 * ============================================================================;
 
 * Get birthdates --------------------------------------------------------------;
-%getbirthdates(year=08, yeartag=2); *1sam;
-%getbirthdates(year=09, yeartag=1); *1sam;
-%getbirthdates(year=10, yeartag=1); *1sam;
-%getbirthdates(year=11, yeartag=1); *1sam;
-%getbirthdates(year=12, yeartag=1); *1sam;
-%getbirthdates(year=13, yeartag=1); *1sam;
-%getbirthdates(year=14, yeartag=1); *1sam;
-%getbirthdates(year=15, yeartag=1); *1sam;
-%getbirthdates(year=16, yeartag=1); *1sam;
-%getbirthdates(year=17, yeartag=1); *1sam;
-%getbirthdates(year=18, yeartag=1); *1sam;
+%getbirthdates(year=08, yeartag=2sam); *1sam;
+%getbirthdates(year=09, yeartag=1sam); *1sam;
+%getbirthdates(year=10, yeartag=1sam); *1sam;
+%getbirthdates(year=11, yeartag=1sam); *1sam;
+%getbirthdates(year=12, yeartag=1sam); *1sam;
+%getbirthdates(year=13, yeartag=1sam); *1sam;
+%getbirthdates(year=14, yeartag=1sam); *1sam;
+%getbirthdates(year=15, yeartag=1sam); *1sam;
+%getbirthdates(year=16, yeartag=1sam); *1sam;
+%getbirthdates(year=17, yeartag=1sam); *1sam;
+%getbirthdates(year=18, yeartag=1sam); *1sam;
 
 * Combine birthdates into a single data table ---------------------------------;
 data cohortBirthdates;
@@ -408,17 +453,17 @@ proc delete data=cohortBirthdates17; run;
 proc delete data=cohortBirthdates18; run; 
 
 * Get yearly cohorts ----------------------------------------------------------;
-%getcohort(year=08, yeartag=2); *1sam;
-%getcohort(year=09, yeartag=1); *1sam;
-%getcohort(year=10, yeartag=1); *1sam;
-%getcohort(year=11, yeartag=1); *1sam;
-%getcohort(year=12, yeartag=1); *1sam;
-%getcohort(year=13, yeartag=1); *1sam;
-%getcohort(year=14, yeartag=1); *1sam;
-%getcohort(year=15, yeartag=1); *1sam;
-%getcohort(year=16, yeartag=1); *1sam;
-%getcohort(year=17, yeartag=1); *1sam;
-%getcohort(year=18, yeartag=1); *1sam;
+%getcohort(year=08, yeartag=2sam); *1sam;
+%getcohort(year=09, yeartag=1sam); *1sam;
+%getcohort(year=10, yeartag=1sam); *1sam;
+%getcohort(year=11, yeartag=1sam); *1sam;
+%getcohort(year=12, yeartag=1sam); *1sam;
+%getcohort(year=13, yeartag=1sam); *1sam;
+%getcohort(year=14, yeartag=1sam); *1sam;
+%getcohort(year=15, yeartag=1sam); *1sam;
+%getcohort(year=16, yeartag=1sam); *1sam;
+%getcohort(year=17, yeartag=1sam); *1sam;
+%getcohort(year=18, yeartag=1sam); *1sam;
 proc delete data=cohortBirthdates; run; 
 
 * Combine yearly cohorts into a single data table -----------------------------;
@@ -451,17 +496,17 @@ proc delete data=cohort18; run;
 %refinecohort(); *1sam;
 
 * Get prescription data -------------------------------------------------------;
-%getrx(year=08, yeartag=2)
-%getrx(year=09, yeartag=1)
-%getrx(year=10, yeartag=1)
-%getrx(year=11, yeartag=1)
-%getrx(year=12, yeartag=1)
-%getrx(year=13, yeartag=1)
-%getrx(year=14, yeartag=1)
-%getrx(year=15, yeartag=1)
-%getrx(year=16, yeartag=1)
-%getrx(year=17, yeartag=1)
-%getrx(year=18, yeartag=1)
+%getrx(year=08, yeartag=2sam)
+%getrx(year=09, yeartag=1sam)
+%getrx(year=10, yeartag=1sam)
+%getrx(year=11, yeartag=1sam)
+%getrx(year=12, yeartag=1sam)
+%getrx(year=13, yeartag=1sam)
+%getrx(year=14, yeartag=1sam)
+%getrx(year=15, yeartag=1sam)
+%getrx(year=16, yeartag=1sam)
+%getrx(year=17, yeartag=1sam)
+%getrx(year=18, yeartag=1sam)
 
 * Combine prescription data into a single data table --------------------------;
 data rx_df;
@@ -490,17 +535,17 @@ proc delete data=d17; run;
 proc delete data=d18; run; 
 
 * Get visit data --------------------------------------------------------------;
-%getvisits_pre15(year=08, yeartag=2)
-%getvisits_pre15(year=09, yeartag=1)
-%getvisits_pre15(year=10, yeartag=1)
-%getvisits_pre15(year=11, yeartag=1)
-%getvisits_pre15(year=12, yeartag=1)
-%getvisits_pre15(year=13, yeartag=1)
-%getvisits_pre15(year=14, yeartag=1)
-%getvisits_post15(year=15, yeartag=1)
-%getvisits_post15(year=16, yeartag=1)
-%getvisits_post15(year=17, yeartag=1)
-%getvisits_post15(year=18, yeartag=1)
+%getvisits_pre15(year=08, yeartag=2sam)
+%getvisits_pre15(year=09, yeartag=1sam)
+%getvisits_pre15(year=10, yeartag=1sam)
+%getvisits_pre15(year=11, yeartag=1sam)
+%getvisits_pre15(year=12, yeartag=1sam)
+%getvisits_pre15(year=13, yeartag=1sam)
+%getvisits_pre15(year=14, yeartag=1sam)
+%getvisits_post15(year=15, yeartag=1sam)
+%getvisits_post15(year=16, yeartag=1sam)
+%getvisits_post15(year=17, yeartag=1sam)
+%getvisits_post15(year=18, yeartag=1sam)
 
 
 * Combine visit data into a single data table ---------------------------------;
@@ -533,19 +578,19 @@ proc delete data=visit_df18; run;
 
 * Save data to output ---------------------------------------------------------;
 proc export data=cohort
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/memb_df.csv'
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/memb_df_sam.csv'
 	dbms=csv
 	replace;
 run;
 
 proc export data=rx_df
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/rx_df.csv'
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/rx_df_sam.csv'
 	dbms=csv
 	replace;
 run;
 
 proc export data=visit_df
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/visit_df.csv'
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/visit_df_sam.csv'
 	dbms=csv
 	replace;
 run;
