@@ -102,6 +102,12 @@ First step is to get diagnosis codes for positions 3 and 4.
 
 Trying some code for this now. 
 
+have also added some code to get the place of service (`STDPLAC`). 
+
+It looks like the weight columns are just some kind of linking integers? I'm not sure what that refers to. I think I'll just explain this in the response to reviewers as an attempt to translate across scales. 
+
+
+
 
 
 

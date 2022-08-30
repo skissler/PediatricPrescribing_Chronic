@@ -288,15 +288,15 @@ run;
 	run;
 
 	* Import 'o' and reduce to those with valid birth date;
-	data o&year. (keep=DX1 DX2 ENROLID SVCDATE BIRTH_DATE CENSOR_DATE);
+	data o&year. (keep=DX1 DX2 ENROLID SVCDATE BIRTH_DATE CENSOR_DATE STDPLAC);
 		merge cohort (in=inleft)
-		dat&year..ccaeo&year.&yeartag. (in=inright keep=DX1 DX2 ENROLID SVCDATE);
+		dat&year..ccaeo&year.&yeartag. (in=inright keep=DX1 DX2 ENROLID SVCDATE STDPLAC);
 		by ENROLID; 
 		IF inleft & inright; 
 	run;
 
 	* Keep only visits between birth and censor date;
-	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID DATE ICD);
+	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID DATE ICD STDPLAC);
 		rename SVCDATE=DATE;
 		length DX1 $30. DX2 $30.;
 	    set o&year.(rename=(DX1=DX1_orig DX2=DX2_orig));
@@ -304,11 +304,11 @@ run;
 	    ICD="9";
 	    DX1=DX1_orig;
 	    DX2=DX2_orig;
-	    DX3="NA";
-	    DX4="NA";
+	    DX3="";
+	    DX4="";
 	run;
 
-	data visit_df&year. (keep=ENROLID DATE DX1 DX2 DX3 DX4 ICD);
+	data visit_df&year. (keep=ENROLID DATE DX1 DX2 DX3 DX4 ICD STDPLAC);
 		set o&year.;
 	run;
 
@@ -328,15 +328,15 @@ run;
 	run;
 
 	* Import 'o' and reduce to those with valid birth date;
-	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID SVCDATE BIRTH_DATE CENSOR_DATE);
+	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID SVCDATE BIRTH_DATE CENSOR_DATE STDPLAC);
 		merge cohort (in=inleft)
-		dat&year..ccaeo&year.&yeartag. (in=inright keep=DX1 DX2 DX3 DX4 ENROLID SVCDATE);
+		dat&year..ccaeo&year.&yeartag. (in=inright keep=DX1 DX2 DX3 DX4 ENROLID SVCDATE STDPLAC);
 		by ENROLID; 
 		IF inleft & inright; 
 	run;
 
 	* Keep only visits between birth and censor date;
-	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID DATE ICD);
+	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID DATE ICD STDPLAC);
 		rename SVCDATE=DATE;
 		length DX1 $30. DX2 $30. DX3 $30. DX4 $30.;
 	    set o&year.(rename=(DX1=DX1_orig DX2=DX2_orig DX3=DX3_orig DX4=DX4_orig));
@@ -348,7 +348,7 @@ run;
 	    DX4=DX4_orig;
 	run;
 
-	data visit_df&year. (keep=ENROLID DATE DX1 DX2 DX3 DX4 ICD);
+	data visit_df&year. (keep=ENROLID DATE DX1 DX2 DX3 DX4 ICD STDPLAC);
 		set o&year.;
 	run;
 
@@ -367,15 +367,15 @@ run;
 	run;
 
 	* Import 'o' and reduce to those with valid birth date;
-	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID SVCDATE DXVER BIRTH_DATE CENSOR_DATE);
+	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID SVCDATE DXVER BIRTH_DATE CENSOR_DATE STDPLAC);
 		merge cohort (in=inleft)
-		dat&year..ccaeo&year.&yeartag. (in=inright keep=DX1 DX2 DX3 DX4 ENROLID SVCDATE DXVER);
+		dat&year..ccaeo&year.&yeartag. (in=inright keep=DX1 DX2 DX3 DX4 ENROLID SVCDATE DXVER STDPLAC);
 		by ENROLID; 
 		IF inleft & inright; 
 	run;
 
 	* Keep only visits between birth and censor date;
-	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID DATE ICD);
+	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID DATE ICD STDPLAC);
 		rename SVCDATE=DATE DXVER=ICD;
 		length DX1 $30 DX2 $30 DX3 $30 DX4 $30;
 	    set o&year.(rename=(DX1=DX1_orig DX2=DX2_orig DX3=DX3_orig DX4=DX4_orig));
@@ -386,7 +386,7 @@ run;
 	    DX4=DX4_orig;
 	run;
 
-	data visit_df&year. (keep=ENROLID DATE DX1 DX2 DX3 DX4 ICD);
+	data visit_df&year. (keep=ENROLID DATE DX1 DX2 DX3 DX4 ICD STDPLAC);
 		set o&year.;
 	run;
 
