@@ -5,6 +5,7 @@ __Jump to:__
 - [24 Aug 2022](#24-Aug-2022)
 - [25 Aug 2022](#25-Aug-2022)
 - [29 Aug 2022](#29-Aug-2022)
+- [30 Aug 2022](#30-Aug-2022)
 
 # 9 Aug 2022
 To do: 
@@ -71,7 +72,9 @@ Now going to work on cleaning the `run_analysis.R` code to facilitate dealing wi
 Alright, the reduction code is cleaned and things still seem to be running happily. The full extraction code is still running. Enough for the morning; will return later. 
 
 
+# 30 Aug 2022 
 
+It looks like the full extraction succeeded from yesterday - it took about four and a half hours, which isn't terrible. Now I'm going to see if the rest of the code works on the newly extracted stuff: 
 
 
 
