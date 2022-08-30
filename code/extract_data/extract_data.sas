@@ -535,8 +535,8 @@ proc delete data=d17; run;
 proc delete data=d18; run; 
 
 * Get visit data --------------------------------------------------------------;
-%getvisits_pre15(year=08, yeartag=2sam)
-%getvisits_pre15(year=09, yeartag=1sam)
+%getvisits_pre10(year=08, yeartag=2sam)
+%getvisits_pre10(year=09, yeartag=1sam)
 %getvisits_pre15(year=10, yeartag=1sam)
 %getvisits_pre15(year=11, yeartag=1sam)
 %getvisits_pre15(year=12, yeartag=1sam)
