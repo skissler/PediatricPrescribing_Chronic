@@ -76,7 +76,11 @@ Alright, the reduction code is cleaned and things still seem to be running happi
 
 It looks like the full extraction succeeded from yesterday - it took about four and a half hours, which isn't terrible. Now I'm going to see if the rest of the code works on the newly extracted stuff: 
 
+I've somehow ended up with fewer children in this most recent pull (124,737 rather than 207,814); I'm not sure why that is; I'll double check. Still, it seems like all of the results are pretty much unchanged. 
 
+Damn - it looks like I was missing V39 as one of my birth code prefixes. That'll do it. I'll have to re-run. 
+
+Before doing the full re-run, I also want to see if there are any specific reviewer comments we need to address through further extractions: 
 
 
 

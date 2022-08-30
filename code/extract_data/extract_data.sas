@@ -88,6 +88,7 @@ run;
 				substr(DX1,1,3)="V35" or 
 				substr(DX1,1,3)="V36" or 
 				substr(DX1,1,3)="V37" or 
+				substr(DX1,1,3)="V39" or 
 				substr(DX1,1,3)="Z38" or 
 				substr(DX2,1,3)="V30" or 
 				substr(DX2,1,3)="V31" or 
@@ -97,6 +98,7 @@ run;
 				substr(DX2,1,3)="V35" or 
 				substr(DX2,1,3)="V36" or 
 				substr(DX2,1,3)="V37" or 
+				substr(DX2,1,3)="V39" or 
 				substr(DX2,1,3)="Z38")));
 	run;
 
