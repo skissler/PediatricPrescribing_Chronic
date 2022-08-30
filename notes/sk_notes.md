@@ -82,6 +82,20 @@ Damn - it looks like I was missing V39 as one of my birth code prefixes. That'll
 
 Before doing the full re-run, I also want to see if there are any specific reviewer comments we need to address through further extractions: 
 
+- Diagnoses beyond positions 1 and 2
+- Setting of care 
+- Weights 
+
+For diagnoses beyond positions 1 and 2, it looks like this occurs in: 
+- 2017
+- 2016
+- 2015
+- 2014
+- 2013
+- 2010
+
+but not 2008, and we don't have the documentation for 2009. I think we can just pull them for 2010 onward. 
+
 
 
 
