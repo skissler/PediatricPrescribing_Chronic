@@ -104,7 +104,7 @@ fig_cumrx_respnonresp_abx <-
 	ggplot(data=combdat_abx, aes(x=AGE_DAYS_ROUNDED, y=NRX, col=Indication, fill=Indication, linetype=Indication)) + 
 		geom_ribbon(aes(ymin=lwr,ymax=upr),alpha=0.4) + 
 		geom_line() + 
-		scale_x_continuous(breaks=seq(from=0, to=1800, by=360)) + 
+		scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
 		theme_classic() + 
 		labs(tag="A)", x="Days from birth", y=paste0("Cumulative prescriptions")) + 
 		scale_color_manual(values=c("All conditions"="Gray","Respiratory conditions"="Blue","Non-respiratory conditions"="Blue")) + 
@@ -120,7 +120,7 @@ ggsave(fig_cumrx_respnonresp_abx + theme(legend.position='none'), file="figures/
 
 # prescriptions by age 5: 
 combdat_abx %>% 
-	filter(AGE_DAYS_ROUNDED==1800) %>% 
+	filter(AGE_DAYS_ROUNDED==1825) %>% 
 	select(AGE_DAYS_ROUNDED, Indication, NRX, lwr, upr)
 
 # Prescribing rates by age: 
@@ -132,34 +132,34 @@ rxrate1 <- combdat_abx %>%
 	mutate(NRX=NRX*2, lwr=lwr*2, upr=upr*2)
 
 
-# 6 mos (180 days) to 2 years (720 days): 
+# 6 mos (180 days) to 2 years (730 days): 
 rxrate2 <- combdat_abx %>% 
 	filter(Indication=="All conditions") %>% 
-	filter(AGE_DAYS_ROUNDED%in%c(180,720)) %>% 
+	filter(AGE_DAYS_ROUNDED%in%c(180,730)) %>% 
 	select(AGE_DAYS_ROUNDED,NRX,lwr,upr) %>% 
 	mutate(AGE_DAYS_ROUNDED=AGE_DAYS_ROUNDED-lag(AGE_DAYS_ROUNDED),
 		NRX=NRX-lag(NRX),
 		lwr=lwr-lag(lwr),
 		upr=upr-lag(upr)) %>% 
 	filter(!is.na(AGE_DAYS_ROUNDED)) %>% 
-	mutate(NRX=NRX/AGE_DAYS_ROUNDED*360,
-		lwr=lwr/AGE_DAYS_ROUNDED*360,
-		upr=upr/AGE_DAYS_ROUNDED*360) %>% 
+	mutate(NRX=NRX/AGE_DAYS_ROUNDED*365,
+		lwr=lwr/AGE_DAYS_ROUNDED*365,
+		upr=upr/AGE_DAYS_ROUNDED*365) %>% 
 	select(-AGE_DAYS_ROUNDED)
 
-# 2 years (720 days) to 5 years (1800 days): 
+# 2 years (730 days) to 5 years (1825 days): 
 rxrate3 <- combdat_abx %>% 
 	filter(Indication=="All conditions") %>% 
-	filter(AGE_DAYS_ROUNDED%in%c(720,1800)) %>% 
+	filter(AGE_DAYS_ROUNDED%in%c(730,1825)) %>% 
 	select(AGE_DAYS_ROUNDED,NRX,lwr,upr) %>% 
 	mutate(AGE_DAYS_ROUNDED=AGE_DAYS_ROUNDED-lag(AGE_DAYS_ROUNDED),
 		NRX=NRX-lag(NRX),
 		lwr=lwr-lag(lwr),
 		upr=upr-lag(upr)) %>% 
 	filter(!is.na(AGE_DAYS_ROUNDED)) %>% 
-	mutate(NRX=NRX/AGE_DAYS_ROUNDED*360,
-		lwr=lwr/AGE_DAYS_ROUNDED*360,
-		upr=upr/AGE_DAYS_ROUNDED*360) %>% 
+	mutate(NRX=NRX/AGE_DAYS_ROUNDED*365,
+		lwr=lwr/AGE_DAYS_ROUNDED*365,
+		upr=upr/AGE_DAYS_ROUNDED*365) %>% 
 	select(-AGE_DAYS_ROUNDED)	
 
 # By region: 
@@ -194,7 +194,7 @@ fig_first_cumrx_drug <- first_cumrx_df_drug %>%
 	ggplot(aes(x=AGE_DAYS_ROUNDED, y=NRX, col=factor(ISABX),fill=factor(ISABX))) + 
 		geom_ribbon(aes(ymin=lwr,ymax=upr),alpha=0.4) + 
 		geom_line() + 
-		scale_x_continuous(breaks=seq(from=0, to=1800, by=360)) + 
+		scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
 		scale_y_continuous(limits=c(0,1), breaks=seq(from=0, to=1, by=0.2)) + 
 		theme_classic() + 
 		labs(x="Days from birth", y=paste0("Proportion who have received a prescription"), col="Drug class", fill="Drug class") + 
@@ -270,7 +270,7 @@ fig_first_cumrx_drug_resp <- first_cumrx_df_drug_resp %>%
 	ggplot(aes(x=AGE_DAYS_ROUNDED, y=NRX, col=factor(ISABX),fill=factor(ISABX))) + 
 		geom_ribbon(aes(ymin=lwr,ymax=upr),alpha=0.4) + 
 		geom_line() + 
-		scale_x_continuous(breaks=seq(from=0, to=1800, by=360)) + 
+		scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
 		scale_y_continuous(limits=c(0,1), breaks=seq(from=0, to=1, by=0.2)) + 
 		theme_classic() + 
 		labs(x="Days from birth", y=paste0("Proportion who have received a prescription"), col="Drug class", fill="Drug class") + 
@@ -317,7 +317,7 @@ combdat <- bind_rows(mutate(fulldat,Indication="All conditions"),mutate(respdat,
 fig_first_cumrx_drug_combined <- ggplot(data=combdat, aes(x=AGE_DAYS_ROUNDED, y=NRX, col=factor(ISABX),fill=factor(ISABX), linetype=Indication)) + 
 	geom_ribbon(aes(ymin=lwr,ymax=upr),alpha=0.4) + 
 	geom_line() + 
-	scale_x_continuous(breaks=seq(from=0, to=1800, by=360)) + 
+	scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
 	scale_y_continuous(limits=c(0,1), breaks=seq(from=0, to=1, by=0.2)) + 
 	theme_classic() + 
 	labs(x="Days from birth", y=paste0("Proportion who have received a prescription"), col="Drug class", fill="Drug class") + 
@@ -335,7 +335,7 @@ fig_first_cumrx_drug_combined <- ggplot(data=combdat, aes(x=AGE_DAYS_ROUNDED, y=
 # 	mutate(propupr=(rawupr-rawmean)/rawmean) %>% 
 # 	mutate(lwr=NRX-proplwr*NRX) %>% 
 # 	mutate(upr=NRX+propupr*NRX) %>% 
-# 	filter(AGE_DAYS_ROUNDED %in% c(360, 2*360, 1800)) %>% 
+# 	filter(AGE_DAYS_ROUNDED %in% c(365, 2*365, 1825)) %>% 
 # 	select(CLASS, AGE_DAYS_ROUNDED, NRX, lwr, upr) %>% 
 # 	arrange(CLASS, AGE_DAYS_ROUNDED)
 
@@ -350,7 +350,7 @@ fig_first_cumrx_respnonresp_abx <-
 	ggplot(data=combdat_abx, aes(x=AGE_DAYS_ROUNDED, y=NRX, col=Indication, fill=Indication, linetype=Indication)) + 
 		geom_ribbon(aes(ymin=lwr,ymax=upr),alpha=0.4) + 
 		geom_line() + 
-		scale_x_continuous(breaks=seq(from=0, to=1800, by=360)) + 
+		scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
 		scale_y_continuous(limits=c(0,1), breaks=seq(from=0, to=1, by=0.2)) + 
 		theme_classic() + 
 		labs(tag="B)",x="Days from birth", y=paste0("Proportion who have received a prescription")) + 
@@ -366,7 +366,7 @@ ggsave(fig_first_cumrx_respnonresp_abx+theme(legend.position="none"), file="figu
 ggsave(fig_first_cumrx_respnonresp_abx+theme(legend.position="none"), file="figures/firstrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
 
 combdat_abx %>% 	
-	filter(AGE_DAYS_ROUNDED==1800) %>% 
+	filter(AGE_DAYS_ROUNDED==1825) %>% 
 	select(AGE_DAYS_ROUNDED, Indication, NRX, lwr, upr)
 
 # ==============================================================================

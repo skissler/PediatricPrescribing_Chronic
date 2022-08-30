@@ -106,7 +106,7 @@ have also added some code to get the place of service (`STDPLAC`).
 
 It looks like the weight columns are just some kind of linking integers? I'm not sure what that refers to. I think I'll just explain this in the response to reviewers as an attempt to translate across scales. 
 
-
+I've also done a quick update of 2 years from 720 to 730 days, one year from 360 to 365 days, and 5 years from 1800 to 1825 days. That all in run_analysis. Hopefully I haven't broken anything. 
 
 
 
