@@ -63,3 +63,15 @@ NOTE: PROCEDURE DATASETS used (Total process time):
       real time           0.67 seconds
       cpu time            0.03 seconds
       
+
+6        !                                           run;
+7          
+8          * Set path for log;
+9          proc printto log="/home/kissler/PediatricPrescribing_Chronic/logs/extract_data_log.txt" new;
+10         run;
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           4:25:40.12
+      cpu time            4:09:44.55
+      

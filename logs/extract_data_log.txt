@@ -3184,3 +3184,691 @@ NOTE: PROCEDURE SORT used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
       
+
+NOTE: Data file DAT13.CCAEO131.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+
+NOTE: There were 124787 observations read from the data set WORK.COHORT.
+NOTE: There were 875696525 observations read from the data set DAT13.CCAEO131.
+NOTE: The data set WORK.O13 has 2783601 observations and 6 variables.
+NOTE: DATA statement used (Total process time):
+      real time           12:51.13
+      cpu time            11:46.01
+      
+
+
+NOTE: There were 2574941 observations read from the data set WORK.O13.
+      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
+NOTE: The data set WORK.O13 has 2574941 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.90 seconds
+      cpu time            0.89 seconds
+      
+
+
+NOTE: There were 2574941 observations read from the data set WORK.O13.
+NOTE: The data set WORK.VISIT_DF13 has 2574941 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.43 seconds
+      cpu time            0.42 seconds
+      
+
+
+NOTE: There were 2574941 observations read from the data set WORK.VISIT_DF13.
+NOTE: 1681323 observations with duplicate key values were deleted.
+NOTE: The data set WORK.VISIT_DF13 has 893618 observations and 5 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.61 seconds
+      cpu time            1.38 seconds
+      
+
+
+NOTE: Deleting WORK.O13 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+56                                                         The SAS System                              08:59 Monday, August 29, 2022
+
+      real time           0.02 seconds
+      cpu time            0.03 seconds
+      
+
+560        %getvisits_pre15(year=14, yeartag=1)
+
+NOTE: Input data set is already sorted, no sorting done.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: Data file DAT14.CCAEO141.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+
+NOTE: There were 124787 observations read from the data set WORK.COHORT.
+NOTE: There were 952082337 observations read from the data set DAT14.CCAEO141.
+NOTE: The data set WORK.O14 has 2359426 observations and 6 variables.
+NOTE: DATA statement used (Total process time):
+      real time           13:17.05
+      cpu time            12:14.92
+      
+
+
+NOTE: There were 1863312 observations read from the data set WORK.O14.
+      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
+NOTE: The data set WORK.O14 has 1863312 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.66 seconds
+      cpu time            0.65 seconds
+      
+
+
+NOTE: There were 1863312 observations read from the data set WORK.O14.
+NOTE: The data set WORK.VISIT_DF14 has 1863312 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.28 seconds
+      cpu time            0.27 seconds
+      
+
+
+NOTE: There were 1863312 observations read from the data set WORK.VISIT_DF14.
+NOTE: 1192246 observations with duplicate key values were deleted.
+NOTE: The data set WORK.VISIT_DF14 has 671066 observations and 5 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.33 seconds
+      cpu time            0.78 seconds
+      
+
+
+NOTE: Deleting WORK.O14 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.02 seconds
+      
+
+561        %getvisits_post15(year=15, yeartag=1)
+57                                                         The SAS System                              08:59 Monday, August 29, 2022
+
+
+NOTE: Input data set is already sorted, no sorting done.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: Data file DAT15.CCAEO151.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+
+NOTE: There were 124787 observations read from the data set WORK.COHORT.
+NOTE: There were 599918568 observations read from the data set DAT15.CCAEO151.
+NOTE: The data set WORK.O15 has 1834330 observations and 7 variables.
+NOTE: DATA statement used (Total process time):
+      real time           9:50.75
+      cpu time            8:58.09
+      
+
+
+NOTE: There were 1171823 observations read from the data set WORK.O15.
+      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
+NOTE: The data set WORK.O15 has 1171823 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.44 seconds
+      cpu time            0.43 seconds
+      
+
+
+NOTE: There were 1171823 observations read from the data set WORK.O15.
+NOTE: The data set WORK.VISIT_DF15 has 1171823 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.15 seconds
+      cpu time            0.15 seconds
+      
+
+
+NOTE: There were 1171823 observations read from the data set WORK.VISIT_DF15.
+NOTE: 710897 observations with duplicate key values were deleted.
+NOTE: The data set WORK.VISIT_DF15 has 460926 observations and 5 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.22 seconds
+      cpu time            0.50 seconds
+      
+
+
+NOTE: Deleting WORK.O15 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+562        %getvisits_post15(year=16, yeartag=1)
+
+NOTE: Input data set is already sorted, no sorting done.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+58                                                         The SAS System                              08:59 Monday, August 29, 2022
+
+      
+
+NOTE: Data file DAT16.CCAEO161.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+
+NOTE: There were 124787 observations read from the data set WORK.COHORT.
+NOTE: There were 607028634 observations read from the data set DAT16.CCAEO161.
+NOTE: The data set WORK.O16 has 1621497 observations and 7 variables.
+NOTE: DATA statement used (Total process time):
+      real time           9:51.24
+      cpu time            8:57.96
+      
+
+
+NOTE: There were 751283 observations read from the data set WORK.O16.
+      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
+NOTE: The data set WORK.O16 has 751283 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.34 seconds
+      cpu time            0.34 seconds
+      
+
+
+NOTE: There were 751283 observations read from the data set WORK.O16.
+NOTE: The data set WORK.VISIT_DF16 has 751283 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.10 seconds
+      cpu time            0.10 seconds
+      
+
+
+NOTE: There were 751283 observations read from the data set WORK.VISIT_DF16.
+NOTE: 455763 observations with duplicate key values were deleted.
+NOTE: The data set WORK.VISIT_DF16 has 295520 observations and 5 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.16 seconds
+      cpu time            0.35 seconds
+      
+
+
+NOTE: Deleting WORK.O16 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.02 seconds
+      
+
+563        %getvisits_post15(year=17, yeartag=1)
+
+NOTE: Input data set is already sorted, no sorting done.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: Data file DAT17.CCAEO171.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+59                                                         The SAS System                              08:59 Monday, August 29, 2022
+
+
+NOTE: There were 124787 observations read from the data set WORK.COHORT.
+NOTE: There were 573221660 observations read from the data set DAT17.CCAEO171.
+NOTE: The data set WORK.O17 has 1408572 observations and 7 variables.
+NOTE: DATA statement used (Total process time):
+      real time           9:17.97
+      cpu time            8:31.23
+      
+
+
+NOTE: There were 429130 observations read from the data set WORK.O17.
+      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
+NOTE: The data set WORK.O17 has 429130 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.25 seconds
+      cpu time            0.24 seconds
+      
+
+
+NOTE: There were 429130 observations read from the data set WORK.O17.
+NOTE: The data set WORK.VISIT_DF17 has 429130 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.05 seconds
+      cpu time            0.06 seconds
+      
+
+
+NOTE: There were 429130 observations read from the data set WORK.VISIT_DF17.
+NOTE: 268225 observations with duplicate key values were deleted.
+NOTE: The data set WORK.VISIT_DF17 has 160905 observations and 5 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.09 seconds
+      cpu time            0.18 seconds
+      
+
+
+NOTE: Deleting WORK.O17 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+564        %getvisits_post15(year=18, yeartag=1)
+
+NOTE: Input data set is already sorted, no sorting done.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+NOTE: Data file DAT18.CCAEO181.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+
+NOTE: There were 124787 observations read from the data set WORK.COHORT.
+NOTE: There were 589022269 observations read from the data set DAT18.CCAEO181.
+NOTE: The data set WORK.O18 has 1174561 observations and 7 variables.
+NOTE: DATA statement used (Total process time):
+60                                                         The SAS System                              08:59 Monday, August 29, 2022
+
+      real time           9:14.33
+      cpu time            8:25.24
+      
+
+
+NOTE: There were 125678 observations read from the data set WORK.O18.
+      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
+NOTE: The data set WORK.O18 has 125678 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.18 seconds
+      cpu time            0.18 seconds
+      
+
+
+NOTE: There were 125678 observations read from the data set WORK.O18.
+NOTE: The data set WORK.VISIT_DF18 has 125678 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.02 seconds
+      
+
+
+NOTE: There were 125678 observations read from the data set WORK.VISIT_DF18.
+NOTE: 74360 observations with duplicate key values were deleted.
+NOTE: The data set WORK.VISIT_DF18 has 51318 observations and 5 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.04 seconds
+      cpu time            0.04 seconds
+      
+
+
+NOTE: Deleting WORK.O18 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+565        
+566        
+567        * Combine visit data into a single data table ---------------------------------;
+568        data visit_df;
+569        	set visit_df08
+570        		visit_df09
+571        		visit_df10
+572        		visit_df11
+573        		visit_df12
+574        		visit_df13
+575        		visit_df14
+576        		visit_df15
+577        		visit_df16
+578        		visit_df17
+579        		visit_df18;
+580        run;
+
+NOTE: There were 187768 observations read from the data set WORK.VISIT_DF08.
+NOTE: There were 480994 observations read from the data set WORK.VISIT_DF09.
+NOTE: There were 669955 observations read from the data set WORK.VISIT_DF10.
+NOTE: There were 808483 observations read from the data set WORK.VISIT_DF11.
+61                                                         The SAS System                              08:59 Monday, August 29, 2022
+
+NOTE: There were 910281 observations read from the data set WORK.VISIT_DF12.
+NOTE: There were 893618 observations read from the data set WORK.VISIT_DF13.
+NOTE: There were 671066 observations read from the data set WORK.VISIT_DF14.
+NOTE: There were 460926 observations read from the data set WORK.VISIT_DF15.
+NOTE: There were 295520 observations read from the data set WORK.VISIT_DF16.
+NOTE: There were 160905 observations read from the data set WORK.VISIT_DF17.
+NOTE: There were 51318 observations read from the data set WORK.VISIT_DF18.
+NOTE: The data set WORK.VISIT_DF has 5590834 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.71 seconds
+      cpu time            0.65 seconds
+      
+
+581        
+582        proc delete data=visit_df08; run;
+
+NOTE: Deleting WORK.VISIT_DF08 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+583        proc delete data=visit_df09; run;
+
+NOTE: Deleting WORK.VISIT_DF09 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+584        proc delete data=visit_df10; run;
+
+NOTE: Deleting WORK.VISIT_DF10 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+585        proc delete data=visit_df11; run;
+
+NOTE: Deleting WORK.VISIT_DF11 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+586        proc delete data=visit_df12; run;
+
+NOTE: Deleting WORK.VISIT_DF12 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+587        proc delete data=visit_df13; run;
+
+NOTE: Deleting WORK.VISIT_DF13 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+62                                                         The SAS System                              08:59 Monday, August 29, 2022
+
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+588        proc delete data=visit_df14; run;
+
+NOTE: Deleting WORK.VISIT_DF14 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+589        proc delete data=visit_df15; run;
+
+NOTE: Deleting WORK.VISIT_DF15 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+590        proc delete data=visit_df16; run;
+
+NOTE: Deleting WORK.VISIT_DF16 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+591        proc delete data=visit_df17; run;
+
+NOTE: Deleting WORK.VISIT_DF17 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+592        proc delete data=visit_df18; run;
+
+NOTE: Deleting WORK.VISIT_DF18 (memtype=DATA).
+NOTE: PROCEDURE DELETE used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+593        
+594        
+595        * Save data to output ---------------------------------------------------------;
+596        proc export data=cohort
+597        	outfile='/home/kissler/PediatricPrescribing_Chronic/output/memb_df.csv'
+598        	dbms=csv
+599        	replace;
+600        run;
+
+601         /**********************************************************************
+602         *   PRODUCT:   SAS
+603         *   VERSION:   9.4
+604         *   CREATOR:   External File Interface
+605         *   DATE:      29AUG22
+63                                                         The SAS System                              08:59 Monday, August 29, 2022
+
+606         *   DESC:      Generated SAS Datastep Code
+607         *   TEMPLATE SOURCE:  (None Specified.)
+608         ***********************************************************************/
+609            data _null_;
+610            %let _EFIERR_ = 0; /* set the ERROR detection macro variable */
+611            %let _EFIREC_ = 0;     /* clear export record count macro variable */
+612            file '/home/kissler/PediatricPrescribing_Chronic/output/memb_df.csv' delimiter=',' DSD DROPOVER lrecl=32767;
+613            if _n_ = 1 then        /* write column names or labels */
+614             do;
+615               put
+616                  "BIRTH_DATE"
+617               ','
+618                  "ENROLID"
+619               ','
+620                  "STATE"
+621               ','
+622                  "MSA"
+623               ','
+624                  "SEX"
+625               ','
+626                  "CENSOR_DATE"
+627               ;
+628             end;
+629           set  COHORT   end=EFIEOD;
+630               format BIRTH_DATE mmddyy10. ;
+631               format ENROLID best12. ;
+632               format STATE $30. ;
+633               format MSA z5. ;
+634               format SEX $1. ;
+635               format CENSOR_DATE mmddyys10. ;
+636             do;
+637               EFIOUT + 1;
+638               put BIRTH_DATE @;
+639               put ENROLID @;
+640               put STATE $ @;
+641               put MSA @;
+642               put SEX $ @;
+643               put CENSOR_DATE ;
+644               ;
+645             end;
+646            if _ERROR_ then call symputx('_EFIERR_',1);  /* set ERROR detection macro variable */
+647            if EFIEOD then call symputx('_EFIREC_',EFIOUT);
+648            run;
+
+NOTE: The file '/home/kissler/PediatricPrescribing_Chronic/output/memb_df.csv' is:
+      Filename=/home/kissler/PediatricPrescribing_Chronic/output/memb_df.csv,
+      Owner Name=kissler,Group Name=users,
+      Access Permission=-rw-------,
+      Last Modified=29Aug2022:13:24:37
+
+NOTE: 124788 records were written to the file '/home/kissler/PediatricPrescribing_Chronic/output/memb_df.csv'.
+      The minimum record length was 40.
+      The maximum record length was 55.
+NOTE: There were 124787 observations read from the data set WORK.COHORT.
+NOTE: DATA statement used (Total process time):
+      real time           0.25 seconds
+      cpu time            0.12 seconds
+      
+64                                                         The SAS System                              08:59 Monday, August 29, 2022
+
+
+124787 records created in /home/kissler/PediatricPrescribing_Chronic/output/memb_df.csv from COHORT.
+  
+  
+NOTE: "/home/kissler/PediatricPrescribing_Chronic/output/memb_df.csv" file was successfully created.
+NOTE: PROCEDURE EXPORT used (Total process time):
+      real time           0.47 seconds
+      cpu time            0.16 seconds
+      
+
+649        
+650        proc export data=rx_df
+651        	outfile='/home/kissler/PediatricPrescribing_Chronic/output/rx_df.csv'
+652        	dbms=csv
+653        	replace;
+654        run;
+
+655         /**********************************************************************
+656         *   PRODUCT:   SAS
+657         *   VERSION:   9.4
+658         *   CREATOR:   External File Interface
+659         *   DATE:      29AUG22
+660         *   DESC:      Generated SAS Datastep Code
+661         *   TEMPLATE SOURCE:  (None Specified.)
+662         ***********************************************************************/
+663            data _null_;
+664            %let _EFIERR_ = 0; /* set the ERROR detection macro variable */
+665            %let _EFIREC_ = 0;     /* clear export record count macro variable */
+666            file '/home/kissler/PediatricPrescribing_Chronic/output/rx_df.csv' delimiter=',' DSD DROPOVER lrecl=32767;
+667            if _n_ = 1 then        /* write column names or labels */
+668             do;
+669               put
+670                  "CODE"
+671               ','
+672                  "ENROLID"
+673               ','
+674                  "DATE"
+675               ','
+676                  "REFILL"
+677               ;
+678             end;
+679           set  RX_DF   end=EFIEOD;
+680               format CODE $13. ;
+681               format ENROLID best12. ;
+682               format DATE mmddyy10. ;
+683               format REFILL best12. ;
+684             do;
+685               EFIOUT + 1;
+686               put CODE $ @;
+687               put ENROLID @;
+688               put DATE @;
+689               put REFILL ;
+690               ;
+691             end;
+692            if _ERROR_ then call symputx('_EFIERR_',1);  /* set ERROR detection macro variable */
+693            if EFIEOD then call symputx('_EFIREC_',EFIOUT);
+694            run;
+
+65                                                         The SAS System                              08:59 Monday, August 29, 2022
+
+NOTE: The file '/home/kissler/PediatricPrescribing_Chronic/output/rx_df.csv' is:
+      Filename=/home/kissler/PediatricPrescribing_Chronic/output/rx_df.csv,
+      Owner Name=kissler,Group Name=users,
+      Access Permission=-rw-------,
+      Last Modified=29Aug2022:13:24:37
+
+NOTE: 892803 records were written to the file '/home/kissler/PediatricPrescribing_Chronic/output/rx_df.csv'.
+      The minimum record length was 24.
+      The maximum record length was 37.
+NOTE: There were 892802 observations read from the data set WORK.RX_DF.
+NOTE: DATA statement used (Total process time):
+      real time           1.07 seconds
+      cpu time            0.54 seconds
+      
+
+892802 records created in /home/kissler/PediatricPrescribing_Chronic/output/rx_df.csv from RX_DF.
+  
+  
+NOTE: "/home/kissler/PediatricPrescribing_Chronic/output/rx_df.csv" file was successfully created.
+NOTE: PROCEDURE EXPORT used (Total process time):
+      real time           1.12 seconds
+      cpu time            0.57 seconds
+      
+
+695        
+696        proc export data=visit_df
+697        	outfile='/home/kissler/PediatricPrescribing_Chronic/output/visit_df.csv'
+698        	dbms=csv
+699        	replace;
+700        run;
+
+701         /**********************************************************************
+702         *   PRODUCT:   SAS
+703         *   VERSION:   9.4
+704         *   CREATOR:   External File Interface
+705         *   DATE:      29AUG22
+706         *   DESC:      Generated SAS Datastep Code
+707         *   TEMPLATE SOURCE:  (None Specified.)
+708         ***********************************************************************/
+709            data _null_;
+710            %let _EFIERR_ = 0; /* set the ERROR detection macro variable */
+711            %let _EFIREC_ = 0;     /* clear export record count macro variable */
+712            file '/home/kissler/PediatricPrescribing_Chronic/output/visit_df.csv' delimiter=',' DSD DROPOVER lrecl=32767;
+713            if _n_ = 1 then        /* write column names or labels */
+714             do;
+715               put
+716                  "DX1"
+717               ','
+718                  "DX2"
+719               ','
+720                  "ENROLID"
+721               ','
+722                  "DATE"
+723               ','
+724                  "ICD"
+725               ;
+726             end;
+727           set  VISIT_DF   end=EFIEOD;
+66                                                         The SAS System                              08:59 Monday, August 29, 2022
+
+728               format DX1 $30. ;
+729               format DX2 $30. ;
+730               format ENROLID best12. ;
+731               format DATE mmddyy10. ;
+732               format ICD $1. ;
+733             do;
+734               EFIOUT + 1;
+735               put DX1 $ @;
+736               put DX2 $ @;
+737               put ENROLID @;
+738               put DATE @;
+739               put ICD $ ;
+740               ;
+741             end;
+742            if _ERROR_ then call symputx('_EFIERR_',1);  /* set ERROR detection macro variable */
+743            if EFIEOD then call symputx('_EFIREC_',EFIOUT);
+744            run;
+
+NOTE: The file '/home/kissler/PediatricPrescribing_Chronic/output/visit_df.csv' is:
+      Filename=/home/kissler/PediatricPrescribing_Chronic/output/visit_df.csv,
+      Owner Name=kissler,Group Name=users,
+      Access Permission=-rw-------,
+      Last Modified=29Aug2022:13:24:38
+
+NOTE: 5590835 records were written to the file '/home/kissler/PediatricPrescribing_Chronic/output/visit_df.csv'.
+      The minimum record length was 23.
+      The maximum record length was 40.
+NOTE: There were 5590834 observations read from the data set WORK.VISIT_DF.
+NOTE: DATA statement used (Total process time):
+      real time           6.49 seconds
+      cpu time            3.65 seconds
+      
+
+5590834 records created in /home/kissler/PediatricPrescribing_Chronic/output/visit_df.csv from VISIT_DF.
+  
+  
+NOTE: "/home/kissler/PediatricPrescribing_Chronic/output/visit_df.csv" file was successfully created.
+NOTE: PROCEDURE EXPORT used (Total process time):
+      real time           6.54 seconds
+      cpu time            3.68 seconds
+      
+
+745        
+
