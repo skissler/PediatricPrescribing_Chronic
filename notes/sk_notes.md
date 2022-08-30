@@ -108,7 +108,7 @@ It looks like the weight columns are just some kind of linking integers? I'm not
 
 I've also done a quick update of 2 years from 720 to 730 days, one year from 360 to 365 days, and 5 years from 1800 to 1825 days. That all in run_analysis. Hopefully I haven't broken anything. 
 
-
+Going to do a re-run of the full extraction now, now that the extra diagnosis columns are being pulled and the service location. 
 
 
 
