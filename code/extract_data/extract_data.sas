@@ -378,7 +378,7 @@ run;
 	* Keep only visits between birth and censor date;
 	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID DATE ICD STDPLAC);
 		rename SVCDATE=DATE DXVER=ICD;
-		length DX1 $30 DX2 $30 DX3 $30 DX4 $30;
+		length DX1 $30. DX2 $30. DX3 $30. DX4 $30.;
 	    set o&year.(rename=(DX1=DX1_orig DX2=DX2_orig DX3=DX3_orig DX4=DX4_orig));
 	    where BIRTH_DATE<=SVCDATE<=CENSOR_DATE;
 	    DX1=DX1_orig;
