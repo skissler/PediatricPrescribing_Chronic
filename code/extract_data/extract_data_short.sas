@@ -493,105 +493,10 @@ proc delete data=cohort16; run;
 proc delete data=cohort17; run; 
 proc delete data=cohort18; run; 
 
-* Refine to a cohort of people present for five straight years ----------------;
-%refinecohort(); *1sam;
-
-* Get prescription data -------------------------------------------------------;
-%getrx(year=08, yeartag=2)
-%getrx(year=09, yeartag=1)
-%getrx(year=10, yeartag=1)
-%getrx(year=11, yeartag=1)
-%getrx(year=12, yeartag=1)
-%getrx(year=13, yeartag=1)
-%getrx(year=14, yeartag=1)
-%getrx(year=15, yeartag=1)
-%getrx(year=16, yeartag=1)
-%getrx(year=17, yeartag=1)
-%getrx(year=18, yeartag=1)
-
-* Combine prescription data into a single data table --------------------------;
-data rx_df;
-	set d08
-		d09
-		d10
-		d11
-		d12
-		d13
-		d14
-		d15
-		d16
-		d17
-		d18;
-run;
-proc delete data=d08; run; 
-proc delete data=d09; run; 
-proc delete data=d10; run; 
-proc delete data=d11; run; 
-proc delete data=d12; run; 
-proc delete data=d13; run; 
-proc delete data=d14; run; 
-proc delete data=d15; run; 
-proc delete data=d16; run; 
-proc delete data=d17; run; 
-proc delete data=d18; run; 
-
-* Get visit data --------------------------------------------------------------;
-%getvisits_pre10(year=08, yeartag=2)
-%getvisits_pre10(year=09, yeartag=1)
-%getvisits_pre15(year=10, yeartag=1)
-%getvisits_pre15(year=11, yeartag=1)
-%getvisits_pre15(year=12, yeartag=1)
-%getvisits_pre15(year=13, yeartag=1)
-%getvisits_pre15(year=14, yeartag=1)
-%getvisits_post15(year=15, yeartag=1)
-%getvisits_post15(year=16, yeartag=1)
-%getvisits_post15(year=17, yeartag=1)
-%getvisits_post15(year=18, yeartag=1)
-
-
-* Combine visit data into a single data table ---------------------------------;
-data visit_df;
-	set visit_df08 
-		visit_df09 
-		visit_df10 
-		visit_df11 
-		visit_df12 
-		visit_df13 
-		visit_df14 
-		visit_df15 
-		visit_df16 
-		visit_df17 
-		visit_df18;
-run;
-
-proc delete data=visit_df08; run; 
-proc delete data=visit_df09; run; 
-proc delete data=visit_df10; run; 
-proc delete data=visit_df11; run; 
-proc delete data=visit_df12; run; 
-proc delete data=visit_df13; run; 
-proc delete data=visit_df14; run; 
-proc delete data=visit_df15; run; 
-proc delete data=visit_df16; run; 
-proc delete data=visit_df17; run; 
-proc delete data=visit_df18; run; 
-
 
 * Save data to output ---------------------------------------------------------;
 proc export data=cohort
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/memb_df.csv'
-	dbms=csv
-	replace;
-run;
-
-proc export data=rx_df
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/rx_df.csv'
-	dbms=csv
-	replace;
-run;
-
-proc export data=visit_df
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/visit_df.csv'
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/memb_df_test.csv'
 	dbms=csv
 	replace;
 run;

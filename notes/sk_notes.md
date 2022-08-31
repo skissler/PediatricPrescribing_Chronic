@@ -6,6 +6,7 @@ __Jump to:__
 - [25 Aug 2022](#25-Aug-2022)
 - [29 Aug 2022](#29-Aug-2022)
 - [30 Aug 2022](#30-Aug-2022)
+- [31 Aug 2022](#31-Aug-2022)
 
 # 9 Aug 2022
 To do: 
@@ -110,6 +111,14 @@ I've also done a quick update of 2 years from 720 to 730 days, one year from 360
 
 Going to do a re-run of the full extraction now, now that the extra diagnosis columns are being pulled and the service location. 
 
+
+# 31 Aug 2022 
+
+Going to check on the run I sent off after work yesterday; hopefully we're back up to the same number of kids as we had in the original version of the mansucript. If so, I'll carry on with the formal analysis. 
+
+Still took about 4.5 hours which is good, and the run finished. I forgot to update the output file names (they're still appended with 'sam'), but that's an easy fix. 
+
+Hm.... seems like we only got a handful more kids, 124,810. Not sure what's going on there... 
 
 
 
