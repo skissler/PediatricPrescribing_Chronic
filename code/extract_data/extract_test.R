@@ -68,7 +68,7 @@ event_df <- event_df[,.(DATE=first(DATE), EVENT=first(EVENT), CODE=first(CODE)),
 printtime(msg='Finished first block')
 
 
-write_csv(memb_df, path="output/event_df.csv")
+write_csv(event_df, file="output/event_df.csv")
 
 
 # =============================================================================
