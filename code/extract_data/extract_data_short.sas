@@ -405,7 +405,7 @@ run;
 * ============================================================================;
 
 * Get birthdates --------------------------------------------------------------;
-%getbirthdates(year=08, yeartag=1sam); *1sam;
+%getbirthdates(year=08, yeartag=2sam); *2sam;
 %getbirthdates(year=09, yeartag=1sam); *1sam;
 %getbirthdates(year=10, yeartag=1sam); *1sam;
 %getbirthdates(year=11, yeartag=1sam); *1sam;
