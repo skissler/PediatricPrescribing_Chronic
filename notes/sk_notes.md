@@ -121,7 +121,9 @@ Still took about 4.5 hours which is good, and the run finished. I forgot to upda
 Hm.... seems like we only got a handful more kids, 124,810. Not sure what's going on there... 
 
 
+Trying to see now if it's just because I asked for 1825 days rather than 1800. Unlikely, but we'll see. 
 
+maybe difference in using substring vs `%like%` for the birth codes? 
 
 
 
