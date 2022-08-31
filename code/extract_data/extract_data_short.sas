@@ -454,7 +454,7 @@ proc delete data=cohortBirthdates17; run;
 proc delete data=cohortBirthdates18; run; 
 
 proc export data=cohortBirthdates
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/event_df_test.csv'
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/event_df_SAS.csv'
 	dbms=csv
 	replace;
 run;
