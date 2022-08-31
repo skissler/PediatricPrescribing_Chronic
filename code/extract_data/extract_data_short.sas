@@ -405,6 +405,13 @@ run;
 * ============================================================================;
 
 * Get birthdates --------------------------------------------------------------;
+%getbirthdates(year=08, yeartag=1sam); *1sam;
+%getbirthdates(year=09, yeartag=1sam); *1sam;
+%getbirthdates(year=10, yeartag=1sam); *1sam;
+%getbirthdates(year=11, yeartag=1sam); *1sam;
+%getbirthdates(year=12, yeartag=1sam); *1sam;
+%getbirthdates(year=13, yeartag=1sam); *1sam;
+%getbirthdates(year=14, yeartag=1sam); *1sam;
 %getbirthdates(year=15, yeartag=1sam); *1sam;
 %getbirthdates(year=16, yeartag=1sam); *1sam;
 %getbirthdates(year=17, yeartag=1sam); *1sam;
@@ -412,7 +419,14 @@ run;
 
 * Combine birthdates into a single data table ---------------------------------;
 data cohortBirthdates;
-	set cohortBirthdates15
+	set cohortBirthdates08
+		cohortBirthdates09
+		cohortBirthdates10
+		cohortBirthdates11
+		cohortBirthdates12
+		cohortBirthdates13
+		cohortBirthdates14
+		cohortBirthdates15
 		cohortBirthdates16
 		cohortBirthdates17
 		cohortBirthdates18;
@@ -427,6 +441,13 @@ data cohortBirthdates (keep=ENROLID BIRTH_DATE);
 	by ENROLID;
 	if first.ENROLID;
 run;
+proc delete data=cohortBirthdates08; run; 
+proc delete data=cohortBirthdates09; run; 
+proc delete data=cohortBirthdates10; run; 
+proc delete data=cohortBirthdates11; run; 
+proc delete data=cohortBirthdates12; run; 
+proc delete data=cohortBirthdates13; run; 
+proc delete data=cohortBirthdates14; run; 
 proc delete data=cohortBirthdates15; run; 
 proc delete data=cohortBirthdates16; run; 
 proc delete data=cohortBirthdates17; run; 
