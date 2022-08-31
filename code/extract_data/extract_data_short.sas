@@ -192,7 +192,7 @@ run;
 	run;
 
 	* keep only rows where index = months from birth, which gives contiguous months from birth;
-	data cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF where=(COUNT=BIRTHDIFF));
+	data cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF where=(COUNT=BIRTHDIFF and COUNT>1));
 		set cohort;
 	run;
 
@@ -482,7 +482,7 @@ proc delete data=cohort12; run;
 * proc delete data=cohort18; run; 
 
 * Refine to a cohort of people present for five straight years ----------------;
-* %refinecohort(); *1sam;
+%refinecohort(); *1sam;
 
 proc export data=cohortBirthdates
 	outfile='/home/kissler/PediatricPrescribing_Chronic/output/event_df_SAS.csv'

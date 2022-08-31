@@ -130,6 +130,8 @@ Ok - it looks like the birth date extraction is no different.
 right - somehow I've gotten more lines from SAS at the midpoint of the analysis. How do we end up getting less? Why are the different? maybe the leq. 
 
 
+ok, and the loop gives the same as the first cohort pull function. So the difference must be coming from the reduction steps. where? 
+
 
 
 
