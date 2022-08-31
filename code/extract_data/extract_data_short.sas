@@ -453,8 +453,57 @@ proc delete data=cohortBirthdates16; run;
 proc delete data=cohortBirthdates17; run; 
 proc delete data=cohortBirthdates18; run; 
 
+* Get yearly cohorts ----------------------------------------------------------;
+%getcohort(year=08, yeartag=2); *1sam;
+%getcohort(year=09, yeartag=1); *1sam;
+%getcohort(year=10, yeartag=1); *1sam;
+%getcohort(year=11, yeartag=1); *1sam;
+%getcohort(year=12, yeartag=1); *1sam;
+%getcohort(year=13, yeartag=1); *1sam;
+%getcohort(year=14, yeartag=1); *1sam;
+%getcohort(year=15, yeartag=1); *1sam;
+%getcohort(year=16, yeartag=1); *1sam;
+%getcohort(year=17, yeartag=1); *1sam;
+%getcohort(year=18, yeartag=1); *1sam;
+proc delete data=cohortBirthdates; run; 
+
+* Combine yearly cohorts into a single data table -----------------------------;
+data cohort;
+	set cohort08
+		cohort09
+		cohort10
+		cohort11
+		cohort12
+		cohort13
+		cohort14
+		cohort15
+		cohort16
+		cohort17
+		cohort18;
+run;
+proc delete data=cohort08; run; 
+proc delete data=cohort09; run; 
+proc delete data=cohort10; run; 
+proc delete data=cohort11; run; 
+proc delete data=cohort12; run; 
+proc delete data=cohort13; run; 
+proc delete data=cohort14; run; 
+proc delete data=cohort15; run; 
+proc delete data=cohort16; run; 
+proc delete data=cohort17; run; 
+proc delete data=cohort18; run; 
+
+* Refine to a cohort of people present for five straight years ----------------;
+%refinecohort(); *1sam;
+
 proc export data=cohortBirthdates
 	outfile='/home/kissler/PediatricPrescribing_Chronic/output/event_df_SAS.csv'
+	dbms=csv
+	replace;
+run;
+
+proc export data=cohort
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/memb_df_SAS.csv'
 	dbms=csv
 	replace;
 run;
