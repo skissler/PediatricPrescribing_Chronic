@@ -125,7 +125,9 @@ Trying to see now if it's just because I asked for 1825 days rather than 1800. U
 
 maybe difference in using substring vs `%like%` for the birth codes?
 
-Ok - it looks like the birth date extraction is no different.  
+Ok - it looks like the birth date extraction is no different. 
+
+right - somehow I've gotten more lines from SAS at the midpoint of the analysis. How do we end up getting less? Why are the different? maybe the leq. 
 
 
 

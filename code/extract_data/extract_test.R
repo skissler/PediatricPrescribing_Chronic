@@ -24,7 +24,7 @@ event_df <- setDT(data.frame())
 # --- ~??min ------------------------------------------------------------------
 
 printtime(msg='Starting birth extraction')
-for(y in match(c("08","09","10","11","12","13","14","15","16","17","18"), yearlist)){
+for(y in match(c("08","09","10","11","12"), yearlist)){
 
 	# --- ~10min/block --------------------------------------------------------
 
@@ -77,7 +77,7 @@ write_csv(event_df, file="output/event_df_R.csv")
 
 printtime(msg='Starting censorship definition')
 memb_df <- setDT(data.frame())
-for(y in match(c("08","09","10","11","12","13","14","15","16","17","18"), yearlist)){
+for(y in match(c("08","09","10","11","12"), yearlist)){
 
 	# --- Import 't' (membership detail) table: ~??min ------------------------
 	t_df <- read_sas(filenames_t_sam[y],
@@ -116,7 +116,7 @@ for(y in match(c("08","09","10","11","12","13","14","15","16","17","18"), yearli
 	t_df <- t_df[,BIRTH_MONTH:=month(BIRTH_DATE)]
 	t_df <- t_df[,BIRTH_YEAR:=year(BIRTH_DATE)]
 	# Restrict to those under 5 (first 5 years of life): 
-	t_df <- t_df[AGE<5]
+	t_df <- t_df[AGE<=5]
 	# 2010sam: 42425 recs
 	# 2018sam: 122574 recs
 	# Keep only rows corresponding to full months or the birth month: 
