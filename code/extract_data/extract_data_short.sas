@@ -454,17 +454,17 @@ proc delete data=cohortBirthdates17; run;
 proc delete data=cohortBirthdates18; run; 
 
 * Get yearly cohorts ----------------------------------------------------------;
-%getcohort(year=08, yeartag=2); *1sam;
-%getcohort(year=09, yeartag=1); *1sam;
-%getcohort(year=10, yeartag=1); *1sam;
-%getcohort(year=11, yeartag=1); *1sam;
-%getcohort(year=12, yeartag=1); *1sam;
-%getcohort(year=13, yeartag=1); *1sam;
-%getcohort(year=14, yeartag=1); *1sam;
-%getcohort(year=15, yeartag=1); *1sam;
-%getcohort(year=16, yeartag=1); *1sam;
-%getcohort(year=17, yeartag=1); *1sam;
-%getcohort(year=18, yeartag=1); *1sam;
+%getcohort(year=08, yeartag=2sam); *1sam;
+%getcohort(year=09, yeartag=1sam); *1sam;
+%getcohort(year=10, yeartag=1sam); *1sam;
+%getcohort(year=11, yeartag=1sam); *1sam;
+%getcohort(year=12, yeartag=1sam); *1sam;
+%getcohort(year=13, yeartag=1sam); *1sam;
+%getcohort(year=14, yeartag=1sam); *1sam;
+%getcohort(year=15, yeartag=1sam); *1sam;
+%getcohort(year=16, yeartag=1sam); *1sam;
+%getcohort(year=17, yeartag=1sam); *1sam;
+%getcohort(year=18, yeartag=1sam); *1sam;
 proc delete data=cohortBirthdates; run; 
 
 * Combine yearly cohorts into a single data table -----------------------------;
