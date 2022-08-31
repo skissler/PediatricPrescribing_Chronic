@@ -432,7 +432,7 @@ proc delete data=cohortBirthdates16; run;
 proc delete data=cohortBirthdates17; run; 
 proc delete data=cohortBirthdates18; run; 
 
-proc export data=cohort
+proc export data=cohortBirthdates
 	outfile='/home/kissler/PediatricPrescribing_Chronic/output/event_df_test.csv'
 	dbms=csv
 	replace;
