@@ -123,7 +123,9 @@ Hm.... seems like we only got a handful more kids, 124,810. Not sure what's goin
 
 Trying to see now if it's just because I asked for 1825 days rather than 1800. Unlikely, but we'll see. 
 
-maybe difference in using substring vs `%like%` for the birth codes? 
+maybe difference in using substring vs `%like%` for the birth codes?
+
+Ok - it looks like the birth date extraction is no different.  
 
 
 

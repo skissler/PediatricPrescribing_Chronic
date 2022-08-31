@@ -136,8 +136,8 @@ egeoloclist <- read.csv('data/EGEOLOClist.csv', colClasses=c('character','charac
 
 # Store the pointers to the 't' data frames (membership detail)
 filenames_t <- c(
-	"/data/markscan_authorized/data/commercial/2008/ccaet082.sas7bdat",
-	"/data/markscan_authorized/data/commercial/2009/ccaet091.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat08/ccaet082.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat09/ccaet091.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2010/ccaet101.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2011/ccaet111.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2012/ccaet121.sas7bdat",
@@ -151,8 +151,8 @@ filenames_t <- c(
 
 # Store the pointers to the 'd' data frames (prescriptions) 
 filenames_d <- c(
-	"/data/markscan_authorized/data/commercial/2008/ccaed082.sas7bdat",
-	"/data/markscan_authorized/data/commercial/2009/ccaed091.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat08/ccaed082.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat09/ccaed091.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2010/ccaed101.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2011/ccaed111.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2012/ccaed121.sas7bdat",
@@ -166,8 +166,8 @@ filenames_d <- c(
 
 # Store the pointers to the 'o' data frames (outpatient services)
 filenames_o <- c(
-	"/data/markscan_authorized/data/commercial/2008/ccaeo082.sas7bdat",
-	"/data/markscan_authorized/data/commercial/2009/ccaeo091.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat08/ccaeo082.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat09/ccaeo091.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2010/ccaeo101.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2011/ccaeo111.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2012/ccaeo121.sas7bdat",
@@ -181,8 +181,8 @@ filenames_o <- c(
 
 # Store the pointers to the 's' data frames (inpatient services)
 filenames_s <- c(
-	"/data/markscan_authorized/data/commercial/2008/ccaes082.sas7bdat",
-	"/data/markscan_authorized/data/commercial/2009/ccaes091.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat08/ccaes082.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat09/ccaes091.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2010/ccaes101.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2011/ccaes111.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2012/ccaes121.sas7bdat",
@@ -196,8 +196,8 @@ filenames_s <- c(
 
 # Store the pointers to the sampled 't' data frames (membership detail)
 filenames_t_sam <- c(
-	"/data/markscan_authorized/data/commercial/2008/ccaet082sam.sas7bdat",
-	"/data/markscan_authorized/data/commercial/2009/ccaet091sam.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat08/ccaet082sam.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat09/ccaet091sam.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2010/ccaet101sam.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2011/ccaet111sam.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2012/ccaet121sam.sas7bdat",
@@ -211,8 +211,8 @@ filenames_t_sam <- c(
 
 # Store the pointers to the sampled 'd' data frames (prescriptions) 
 filenames_d_sam <- c(
-	"/data/markscan_authorized/data/commercial/2008/ccaed082sam.sas7bdat",
-	"/data/markscan_authorized/data/commercial/2009/ccaed091sam.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat08/ccaed082sam.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat09/ccaed091sam.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2010/ccaed101sam.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2011/ccaed111sam.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2012/ccaed121sam.sas7bdat",
@@ -226,8 +226,8 @@ filenames_d_sam <- c(
 
 # Store the pointers to the sampled 'o' data frames (outpatient services)
 filenames_o_sam <- c(
-	"/data/markscan_authorized/data/commercial/2008/ccaeo082sam.sas7bdat",
-	"/data/markscan_authorized/data/commercial/2009/ccaeo091sam.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat08/ccaeo082sam.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat09/ccaeo091sam.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2010/ccaeo101sam.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2011/ccaeo111sam.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2012/ccaeo121sam.sas7bdat",
@@ -241,8 +241,8 @@ filenames_o_sam <- c(
 
 # Store the pointers to the sampled 's' data frames (inpatient services)
 filenames_s_sam <- c(
-	"/data/markscan_authorized/data/commercial/2008/ccaes082sam.sas7bdat",
-	"/data/markscan_authorized/data/commercial/2009/ccaes091sam.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat08/ccaes082sam.sas7bdat",
+	"/data/markscan_authorized_users/kissler/dat09/ccaes091sam.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2010/ccaes101sam.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2011/ccaes111sam.sas7bdat",
 	"/data/markscan_authorized/data/commercial/2012/ccaes121sam.sas7bdat",
