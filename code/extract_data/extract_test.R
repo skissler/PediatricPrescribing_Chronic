@@ -153,6 +153,8 @@ write_csv(memb_df, file="output/memb_df_prereduce_R.csv")
 memb_df <- memb_df[,INDEX:=12*(DT_YEAR-BIRTH_YEAR)+(DT_MONTH-BIRTH_MONTH)]
 # Restrict to indices from the month after birth through end of enrollment:
 memb_df <- memb_df[INDEX>=min(index_df$INDEX) & INDEX<=max(index_df$INDEX)]
+
+
 # sam: 1098006 recs
 # Find the first missing month for each person: 
 memb_df <- memb_df[,CENSORINDEX:=min(setdiff(c(index_df$INDEX,Inf), .SD$INDEX)), by=.(ENROLID)]

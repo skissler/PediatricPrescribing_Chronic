@@ -196,15 +196,15 @@ run;
 		set cohort;
 	run;
 
+	* keep only one row per person (the last);
+	proc sort data=cohort;
+		by ENROLID COUNT;
+	run;
+
 	proc export data=cohort
 		outfile='/home/kissler/PediatricPrescribing_Chronic/output/cohort_intermediate_SAS.csv'
 		dbms=csv
 		replace;
-	run;
-
-	* keep only one row per person (the last);
-	proc sort data=cohort;
-		by ENROLID COUNT;
 	run;
 
 	data cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE);
