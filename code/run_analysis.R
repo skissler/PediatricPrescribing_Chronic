@@ -251,11 +251,11 @@ fig_cumfirstrx_respnonresp <-
 		scale_linetype_manual(values=c("All conditions"="solid","Respiratory conditions"="solid","Non-respiratory conditions"="dashed")) +
 		theme(text=element_text(size=10))
 
-ggsave(fig_first_cumrx_respnonresp, file="figures/firstrx.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_first_cumrx_respnonresp, file="figures/firstrx.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumfirstrx_respnonresp, file="figures/firstrx.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumfirstrx_respnonresp, file="figures/firstrx.png", width=figwidth, height=figwidth, dpi=figres)
 
-ggsave(fig_first_cumrx_respnonresp+theme(legend.position="none"), file="figures/firstrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_first_cumrx_respnonresp+theme(legend.position="none"), file="figures/firstrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumfirstrx_respnonresp+theme(legend.position="none"), file="figures/firstrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumfirstrx_respnonresp+theme(legend.position="none"), file="figures/firstrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
 
 # Extract proportion of children who have received a prescription by age 5: 
 combdat_firstcumrx %>% 	
