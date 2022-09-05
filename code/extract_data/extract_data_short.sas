@@ -192,9 +192,9 @@ run;
 	run;
 
 	* Keep rows corresponding to months 1-60 after birth;
-	data cohort (where=(BIRTHDIFF>=1 and BIRTHDIFF<=60));
-		set cohort;
-	run;
+	* data cohort (where=(BIRTHDIFF>=1 and BIRTHDIFF<=60));
+	* 	set cohort;
+	* run;
 
 	proc sort data=cohort;
 		by ENROLID COUNT;
