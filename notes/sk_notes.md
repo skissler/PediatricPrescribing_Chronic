@@ -138,6 +138,9 @@ ok, and the loop gives the same as the first cohort pull function. So the differ
 
 Alright, I'm convinced that the SAS pull is the right one. In the preivous R pull, I kept a few people with coverage prior to their inferred birth, which I should probably throw out since we don't really know what's going on there. I was also keeping some people for whom we didn't have coverage during their birth month, which I think we shouldn't be doing. That gives us somewhat fewer people, but I think the results are similar. I'll do the full pull now and verify the paper's findings now. 
 
+Starting the new extraction now - - 
+
+
 
 
 
