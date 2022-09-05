@@ -192,7 +192,7 @@ run;
 	run;
 
 	* Keep rows corresponding to months 1-60 after birth;
-	data cohort (where=(COUNT>=1 and COUNT<=60)); *and COUNT>1;
+	data cohort (where=(BIRTHDIFF>=1 and BIRTHDIFF<=60));
 		set cohort;
 	run;
 
