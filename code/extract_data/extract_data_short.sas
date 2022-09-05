@@ -185,6 +185,15 @@ run;
 		if first.ENROLID then COUNT = 0; *COUNT=1;
 	run;
 
+	proc sort data=cohort;
+		by ENROLID COUNT;
+	run;
+	proc export data=cohort
+		outfile='/home/kissler/PediatricPrescribing_Chronic/output/cohort_intermediate_SAS.csv'
+		dbms=csv
+		replace;
+	run;
+
 	* Append an index column;
 	data cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
 		set cohort;
@@ -199,12 +208,6 @@ run;
 	* keep only one row per person (the last);
 	proc sort data=cohort;
 		by ENROLID COUNT;
-	run;
-
-	proc export data=cohort
-		outfile='/home/kissler/PediatricPrescribing_Chronic/output/cohort_intermediate_SAS.csv'
-		dbms=csv
-		replace;
 	run;
 
 	data cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE);
