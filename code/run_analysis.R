@@ -266,6 +266,7 @@ combdat_firstcumrx %>%
 # Figure 1C: Prescribing histogram
 # ==============================================================================
 
+# Count total prescriptions per person:
 cumrx_summ_overall <- rx_df[
 	,.(ENROLID,ISRX=1)][
 	memb_df[,.(ENROLID)], on=.(ENROLID)][
@@ -274,6 +275,7 @@ cumrx_summ_overall <- rx_df[
 	as_tibble() %>% 
 	mutate(Indication="All conditions")
 
+# Count total prescriptions per person for respiratory conditions:
 cumrx_summ_resp <- rx_df_resp[
 	,.(ENROLID,ISRX=1)][
 	memb_df[,.(ENROLID)], on=.(ENROLID)][
@@ -282,6 +284,7 @@ cumrx_summ_resp <- rx_df_resp[
 	as_tibble() %>% 
 	mutate(Indication="Respiratory infections")
 
+# Count total prescriptions per person for non-respiratory conditions:
 cumrx_summ_nonresp <- rx_df_nonresp[
 	,.(ENROLID,ISRX=1)][
 	memb_df[,.(ENROLID)], on=.(ENROLID)][
@@ -290,8 +293,10 @@ cumrx_summ_nonresp <- rx_df_nonresp[
 	as_tibble() %>% 
 	mutate(Indication="Other conditions")
 
+# Combine counts into a single data frame: 
 cumrx_summ <- rbind(cumrx_summ_overall, cumrx_summ_resp, cumrx_summ_nonresp)
 
+# Plot cumulative prescriptions by condition group as densities: 
 fig_cumrx_summ <- cumrx_summ %>% 
 	ggplot(aes(x=NRX, fill=Indication, col=Indication, lty=Indication)) + 
 		# geom_histogram(aes(y=..density..), position="identity", binwidth=1, alpha=0.2) + 
@@ -314,6 +319,7 @@ ggsave(fig_cumrx_summ + theme(legend.position="none"), file="figures/cumrx_summ_
 # Asymmetry in prescribing
 # ==============================================================================
 
+# Count and rank total prescriptions per child, from most to least: 
 rxrankdf_overall <- rx_df[,.(ENROLID,ID)][
 	memb_df,
 	on=.(ENROLID)][
@@ -332,10 +338,11 @@ rxrankdf_overall <- rx_df[,.(ENROLID,ID)][
 	mutate(PRANK_WEIGHTED=cumsum(WEIGHT_INDIV_NOYEAR)) %>% 
 	ungroup()
 
+# What proportion of children (starting from those who receive the most prescriptions) is responsible for 50% of antibiotic prescriptions? 
 rxrankdf_overall %>% filter(CUMPROPRX>0.5)
 rxrankdf_overall %>% filter(PRANK_WEIGHTED>0.2)
 
-
+# Count and rank total prescriptions per child associated with respiratory conditions, from most to least: 
 rxrankdf_resp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
 	COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")][
@@ -357,6 +364,7 @@ rxrankdf_resp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	mutate(PRANK_WEIGHTED=cumsum(WEIGHT_INDIV_NOYEAR)) %>% 
 	ungroup()
 
+# Count and rank total prescriptions per child associated with non-respiratory conditions, from most to least: 
 rxrankdf_nonresp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
 	!(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media"))][
@@ -378,12 +386,14 @@ rxrankdf_nonresp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	mutate(PRANK_WEIGHTED=cumsum(WEIGHT_INDIV_NOYEAR)) %>% 
 	ungroup() 
 
+# Combine the ranking data frames across all condition classes: 
 rxrankdf_combined <- bind_rows(
 	mutate(rxrankdf_overall,COND="All conditions"),
 	mutate(rxrankdf_resp,COND="Respiratory conditions"),
 	mutate(rxrankdf_nonresp,COND="Non-respiratory conditions"),
 	)
 
+# Plot the Lorenz curves for prescriptions by condition class: 
 fig_rankcurve_respnonresp <- rxrankdf_combined %>% 
 	ggplot(aes(x=PRANK_WEIGHTED, y=CUMPROPRX, col=COND, lty=COND)) + 
 		geom_line() + 
@@ -405,69 +415,60 @@ ggsave(fig_rankcurve_respnonresp+theme(legend.position="none"), file="figures/ra
 # Chronic condition analysis
 # ==============================================================================
 
-superuserdf <- rxrankdf_overall_abx %>% 
-	filter(PRANK_WEIGHTED<=0.2)
-setDT(superuserdf)
+# superuserdf <- rxrankdf_overall %>% 
+# 	filter(PRANK_WEIGHTED<=0.2)
+# setDT(superuserdf)
 
-temp1 <- chronicconddf[,.(DX, BODY_SYSTEM, ICD)][
-	visit_df[,.(ENROLID,DX=DX1,ICD)],on=.(DX,ICD)]
-temp2 <- chronicconddf[,.(DX, BODY_SYSTEM, ICD)][
-	visit_df[,.(ENROLID,DX=DX2,ICD)],on=.(DX,ICD)]
-temp <- rbind(temp1, temp2)
-tempcount <- temp[!is.na(BODY_SYSTEM)][
-	,.(NVISITS=.N),by=.(ICD,DX,BODY_SYSTEM)] %>% 
-	as_tibble() %>% 
-	arrange(BODY_SYSTEM, desc(NVISITS)) %>% 
-	left_join(icd9list, by=c("DX","ICD")) %>% 
-	left_join(icd10list, by=c("DX","ICD"), suffix=c(".9",".0")) %>% 
-	split(.$BODY_SYSTEM) %>% 
-	map(~ select(., -BODY_SYSTEM))
+# temp1 <- chronicconddf[,.(DX, BODY_SYSTEM, ICD)][
+# 	visit_df[,.(ENROLID,DX=DX1,ICD)],on=.(DX,ICD)]
+# temp2 <- chronicconddf[,.(DX, BODY_SYSTEM, ICD)][
+# 	visit_df[,.(ENROLID,DX=DX2,ICD)],on=.(DX,ICD)]
+# temp <- rbind(temp1, temp2)
+# tempcount <- temp[!is.na(BODY_SYSTEM)][
+# 	,.(NVISITS=.N),by=.(ICD,DX,BODY_SYSTEM)] %>% 
+# 	as_tibble() %>% 
+# 	arrange(BODY_SYSTEM, desc(NVISITS)) %>% 
+# 	left_join(icd9list, by=c("DX","ICD")) %>% 
+# 	left_join(icd10list, by=c("DX","ICD"), suffix=c(".9",".0")) %>% 
+# 	split(.$BODY_SYSTEM) %>% 
+# 	map(~ select(., -BODY_SYSTEM))
 
-tempcount_clean_9 <- tempcount %>% 
-	map(~ filter(., ICD==9)) %>% 
-	map(~ select(., -ICD, -DESC_LONG.0)) %>% 
-	map(~ mutate(., CUMVISITS=sum(.$NVISITS))) %>% 
-	map(~ mutate(., PCTVISITS=round(NVISITS/CUMVISITS*1000)/10)) %>% 
-	map(~ select(., PCTVISITS, DX, DESC_LONG.9))
+# tempcount_clean_9 <- tempcount %>% 
+# 	map(~ filter(., ICD==9)) %>% 
+# 	map(~ select(., -ICD, -DESC_LONG.0)) %>% 
+# 	map(~ mutate(., CUMVISITS=sum(.$NVISITS))) %>% 
+# 	map(~ mutate(., PCTVISITS=round(NVISITS/CUMVISITS*1000)/10)) %>% 
+# 	map(~ select(., PCTVISITS, DX, DESC_LONG.9))
 
-tempcount_clean_10 <- tempcount %>% 
-	map(~ filter(., ICD==0)) %>% 
-	map(~ select(., -ICD, -DESC_LONG.9)) %>% 
-	map(~ mutate(., CUMVISITS=sum(.$NVISITS))) %>% 
-	map(~ mutate(., PCTVISITS=round(NVISITS/CUMVISITS*1000)/10)) %>% 
-	map(~ select(., PCTVISITS, DX, DESC_LONG.0))
+# tempcount_clean_10 <- tempcount %>% 
+# 	map(~ filter(., ICD==0)) %>% 
+# 	map(~ select(., -ICD, -DESC_LONG.9)) %>% 
+# 	map(~ mutate(., CUMVISITS=sum(.$NVISITS))) %>% 
+# 	map(~ mutate(., PCTVISITS=round(NVISITS/CUMVISITS*1000)/10)) %>% 
+# 	map(~ select(., PCTVISITS, DX, DESC_LONG.0))
 
-# tempcount_clean_9$pulmonary_respiratory
-tempcount_clean_10$pulmonary_respiratory
-tempcount_clean_10$otologic
-tempcount_clean_10$immunological
+# tempcount_clean_10$pulmonary_respiratory
+# tempcount_clean_10$otologic
+# tempcount_clean_10$immunological
 
-#  tempcount$pulmonary_respiratory
-# # A tibble: 160 × 5
-#    ICD   DX     NVISITS DESC_LONG.9                                  DESC_LONG.0
-#    <chr> <chr>    <int> <chr>                                        <chr>
-#  1 9     49390    52472 Asthma, unspecified type, unspecified        NA
-#  2 9     49392    14651 Asthma, unspecified type, with (acute) exac… NA
-#  3 9     49300    13699 Extrinsic asthma, unspecified                NA
-#  4 9     7707      8152 Chronic respiratory disease arising in the … NA
-#  5 9     32723     6581 Obstructive sleep apnea (adult)(pediatric)   NA
+# tempcount$otologic
+# tempcount$immunological$DESC_LONG.0
 
-tempcount$otologic
-tempcount$immunological$DESC_LONG.0
+# tempcount_ccs <- temp[!is.na(BODY_SYSTEM)][
+# 	,.(NVISITS=.N),by=.(ICD,DX,BODY_SYSTEM)] %>% 
+# 	as_tibble() %>% 
+# 	arrange(BODY_SYSTEM, desc(NVISITS)) %>% 
+# 	left_join(select(ccs9list,-CCS_CODE), by=c("DX","ICD")) %>% 
+# 	left_join(select(ccs10list,-CCS_CODE), by=c("DX","ICD"), suffix=c(".9",".0")) %>% 
+# 	split(.$BODY_SYSTEM) %>% 
+# 	map(~ select(., -BODY_SYSTEM))
 
-tempcount_ccs <- temp[!is.na(BODY_SYSTEM)][
-	,.(NVISITS=.N),by=.(ICD,DX,BODY_SYSTEM)] %>% 
-	as_tibble() %>% 
-	arrange(BODY_SYSTEM, desc(NVISITS)) %>% 
-	left_join(select(ccs9list,-CCS_CODE), by=c("DX","ICD")) %>% 
-	left_join(select(ccs10list,-CCS_CODE), by=c("DX","ICD"), suffix=c(".9",".0")) %>% 
-	split(.$BODY_SYSTEM) %>% 
-	map(~ select(., -BODY_SYSTEM))
+# tempcount_ccs$pulmonary_respiratory
+# tempcount_ccs$otologic
 
-tempcount_ccs$pulmonary_respiratory
-tempcount_ccs$otologic
 
-rxrankdf_full <-  rxrankdf_overall_abx %>% 
+# Append chronic conditions to the ranked prescribing data frame:
+rxrankdf_full <-  rxrankdf_overall %>% 
 	mutate(SUPERUSER=case_when(PRANK_WEIGHTED<=0.2~1,TRUE~0)) %>% 
 	select(ENROLID, NRX, SUPERUSER) %>% 
 	left_join(as_tibble(ccmap), by="ENROLID") %>% 
@@ -491,6 +492,7 @@ rxrankdf_full <-  rxrankdf_overall_abx %>%
 	    malignancy=0,
 	    dermatological=0))
 
+# Run a logistic regression to calculate odds difference in being a super-user by chronic condition:
 superlogisticdf <- rxrankdf_full %>% 
 	mutate(SUPERUSER=as.factor(SUPERUSER),
 		musculoskeletal=as.factor(musculoskeletal),
@@ -515,6 +517,7 @@ superlogisticdf <- rxrankdf_full %>%
 	(function(x){glm(SUPERUSER ~ musculoskeletal + mental_health + immunological + otolaryngological + pulmonary_respiratory + neurological + cardiac + ophthalmological + renal + genitourinary + otologic + metabolic + hematological + genetic + gastrointestinal + craniofacial + endocrinological + malignancy + dermatological, 
 		family="binomial", data=x)})
 
+# Plot p/effect for the super-user regression:
 fig_superlogistic <- superlogisticdf %>% 
 	tidy() %>% 
 	filter(term!="(Intercept)") %>% 
@@ -529,6 +532,7 @@ fig_superlogistic <- superlogisticdf %>%
 		labs(x="-log(p value)",y="Log-odds difference", alpha="")
 # ggsave(fig_superlogistic, file="figures/under5/superlogistic.pdf",width=8,height=5)
 
+# Clean up chronic condition names:
 ccnames <- tibble(BODY_SYSTEM=c("pulmonary_respiratory",
 	"cardiac",
 	"renal",
@@ -568,6 +572,7 @@ NAME=c("Pulmonary/Respiratory",
 	"Otologic",
 	"Craniofacial"))
 
+# Save a table of increase in log-odds of being a superuser by chronic condition:
 superlogistictab <- superlogisticdf %>% 
 	tidy() %>% 
 	mutate(estimate=exp(estimate)) %>% 	
@@ -593,60 +598,54 @@ write_csv(superlogistictab, file="figures/superlogistictab.csv")
 # Geography
 # ==============================================================================
 
+# Calculate cumulative prescriptions by age 5 by MSA for respiratory conditions:
 rx_summ_msa_resp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
 	COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")][
 	MSA %in% bigmsalist
-	,.(ENROLID,STATE,MSA,MSA_POP,MSA_NAME,ISABX,ID,WEIGHT_INDIV_MSAGROUP_NOYEAR)][
-	,.(NRX=sum(WEIGHT_INDIV_MSAGROUP_NOYEAR),STATE=first(STATE),MSA_POP=first(MSA_POP), MSA_NAME=first(MSA_NAME)),by=.(MSA,ISABX)] %>% 
+	,.(ENROLID,STATE,MSA,MSA_POP,MSA_NAME,ID,WEIGHT_INDIV_MSAGROUP_NOYEAR)][
+	,.(NRX=sum(WEIGHT_INDIV_MSAGROUP_NOYEAR),STATE=first(STATE),MSA_POP=first(MSA_POP), MSA_NAME=first(MSA_NAME)),by=.(MSA)] %>% 
 	as_tibble() %>% 
-	arrange(MSA,ISABX) %>%
+	arrange(MSA) %>%
 	makeHHS %>% 
-	select(HHS, STATE, MSA, MSA_POP, MSA_NAME, ISABX, NRX) %>% 
-	filter(ISABX==1)
+	select(HHS, STATE, MSA, MSA_POP, MSA_NAME, NRX)
 
+# Calculate cumulative prescriptions by age 5 by MSA for non-respiratory conditions:
 rx_summ_msa_nonresp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
 	!(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media"))][
 	MSA %in% bigmsalist
-	,.(ENROLID,STATE,MSA,MSA_POP,MSA_NAME,ISABX,ID,WEIGHT_INDIV_MSAGROUP_NOYEAR)][
-	,.(NRX=sum(WEIGHT_INDIV_MSAGROUP_NOYEAR),STATE=first(STATE),MSA_POP=first(MSA_POP), MSA_NAME=first(MSA_NAME)),by=.(MSA,ISABX)] %>% 
+	,.(ENROLID,STATE,MSA,MSA_POP,MSA_NAME,ID,WEIGHT_INDIV_MSAGROUP_NOYEAR)][
+	,.(NRX=sum(WEIGHT_INDIV_MSAGROUP_NOYEAR),STATE=first(STATE),MSA_POP=first(MSA_POP), MSA_NAME=first(MSA_NAME)),by=.(MSA)] %>% 
 	as_tibble() %>% 
-	arrange(MSA,ISABX) %>%
+	arrange(MSA) %>%
 	makeHHS %>% 
-	select(HHS, STATE, MSA, MSA_POP, MSA_NAME, ISABX, NRX) %>% 
-	filter(ISABX==1)
+	select(HHS, STATE, MSA, MSA_POP, MSA_NAME, NRX)
 
 write_csv(rx_summ_msa_resp, file="figures/rx_summ_msa_resp.csv")
 write_csv(rx_summ_msa_nonresp, file="figures/rx_summ_msa_nonresp.csv")
 
+# Calculate proportion of children who have received a prescriptions by age 5 by MSA for respiratory conditions:
 first_rx_msa_resp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
 	COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")][
 	MSA %in% bigmsalist][
 	,AGE_DAYS:=as.numeric(difftime(DATE,BIRTH_DATE,units="days"))][
-	,.(AGE_DAYS=min(AGE_DAYS)), by=.(ENROLID,ISABX)][
-	rbind(
-		memb_df[MSA %in% bigmsalist,.(ENROLID, STATE, MSA, MSA_POP, MSA_NAME, WEIGHT_INDIV_MSAGROUP_NOYEAR, ISABX=0)],
-		memb_df[MSA %in% bigmsalist,.(ENROLID, STATE, MSA, MSA_POP, MSA_NAME, WEIGHT_INDIV_MSAGROUP_NOYEAR, ISABX=1)]
-		), on=.(ENROLID, ISABX)][
+	,.(AGE_DAYS=min(AGE_DAYS)), by=.(ENROLID)][
+		memb_df, on=.(ENROLID)][
 	is.na(AGE_DAYS), AGE_DAYS:=Inf] %>% 
-	as_tibble() %>% 
-	filter(ISABX==1)
+	as_tibble()
 
+# Calculate proportion of children who have received a prescriptions by age 5 by MSA for non-respiratory conditions:
 first_rx_msa_nonresp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
 	!(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media"))][
 	MSA %in% bigmsalist][
 	,AGE_DAYS:=as.numeric(difftime(DATE,BIRTH_DATE,units="days"))][
-	,.(AGE_DAYS=min(AGE_DAYS)), by=.(ENROLID,ISABX)][
-	rbind(
-		memb_df[MSA %in% bigmsalist,.(ENROLID, STATE, MSA, MSA_POP, MSA_NAME, WEIGHT_INDIV_MSAGROUP_NOYEAR, ISABX=0)],
-		memb_df[MSA %in% bigmsalist,.(ENROLID, STATE, MSA, MSA_POP, MSA_NAME, WEIGHT_INDIV_MSAGROUP_NOYEAR, ISABX=1)]
-		), on=.(ENROLID, ISABX)][
+	,.(AGE_DAYS=min(AGE_DAYS)), by=.(ENROLID)][
+		memb_df, on=.(ENROLID)][
 	is.na(AGE_DAYS), AGE_DAYS:=Inf] %>% 
-	as_tibble() %>% 
-	filter(ISABX==1)
+	as_tibble() 
 
 write_csv(first_rx_msa_resp, file="figures/first_rx_msa_resp.csv")
 write_csv(first_rx_msa_nonresp, file="figures/first_rx_msa_nonresp.csv")
