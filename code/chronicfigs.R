@@ -88,7 +88,6 @@ fig_cumrx_chronic <-
 # Time to first prescription
 # ==============================================================================
 
-
 # Get the age of first prescription for those with chronic conditions: 
 firstrx_df_chronic <- visit_df_chronic[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df_chronic, on=.(ASSOC_VISIT_ID)][
