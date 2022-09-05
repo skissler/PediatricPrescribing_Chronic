@@ -179,6 +179,8 @@ memb_df <- memb_df[,.(STATE=first(STATE), MSA=first(MSA), SEX=first(SEX), BIRTH_
 memb_df <- memb_df[,NDAYS:=as.integer(difftime(CENSOR_DATE,BIRTH_DATE,units="days"))]
 # sam: 45071 recs
 
+memb_df <- memb_df[NDAYS>=1800]
+
 write_csv(memb_df, file="output/memb_df_R.csv")
 
 printtime(msg='    Finished reduction')
