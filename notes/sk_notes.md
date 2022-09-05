@@ -7,6 +7,7 @@ __Jump to:__
 - [29 Aug 2022](#29-Aug-2022)
 - [30 Aug 2022](#30-Aug-2022)
 - [31 Aug 2022](#31-Aug-2022)
+- [5 Sep 2022](#5-Sep-2022)
 
 # 9 Aug 2022
 To do: 
@@ -132,6 +133,8 @@ right - somehow I've gotten more lines from SAS at the midpoint of the analysis.
 
 ok, and the loop gives the same as the first cohort pull function. So the difference must be coming from the reduction steps. where? 
 
+
+# 5 Sep 2022 
 
 
 
