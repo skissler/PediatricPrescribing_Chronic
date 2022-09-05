@@ -384,7 +384,6 @@ rxrankdf_combined <- bind_rows(
 	mutate(rxrankdf_nonresp,COND="Non-respiratory conditions"),
 	)
 
-
 fig_rankcurve_respnonresp <- rxrankdf_combined %>% 
 	ggplot(aes(x=PRANK_WEIGHTED, y=CUMPROPRX, col=COND, lty=COND)) + 
 		geom_line() + 
