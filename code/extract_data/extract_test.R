@@ -143,43 +143,43 @@ for(y in match(c("08","09","10","11","12"), yearlist)){
 
 	}
 
-write_csv(memb_df, file="output/memb_df_R.csv")
+write_csv(memb_df, file="output/memb_df_prereduce_R.csv")
 
 # 2010-2018 sample memb_df: 1129099 recs
 
-# # Assign an index to each month of membership that counts from birth month:
-# memb_df <- memb_df[,INDEX:=12*(DT_YEAR-BIRTH_YEAR)+(DT_MONTH-BIRTH_MONTH)]
-# # Restrict to indices from the month after birth through end of enrollment:
-# memb_df <- memb_df[INDEX>=min(index_df$INDEX) & INDEX<=max(index_df$INDEX)]
-# # sam: 1098006 recs
-# # Find the first missing month for each person: 
-# memb_df <- memb_df[,CENSORINDEX:=min(setdiff(c(index_df$INDEX,Inf), .SD$INDEX)), by=.(ENROLID)]
-# # sam: 1098006 recs
-# # Cut off all months past the censor month:
-# memb_df <- memb_df[INDEX<CENSORINDEX]
-# # sam: 933316 recs
-# # Get rid of the censor index column:
-# memb_df <- memb_df[,CENSORINDEX:=NULL]
-# # Append the censorship date: 
-# memb_df <- memb_df[,CENSOR_DATE:=max(DTEND), by=.(ENROLID)]
+# Assign an index to each month of membership that counts from birth month:
+memb_df <- memb_df[,INDEX:=12*(DT_YEAR-BIRTH_YEAR)+(DT_MONTH-BIRTH_MONTH)]
+# Restrict to indices from the month after birth through end of enrollment:
+memb_df <- memb_df[INDEX>=min(index_df$INDEX) & INDEX<=max(index_df$INDEX)]
+# sam: 1098006 recs
+# Find the first missing month for each person: 
+memb_df <- memb_df[,CENSORINDEX:=min(setdiff(c(index_df$INDEX,Inf), .SD$INDEX)), by=.(ENROLID)]
+# sam: 1098006 recs
+# Cut off all months past the censor month:
+memb_df <- memb_df[INDEX<CENSORINDEX]
+# sam: 933316 recs
+# Get rid of the censor index column:
+memb_df <- memb_df[,CENSORINDEX:=NULL]
+# Append the censorship date: 
+memb_df <- memb_df[,CENSOR_DATE:=max(DTEND), by=.(ENROLID)]
 
-# # Add censorship dates to event_df: 
-# # Find censorship dates: 
-# censor_df <- memb_df[,.(DATE=first(CENSOR_DATE), EVENT="censored", CODE=""),by=.(ENROLID)]
-# # Restrict event_df to people who also have a censorship date: 
-# event_df <- censor_df[,.(ENROLID)][event_df, nomatch=0, on=.(ENROLID)]
-# # Bind censorship dates to event_df: 
-# event_df <- rbind(event_df, censor_df) 
-# # Remove censorship dates data table: 
-# rm(censor_df) 
+# Add censorship dates to event_df: 
+# Find censorship dates: 
+censor_df <- memb_df[,.(DATE=first(CENSOR_DATE), EVENT="censored", CODE=""),by=.(ENROLID)]
+# Restrict event_df to people who also have a censorship date: 
+event_df <- censor_df[,.(ENROLID)][event_df, nomatch=0, on=.(ENROLID)]
+# Bind censorship dates to event_df: 
+event_df <- rbind(event_df, censor_df) 
+# Remove censorship dates data table: 
+rm(censor_df) 
 
-# # Generate lookup table for membership attributes: 
-# memb_df <- memb_df[,.(STATE=first(STATE), MSA=first(MSA), SEX=first(SEX), BIRTH_DATE=first(BIRTH_DATE), CENSOR_DATE=first(CENSOR_DATE)),by=.(ENROLID)]
-# # sam: 45071 recs
-# memb_df <- memb_df[,NDAYS:=as.integer(difftime(CENSOR_DATE,BIRTH_DATE,units="days"))]
-# # sam: 45071 recs
+# Generate lookup table for membership attributes: 
+memb_df <- memb_df[,.(STATE=first(STATE), MSA=first(MSA), SEX=first(SEX), BIRTH_DATE=first(BIRTH_DATE), CENSOR_DATE=first(CENSOR_DATE)),by=.(ENROLID)]
+# sam: 45071 recs
+memb_df <- memb_df[,NDAYS:=as.integer(difftime(CENSOR_DATE,BIRTH_DATE,units="days"))]
+# sam: 45071 recs
 
-# write_csv(memb_df, file="output/memb_df_R.csv")
+write_csv(memb_df, file="output/memb_df_R.csv")
 
 printtime(msg='    Finished reduction')
 

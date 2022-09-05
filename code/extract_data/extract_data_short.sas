@@ -178,17 +178,23 @@ run;
 	run;
 
 	* Count months from birth;
-	data cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT);
+	data cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT where=(COUNT>0)); *remove where;
 		set cohort;
 		COUNT + 1;
 		by ENROLID;
-		if first.ENROLID then COUNT = 1;
+		if first.ENROLID then COUNT = 0; *COUNT=1;
 	run;
 
 	* Append an index column;
 	data cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
 		set cohort;
-		BIRTHDIFF=12*(DT_YEAR-year(BIRTH_DATE))+(DT_MONTH-month(BIRTH_DATE))+1;
+		BIRTHDIFF=12*(DT_YEAR-year(BIRTH_DATE))+(DT_MONTH-month(BIRTH_DATE)); *+1;
+	run;
+
+	proc export data=cohort
+		outfile='/home/kissler/PediatricPrescribing_Chronic/output/cohort_intermediate_SAS.csv'
+		dbms=csv
+		replace;
 	run;
 
 	* keep only rows where index = months from birth, which gives contiguous months from birth;
@@ -459,7 +465,14 @@ proc delete data=cohortBirthdates12; run;
 * %getcohort(year=16, yeartag=1sam); *1sam;
 * %getcohort(year=17, yeartag=1sam); *1sam;
 * %getcohort(year=18, yeartag=1sam); *1sam;
-proc delete data=cohortBirthdates; run; 
+
+proc export data=cohortBirthdates
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/event_df_SAS.csv'
+	dbms=csv
+	replace;
+run;
+
+* proc delete data=cohortBirthdates; run; 
 
 * Combine yearly cohorts into a single data table -----------------------------;
 data cohort;
@@ -481,14 +494,15 @@ proc delete data=cohort12; run;
 * proc delete data=cohort17; run; 
 * proc delete data=cohort18; run; 
 
-* Refine to a cohort of people present for five straight years ----------------;
-* %refinecohort(); *1sam;
-
-proc export data=cohortBirthdates
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/event_df_SAS.csv'
+proc export data=cohort
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/memb_df_prereduce_SAS.csv'
 	dbms=csv
 	replace;
 run;
+
+
+* Refine to a cohort of people present for five straight years ----------------;
+%refinecohort(); 
 
 proc export data=cohort
 	outfile='/home/kissler/PediatricPrescribing_Chronic/output/memb_df_SAS.csv'
