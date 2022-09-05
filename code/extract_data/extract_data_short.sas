@@ -191,6 +191,11 @@ run;
 		BIRTHDIFF=12*(DT_YEAR-year(BIRTH_DATE))+(DT_MONTH-month(BIRTH_DATE)); *+1;
 	run;
 
+	* Keep rows corresponding to months 1-60 after birth;
+	data cohort (where=(COUNT>=1 and COUNT<=60)); *and COUNT>1;
+		set cohort;
+	run;
+
 	proc sort data=cohort;
 		by ENROLID COUNT;
 	run;
