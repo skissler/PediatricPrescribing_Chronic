@@ -178,23 +178,18 @@ run;
 	run;
 
 	* Count months from birth;
-	data cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT); *where=(COUNT>0);
+	data cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT); 
 		set cohort;
 		COUNT + 1;
 		by ENROLID;
-		if first.ENROLID then COUNT = 0; *COUNT=1;
+		if first.ENROLID then COUNT = 0; 
 	run;
 
 	* Append an index column;
 	data cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
 		set cohort;
-		BIRTHDIFF=12*(DT_YEAR-year(BIRTH_DATE))+(DT_MONTH-month(BIRTH_DATE)); *+1;
+		BIRTHDIFF=12*(DT_YEAR-year(BIRTH_DATE))+(DT_MONTH-month(BIRTH_DATE));
 	run;
-
-	* Keep rows corresponding to months 1-60 after birth;
-	* data cohort (where=(BIRTHDIFF>=1 and BIRTHDIFF<=60));
-	* 	set cohort;
-	* run;
 
 	proc sort data=cohort;
 		by ENROLID COUNT;
@@ -206,17 +201,8 @@ run;
 	run;
 
 	* keep only rows where index = months from birth, which gives contiguous months from birth;
-	data cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF where=(COUNT=BIRTHDIFF)); *and COUNT>1;
+	data cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF where=(COUNT=BIRTHDIFF)); 
 		set cohort;
-	run;
-
-	proc sort data=cohort;
-		by ENROLID COUNT;
-	run;
-	proc export data=cohort
-		outfile='/home/kissler/PediatricPrescribing_Chronic/output/cohort_intermediate_SAS.csv'
-		dbms=csv
-		replace;
 	run;
 
 	* keep only one row per person (the last);
@@ -228,6 +214,15 @@ run;
 		set cohort;
 		by ENROLID;
 		if last.ENROLID;
+	run;
+
+	proc sort data=cohort;
+		by ENROLID COUNT;
+	run;
+	proc export data=cohort
+		outfile='/home/kissler/PediatricPrescribing_Chronic/output/cohort_intermediate_SAS.csv'
+		dbms=csv
+		replace;
 	run;
 
 	* Calculate how long each person is followed;

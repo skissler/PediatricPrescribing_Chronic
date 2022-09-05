@@ -150,20 +150,16 @@ write_csv(memb_df, file="output/memb_df_prereduce_R.csv")
 # 2010-2018 sample memb_df: 1129099 recs
 
 # Assign an index to each month of membership that counts from birth month:
-memb_df <- memb_df[,INDEX:=12*(DT_YEAR-BIRTH_YEAR)+(DT_MONTH-BIRTH_MONTH)+1]
+memb_df <- memb_df[,INDEX:=12*(DT_YEAR-BIRTH_YEAR)+(DT_MONTH-BIRTH_MONTH)]
 # Restrict to indices from the month after birth through end of enrollment:
 # memb_df <- memb_df[INDEX>=min(index_df$INDEX) & INDEX<=max(index_df$INDEX)]
 
-
 # sam: 1098006 recs
 # Find the first missing month for each person: 
-memb_df <- memb_df[,CENSORINDEX:=min(setdiff(c(index_df$INDEX,Inf), .SD$INDEX)), by=.(ENROLID)]
+memb_df <- memb_df[,CENSORINDEX:=min(setdiff(c(-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,index_df$INDEX,61,62,63,64,65,66,67,68.69,70,Inf), .SD$INDEX)), by=.(ENROLID)]
 # sam: 1098006 recs
 # Cut off all months past the censor month:
-memb_df <- memb_df[INDEX<CENSORINDEX]
-
-
-
+memb_df <- memb_df[INDEX>=0 & INDEX<CENSORINDEX]
 
 write_csv(memb_df, file="output/cohort_intermediate_R.csv")
 
