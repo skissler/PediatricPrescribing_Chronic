@@ -146,6 +146,10 @@ Got the code for Figure 1 cleaned.
 
 Finished cleaning the ranking code. 
 
+I think I've cleaned the rest, minus the local geographic analysis - now to make sure everything runs happily and to update the manuscript with new figures. 
+
+
+
 
 
 
