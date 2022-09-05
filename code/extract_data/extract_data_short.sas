@@ -482,7 +482,7 @@ proc delete data=cohort12; run;
 * proc delete data=cohort18; run; 
 
 * Refine to a cohort of people present for five straight years ----------------;
-%refinecohort(); *1sam;
+* %refinecohort(); *1sam;
 
 proc export data=cohortBirthdates
 	outfile='/home/kissler/PediatricPrescribing_Chronic/output/event_df_SAS.csv'
