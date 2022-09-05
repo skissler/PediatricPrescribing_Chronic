@@ -1,4 +1,4 @@
-1                                                          The SAS System                            13:25 Monday, September 5, 2022
+1                                                          The SAS System                            13:11 Monday, September 5, 2022
 
 NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
 NOTE: SAS (r) Proprietary Software 9.4 (TS1M7) 
@@ -44,7 +44,7 @@ The command line option "-nonews" will prevent this display.
 
 
 NOTE: SAS initialization used:
-      real time           0.11 seconds
+      real time           0.08 seconds
       cpu time            0.03 seconds
       
 1          * ============================================================================;
@@ -58,10 +58,10 @@ WARNING: The Base SAS Software product with which DATASETS is associated will be
 6        !                                     quit;
 
 NOTE: PROCEDURE DATASETS used (Total process time):
-2                                                          The SAS System                            13:25 Monday, September 5, 2022
+2                                                          The SAS System                            13:11 Monday, September 5, 2022
 
       real time           0.03 seconds
-      cpu time            0.03 seconds
+      cpu time            0.02 seconds
       
 
 6        !                                           run;
@@ -72,6 +72,6 @@ NOTE: PROCEDURE DATASETS used (Total process time):
 
 NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
 NOTE: The SAS System used:
-      real time           1:10.72
-      cpu time            1:11.46
+      real time           14.87 seconds
+      cpu time            16.59 seconds
       
