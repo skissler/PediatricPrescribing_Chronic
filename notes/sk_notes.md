@@ -142,6 +142,10 @@ Starting the new extraction now - - started at 1:36pm, so should be finished aro
 
 While that's running, I should be able to use the old extractions to refine the code. 
 
+Got the code for Figure 1 cleaned. 
+
+Finished cleaning the ranking code. 
+
 
 
 

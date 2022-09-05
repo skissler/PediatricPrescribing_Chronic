@@ -314,18 +314,15 @@ ggsave(fig_cumrx_summ + theme(legend.position="none"), file="figures/cumrx_summ_
 # Asymmetry in prescribing
 # ==============================================================================
 
-rxrankdf_overall_abx <- rx_df[,.(ENROLID,ISABX,ID)][
-	Reduce(rbind, lapply(
-		c(0,1),
-		function(x){memb_df[,.(ENROLID,WEIGHT_INDIV_NOYEAR,ISABX=x)]})),
-	on=.(ENROLID,ISABX)][
+rxrankdf_overall <- rx_df[,.(ENROLID,ID)][
+	memb_df,
+	on=.(ENROLID)][
 	!is.na(ID),NRX:=1][
 	is.na(ID),NRX:=0][
-	,.(NRX=sum(NRX),WEIGHT_INDIV_NOYEAR=first(WEIGHT_INDIV_NOYEAR)),by=.(ENROLID,ISABX)] %>% 
+	,.(NRX=sum(NRX),WEIGHT_INDIV_NOYEAR=first(WEIGHT_INDIV_NOYEAR)),by=.(ENROLID)] %>% 
 	as_tibble() %>% 
 	shuffledf() %>% 
-	arrange(ISABX,desc(NRX)) %>% 
-	group_by(ISABX) %>% 
+	arrange(desc(NRX)) %>% 
 	mutate(TOTRX=sum(NRX)) %>% 
 	mutate(PROPRX=NRX/TOTRX) %>% 
 	mutate(CUMPROPRX=cumsum(PROPRX)) %>% 
@@ -333,27 +330,24 @@ rxrankdf_overall_abx <- rx_df[,.(ENROLID,ISABX,ID)][
 	mutate(RANK=1:n()) %>% 
 	mutate(PRANK=RANK/max(RANK)) %>% 
 	mutate(PRANK_WEIGHTED=cumsum(WEIGHT_INDIV_NOYEAR)) %>% 
-	ungroup() %>% 
-	filter(ISABX==1)
+	ungroup()
 
-rxrankdf_overall_abx %>% filter(CUMPROPRX>0.5)
-rxrankdf_overall_abx %>% filter(PRANK_WEIGHTED>0.2)
+rxrankdf_overall %>% filter(CUMPROPRX>0.5)
+rxrankdf_overall %>% filter(PRANK_WEIGHTED>0.2)
 
-rxrankdf_resp_abx <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
+
+rxrankdf_resp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
 	COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")][
-	,.(ENROLID,ISABX,ID)][
-	Reduce(rbind, lapply(
-		c(0,1),
-		function(x){memb_df[,.(ENROLID,WEIGHT_INDIV_NOYEAR,ISABX=x)]})),
-	on=.(ENROLID,ISABX)][
+	,.(ENROLID,ID)][
+	memb_df,
+	on=.(ENROLID)][
 	!is.na(ID),NRX:=1][
 	is.na(ID),NRX:=0][
-	,.(NRX=sum(NRX),WEIGHT_INDIV_NOYEAR=first(WEIGHT_INDIV_NOYEAR)),by=.(ENROLID,ISABX)] %>% 
+	,.(NRX=sum(NRX),WEIGHT_INDIV_NOYEAR=first(WEIGHT_INDIV_NOYEAR)),by=.(ENROLID)] %>% 
 	as_tibble() %>% 
 	shuffledf() %>% 
-	arrange(ISABX,desc(NRX)) %>% 
-	group_by(ISABX) %>% 
+	arrange(desc(NRX)) %>% 
 	mutate(TOTRX=sum(NRX)) %>% 
 	mutate(PROPRX=NRX/TOTRX) %>% 
 	mutate(CUMPROPRX=cumsum(PROPRX)) %>% 
@@ -361,25 +355,20 @@ rxrankdf_resp_abx <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	mutate(RANK=1:n()) %>% 
 	mutate(PRANK=RANK/max(RANK)) %>% 
 	mutate(PRANK_WEIGHTED=cumsum(WEIGHT_INDIV_NOYEAR)) %>% 
-	ungroup() %>% 
-	filter(ISABX==1)
+	ungroup()
 
-
-rxrankdf_nonresp_abx <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
+rxrankdf_nonresp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
 	!(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media"))][
-	,.(ENROLID,ISABX,ID)][
-	Reduce(rbind, lapply(
-		c(0,1),
-		function(x){memb_df[,.(ENROLID,WEIGHT_INDIV_NOYEAR,ISABX=x)]})),
-	on=.(ENROLID,ISABX)][
+	,.(ENROLID,ID)][
+	memb_df,
+	on=.(ENROLID)][
 	!is.na(ID),NRX:=1][
 	is.na(ID),NRX:=0][
-	,.(NRX=sum(NRX),WEIGHT_INDIV_NOYEAR=first(WEIGHT_INDIV_NOYEAR)),by=.(ENROLID,ISABX)] %>% 
+	,.(NRX=sum(NRX),WEIGHT_INDIV_NOYEAR=first(WEIGHT_INDIV_NOYEAR)),by=.(ENROLID)] %>% 
 	as_tibble() %>% 
 	shuffledf() %>% 
-	arrange(ISABX,desc(NRX)) %>% 
-	group_by(ISABX) %>% 
+	arrange(desc(NRX)) %>% 
 	mutate(TOTRX=sum(NRX)) %>% 
 	mutate(PROPRX=NRX/TOTRX) %>% 
 	mutate(CUMPROPRX=cumsum(PROPRX)) %>% 
@@ -387,20 +376,17 @@ rxrankdf_nonresp_abx <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	mutate(RANK=1:n()) %>% 
 	mutate(PRANK=RANK/max(RANK)) %>% 
 	mutate(PRANK_WEIGHTED=cumsum(WEIGHT_INDIV_NOYEAR)) %>% 
-	ungroup() %>% 
-	filter(ISABX==1)
+	ungroup() 
 
-
-rxrankdf_abx_combined <- bind_rows(
-	mutate(rxrankdf_overall_abx,COND="All conditions"),
-	mutate(rxrankdf_resp_abx,COND="Respiratory conditions"),
-	mutate(rxrankdf_nonresp_abx,COND="Non-respiratory conditions"),
+rxrankdf_combined <- bind_rows(
+	mutate(rxrankdf_overall,COND="All conditions"),
+	mutate(rxrankdf_resp,COND="Respiratory conditions"),
+	mutate(rxrankdf_nonresp,COND="Non-respiratory conditions"),
 	)
 
 
-fig_rankcurve_respnonresp <- rxrankdf_abx_combined %>% 
+fig_rankcurve_respnonresp <- rxrankdf_combined %>% 
 	ggplot(aes(x=PRANK_WEIGHTED, y=CUMPROPRX, col=COND, lty=COND)) + 
-		# geom_line(stat="smooth", method="loess", span=2) + 
 		geom_line() + 
 		scale_x_continuous(breaks=seq(from=0,to=1,by=0.1)) + 
 		scale_y_continuous(breaks=seq(from=0,to=1,by=0.1)) + 
