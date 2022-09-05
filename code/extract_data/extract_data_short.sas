@@ -224,12 +224,6 @@ run;
 		by DURATION;
 	run;
 
-	* proc export data=cohort
-	* 	outfile='/home/kissler/PediatricPrescribing_Chronic/output/cohort_intermediate_SAS.csv'
-	* 	dbms=csv
-	* 	replace;
-	* run;
-
 	data cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE DURATION);
 		set cohort;
 		by DURATION;
