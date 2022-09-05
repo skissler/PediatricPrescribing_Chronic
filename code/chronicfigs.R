@@ -77,13 +77,6 @@ fig_cumrx_chronic <-
 		scale_linetype_manual(values=c("Yes"="solid","No"="solid")) +
 		theme(text=element_text(size=10))
 
-# ggsave(fig_cumrx_respnonresp_chronic, file="figures/cumrx.pdf", width=figwidth, height=figwidth, dpi=figres)
-# ggsave(fig_cumrx_respnonresp_chronic, file="figures/cumrx.png", width=figwidth, height=figwidth, dpi=figres)
-
-# ggsave(fig_cumrx_respnonresp_chronic + theme(legend.position='none'), file="figures/cumrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
-# ggsave(fig_cumrx_respnonresp_chronic + theme(legend.position='none'), file="figures/cumrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
-
-
 # ==============================================================================
 # Time to first prescription
 # ==============================================================================
@@ -168,25 +161,40 @@ combdat_firstcumrx_chronic %>%
 	filter(AGE_DAYS_ROUNDED==1825) %>% 
 	select(AGE_DAYS_ROUNDED, Comorbidities, NRX, lwr, upr)
 
-# # ggsave(fig_cumfirstrx
-# nonresp, file="figures/firstrx.pdf", width=figwidth, height=figwidth, dpi=figres)
-# # ggsave(fig_cumfirstrx
-# nonresp, file="figures/firstrx.png", width=figwidth, height=figwidth, dpi=figres)
 
-# # ggsave(fig_cumfirstrx
-# nonresp+theme(legend.position="none"), file="figures/firstrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
-# # ggsave(fig_cumfirstrx
-# nonresp+theme(legend.position="none"), file="figures/firstrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
+# ==============================================================================
+# Chronic/non-Chronic histogram
+# ==============================================================================
 
-# fig_cumfirstrx_comparison_chronic <-
-# 	ggplot(data=bind_rows(mutate(fulldat_firstcumrx,Comorbidities="No"), mutate(fulldat_firstcumrx_chronic,Comorbidities="Yes")), aes(x=AGE_DAYS_ROUNDED, y=NRX, col=Indication, fill=Indication, linetype=Indication)) + 
-# 		geom_ribbon(aes(ymin=lwr,ymax=upr),alpha=0.4) + 
-# 		geom_line() + 
-# 		scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
-# 		scale_y_continuous(limits=c(0,1), breaks=seq(from=0, to=1, by=0.2)) + 
-# 		theme_classic() + 
-# 		labs(tag="B)",x="Days from birth", y=paste0("Proportion who have received a prescription")) + 
-# 		scale_color_manual(values=c("All conditions"="Gray","Respiratory conditions"="Blue","Non-respiratory conditions"="Blue")) + 
-# 		scale_fill_manual(values=c("All conditions"="Gray","Respiratory conditions"="Blue","Non-respiratory conditions"="Blue")) +
-# 		scale_linetype_manual(values=c("All conditions"="solid","Respiratory conditions"="solid","Non-respiratory conditions"="dashed")) +
-# 		theme(text=element_text(size=10))
+# Count total prescriptions per person for kids with chronic conditions:
+cumrx_summ_chronic <- rx_df_chronic[
+	,.(ENROLID,ISRX=1)][
+	memb_df_chronic[,.(ENROLID)], on=.(ENROLID)][
+	is.na(ISRX),ISRX:=0][
+	,.(NRX=sum(ISRX)),by=.(ENROLID)] %>% 
+	as_tibble() %>% 
+	mutate(Comorbidities="Yes")
+
+# Count total prescriptions per person for kids without chronic conditions:
+cumrx_summ_nonchronic <- rx_df_nonchronic[
+	,.(ENROLID,ISRX=1)][
+	memb_df_nonchronic[,.(ENROLID)], on=.(ENROLID)][
+	is.na(ISRX),ISRX:=0][
+	,.(NRX=sum(ISRX)),by=.(ENROLID)] %>% 
+	as_tibble() %>% 
+	mutate(Comorbidities="No")
+
+# Combine counts into a single data frame: 
+cumrx_summ_chronic <- rbind(cumrx_summ_chronic, cumrx_summ_nonchronic)
+
+# Plot cumulative prescriptions by condition group as densities: 
+fig_cumrx_summ_chronic <- cumrx_summ_chronic %>% 
+	ggplot(aes(x=NRX, fill=Comorbidities, col=Comorbidities, lty=Comorbidities)) + 
+		geom_density(adjust=5, alpha=0.4) + 
+		scale_x_continuous(limits=c(0,50)) + 
+		scale_color_manual(values=c("Yes"="Red","No"="Black")) + 
+		scale_fill_manual(values=c("Yes"="Red","No"="Black")) +
+		scale_linetype_manual(values=c("Yes"="solid","No"="solid")) +
+		theme_classic() + 
+		theme(text=element_text(size=10)) + 
+		labs(x="Number of antibiotic prescriptions", y="Proportion of children (as density)")
