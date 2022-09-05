@@ -157,6 +157,9 @@ memb_df <- memb_df[,CENSORINDEX:=min(setdiff(c(index_df$INDEX,Inf), .SD$INDEX)),
 # sam: 1098006 recs
 # Cut off all months past the censor month:
 memb_df <- memb_df[INDEX<CENSORINDEX]
+
+write_csv(memb_df, file="output/cohort_intermediate_R.csv")
+
 # sam: 933316 recs
 # Get rid of the censor index column:
 memb_df <- memb_df[,CENSORINDEX:=NULL]
