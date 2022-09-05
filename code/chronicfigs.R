@@ -61,7 +61,7 @@ part2_cumrx_chronic <- cumrx_df_nonchronic %>%
 
 combdat_cumrx_chronic <- bind_rows(
 	mutate(part1_cumrx_chronic,Comorbidities="Yes"),
-	mutate(part2_cumrx_nonchronic,Comorbidities="No")
+	mutate(part2_cumrx_chronic,Comorbidities="No")
 	)
 
 # Plot cumulative prescriptions overall and by respiratory/non-respiratory conditions: 
