@@ -29,79 +29,76 @@ figres <- 600
 # Figure 1A: Cumulative prescriptions
 # =============================================================================
 
-rx_df_drug <- rx_df[
-	,AGE_DAYS:=as.numeric(difftime(DATE,BIRTH_DATE,units="days"))]
-
-cumrx_df_drug <- setDT(data.frame())
-for(t in seq(from=0, to=30*60, by=30)){
-	cumrx_df_drug <- rbind(cumrx_df_drug,
-		rx_df_drug[AGE_DAYS<=t,.(NOBS=.N, NRX=sum(WEIGHT_INDIV_NOYEAR),AGE_DAYS_ROUNDED=t),by=.(ISABX)])
+# Count cumulative prescriptions across all conditions: 
+cumrx_df <- setDT(data.frame())
+for(t in seq(from=0, to=1825, by=5)){
+	cumrx_df <- rbind(cumrx_df,
+		rx_df[AGE_DAYS<=t,.(NOBS=.N, NRX=sum(WEIGHT_INDIV_NOYEAR),AGE_DAYS_ROUNDED=t)])
 }
-cumrx_df_drug <- cumrx_df_drug[,NMEMB:=nrow(memb_df)]
+cumrx_df <- cumrx_df[,NMEMB:=nrow(memb_df)]
 
-rx_df_drug_resp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
+# Count cumulative prescriptions for respiratory conditions: 
+rx_df_resp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
-	COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")][
-	,AGE_DAYS:=as.numeric(difftime(DATE,BIRTH_DATE,units="days"))]
+	COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")]
 
-rx_df_drug_nonresp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
+cumrx_df_resp <- setDT(data.frame())
+for(t in seq(from=0, to=1825, by=5)){
+	cumrx_df_resp <- rbind(cumrx_df_resp,
+		rx_df_resp[AGE_DAYS<=t,.(NOBS=.N, NRX=sum(WEIGHT_INDIV_NOYEAR),AGE_DAYS_ROUNDED=t)])
+}
+cumrx_df_resp <- cumrx_df_resp[,NMEMB:=nrow(memb_df)]
+
+# Count cumulative prescriptions for non-respiratory conditions: 
+rx_df_nonresp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
-	!(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media"))][
-	,AGE_DAYS:=as.numeric(difftime(DATE,BIRTH_DATE,units="days"))]
+	!(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media"))]
 
-cumrx_df_drug_resp <- setDT(data.frame())
-for(t in seq(from=0, to=30*60, by=30)){
-	cumrx_df_drug_resp <- rbind(cumrx_df_drug_resp,
-		rx_df_drug_resp[AGE_DAYS<=t,.(NOBS=.N, NRX=sum(WEIGHT_INDIV_NOYEAR),AGE_DAYS_ROUNDED=t),by=.(ISABX)])
+cumrx_df_nonresp <- setDT(data.frame())
+for(t in seq(from=0, to=1825, by=5)){
+	cumrx_df_nonresp <- rbind(cumrx_df_nonresp,
+		rx_df_nonresp[AGE_DAYS<=t,.(NOBS=.N, NRX=sum(WEIGHT_INDIV_NOYEAR),AGE_DAYS_ROUNDED=t)])
 }
-cumrx_df_drug_resp <- cumrx_df_drug_resp[,NMEMB:=nrow(memb_df)]
+cumrx_df_nonresp <- cumrx_df_nonresp[,NMEMB:=nrow(memb_df)]
 
-cumrx_df_drug_nonresp <- setDT(data.frame())
-for(t in seq(from=0, to=30*60, by=30)){
-	cumrx_df_drug_nonresp <- rbind(cumrx_df_drug_nonresp,
-		rx_df_drug_nonresp[AGE_DAYS<=t,.(NOBS=.N, NRX=sum(WEIGHT_INDIV_NOYEAR),AGE_DAYS_ROUNDED=t),by=.(ISABX)])
-}
-cumrx_df_drug_nonresp <- cumrx_df_drug_nonresp[,NMEMB:=nrow(memb_df)]
 
-fulldat <- cumrx_df_drug %>% 
+# Gather the data into a useful format and append confidence intervals: 
+fulldat_cumrx <- cumrx_df %>% 
 	mutate(rawmean=NOBS/NMEMB) %>% 
 	mutate(rawlwr=qgamma(alphasig/2,NOBS,1)/NMEMB) %>%
 	mutate(rawupr=qgamma(1-alphasig/2,NOBS+1,1)/NMEMB) %>%
 	mutate(proplwr=(rawmean-rawlwr)/rawmean) %>% 
 	mutate(propupr=(rawupr-rawmean)/rawmean) %>% 
 	mutate(lwr=NRX-proplwr*NRX) %>% 
-	mutate(upr=NRX+propupr*NRX) %>% 
-	mutate(ISABX=factor(ISABX))
+	mutate(upr=NRX+propupr*NRX) 
 
-respdat <- cumrx_df_drug_resp %>% 
+respdat_cumrx <- cumrx_df_resp %>% 
 	mutate(rawmean=NOBS/NMEMB) %>% 
 	mutate(rawlwr=qgamma(alphasig/2,NOBS,1)/NMEMB) %>%
 	mutate(rawupr=qgamma(1-alphasig/2,NOBS+1,1)/NMEMB) %>%
 	mutate(proplwr=(rawmean-rawlwr)/rawmean) %>% 
 	mutate(propupr=(rawupr-rawmean)/rawmean) %>% 
 	mutate(lwr=NRX-proplwr*NRX) %>% 
-	mutate(upr=NRX+propupr*NRX) %>% 
-	mutate(ISABX=factor(ISABX))
+	mutate(upr=NRX+propupr*NRX) 
 
-nonrespdat <- cumrx_df_drug_nonresp %>% 
+nonrespdat_cumrx <- cumrx_df_nonresp %>% 
 	mutate(rawmean=NOBS/NMEMB) %>% 
 	mutate(rawlwr=qgamma(alphasig/2,NOBS,1)/NMEMB) %>%
 	mutate(rawupr=qgamma(1-alphasig/2,NOBS+1,1)/NMEMB) %>%
 	mutate(proplwr=(rawmean-rawlwr)/rawmean) %>% 
 	mutate(propupr=(rawupr-rawmean)/rawmean) %>% 
 	mutate(lwr=NRX-proplwr*NRX) %>% 
-	mutate(upr=NRX+propupr*NRX) %>% 
-	mutate(ISABX=factor(ISABX))
+	mutate(upr=NRX+propupr*NRX) 
 
-combdat_abx <- bind_rows(
-	mutate(fulldat,Indication="All conditions"),
-	mutate(respdat,Indication="Respiratory conditions"),
-	mutate(nonrespdat,Indication="Non-respiratory conditions")
-	) %>% 
-	filter(ISABX==1) 
+combdat_cumrx <- bind_rows(
+	mutate(fulldat_cumrx,Indication="All conditions"),
+	mutate(respdat_cumrx,Indication="Respiratory conditions"),
+	mutate(nonrespdat_cumrx,Indication="Non-respiratory conditions")
+	)
 
-fig_cumrx_respnonresp_abx <-
-	ggplot(data=combdat_abx, aes(x=AGE_DAYS_ROUNDED, y=NRX, col=Indication, fill=Indication, linetype=Indication)) + 
+# Plot cumulative prescriptions overall and by respiratory/non-respiratory conditions: 
+fig_cumrx_respnonresp <-
+	ggplot(data=combdat_cumrx, aes(x=AGE_DAYS_ROUNDED, y=NRX, col=Indication, fill=Indication, linetype=Indication)) + 
 		geom_ribbon(aes(ymin=lwr,ymax=upr),alpha=0.4) + 
 		geom_line() + 
 		scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
@@ -112,28 +109,28 @@ fig_cumrx_respnonresp_abx <-
 		scale_linetype_manual(values=c("All conditions"="solid","Respiratory conditions"="solid","Non-respiratory conditions"="dashed")) +
 		theme(text=element_text(size=10))
 
-ggsave(fig_cumrx_respnonresp_abx, file="figures/cumrx.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_cumrx_respnonresp_abx, file="figures/cumrx.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumrx_respnonresp, file="figures/cumrx.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumrx_respnonresp, file="figures/cumrx.png", width=figwidth, height=figwidth, dpi=figres)
 
-ggsave(fig_cumrx_respnonresp_abx + theme(legend.position='none'), file="figures/cumrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_cumrx_respnonresp_abx + theme(legend.position='none'), file="figures/cumrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumrx_respnonresp + theme(legend.position='none'), file="figures/cumrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumrx_respnonresp + theme(legend.position='none'), file="figures/cumrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
 
-# prescriptions by age 5: 
-combdat_abx %>% 
+# Extract prescriptions by age 5: 
+combdat_cumrx %>% 
 	filter(AGE_DAYS_ROUNDED==1825) %>% 
 	select(AGE_DAYS_ROUNDED, Indication, NRX, lwr, upr)
 
-# Prescribing rates by age: 
-# birth to 6mos (180 days): 
-rxrate1 <- combdat_abx %>% 
+# Calculate prescribing rates between key ages: 
+# 1) Birth to 6mos (180 days): 
+rxrate1 <- combdat_cumrx %>% 
 	filter(Indication=="All conditions") %>% 
 	filter(AGE_DAYS_ROUNDED==180) %>% 
 	select(NRX,lwr,upr) %>% 
 	mutate(NRX=NRX*2, lwr=lwr*2, upr=upr*2)
 
 
-# 6 mos (180 days) to 2 years (730 days): 
-rxrate2 <- combdat_abx %>% 
+# 2) 6 mos (180 days) to 2 years (730 days): 
+rxrate2 <- combdat_cumrx %>% 
 	filter(Indication=="All conditions") %>% 
 	filter(AGE_DAYS_ROUNDED%in%c(180,730)) %>% 
 	select(AGE_DAYS_ROUNDED,NRX,lwr,upr) %>% 
@@ -147,8 +144,8 @@ rxrate2 <- combdat_abx %>%
 		upr=upr/AGE_DAYS_ROUNDED*365) %>% 
 	select(-AGE_DAYS_ROUNDED)
 
-# 2 years (730 days) to 5 years (1825 days): 
-rxrate3 <- combdat_abx %>% 
+# 3) 2 years (730 days) to 5 years (1825 days): 
+rxrate3 <- combdat_cumrx %>% 
 	filter(Indication=="All conditions") %>% 
 	filter(AGE_DAYS_ROUNDED%in%c(730,1825)) %>% 
 	select(AGE_DAYS_ROUNDED,NRX,lwr,upr) %>% 
@@ -162,192 +159,87 @@ rxrate3 <- combdat_abx %>%
 		upr=upr/AGE_DAYS_ROUNDED*365) %>% 
 	select(-AGE_DAYS_ROUNDED)	
 
-# By region: 
-temp <- rx_df_drug[ISABX==1][
-	,.(NRX=sum(WEIGHT_INDIV_STATEGROUP_NOYEAR)),by=.(STATE)]
-
 # =============================================================================
 # Figure 1B: Time to first prescription
 # =============================================================================
 
-first_rx_df_drug <- rx_df[
-	,AGE_DAYS:=as.numeric(difftime(DATE,BIRTH_DATE,units="days"))][
-	,.(WEIGHT_INDIV_NOYEAR=first(WEIGHT_INDIV_NOYEAR), AGE_DAYS=min(AGE_DAYS)), by=.(ENROLID,ISABX)]
+# Get the age of first prescription for any condition: 
+firstrx_df <- rx_df[
+	,.(WEIGHT_INDIV_NOYEAR=first(WEIGHT_INDIV_NOYEAR), AGE_DAYS=min(AGE_DAYS)), by=.(ENROLID)]
 
-first_cumrx_df_drug <- setDT(data.frame())
-for(t in seq(from=0, to=30*60, by=30)){
-	first_cumrx_df_drug <- rbind(first_cumrx_df_drug,
-		first_rx_df_drug[AGE_DAYS<=t,.(NOBS=.N,NRX=sum(WEIGHT_INDIV_NOYEAR),AGE_DAYS_ROUNDED=t),by=.(ISABX)])
+cumfirstrx_df <- setDT(data.frame())
+for(t in seq(from=0, to=1825, by=5)){
+	cumfirstrx_df <- rbind(cumfirstrx_df,
+		firstrx_df[AGE_DAYS<=t,.(NOBS=.N,NRX=sum(WEIGHT_INDIV_NOYEAR),AGE_DAYS_ROUNDED=t)])
 }
-first_cumrx_df_drug <- first_cumrx_df_drug[,NMEMB:=nrow(memb_df)]
-
-first_cumrx_df_drug <- as_tibble(first_cumrx_df_drug)
-fig_first_cumrx_drug <- first_cumrx_df_drug %>% 
-	mutate(rawmean=NOBS/NMEMB) %>% 
-	mutate(rawlwr=qgamma(alphasig/2,NOBS,1)/NMEMB) %>%
-	mutate(rawupr=qgamma(1-alphasig/2,NOBS+1,1)/NMEMB) %>%
-	mutate(proplwr=(rawmean-rawlwr)/rawmean) %>% 
-	mutate(propupr=(rawupr-rawmean)/rawmean) %>% 
-	mutate(lwr=NRX-proplwr*NRX) %>% 
-	mutate(upr=NRX+propupr*NRX) %>% 
-	mutate(ISABX=factor(ISABX)) %>% 
-	ggplot(aes(x=AGE_DAYS_ROUNDED, y=NRX, col=factor(ISABX),fill=factor(ISABX))) + 
-		geom_ribbon(aes(ymin=lwr,ymax=upr),alpha=0.4) + 
-		geom_line() + 
-		scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
-		scale_y_continuous(limits=c(0,1), breaks=seq(from=0, to=1, by=0.2)) + 
-		theme_classic() + 
-		labs(x="Days from birth", y=paste0("Proportion who have received a prescription"), col="Drug class", fill="Drug class") + 
-		scale_color_manual(values=c("Gray","Blue"),labels=c("0"="Non-antibiotics","1"="Antibiotics")) + 
-		scale_fill_manual(values=c("Gray","Blue"),labels=c("0"="Non-antibiotics","1"="Antibiotics")) +
-		theme(text=element_text(size=16))
-
-# ggsave(fig_first_cumrx_drug, file="figures/letter_binary/first_cumrx_drug.pdf",width=8,height=5)
-# ggsave(fig_first_cumrx_drug, file="figures/letter_binary/first_cumrx_drug.png",width=8,height=5)
+cumfirstrx_df <- cumfirstrx_df[,NMEMB:=nrow(memb_df)]
 
 
-tab_firstrx_df_drug <- first_cumrx_df_drug %>% 
-	mutate(rawmean=NOBS/NMEMB) %>% 
-	mutate(rawlwr=qgamma(alphasig/2,NOBS,1)/NMEMB) %>%
-	mutate(rawupr=qgamma(1-alphasig/2,NOBS+1,1)/NMEMB) %>%
-	mutate(proplwr=(rawmean-rawlwr)/rawmean) %>% 
-	mutate(propupr=(rawupr-rawmean)/rawmean) %>% 
-	mutate(lwr=NRX-proplwr*NRX) %>% 
-	mutate(upr=NRX+propupr*NRX) %>% 
-	select(ISABX, AGE_DAYS_ROUNDED, NRX, lwr, upr) %>% 
-	filter(AGE_DAYS_ROUNDED %in% c(30*12*1, 30*12*2, 30*12*5)) %>% 
-	arrange(ISABX, AGE_DAYS_ROUNDED) %>% 
-	mutate(AGE=case_when(
-		AGE_DAYS_ROUNDED==30*12*1~"1 year",
-		AGE_DAYS_ROUNDED==30*12*2~"2 years",
-		AGE_DAYS_ROUNDED==30*12*5~"5 years")) %>% 
-	mutate(NRX=as.character(round(NRX*100,1))) %>% 
-	mutate(lwr=paste0("(",as.character(round(lwr*100,1)),",")) %>% 
-	mutate(upr=paste0(as.character(round(upr*100,1)),")")) %>% 
-	select(ISABX,AGE,NRX,lwr,upr) 
-
-# write_csv(tab_firstrx_df_drug, file="figures/letter_binary/firstrx_df_drug.csv")
-
-# ------------------------------------------------------------------------------
-# For respiratory conditions: 
-
-first_rx_df_drug_resp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
+# Get the age of first prescription for a respiratory condition: 
+firstrx_df_resp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
 	COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")][
-	,AGE_DAYS:=as.numeric(difftime(DATE,BIRTH_DATE,units="days"))][
-	,.(WEIGHT_INDIV_NOYEAR=first(WEIGHT_INDIV_NOYEAR), AGE_DAYS=min(AGE_DAYS)), by=.(ENROLID,ISABX)]
+	,.(WEIGHT_INDIV_NOYEAR=first(WEIGHT_INDIV_NOYEAR), AGE_DAYS=min(AGE_DAYS)), by=.(ENROLID)]
 
-first_cumrx_df_drug_resp <- setDT(data.frame())
-for(t in seq(from=0, to=30*60, by=30)){
-	first_cumrx_df_drug_resp <- rbind(first_cumrx_df_drug_resp,
-		first_rx_df_drug_resp[AGE_DAYS<=t,.(NOBS=.N,NRX=sum(WEIGHT_INDIV_NOYEAR),AGE_DAYS_ROUNDED=t),by=.(ISABX)])
+cumfirstrx_df_resp <- setDT(data.frame())
+for(t in seq(from=0, to=1825, by=5)){
+	cumfirstrx_df_resp <- rbind(cumfirstrx_df_resp,
+		firstrx_df_resp[AGE_DAYS<=t,.(NOBS=.N,NRX=sum(WEIGHT_INDIV_NOYEAR),AGE_DAYS_ROUNDED=t)])
 }
-first_cumrx_df_drug_resp <- first_cumrx_df_drug_resp[,NMEMB:=nrow(memb_df)]
+cumfirstrx_df_resp <- cumfirstrx_df_resp[,NMEMB:=nrow(memb_df)]
 
-first_rx_df_drug_nonresp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
+
+# Get the age of first prescription for a non-respiratory condition: 
+firstrx_df_nonresp <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
 	!(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media"))][
-	,AGE_DAYS:=as.numeric(difftime(DATE,BIRTH_DATE,units="days"))][
-	,.(WEIGHT_INDIV_NOYEAR=first(WEIGHT_INDIV_NOYEAR), AGE_DAYS=min(AGE_DAYS)), by=.(ENROLID,ISABX)]
+	,.(WEIGHT_INDIV_NOYEAR=first(WEIGHT_INDIV_NOYEAR), AGE_DAYS=min(AGE_DAYS)), by=.(ENROLID)]
 
-first_cumrx_df_drug_nonresp <- setDT(data.frame())
-for(t in seq(from=0, to=30*60, by=30)){
-	first_cumrx_df_drug_nonresp <- rbind(first_cumrx_df_drug_nonresp,
-		first_rx_df_drug_nonresp[AGE_DAYS<=t,.(NOBS=.N,NRX=sum(WEIGHT_INDIV_NOYEAR),AGE_DAYS_ROUNDED=t),by=.(ISABX)])
+cumfirstrx_df_nonresp <- setDT(data.frame())
+for(t in seq(from=0, to=1825, by=5)){
+	cumfirstrx_df_nonresp <- rbind(cumfirstrx_df_nonresp,
+		firstrx_df_nonresp[AGE_DAYS<=t,.(NOBS=.N,NRX=sum(WEIGHT_INDIV_NOYEAR),AGE_DAYS_ROUNDED=t)])
 }
-first_cumrx_df_drug_nonresp <- first_cumrx_df_drug_nonresp[,NMEMB:=nrow(memb_df)]
+cumfirstrx_df_nonresp <- cumfirstrx_df_nonresp[,NMEMB:=nrow(memb_df)]
 
-first_cumrx_df_drug_resp <- as_tibble(first_cumrx_df_drug_resp)
-fig_first_cumrx_drug_resp <- first_cumrx_df_drug_resp %>% 
+
+# Gather the data into a useful format and append confidence intervals: 
+fulldat_firstcumrx <- cumfirstrx_df %>% 
 	mutate(rawmean=NOBS/NMEMB) %>% 
 	mutate(rawlwr=qgamma(alphasig/2,NOBS,1)/NMEMB) %>%
 	mutate(rawupr=qgamma(1-alphasig/2,NOBS+1,1)/NMEMB) %>%
 	mutate(proplwr=(rawmean-rawlwr)/rawmean) %>% 
 	mutate(propupr=(rawupr-rawmean)/rawmean) %>% 
 	mutate(lwr=NRX-proplwr*NRX) %>% 
-	mutate(upr=NRX+propupr*NRX) %>% 
-	mutate(ISABX=factor(ISABX)) %>% 
-	ggplot(aes(x=AGE_DAYS_ROUNDED, y=NRX, col=factor(ISABX),fill=factor(ISABX))) + 
-		geom_ribbon(aes(ymin=lwr,ymax=upr),alpha=0.4) + 
-		geom_line() + 
-		scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
-		scale_y_continuous(limits=c(0,1), breaks=seq(from=0, to=1, by=0.2)) + 
-		theme_classic() + 
-		labs(x="Days from birth", y=paste0("Proportion who have received a prescription"), col="Drug class", fill="Drug class") + 
-		scale_color_manual(values=c("Gray","Blue"),labels=c("0"="Non-antibiotics","1"="Antibiotics")) + 
-		scale_fill_manual(values=c("Gray","Blue"),labels=c("0"="Non-antibiotics","1"="Antibiotics")) +
-		theme(text=element_text(size=16))
+	mutate(upr=NRX+propupr*NRX) 
 
-# ggsave(fig_first_cumrx_drug_resp, file="figures/letter_binary/first_cumrx_drug_resp.pdf",width=8,height=5)
-# ggsave(fig_first_cumrx_drug_resp, file="figures/letter_binary/first_cumrx_drug_resp.png",width=8,height=5)
-
-fulldat <- first_cumrx_df_drug %>% 
+respdat_firstcumrx <- cumfirstrx_df_resp %>% 
 	mutate(rawmean=NOBS/NMEMB) %>% 
 	mutate(rawlwr=qgamma(alphasig/2,NOBS,1)/NMEMB) %>%
 	mutate(rawupr=qgamma(1-alphasig/2,NOBS+1,1)/NMEMB) %>%
 	mutate(proplwr=(rawmean-rawlwr)/rawmean) %>% 
 	mutate(propupr=(rawupr-rawmean)/rawmean) %>% 
 	mutate(lwr=NRX-proplwr*NRX) %>% 
-	mutate(upr=NRX+propupr*NRX) %>% 
-	mutate(ISABX=factor(ISABX))
+	mutate(upr=NRX+propupr*NRX) 
 
-respdat <- first_cumrx_df_drug_resp %>% 
+nonrespdat_firstcumrx <- cumfirstrx_df_nonresp %>% 
 	mutate(rawmean=NOBS/NMEMB) %>% 
 	mutate(rawlwr=qgamma(alphasig/2,NOBS,1)/NMEMB) %>%
 	mutate(rawupr=qgamma(1-alphasig/2,NOBS+1,1)/NMEMB) %>%
 	mutate(proplwr=(rawmean-rawlwr)/rawmean) %>% 
 	mutate(propupr=(rawupr-rawmean)/rawmean) %>% 
 	mutate(lwr=NRX-proplwr*NRX) %>% 
-	mutate(upr=NRX+propupr*NRX) %>% 
-	mutate(ISABX=factor(ISABX))
+	mutate(upr=NRX+propupr*NRX) 
 
-nonrespdat <- first_cumrx_df_drug_nonresp %>% 
-	mutate(rawmean=NOBS/NMEMB) %>% 
-	mutate(rawlwr=qgamma(alphasig/2,NOBS,1)/NMEMB) %>%
-	mutate(rawupr=qgamma(1-alphasig/2,NOBS+1,1)/NMEMB) %>%
-	mutate(proplwr=(rawmean-rawlwr)/rawmean) %>% 
-	mutate(propupr=(rawupr-rawmean)/rawmean) %>% 
-	mutate(lwr=NRX-proplwr*NRX) %>% 
-	mutate(upr=NRX+propupr*NRX) %>% 
-	mutate(ISABX=factor(ISABX))
+combdat_firstcumrx <- bind_rows(
+	mutate(fulldat_firstcumrx,Indication="All conditions"),
+	mutate(respdat_firstcumrx,Indication="Respiratory conditions"),
+	mutate(nonrespdat_firstcumrx,Indication="Non-respiratory conditions")
+	) 
 
-combdat <- bind_rows(mutate(fulldat,Indication="All conditions"),mutate(respdat,Indication="Respiratory conditions"))
-
- 
-fig_first_cumrx_drug_combined <- ggplot(data=combdat, aes(x=AGE_DAYS_ROUNDED, y=NRX, col=factor(ISABX),fill=factor(ISABX), linetype=Indication)) + 
-	geom_ribbon(aes(ymin=lwr,ymax=upr),alpha=0.4) + 
-	geom_line() + 
-	scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
-	scale_y_continuous(limits=c(0,1), breaks=seq(from=0, to=1, by=0.2)) + 
-	theme_classic() + 
-	labs(x="Days from birth", y=paste0("Proportion who have received a prescription"), col="Drug class", fill="Drug class") + 
-	scale_color_manual(values=c("Gray","Blue"),labels=c("0"="Non-antibiotics","1"="Antibiotics")) + 
-	scale_fill_manual(values=c("Gray","Blue"),labels=c("0"="Non-antibiotics","1"="Antibiotics")) +
-	scale_linetype_manual(values=c("solid","dashed")) + 
-	theme(text=element_text(size=16))
-
-# Some statistics: 
-# first_cumrx_df_drug %>% 
-# 	mutate(rawmean=NOBS/NMEMB) %>% 
-# 	mutate(rawlwr=qgamma(alphasig/2,NOBS,1)/NMEMB) %>%
-# 	mutate(rawupr=qgamma(1-alphasig/2,NOBS+1,1)/NMEMB) %>%
-# 	mutate(proplwr=(rawmean-rawlwr)/rawmean) %>% 
-# 	mutate(propupr=(rawupr-rawmean)/rawmean) %>% 
-# 	mutate(lwr=NRX-proplwr*NRX) %>% 
-# 	mutate(upr=NRX+propupr*NRX) %>% 
-# 	filter(AGE_DAYS_ROUNDED %in% c(365, 2*365, 1825)) %>% 
-# 	select(CLASS, AGE_DAYS_ROUNDED, NRX, lwr, upr) %>% 
-# 	arrange(CLASS, AGE_DAYS_ROUNDED)
-
-combdat_abx <- bind_rows(
-	mutate(fulldat,Indication="All conditions"),
-	mutate(respdat,Indication="Respiratory conditions"),
-	mutate(nonrespdat,Indication="Non-respiratory conditions")
-	) %>% 
-	filter(ISABX==1) 
-
-fig_first_cumrx_respnonresp_abx <-
-	ggplot(data=combdat_abx, aes(x=AGE_DAYS_ROUNDED, y=NRX, col=Indication, fill=Indication, linetype=Indication)) + 
+# Plot age at first prescriptions overall and by respiratory/non-respiratory conditions: 
+fig_cumfirstrx_respnonresp <-
+	ggplot(data=combdat_firstcumrx, aes(x=AGE_DAYS_ROUNDED, y=NRX, col=Indication, fill=Indication, linetype=Indication)) + 
 		geom_ribbon(aes(ymin=lwr,ymax=upr),alpha=0.4) + 
 		geom_line() + 
 		scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
@@ -359,13 +251,14 @@ fig_first_cumrx_respnonresp_abx <-
 		scale_linetype_manual(values=c("All conditions"="solid","Respiratory conditions"="solid","Non-respiratory conditions"="dashed")) +
 		theme(text=element_text(size=10))
 
-ggsave(fig_first_cumrx_respnonresp_abx, file="figures/firstrx.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_first_cumrx_respnonresp_abx, file="figures/firstrx.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_first_cumrx_respnonresp, file="figures/firstrx.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_first_cumrx_respnonresp, file="figures/firstrx.png", width=figwidth, height=figwidth, dpi=figres)
 
-ggsave(fig_first_cumrx_respnonresp_abx+theme(legend.position="none"), file="figures/firstrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_first_cumrx_respnonresp_abx+theme(legend.position="none"), file="figures/firstrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_first_cumrx_respnonresp+theme(legend.position="none"), file="figures/firstrx_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_first_cumrx_respnonresp+theme(legend.position="none"), file="figures/firstrx_nokey.png", width=figwidth, height=figwidth, dpi=figres)
 
-combdat_abx %>% 	
+# Extract proportion of children who have received a prescription by age 5: 
+combdat_firstcumrx %>% 	
 	filter(AGE_DAYS_ROUNDED==1825) %>% 
 	select(AGE_DAYS_ROUNDED, Indication, NRX, lwr, upr)
 
@@ -373,7 +266,7 @@ combdat_abx %>%
 # Figure 1C: Prescribing histogram
 # ==============================================================================
 
-cumrx_summ_overall <- rx_df_drug[ISABX==1][
+cumrx_summ_overall <- rx_df[
 	,.(ENROLID,ISRX=1)][
 	memb_df[,.(ENROLID)], on=.(ENROLID)][
 	is.na(ISRX),ISRX:=0][
@@ -381,7 +274,7 @@ cumrx_summ_overall <- rx_df_drug[ISABX==1][
 	as_tibble() %>% 
 	mutate(Indication="All conditions")
 
-cumrx_summ_resp <- rx_df_drug_resp[ISABX==1][
+cumrx_summ_resp <- rx_df_resp[
 	,.(ENROLID,ISRX=1)][
 	memb_df[,.(ENROLID)], on=.(ENROLID)][
 	is.na(ISRX),ISRX:=0][
@@ -389,7 +282,7 @@ cumrx_summ_resp <- rx_df_drug_resp[ISABX==1][
 	as_tibble() %>% 
 	mutate(Indication="Respiratory infections")
 
-cumrx_summ_nonresp <- rx_df_drug_nonresp[ISABX==1][
+cumrx_summ_nonresp <- rx_df_nonresp[
 	,.(ENROLID,ISRX=1)][
 	memb_df[,.(ENROLID)], on=.(ENROLID)][
 	is.na(ISRX),ISRX:=0][
@@ -421,7 +314,7 @@ ggsave(fig_cumrx_summ + theme(legend.position="none"), file="figures/cumrx_summ_
 # Asymmetry in prescribing
 # ==============================================================================
 
-rxrankdf_drug_overall_abx <- rx_df[,.(ENROLID,ISABX,ID)][
+rxrankdf_overall_abx <- rx_df[,.(ENROLID,ISABX,ID)][
 	Reduce(rbind, lapply(
 		c(0,1),
 		function(x){memb_df[,.(ENROLID,WEIGHT_INDIV_NOYEAR,ISABX=x)]})),
@@ -443,10 +336,10 @@ rxrankdf_drug_overall_abx <- rx_df[,.(ENROLID,ISABX,ID)][
 	ungroup() %>% 
 	filter(ISABX==1)
 
-rxrankdf_drug_overall_abx %>% filter(CUMPROPRX>0.5)
-rxrankdf_drug_overall_abx %>% filter(PRANK_WEIGHTED>0.2)
+rxrankdf_overall_abx %>% filter(CUMPROPRX>0.5)
+rxrankdf_overall_abx %>% filter(PRANK_WEIGHTED>0.2)
 
-rxrankdf_drug_resp_abx <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
+rxrankdf_resp_abx <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
 	COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")][
 	,.(ENROLID,ISABX,ID)][
@@ -472,7 +365,7 @@ rxrankdf_drug_resp_abx <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	filter(ISABX==1)
 
 
-rxrankdf_drug_nonresp_abx <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
+rxrankdf_nonresp_abx <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 	rx_df, on=.(ASSOC_VISIT_ID)][
 	!(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media"))][
 	,.(ENROLID,ISABX,ID)][
@@ -499,13 +392,13 @@ rxrankdf_drug_nonresp_abx <- visit_df[,.(ASSOC_VISIT_ID=ID,COND)][
 
 
 rxrankdf_abx_combined <- bind_rows(
-	mutate(rxrankdf_drug_overall_abx,COND="All conditions"),
-	mutate(rxrankdf_drug_resp_abx,COND="Respiratory conditions"),
-	mutate(rxrankdf_drug_nonresp_abx,COND="Non-respiratory conditions"),
+	mutate(rxrankdf_overall_abx,COND="All conditions"),
+	mutate(rxrankdf_resp_abx,COND="Respiratory conditions"),
+	mutate(rxrankdf_nonresp_abx,COND="Non-respiratory conditions"),
 	)
 
 
-fig_rankcurve_respnonresp_abx <- rxrankdf_abx_combined %>% 
+fig_rankcurve_respnonresp <- rxrankdf_abx_combined %>% 
 	ggplot(aes(x=PRANK_WEIGHTED, y=CUMPROPRX, col=COND, lty=COND)) + 
 		# geom_line(stat="smooth", method="loess", span=2) + 
 		geom_line() + 
@@ -517,17 +410,17 @@ fig_rankcurve_respnonresp_abx <- rxrankdf_abx_combined %>%
 		scale_linetype_manual(values=c("All conditions"="solid","Respiratory conditions"="solid","Non-respiratory conditions"="dashed")) +
 		theme(text=element_text(size=10))
 
-ggsave(fig_rankcurve_respnonresp_abx, file="figures/rankcurve.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_rankcurve_respnonresp_abx, file="figures/rankcurve.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_rankcurve_respnonresp, file="figures/rankcurve.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_rankcurve_respnonresp, file="figures/rankcurve.png", width=figwidth, height=figwidth, dpi=figres)
 
-ggsave(fig_rankcurve_respnonresp_abx+theme(legend.position="none"), file="figures/rankcurve_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_rankcurve_respnonresp_abx+theme(legend.position="none"), file="figures/rankcurve_nokey.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_rankcurve_respnonresp+theme(legend.position="none"), file="figures/rankcurve_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_rankcurve_respnonresp+theme(legend.position="none"), file="figures/rankcurve_nokey.png", width=figwidth, height=figwidth, dpi=figres)
 
 # ==============================================================================
 # Chronic condition analysis
 # ==============================================================================
 
-superuserdf <- rxrankdf_drug_overall_abx %>% 
+superuserdf <- rxrankdf_overall_abx %>% 
 	filter(PRANK_WEIGHTED<=0.2)
 setDT(superuserdf)
 
@@ -589,7 +482,7 @@ tempcount_ccs <- temp[!is.na(BODY_SYSTEM)][
 tempcount_ccs$pulmonary_respiratory
 tempcount_ccs$otologic
 
-rxrankdf_full <-  rxrankdf_drug_overall_abx %>% 
+rxrankdf_full <-  rxrankdf_overall_abx %>% 
 	mutate(SUPERUSER=case_when(PRANK_WEIGHTED<=0.2~1,TRUE~0)) %>% 
 	select(ENROLID, NRX, SUPERUSER) %>% 
 	left_join(as_tibble(ccmap), by="ENROLID") %>% 
