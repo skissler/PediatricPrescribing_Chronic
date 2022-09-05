@@ -198,7 +198,7 @@ run;
 	run;
 
 	* keep only rows where index = months from birth, which gives contiguous months from birth;
-	data cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF where=(COUNT=BIRTHDIFF and COUNT>1));
+	data cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF where=(COUNT=BIRTHDIFF)); *and COUNT>1;
 		set cohort;
 	run;
 
@@ -222,6 +222,12 @@ run;
 	* Censor people after 5 years (1825 days);
 	proc sort data=cohort;
 		by DURATION;
+	run;
+
+	proc export data=cohort
+		outfile='/home/kissler/PediatricPrescribing_Chronic/output/cohort_intermediate_SAS.csv'
+		dbms=csv
+		replace;
 	run;
 
 	data cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE DURATION);
