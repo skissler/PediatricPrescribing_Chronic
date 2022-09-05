@@ -39,3 +39,11 @@ temp %>%
 # ==============================================================
 
 sasdf <- read_csv('output/cohort_intermediate_SAS.csv')
+
+sasdf <- sasdf %>% 
+	mutate(BIRTH_DATE=mdy(BIRTH_DATE)) %>% 
+ 	mutate(DTEND=mdy(DTEND)) %>% 
+ 	mutate(DURATION=as.numeric(difftime(DTEND,BIRTH_DATE,units='days'))) %>% 
+ 	filter(DURATION>=1800) 
+
+	

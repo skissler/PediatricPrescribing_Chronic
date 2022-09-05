@@ -182,13 +182,13 @@ run;
 		set cohort;
 		COUNT + 1;
 		by ENROLID;
-		if first.ENROLID then COUNT = 1;
+		if first.ENROLID then COUNT = 0;
 	run;
 
 	* Append an index column;
 	data cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
 		set cohort;
-		BIRTHDIFF=12*(DT_YEAR-year(BIRTH_DATE))+(DT_MONTH-month(BIRTH_DATE))+1;
+		BIRTHDIFF=12*(DT_YEAR-year(BIRTH_DATE))+(DT_MONTH-month(BIRTH_DATE));
 	run;
 
 	* keep only rows where index = months from birth, which gives contiguous months from birth;
@@ -221,12 +221,12 @@ run;
 	data cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE DURATION);
 		set cohort;
 		by DURATION;
-		if DURATION>=1800; *change to 1825;
+		if DURATION>=1825; *change to 1825;
 	run;
 
 	data cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE CENSOR_DATE);
 		set cohort;
-		CENSOR_DATE=BIRTH_DATE+1800; *change to 1825;
+		CENSOR_DATE=BIRTH_DATE+1825; *change to 1825;
 		format CENSOR_DATE mmddyys10.;
 	run;
 

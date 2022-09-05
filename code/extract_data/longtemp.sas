@@ -1,0 +1,239 @@
+* ============================================================================;
+* Setup;
+* ============================================================================;
+
+* Make sure there's nothing in the 'work' library;
+proc datasets lib=work nolist kill; quit; run;
+
+* Set path for log; 
+proc printto log="/home/kissler/PediatricPrescribing_Chronic/logs/extract_data_log.txt" new;
+run;
+
+* Set path for printing output;
+proc printto print="/home/kissler/PediatricPrescribing_Chronic/logs/extract_data_out.txt" new;
+run;
+
+* Set path for saving output;
+libname out "/home/kissler/PediatricPrescribing_Chronic/output/buildfiles/";
+
+* Specify data libraries;
+libname dathome "/data/markscan_authorized/data";
+libname dat08 "/data/markscan_authorized_users/kissler/dat08";
+libname dat09 "/data/markscan_authorized_users/kissler/dat09";
+libname dat10 "/data/markscan_authorized/data/commercial/2010";
+libname dat11 "/data/markscan_authorized/data/commercial/2011";
+libname dat12 "/data/markscan_authorized/data/commercial/2012";
+libname dat13 "/data/markscan_authorized/data/commercial/2013";
+libname dat14 "/data/markscan_authorized/data/commercial/2014";
+libname dat15 "/data/markscan_authorized/data/commercial/2015";
+libname dat16 "/data/markscan_authorized/data/commercial/2016";
+libname dat17 "/data/markscan_authorized/data/commercial/2017";
+libname dat18 "/data/markscan_authorized/data/commercial/2018";
+
+
+* Import and process table of days per month --------------------------------; 
+proc import datafile="/home/kissler/PediatricPrescribing_Chronic/data/dayspermonth.csv"
+        out=dayspermonth
+        dbms=csv
+        replace;
+run;
+
+proc sort data=dayspermonth;
+	by DT_MONTH;
+run;
+
+* Import and process list of NDC codes to extract -----------------------------; 
+proc import datafile="/home/kissler/PediatricPrescribing_Chronic/data/ndc_to_extract.csv"
+        out=ndctoextract
+        dbms=csv
+        replace;
+run;
+
+proc sort data=ndctoextract;
+	by NDCNUM;
+run;
+
+* Import and process table of US states --------------------------------------;
+proc import datafile="/home/kissler/PediatricPrescribing_Chronic/data/EGEOLOClist_char.csv"
+        out=EGEOLOClist
+        dbms=csv
+        replace;
+run;
+
+* Make sure variable lengths are sufficient to avoid truncation:;
+data EGEOLOClist;
+	length STATE $30;
+    set EGEOLOClist(rename=(STATE=STATE_orig));
+    STATE=STATE_orig;
+run;
+
+proc sort data=EGEOLOClist;
+	by EGEOLOC;
+run;
+
+* ============================================================================;
+* Define extraction/reduction scripts;
+* ============================================================================;
+
+* Extract birth dates;
+%macro getbirthdates(year=,yeartag=);
+
+	* Initial import of inpatient services table;
+	data cohortBirthdates&year. (keep=ENROLID SVCDATE);
+		set dat&year..ccaes&year.&yeartag. (keep=AGE DX1 DX2 ENROLID SVCDATE where=(AGE=0 and (substr(DX1,1,3)="V30" or 
+				substr(DX1,1,3)="V31" or 
+				substr(DX1,1,3)="V32" or 
+				substr(DX1,1,3)="V33" or 
+				substr(DX1,1,3)="V34" or 
+				substr(DX1,1,3)="V35" or 
+				substr(DX1,1,3)="V36" or 
+				substr(DX1,1,3)="V37" or 
+				substr(DX1,1,3)="V39" or 
+				substr(DX1,1,3)="Z38" or 
+				substr(DX2,1,3)="V30" or 
+				substr(DX2,1,3)="V31" or 
+				substr(DX2,1,3)="V32" or 
+				substr(DX2,1,3)="V33" or 
+				substr(DX2,1,3)="V34" or 
+				substr(DX2,1,3)="V35" or 
+				substr(DX2,1,3)="V36" or 
+				substr(DX2,1,3)="V37" or 
+				substr(DX2,1,3)="V39" or 
+				substr(DX2,1,3)="Z38")));
+	run;
+
+	* Sort by visit date;
+	proc sort data=cohortBirthdates&year.;
+		by ENROLID SVCDATE;
+	run;
+
+	* For each person, pull out the earliest date (the birth date);
+	data cohortBirthdates&year. (keep=ENROLID BIRTH_DATE);
+		set cohortBirthdates&year. (rename=(SVCDATE=BIRTH_DATE));
+		by ENROLID;
+		if first.ENROLID;
+	run;
+
+%mend;
+
+* Extract individuals with prescriptions under the age of 5; 
+%macro getcohort(year=,yeartag=);
+
+	* Initial import, ensuring we have RX data and age <= 5;
+	data cohort&year. (keep=DT_MONTH DT_YEAR DTEND EGEOLOC MSA ENROLID MEMDAYS SEX);
+		set dat&year..ccaet&year.&yeartag. (keep=AGE RX DTEND EGEOLOC MSA ENROLID MEMDAYS SEX where=(RX="1" and AGE<=5));
+		DT_MONTH=month(DTEND);
+		DT_YEAR=year(DTEND);
+	run;
+
+	* Restrict to valid states;
+	proc sort data=cohort&year.;
+		by EGEOLOC;
+	run;
+
+	data cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE);
+		merge EGEOLOClist (in=inleft)
+		cohort&year. (in=inright);
+		by EGEOLOC; 
+		IF inleft & inright; 
+	run;
+
+	* Restrict to those with a birth date;
+	proc sort data=cohort&year.;
+		by ENROLID;
+	run;
+
+	data cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE);
+		merge cohortBirthdates (in=inleft)
+		cohort&year. (in=inright);
+		by ENROLID; 
+		IF inleft & inright; 
+	run;
+
+	* Keep only rows corresponding to full months or the birth month;
+	proc sort data=cohort&year.;
+		by DT_MONTH;
+	run;
+
+	data cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID MEMDAYS SEX BIRTH_DATE NDAYS where=((MEMDAYS>=NDAYS) or (month(BIRTH_DATE)=DT_MONTH and year(BIRTH_DATE)=DT_YEAR)));
+		merge dayspermonth (in=inleft)
+		cohort&year. (in=inright);
+		by DT_MONTH;
+		IF inleft & inright;
+	run;
+
+	* Keep only relevant columns;
+	data cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE);
+		set cohort&year.;
+	run;
+
+%mend;
+
+* Reduce to individuals who are present for five straight years;
+%macro refinecohort();
+
+	* Sort the cohort table;
+	proc sort data=cohort;
+		by ENROLID DT_YEAR DT_MONTH;
+	run;
+
+	* Count months from birth;
+	data cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT);
+		set cohort;
+		COUNT + 1;
+		by ENROLID;
+		if first.ENROLID then COUNT = 0;
+	run;
+
+	* Append an index column;
+	data cohort (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF);
+		set cohort;
+		BIRTHDIFF=12*(DT_YEAR-year(BIRTH_DATE))+(DT_MONTH-month(BIRTH_DATE));
+	run;
+
+	* keep only rows where index = months from birth, which gives contiguous months from birth;
+	data cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE COUNT BIRTHDIFF where=(COUNT=BIRTHDIFF));
+		set cohort;
+	run;
+
+	* keep only one row per person (the last);
+	proc sort data=cohort;
+		by ENROLID COUNT;
+	run;
+
+	data cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE);
+		set cohort;
+		by ENROLID;
+		if last.ENROLID;
+	run;
+
+	* Calculate how long each person is followed;
+	data cohort (keep=DTEND STATE MSA ENROLID SEX BIRTH_DATE DURATION);
+		set cohort;
+		DURATION=DTEND-BIRTH_DATE;
+	run;
+
+	* Censor people after 5 years (1825 days);
+	proc sort data=cohort;
+		by DURATION;
+	run;
+
+	data cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE DURATION);
+		set cohort;
+		by DURATION;
+		if DURATION>=1825; *change to 1825;
+	run;
+
+	data cohort (keep=STATE MSA ENROLID SEX BIRTH_DATE CENSOR_DATE);
+		set cohort;
+		CENSOR_DATE=BIRTH_DATE+1825; *change to 1825;
+		format CENSOR_DATE mmddyys10.;
+	run;
+
+	data cohort;
+		set cohort;
+		if STATE="North Carolin" then STATE="North Carolina";
+		if STATE="South Carolin" then STATE="South Carolina";
+	run;
+
+%mend;
