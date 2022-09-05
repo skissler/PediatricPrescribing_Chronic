@@ -579,19 +579,19 @@ proc delete data=visit_df18; run;
 
 * Save data to output ---------------------------------------------------------;
 proc export data=cohort
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/memb_df.csv'
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/memb_df_sam.csv'
 	dbms=csv
 	replace;
 run;
 
 proc export data=rx_df
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/rx_df.csv'
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/rx_df_sam.csv'
 	dbms=csv
 	replace;
 run;
 
 proc export data=visit_df
-	outfile='/home/kissler/PediatricPrescribing_Chronic/output/visit_df.csv'
+	outfile='/home/kissler/PediatricPrescribing_Chronic/output/visit_df_sam.csv'
 	dbms=csv
 	replace;
 run;
