@@ -46,7 +46,7 @@ NOTE: Libref DAT12 was successfully assigned as follows:
 26         libname dat13 "/data/markscan_authorized/data/commercial/2013";
 NOTE: Libref DAT13 was successfully assigned as follows: 
       Engine:        V9 
-3                                                          The SAS System                            13:25 Monday, September 5, 2022
+3                                                          The SAS System                            13:36 Monday, September 5, 2022
 
       Physical Name: /data/markscan_authorized/data/commercial/2013
 27         libname dat14 "/data/markscan_authorized/data/commercial/2014";
@@ -106,7 +106,7 @@ NOTE: The infile '/home/kissler/PediatricPrescribing_Chronic/data/dayspermonth.c
       Owner Name=kissler,Group Name=users,
       Access Permission=-rwx------,
       Last Modified=18Aug2022:11:12:59,
-4                                                          The SAS System                            13:25 Monday, September 5, 2022
+4                                                          The SAS System                            13:36 Monday, September 5, 2022
 
       File Size (bytes)=89
 
@@ -116,7 +116,7 @@ NOTE: 12 records were read from the infile '/home/kissler/PediatricPrescribing_C
 NOTE: The data set WORK.DAYSPERMONTH has 12 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 12 rows created in WORK.DAYSPERMONTH from /home/kissler/PediatricPrescribing_Chronic/data/dayspermonth.csv.
@@ -166,7 +166,7 @@ NOTE: PROCEDURE SORT used (Total process time):
 84                informat THRCLDS $27. ;
 85                informat THRDTDS $22. ;
 86                informat ROADS $13. ;
-5                                                          The SAS System                            13:25 Monday, September 5, 2022
+5                                                          The SAS System                            13:36 Monday, September 5, 2022
 
 87                format NDCNUM $13. ;
 88                format THRCLDS $27. ;
@@ -217,7 +217,7 @@ NOTE: There were 21220 observations read from the data set WORK.NDCTOEXTRACT.
 NOTE: The data set WORK.NDCTOEXTRACT has 21220 observations and 4 variables.
 NOTE: PROCEDURE SORT used (Total process time):
       real time           0.00 seconds
-      cpu time            0.02 seconds
+      cpu time            0.00 seconds
       
 
 103        
@@ -226,7 +226,7 @@ NOTE: PROCEDURE SORT used (Total process time):
 106                out=EGEOLOClist
 107                dbms=csv
 108                replace;
-6                                                          The SAS System                            13:25 Monday, September 5, 2022
+6                                                          The SAS System                            13:36 Monday, September 5, 2022
 
 109        run;
 
@@ -277,7 +277,7 @@ NOTE: WORK.EGEOLOCLIST data set was successfully created.
 NOTE: The data set WORK.EGEOLOCLIST has 51 observations and 2 variables.
 NOTE: PROCEDURE IMPORT used (Total process time):
       real time           0.05 seconds
-      cpu time            0.03 seconds
+      cpu time            0.04 seconds
       
 
 131        
@@ -286,7 +286,7 @@ NOTE: PROCEDURE IMPORT used (Total process time):
 134        	length STATE $30;
 135            set EGEOLOClist(rename=(STATE=STATE_orig));
 136            STATE=STATE_orig;
-7                                                          The SAS System                            13:25 Monday, September 5, 2022
+7                                                          The SAS System                            13:36 Monday, September 5, 2022
 
 137        run;
 
@@ -306,7 +306,7 @@ NOTE: There were 51 observations read from the data set WORK.EGEOLOCLIST.
 NOTE: The data set WORK.EGEOLOCLIST has 51 observations and 3 variables.
 NOTE: PROCEDURE SORT used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 142        
@@ -346,7 +346,7 @@ NOTE: PROCEDURE SORT used (Total process time):
 176        		by ENROLID SVCDATE;
 177        	run;
 178        
-8                                                          The SAS System                            13:25 Monday, September 5, 2022
+8                                                          The SAS System                            13:36 Monday, September 5, 2022
 
 179        	* For each person, pull out the earliest date (the birth date);
 180        	data cohortBirthdates&year. (keep=ENROLID BIRTH_DATE);
@@ -406,7 +406,7 @@ NOTE: PROCEDURE SORT used (Total process time):
 233        
 234        	* Keep only relevant columns;
 235        	data cohort&year. (keep=DT_MONTH DT_YEAR DTEND STATE MSA ENROLID SEX BIRTH_DATE);
-9                                                          The SAS System                            13:25 Monday, September 5, 2022
+9                                                          The SAS System                            13:36 Monday, September 5, 2022
 
 236        		set cohort&year.;
 237        	run;
@@ -466,7 +466,7 @@ NOTE: PROCEDURE SORT used (Total process time):
 291        		set cohort;
 292        		by DURATION;
 293        		if DURATION>=1825; *change to 1825;
-10                                                         The SAS System                            13:25 Monday, September 5, 2022
+10                                                         The SAS System                            13:36 Monday, September 5, 2022
 
 294        	run;
 295        
@@ -526,7 +526,7 @@ NOTE: PROCEDURE SORT used (Total process time):
 349        %mend;
 350        
 351        * Get visit data;
-11                                                         The SAS System                            13:25 Monday, September 5, 2022
+11                                                         The SAS System                            13:36 Monday, September 5, 2022
 
 352        
 353        %macro getvisits_pre10(year=,yeartag=);
@@ -586,7 +586,7 @@ NOTE: PROCEDURE SORT used (Total process time):
 407        
 408        	* Keep only visits between birth and censor date;
 409        	data o&year. (keep=DX1 DX2 DX3 DX4 ENROLID DATE ICD STDPLAC);
-12                                                         The SAS System                            13:25 Monday, September 5, 2022
+12                                                         The SAS System                            13:36 Monday, September 5, 2022
 
 410        		rename SVCDATE=DATE;
 411        		length DX1 $30. DX2 $30. DX3 $30. DX4 $30.;
@@ -646,7 +646,7 @@ NOTE: PROCEDURE SORT used (Total process time):
 465        		by ENROLID DATE;
 466        	run;
 467        
-13                                                         The SAS System                            13:25 Monday, September 5, 2022
+13                                                         The SAS System                            13:36 Monday, September 5, 2022
 
 468        	proc delete data=o&year.; run;
 469        
@@ -657,311 +657,344 @@ NOTE: PROCEDURE SORT used (Total process time):
 474        * ============================================================================;
 475        
 476        * Get birthdates --------------------------------------------------------------;
-477        %getbirthdates(year=08, yeartag=2sam); *2sam;
+477        %getbirthdates(year=08, yeartag=2); *2sam;
+NOTE: Data file DAT08.CCAES082.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
 
-NOTE: There were 91471 observations read from the data set DAT08.CCAES082SAM.
+NOTE: There were 2532424 observations read from the data set DAT08.CCAES082.
       WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
       1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
-NOTE: The data set WORK.COHORTBIRTHDATES08 has 91471 observations and 2 variables.
+NOTE: The data set WORK.COHORTBIRTHDATES08 has 2532424 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.37 seconds
-      cpu time            0.38 seconds
+      real time           1:00.18
+      cpu time            52.11 seconds
       
 
 
-NOTE: There were 91471 observations read from the data set WORK.COHORTBIRTHDATES08.
-NOTE: The data set WORK.COHORTBIRTHDATES08 has 91471 observations and 2 variables.
+NOTE: There were 2532424 observations read from the data set WORK.COHORTBIRTHDATES08.
+NOTE: The data set WORK.COHORTBIRTHDATES08 has 2532424 observations and 2 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.01 seconds
+      real time           0.29 seconds
+      cpu time            0.83 seconds
       
 
 
-NOTE: There were 91471 observations read from the data set WORK.COHORTBIRTHDATES08.
-NOTE: The data set WORK.COHORTBIRTHDATES08 has 8365 observations and 2 variables.
+NOTE: There were 2532424 observations read from the data set WORK.COHORTBIRTHDATES08.
+NOTE: The data set WORK.COHORTBIRTHDATES08 has 228998 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.02 seconds
+      real time           0.18 seconds
+      cpu time            0.18 seconds
       
 
-478        %getbirthdates(year=09, yeartag=1sam); *1sam;
+478        %getbirthdates(year=09, yeartag=1); *1sam;
+NOTE: Data file DAT09.CCAES091.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
 
-NOTE: There were 90567 observations read from the data set DAT09.CCAES091SAM.
+NOTE: There were 2411807 observations read from the data set DAT09.CCAES091.
       WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
       1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
-NOTE: The data set WORK.COHORTBIRTHDATES09 has 90567 observations and 2 variables.
+NOTE: The data set WORK.COHORTBIRTHDATES09 has 2411807 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.39 seconds
-      cpu time            0.39 seconds
+      real time           55.02 seconds
+      cpu time            52.91 seconds
       
 
 
-NOTE: There were 90567 observations read from the data set WORK.COHORTBIRTHDATES09.
-NOTE: The data set WORK.COHORTBIRTHDATES09 has 90567 observations and 2 variables.
+NOTE: There were 2411807 observations read from the data set WORK.COHORTBIRTHDATES09.
+NOTE: The data set WORK.COHORTBIRTHDATES09 has 2411807 observations and 2 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.02 seconds
+      real time           0.31 seconds
+14                                                         The SAS System                            13:36 Monday, September 5, 2022
+
+      cpu time            0.86 seconds
       
 
 
-NOTE: There were 90567 observations read from the data set WORK.COHORTBIRTHDATES09.
-NOTE: The data set WORK.COHORTBIRTHDATES09 has 8214 observations and 2 variables.
-14                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
-      
-
-479        %getbirthdates(year=10, yeartag=1sam); *1sam;
-
-NOTE: There were 96926 observations read from the data set DAT10.CCAES101SAM.
-      WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
-      1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
-NOTE: The data set WORK.COHORTBIRTHDATES10 has 96926 observations and 2 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.35 seconds
-      cpu time            0.35 seconds
-      
-
-
-NOTE: There were 96926 observations read from the data set WORK.COHORTBIRTHDATES10.
-NOTE: The data set WORK.COHORTBIRTHDATES10 has 96926 observations and 2 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.03 seconds
-      
-
-
-NOTE: There were 96926 observations read from the data set WORK.COHORTBIRTHDATES10.
-NOTE: The data set WORK.COHORTBIRTHDATES10 has 8369 observations and 2 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-480        %getbirthdates(year=11, yeartag=1sam); *1sam;
-
-NOTE: There were 104032 observations read from the data set DAT11.CCAES111SAM.
-      WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
-      1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
-NOTE: The data set WORK.COHORTBIRTHDATES11 has 104032 observations and 2 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.35 seconds
-      cpu time            0.34 seconds
-      
-
-
-NOTE: There were 104032 observations read from the data set WORK.COHORTBIRTHDATES11.
-NOTE: The data set WORK.COHORTBIRTHDATES11 has 104032 observations and 2 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.03 seconds
-      
-
-
-NOTE: There were 104032 observations read from the data set WORK.COHORTBIRTHDATES11.
-NOTE: The data set WORK.COHORTBIRTHDATES11 has 8845 observations and 2 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-15                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-
-481        %getbirthdates(year=12, yeartag=1sam); *1sam;
-
-NOTE: There were 113171 observations read from the data set DAT12.CCAES121SAM.
-      WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
-      1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
-NOTE: The data set WORK.COHORTBIRTHDATES12 has 113171 observations and 2 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.37 seconds
-      cpu time            0.38 seconds
-      
-
-
-NOTE: There were 113171 observations read from the data set WORK.COHORTBIRTHDATES12.
-NOTE: The data set WORK.COHORTBIRTHDATES12 has 113171 observations and 2 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.03 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: There were 113171 observations read from the data set WORK.COHORTBIRTHDATES12.
-NOTE: The data set WORK.COHORTBIRTHDATES12 has 9021 observations and 2 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-482        %getbirthdates(year=13, yeartag=1sam); *1sam;
-
-NOTE: There were 76980 observations read from the data set DAT13.CCAES131SAM.
-      WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
-      1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
-NOTE: The data set WORK.COHORTBIRTHDATES13 has 76980 observations and 2 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.24 seconds
-      cpu time            0.24 seconds
-      
-
-
-NOTE: There were 76980 observations read from the data set WORK.COHORTBIRTHDATES13.
-NOTE: The data set WORK.COHORTBIRTHDATES13 has 76980 observations and 2 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: There were 76980 observations read from the data set WORK.COHORTBIRTHDATES13.
-NOTE: The data set WORK.COHORTBIRTHDATES13 has 6291 observations and 2 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-483        %getbirthdates(year=14, yeartag=1sam); *1sam;
-
-NOTE: There were 79205 observations read from the data set DAT14.CCAES141SAM.
-16                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-      WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
-      1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
-NOTE: The data set WORK.COHORTBIRTHDATES14 has 79205 observations and 2 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.21 seconds
-      cpu time            0.21 seconds
-      
-
-
-NOTE: There were 79205 observations read from the data set WORK.COHORTBIRTHDATES14.
-NOTE: The data set WORK.COHORTBIRTHDATES14 has 79205 observations and 2 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 79205 observations read from the data set WORK.COHORTBIRTHDATES14.
-NOTE: The data set WORK.COHORTBIRTHDATES14 has 6525 observations and 2 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.02 seconds
-      
-
-484        %getbirthdates(year=15, yeartag=1sam); *1sam;
-
-NOTE: There were 60198 observations read from the data set DAT15.CCAES151SAM.
-      WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
-      1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
-NOTE: The data set WORK.COHORTBIRTHDATES15 has 60198 observations and 2 variables.
+NOTE: There were 2411807 observations read from the data set WORK.COHORTBIRTHDATES09.
+NOTE: The data set WORK.COHORTBIRTHDATES09 has 221032 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.17 seconds
       cpu time            0.17 seconds
       
 
+479        %getbirthdates(year=10, yeartag=1); *1sam;
+NOTE: Data file DAT10.CCAES101.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
 
-NOTE: There were 60198 observations read from the data set WORK.COHORTBIRTHDATES15.
-NOTE: The data set WORK.COHORTBIRTHDATES15 has 60198 observations and 2 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 60198 observations read from the data set WORK.COHORTBIRTHDATES15.
-NOTE: The data set WORK.COHORTBIRTHDATES15 has 4684 observations and 2 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-485        %getbirthdates(year=16, yeartag=1sam); *1sam;
-
-NOTE: There were 59469 observations read from the data set DAT16.CCAES161SAM.
+NOTE: There were 2818660 observations read from the data set DAT10.CCAES101.
       WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
       1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
-NOTE: The data set WORK.COHORTBIRTHDATES16 has 59469 observations and 2 variables.
+NOTE: The data set WORK.COHORTBIRTHDATES10 has 2818660 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
-17                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-      real time           0.67 seconds
-      cpu time            0.17 seconds
+      real time           1:02.40
+      cpu time            57.61 seconds
       
 
 
-NOTE: There were 59469 observations read from the data set WORK.COHORTBIRTHDATES16.
-NOTE: The data set WORK.COHORTBIRTHDATES16 has 59469 observations and 2 variables.
+NOTE: There were 2818660 observations read from the data set WORK.COHORTBIRTHDATES10.
+NOTE: The data set WORK.COHORTBIRTHDATES10 has 2818660 observations and 2 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.02 seconds
+      real time           0.33 seconds
+      cpu time            0.96 seconds
       
 
 
-NOTE: There were 59469 observations read from the data set WORK.COHORTBIRTHDATES16.
-NOTE: The data set WORK.COHORTBIRTHDATES16 has 4586 observations and 2 variables.
+NOTE: There were 2818660 observations read from the data set WORK.COHORTBIRTHDATES10.
+NOTE: The data set WORK.COHORTBIRTHDATES10 has 237661 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
+      real time           0.19 seconds
+      cpu time            0.20 seconds
       
 
-486        %getbirthdates(year=17, yeartag=1sam); *1sam;
+480        %getbirthdates(year=11, yeartag=1); *1sam;
+NOTE: Data file DAT11.CCAES111.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
 
-NOTE: There were 53191 observations read from the data set DAT17.CCAES171SAM.
+NOTE: There were 3309219 observations read from the data set DAT11.CCAES111.
       WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
       1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
-NOTE: The data set WORK.COHORTBIRTHDATES17 has 53191 observations and 2 variables.
+NOTE: The data set WORK.COHORTBIRTHDATES11 has 3309219 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.12 seconds
+      real time           1:08.85
+      cpu time            1:05.09
+      
+
+
+NOTE: There were 3309219 observations read from the data set WORK.COHORTBIRTHDATES11.
+NOTE: The data set WORK.COHORTBIRTHDATES11 has 3309219 observations and 2 variables.
+15                                                         The SAS System                            13:36 Monday, September 5, 2022
+
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.38 seconds
+      cpu time            1.12 seconds
+      
+
+
+NOTE: There were 3309219 observations read from the data set WORK.COHORTBIRTHDATES11.
+NOTE: The data set WORK.COHORTBIRTHDATES11 has 271669 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.23 seconds
+      cpu time            0.23 seconds
+      
+
+481        %getbirthdates(year=12, yeartag=1); *1sam;
+NOTE: Data file DAT12.CCAES121.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+
+NOTE: There were 3446009 observations read from the data set DAT12.CCAES121.
+      WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
+      1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
+NOTE: The data set WORK.COHORTBIRTHDATES12 has 3446009 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           1:07.21
+      cpu time            1:06.90
+      
+
+
+NOTE: There were 3446009 observations read from the data set WORK.COHORTBIRTHDATES12.
+NOTE: The data set WORK.COHORTBIRTHDATES12 has 3446009 observations and 2 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.39 seconds
+      cpu time            1.15 seconds
+      
+
+
+NOTE: There were 3446009 observations read from the data set WORK.COHORTBIRTHDATES12.
+NOTE: The data set WORK.COHORTBIRTHDATES12 has 278966 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.23 seconds
+      cpu time            0.23 seconds
+      
+
+482        %getbirthdates(year=13, yeartag=1); *1sam;
+NOTE: Data file DAT13.CCAES131.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+
+NOTE: There were 2690646 observations read from the data set DAT13.CCAES131.
+      WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
+      1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
+NOTE: The data set WORK.COHORTBIRTHDATES13 has 2690646 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           55.39 seconds
+      cpu time            54.63 seconds
+      
+
+
+16                                                         The SAS System                            13:36 Monday, September 5, 2022
+
+NOTE: There were 2690646 observations read from the data set WORK.COHORTBIRTHDATES13.
+NOTE: The data set WORK.COHORTBIRTHDATES13 has 2690646 observations and 2 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.31 seconds
+      cpu time            0.91 seconds
+      
+
+
+NOTE: There were 2690646 observations read from the data set WORK.COHORTBIRTHDATES13.
+NOTE: The data set WORK.COHORTBIRTHDATES13 has 215995 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.18 seconds
+      cpu time            0.18 seconds
+      
+
+483        %getbirthdates(year=14, yeartag=1); *1sam;
+NOTE: Data file DAT14.CCAES141.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+
+NOTE: There were 2864091 observations read from the data set DAT14.CCAES141.
+      WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
+      1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
+NOTE: The data set WORK.COHORTBIRTHDATES14 has 2864091 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           53.49 seconds
+      cpu time            53.21 seconds
+      
+
+
+NOTE: There were 2864091 observations read from the data set WORK.COHORTBIRTHDATES14.
+NOTE: The data set WORK.COHORTBIRTHDATES14 has 2864091 observations and 2 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.32 seconds
+      cpu time            0.95 seconds
+      
+
+
+NOTE: There were 2864091 observations read from the data set WORK.COHORTBIRTHDATES14.
+NOTE: The data set WORK.COHORTBIRTHDATES14 has 227072 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.19 seconds
+      cpu time            0.19 seconds
+      
+
+484        %getbirthdates(year=15, yeartag=1); *1sam;
+NOTE: Data file DAT15.CCAES151.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+
+NOTE: There were 2130355 observations read from the data set DAT15.CCAES151.
+      WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
+      1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
+NOTE: The data set WORK.COHORTBIRTHDATES15 has 2130355 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           35.62 seconds
+      cpu time            35.10 seconds
+      
+17                                                         The SAS System                            13:36 Monday, September 5, 2022
+
+
+
+NOTE: There were 2130355 observations read from the data set WORK.COHORTBIRTHDATES15.
+NOTE: The data set WORK.COHORTBIRTHDATES15 has 2130355 observations and 2 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.24 seconds
+      cpu time            0.71 seconds
+      
+
+
+NOTE: There were 2130355 observations read from the data set WORK.COHORTBIRTHDATES15.
+NOTE: The data set WORK.COHORTBIRTHDATES15 has 163729 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.15 seconds
+      cpu time            0.15 seconds
+      
+
+485        %getbirthdates(year=16, yeartag=1); *1sam;
+NOTE: Data file DAT16.CCAES161.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+
+NOTE: There were 2147685 observations read from the data set DAT16.CCAES161.
+      WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
+      1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
+NOTE: The data set WORK.COHORTBIRTHDATES16 has 2147685 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           34.01 seconds
+      cpu time            33.37 seconds
+      
+
+
+NOTE: There were 2147685 observations read from the data set WORK.COHORTBIRTHDATES16.
+NOTE: The data set WORK.COHORTBIRTHDATES16 has 2147685 observations and 2 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.23 seconds
+      cpu time            0.70 seconds
+      
+
+
+NOTE: There were 2147685 observations read from the data set WORK.COHORTBIRTHDATES16.
+NOTE: The data set WORK.COHORTBIRTHDATES16 has 160583 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.15 seconds
+      cpu time            0.15 seconds
+      
+
+486        %getbirthdates(year=17, yeartag=1); *1sam;
+NOTE: Data file DAT17.CCAES171.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+
+NOTE: There were 1918058 observations read from the data set DAT17.CCAES171.
+      WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
+      1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
+NOTE: The data set WORK.COHORTBIRTHDATES17 has 1918058 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           34.06 seconds
+18                                                         The SAS System                            13:36 Monday, September 5, 2022
+
+      cpu time            31.02 seconds
+      
+
+
+NOTE: There were 1918058 observations read from the data set WORK.COHORTBIRTHDATES17.
+NOTE: The data set WORK.COHORTBIRTHDATES17 has 1918058 observations and 2 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.22 seconds
+      cpu time            0.66 seconds
+      
+
+
+NOTE: There were 1918058 observations read from the data set WORK.COHORTBIRTHDATES17.
+NOTE: The data set WORK.COHORTBIRTHDATES17 has 148490 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.13 seconds
       cpu time            0.13 seconds
       
 
+487        %getbirthdates(year=18, yeartag=1); *1sam;
+NOTE: Data file DAT18.CCAES181.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
 
-NOTE: There were 53191 observations read from the data set WORK.COHORTBIRTHDATES17.
-NOTE: The data set WORK.COHORTBIRTHDATES17 has 53191 observations and 2 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 53191 observations read from the data set WORK.COHORTBIRTHDATES17.
-NOTE: The data set WORK.COHORTBIRTHDATES17 has 4131 observations and 2 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
-      
-
-487        %getbirthdates(year=18, yeartag=1sam); *1sam;
-
-NOTE: There were 58852 observations read from the data set DAT18.CCAES181SAM.
+NOTE: There were 1999049 observations read from the data set DAT18.CCAES181.
       WHERE (AGE=0) and (SUBSTR(DX1, 1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38') or SUBSTR(DX2, 
       1, 3) in ('V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V39', 'Z38'));
-NOTE: The data set WORK.COHORTBIRTHDATES18 has 58852 observations and 2 variables.
+NOTE: The data set WORK.COHORTBIRTHDATES18 has 1999049 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.11 seconds
-      cpu time            0.11 seconds
+      real time           32.16 seconds
+      cpu time            31.89 seconds
       
 
-18                                                         The SAS System                            13:25 Monday, September 5, 2022
 
-
-NOTE: There were 58852 observations read from the data set WORK.COHORTBIRTHDATES18.
-NOTE: The data set WORK.COHORTBIRTHDATES18 has 58852 observations and 2 variables.
+NOTE: There were 1999049 observations read from the data set WORK.COHORTBIRTHDATES18.
+NOTE: The data set WORK.COHORTBIRTHDATES18 has 1999049 observations and 2 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
+      real time           0.24 seconds
+      cpu time            0.72 seconds
       
 
 
-NOTE: There were 58852 observations read from the data set WORK.COHORTBIRTHDATES18.
-NOTE: The data set WORK.COHORTBIRTHDATES18 has 4548 observations and 2 variables.
+NOTE: There were 1999049 observations read from the data set WORK.COHORTBIRTHDATES18.
+NOTE: The data set WORK.COHORTBIRTHDATES18 has 158157 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
+      real time           0.14 seconds
+      cpu time            0.14 seconds
       
 
 488        
@@ -973,6 +1006,8 @@ NOTE: DATA statement used (Total process time):
 494        		cohortBirthdates11
 495        		cohortBirthdates12
 496        		cohortBirthdates13
+19                                                         The SAS System                            13:36 Monday, September 5, 2022
+
 497        		cohortBirthdates14
 498        		cohortBirthdates15
 499        		cohortBirthdates16
@@ -980,21 +1015,21 @@ NOTE: DATA statement used (Total process time):
 501        		cohortBirthdates18;
 502        run;
 
-NOTE: There were 8365 observations read from the data set WORK.COHORTBIRTHDATES08.
-NOTE: There were 8214 observations read from the data set WORK.COHORTBIRTHDATES09.
-NOTE: There were 8369 observations read from the data set WORK.COHORTBIRTHDATES10.
-NOTE: There were 8845 observations read from the data set WORK.COHORTBIRTHDATES11.
-NOTE: There were 9021 observations read from the data set WORK.COHORTBIRTHDATES12.
-NOTE: There were 6291 observations read from the data set WORK.COHORTBIRTHDATES13.
-NOTE: There were 6525 observations read from the data set WORK.COHORTBIRTHDATES14.
-NOTE: There were 4684 observations read from the data set WORK.COHORTBIRTHDATES15.
-NOTE: There were 4586 observations read from the data set WORK.COHORTBIRTHDATES16.
-NOTE: There were 4131 observations read from the data set WORK.COHORTBIRTHDATES17.
-NOTE: There were 4548 observations read from the data set WORK.COHORTBIRTHDATES18.
-NOTE: The data set WORK.COHORTBIRTHDATES has 73579 observations and 2 variables.
+NOTE: There were 228998 observations read from the data set WORK.COHORTBIRTHDATES08.
+NOTE: There were 221032 observations read from the data set WORK.COHORTBIRTHDATES09.
+NOTE: There were 237661 observations read from the data set WORK.COHORTBIRTHDATES10.
+NOTE: There were 271669 observations read from the data set WORK.COHORTBIRTHDATES11.
+NOTE: There were 278966 observations read from the data set WORK.COHORTBIRTHDATES12.
+NOTE: There were 215995 observations read from the data set WORK.COHORTBIRTHDATES13.
+NOTE: There were 227072 observations read from the data set WORK.COHORTBIRTHDATES14.
+NOTE: There were 163729 observations read from the data set WORK.COHORTBIRTHDATES15.
+NOTE: There were 160583 observations read from the data set WORK.COHORTBIRTHDATES16.
+NOTE: There were 148490 observations read from the data set WORK.COHORTBIRTHDATES17.
+NOTE: There were 158157 observations read from the data set WORK.COHORTBIRTHDATES18.
+NOTE: The data set WORK.COHORTBIRTHDATES has 2312352 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.02 seconds
+      real time           0.15 seconds
+      cpu time            0.14 seconds
       
 
 503        
@@ -1003,13 +1038,11 @@ NOTE: DATA statement used (Total process time):
 506        	by ENROLID BIRTH_DATE;
 507        run;
 
-NOTE: There were 73579 observations read from the data set WORK.COHORTBIRTHDATES.
-NOTE: The data set WORK.COHORTBIRTHDATES has 73579 observations and 2 variables.
+NOTE: There were 2312352 observations read from the data set WORK.COHORTBIRTHDATES.
+NOTE: The data set WORK.COHORTBIRTHDATES has 2312352 observations and 2 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-19                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-      real time           0.02 seconds
-      cpu time            0.01 seconds
+      real time           0.25 seconds
+      cpu time            0.77 seconds
       
 
 508        data cohortBirthdates (keep=ENROLID BIRTH_DATE);
@@ -1018,11 +1051,11 @@ NOTE: PROCEDURE SORT used (Total process time):
 511        	if first.ENROLID;
 512        run;
 
-NOTE: There were 73579 observations read from the data set WORK.COHORTBIRTHDATES.
-NOTE: The data set WORK.COHORTBIRTHDATES has 73573 observations and 2 variables.
+NOTE: There were 2312352 observations read from the data set WORK.COHORTBIRTHDATES.
+NOTE: The data set WORK.COHORTBIRTHDATES has 2312082 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
+      real time           0.27 seconds
+      cpu time            0.27 seconds
       
 
 513        proc delete data=cohortBirthdates08; run;
@@ -1032,6 +1065,8 @@ NOTE: PROCEDURE DELETE used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
       
+
+20                                                         The SAS System                            13:36 Monday, September 5, 2022
 
 514        proc delete data=cohortBirthdates09; run;
 
@@ -1066,8 +1101,6 @@ NOTE: PROCEDURE DELETE used (Total process time):
       
 
 518        proc delete data=cohortBirthdates13; run;
-20                                                         The SAS System                            13:25 Monday, September 5, 2022
-
 
 NOTE: Deleting WORK.COHORTBIRTHDATES13 (memtype=DATA).
 NOTE: PROCEDURE DELETE used (Total process time):
@@ -1093,10 +1126,12 @@ NOTE: PROCEDURE DELETE used (Total process time):
 
 521        proc delete data=cohortBirthdates16; run;
 
+21                                                         The SAS System                            13:36 Monday, September 5, 2022
+
 NOTE: Deleting WORK.COHORTBIRTHDATES16 (memtype=DATA).
 NOTE: PROCEDURE DELETE used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 522        proc delete data=cohortBirthdates17; run;
@@ -1117,2698 +1152,229 @@ NOTE: PROCEDURE DELETE used (Total process time):
 
 524        
 525        * Get yearly cohorts ----------------------------------------------------------;
-526        %getcohort(year=08, yeartag=2sam); *2sam;
+526        %getcohort(year=08, yeartag=2); *2sam;
+NOTE: Data file DAT08.CCAET082.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
 
-NOTE: There were 940261 observations read from the data set DAT08.CCAET082SAM.
+NOTE: There were 25143252 observations read from the data set DAT08.CCAET082.
       WHERE (RX='1') and (AGE<=5);
-NOTE: The data set WORK.COHORT08 has 940261 observations and 8 variables.
+NOTE: The data set WORK.COHORT08 has 25143252 observations and 8 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.92 seconds
-      cpu time            0.93 seconds
+      real time           6:50.92
+      cpu time            6:40.53
       
-21                                                         The SAS System                            13:25 Monday, September 5, 2022
 
 
-
-NOTE: There were 940261 observations read from the data set WORK.COHORT08.
-NOTE: The data set WORK.COHORT08 has 940261 observations and 8 variables.
+NOTE: There were 25143252 observations read from the data set WORK.COHORT08.
+NOTE: The data set WORK.COHORT08 has 25143252 observations and 8 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.13 seconds
+      real time           3.52 seconds
+      cpu time            10.31 seconds
+      
+
+
+WARNING: The variable BIRTH_DATE in the DROP, KEEP, or RENAME list has never been referenced.
+NOTE: There were 51 observations read from the data set WORK.EGEOLOCLIST.
+NOTE: There were 25143252 observations read from the data set WORK.COHORT08.
+NOTE: The data set WORK.COHORT08 has 24917704 observations and 8 variables.
+NOTE: DATA statement used (Total process time):
+      real time           4.65 seconds
+      cpu time            4.64 seconds
+      
+
+
+NOTE: There were 24917704 observations read from the data set WORK.COHORT08.
+NOTE: The data set WORK.COHORT08 has 24917704 observations and 8 variables.
+22                                                         The SAS System                            13:36 Monday, September 5, 2022
+
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           4.51 seconds
+      cpu time            10.31 seconds
+      
+
+
+NOTE: There were 2312082 observations read from the data set WORK.COHORTBIRTHDATES.
+NOTE: There were 24917704 observations read from the data set WORK.COHORT08.
+NOTE: The data set WORK.COHORT08 has 1043360 observations and 9 variables.
+NOTE: DATA statement used (Total process time):
+      real time           3.65 seconds
+      cpu time            3.64 seconds
+      
+
+
+NOTE: There were 1043360 observations read from the data set WORK.COHORT08.
+NOTE: The data set WORK.COHORT08 has 1043360 observations and 9 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.24 seconds
+      cpu time            0.66 seconds
+      
+
+
+NOTE: There were 12 observations read from the data set WORK.DAYSPERMONTH.
+NOTE: There were 1043360 observations read from the data set WORK.COHORT08.
+NOTE: The data set WORK.COHORT08 has 1040644 observations and 10 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.36 seconds
       cpu time            0.37 seconds
       
 
 
-WARNING: The variable BIRTH_DATE in the DROP, KEEP, or RENAME list has never been referenced.
-NOTE: There were 51 observations read from the data set WORK.EGEOLOCLIST.
-NOTE: There were 940261 observations read from the data set WORK.COHORT08.
-NOTE: The data set WORK.COHORT08 has 932417 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.17 seconds
-      cpu time            0.17 seconds
-      
-
-
-NOTE: There were 932417 observations read from the data set WORK.COHORT08.
-NOTE: The data set WORK.COHORT08 has 932417 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.16 seconds
-      cpu time            0.39 seconds
-      
-
-
-NOTE: There were 73573 observations read from the data set WORK.COHORTBIRTHDATES.
-NOTE: There were 932417 observations read from the data set WORK.COHORT08.
-NOTE: The data set WORK.COHORT08 has 41335 observations and 9 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.14 seconds
-      cpu time            0.14 seconds
-      
-
-
-NOTE: There were 41335 observations read from the data set WORK.COHORT08.
-NOTE: The data set WORK.COHORT08 has 41335 observations and 9 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 12 observations read from the data set WORK.DAYSPERMONTH.
-NOTE: There were 41335 observations read from the data set WORK.COHORT08.
-NOTE: The data set WORK.COHORT08 has 41258 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: There were 41258 observations read from the data set WORK.COHORT08.
-NOTE: The data set WORK.COHORT08 has 41258 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-22                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-      cpu time            0.01 seconds
-      
-
-527        %getcohort(year=09, yeartag=1sam); *1sam;
-
-NOTE: There were 987378 observations read from the data set DAT09.CCAET091SAM.
-      WHERE (RX='1') and (AGE<=5);
-NOTE: The data set WORK.COHORT09 has 987378 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.95 seconds
-      cpu time            0.94 seconds
-      
-
-
-NOTE: There were 987378 observations read from the data set WORK.COHORT09.
-NOTE: The data set WORK.COHORT09 has 987378 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.13 seconds
-      cpu time            0.40 seconds
-      
-
-
-WARNING: The variable BIRTH_DATE in the DROP, KEEP, or RENAME list has never been referenced.
-NOTE: There were 51 observations read from the data set WORK.EGEOLOCLIST.
-NOTE: There were 987378 observations read from the data set WORK.COHORT09.
-NOTE: The data set WORK.COHORT09 has 985192 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.17 seconds
-      cpu time            0.17 seconds
-      
-
-
-NOTE: There were 985192 observations read from the data set WORK.COHORT09.
-NOTE: The data set WORK.COHORT09 has 985192 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.18 seconds
-      cpu time            0.44 seconds
-      
-
-
-NOTE: There were 73573 observations read from the data set WORK.COHORTBIRTHDATES.
-NOTE: There were 985192 observations read from the data set WORK.COHORT09.
-NOTE: The data set WORK.COHORT09 has 106684 observations and 9 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.14 seconds
-      cpu time            0.14 seconds
-      
-
-
-NOTE: There were 106684 observations read from the data set WORK.COHORT09.
-NOTE: The data set WORK.COHORT09 has 106684 observations and 9 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.03 seconds
-      cpu time            0.03 seconds
-      
-
-
-NOTE: There were 12 observations read from the data set WORK.DAYSPERMONTH.
-23                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: There were 106684 observations read from the data set WORK.COHORT09.
-NOTE: The data set WORK.COHORT09 has 106569 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.03 seconds
-      cpu time            0.04 seconds
-      
-
-
-NOTE: There were 106569 observations read from the data set WORK.COHORT09.
-NOTE: The data set WORK.COHORT09 has 106569 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-528        %getcohort(year=10, yeartag=1sam); *1sam;
-
-NOTE: There were 916180 observations read from the data set DAT10.CCAET101SAM.
-      WHERE (RX='1') and (AGE<=5);
-NOTE: The data set WORK.COHORT10 has 916180 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.87 seconds
-      cpu time            0.87 seconds
-      
-
-
-NOTE: There were 916180 observations read from the data set WORK.COHORT10.
-NOTE: The data set WORK.COHORT10 has 916180 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.13 seconds
-      cpu time            0.37 seconds
-      
-
-
-WARNING: The variable BIRTH_DATE in the DROP, KEEP, or RENAME list has never been referenced.
-NOTE: There were 51 observations read from the data set WORK.EGEOLOCLIST.
-NOTE: There were 916180 observations read from the data set WORK.COHORT10.
-NOTE: The data set WORK.COHORT10 has 914058 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.16 seconds
-      cpu time            0.17 seconds
-      
-
-
-NOTE: There were 914058 observations read from the data set WORK.COHORT10.
-NOTE: The data set WORK.COHORT10 has 914058 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.16 seconds
-      cpu time            0.38 seconds
-      
-
-
-NOTE: There were 73573 observations read from the data set WORK.COHORTBIRTHDATES.
-NOTE: There were 914058 observations read from the data set WORK.COHORT10.
-NOTE: The data set WORK.COHORT10 has 150943 observations and 9 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.14 seconds
-      cpu time            0.14 seconds
-24                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-      
-
-
-NOTE: There were 150943 observations read from the data set WORK.COHORT10.
-NOTE: The data set WORK.COHORT10 has 150943 observations and 9 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.05 seconds
-      cpu time            0.05 seconds
-      
-
-
-NOTE: There were 12 observations read from the data set WORK.DAYSPERMONTH.
-NOTE: There were 150943 observations read from the data set WORK.COHORT10.
-NOTE: The data set WORK.COHORT10 has 150800 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.05 seconds
-      cpu time            0.05 seconds
-      
-
-
-NOTE: There were 150800 observations read from the data set WORK.COHORT10.
-NOTE: The data set WORK.COHORT10 has 150800 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.01 seconds
-      
-
-529        %getcohort(year=11, yeartag=1sam); *1sam;
-
-NOTE: There were 967570 observations read from the data set DAT11.CCAET111SAM.
-      WHERE (RX='1') and (AGE<=5);
-NOTE: The data set WORK.COHORT11 has 967570 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.93 seconds
-      cpu time            0.93 seconds
-      
-
-
-NOTE: There were 967570 observations read from the data set WORK.COHORT11.
-NOTE: The data set WORK.COHORT11 has 967570 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.13 seconds
-      cpu time            0.39 seconds
-      
-
-
-WARNING: The variable BIRTH_DATE in the DROP, KEEP, or RENAME list has never been referenced.
-NOTE: There were 51 observations read from the data set WORK.EGEOLOCLIST.
-NOTE: There were 967570 observations read from the data set WORK.COHORT11.
-NOTE: The data set WORK.COHORT11 has 965756 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.17 seconds
-      cpu time            0.17 seconds
-      
-
-
-NOTE: There were 965756 observations read from the data set WORK.COHORT11.
-NOTE: The data set WORK.COHORT11 has 965756 observations and 8 variables.
-25                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.17 seconds
-      cpu time            0.42 seconds
-      
-
-
-NOTE: There were 73573 observations read from the data set WORK.COHORTBIRTHDATES.
-NOTE: There were 965756 observations read from the data set WORK.COHORT11.
-NOTE: The data set WORK.COHORT11 has 206116 observations and 9 variables.
+NOTE: There were 1040644 observations read from the data set WORK.COHORT08.
+NOTE: The data set WORK.COHORT08 has 1040644 observations and 8 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.15 seconds
-      cpu time            0.14 seconds
-      
-
-
-NOTE: There were 206116 observations read from the data set WORK.COHORT11.
-NOTE: The data set WORK.COHORT11 has 206116 observations and 9 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.07 seconds
-      cpu time            0.06 seconds
-      
-
-
-NOTE: There were 12 observations read from the data set WORK.DAYSPERMONTH.
-NOTE: There were 206116 observations read from the data set WORK.COHORT11.
-NOTE: The data set WORK.COHORT11 has 205990 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.06 seconds
-      cpu time            0.06 seconds
-      
-
-
-NOTE: There were 205990 observations read from the data set WORK.COHORT11.
-NOTE: The data set WORK.COHORT11 has 205990 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.03 seconds
-      cpu time            0.03 seconds
-      
-
-530        %getcohort(year=12, yeartag=1sam); *1sam;
-
-NOTE: There were 962402 observations read from the data set DAT12.CCAET121SAM.
-      WHERE (RX='1') and (AGE<=5);
-NOTE: The data set WORK.COHORT12 has 962402 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.96 seconds
-      cpu time            0.96 seconds
-      
-
-
-NOTE: There were 962402 observations read from the data set WORK.COHORT12.
-NOTE: The data set WORK.COHORT12 has 962402 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.13 seconds
-      cpu time            0.40 seconds
-      
-
-
-26                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-WARNING: The variable BIRTH_DATE in the DROP, KEEP, or RENAME list has never been referenced.
-NOTE: There were 51 observations read from the data set WORK.EGEOLOCLIST.
-NOTE: There were 962402 observations read from the data set WORK.COHORT12.
-NOTE: The data set WORK.COHORT12 has 961162 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.17 seconds
       cpu time            0.16 seconds
       
 
+527        %getcohort(year=09, yeartag=1); *1sam;
+NOTE: Data file DAT09.CCAET091.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
 
-NOTE: There were 961162 observations read from the data set WORK.COHORT12.
-NOTE: The data set WORK.COHORT12 has 961162 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.17 seconds
-      cpu time            0.42 seconds
-      
-
-
-NOTE: There were 73573 observations read from the data set WORK.COHORTBIRTHDATES.
-NOTE: There were 961162 observations read from the data set WORK.COHORT12.
-NOTE: The data set WORK.COHORT12 has 252506 observations and 9 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.15 seconds
-      cpu time            0.15 seconds
-      
-
-
-NOTE: There were 252506 observations read from the data set WORK.COHORT12.
-NOTE: The data set WORK.COHORT12 has 252506 observations and 9 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.08 seconds
-      cpu time            0.08 seconds
-      
-
-
-NOTE: There were 12 observations read from the data set WORK.DAYSPERMONTH.
-NOTE: There were 252506 observations read from the data set WORK.COHORT12.
-NOTE: The data set WORK.COHORT12 has 252373 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.08 seconds
-      cpu time            0.08 seconds
-      
-
-
-NOTE: There were 252373 observations read from the data set WORK.COHORT12.
-NOTE: The data set WORK.COHORT12 has 252373 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.03 seconds
-      cpu time            0.03 seconds
-      
-
-531        %getcohort(year=13, yeartag=1sam); *1sam;
-
-NOTE: There were 710047 observations read from the data set DAT13.CCAET131SAM.
+NOTE: There were 24833474 observations read from the data set DAT09.CCAET091.
       WHERE (RX='1') and (AGE<=5);
-NOTE: The data set WORK.COHORT13 has 710047 observations and 8 variables.
+NOTE: The data set WORK.COHORT09 has 24833474 observations and 8 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.63 seconds
-27                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-      cpu time            0.63 seconds
+      real time           6:26.72
+      cpu time            6:23.58
       
 
 
-NOTE: There were 710047 observations read from the data set WORK.COHORT13.
-NOTE: The data set WORK.COHORT13 has 710047 observations and 8 variables.
+NOTE: There were 24833474 observations read from the data set WORK.COHORT09.
+NOTE: The data set WORK.COHORT09 has 24833474 observations and 8 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.10 seconds
-      cpu time            0.29 seconds
+      real time           3.42 seconds
+      cpu time            9.94 seconds
+23                                                         The SAS System                            13:36 Monday, September 5, 2022
+
       
 
 
 WARNING: The variable BIRTH_DATE in the DROP, KEEP, or RENAME list has never been referenced.
 NOTE: There were 51 observations read from the data set WORK.EGEOLOCLIST.
-NOTE: There were 710047 observations read from the data set WORK.COHORT13.
-NOTE: The data set WORK.COHORT13 has 702820 observations and 8 variables.
+NOTE: There were 24833474 observations read from the data set WORK.COHORT09.
+NOTE: The data set WORK.COHORT09 has 24775217 observations and 8 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.13 seconds
-      cpu time            0.13 seconds
+      real time           4.62 seconds
+      cpu time            4.60 seconds
       
 
 
-NOTE: There were 702820 observations read from the data set WORK.COHORT13.
-NOTE: The data set WORK.COHORT13 has 702820 observations and 8 variables.
+NOTE: There were 24775217 observations read from the data set WORK.COHORT09.
+NOTE: The data set WORK.COHORT09 has 24775217 observations and 8 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.12 seconds
-      cpu time            0.30 seconds
+      real time           4.61 seconds
+      cpu time            10.44 seconds
       
 
 
-NOTE: There were 73573 observations read from the data set WORK.COHORTBIRTHDATES.
-NOTE: There were 702820 observations read from the data set WORK.COHORT13.
-NOTE: The data set WORK.COHORT13 has 228225 observations and 9 variables.
+NOTE: There were 2312082 observations read from the data set WORK.COHORTBIRTHDATES.
+NOTE: There were 24775217 observations read from the data set WORK.COHORT09.
+NOTE: The data set WORK.COHORT09 has 2682107 observations and 9 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.12 seconds
-      cpu time            0.12 seconds
+      real time           3.71 seconds
+      cpu time            3.71 seconds
       
 
 
-NOTE: There were 228225 observations read from the data set WORK.COHORT13.
-NOTE: The data set WORK.COHORT13 has 228225 observations and 9 variables.
+NOTE: There were 2682107 observations read from the data set WORK.COHORT09.
+NOTE: The data set WORK.COHORT09 has 2682107 observations and 9 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.07 seconds
-      cpu time            0.07 seconds
+      real time           0.64 seconds
+      cpu time            1.69 seconds
       
 
 
 NOTE: There were 12 observations read from the data set WORK.DAYSPERMONTH.
-NOTE: There were 228225 observations read from the data set WORK.COHORT13.
-NOTE: The data set WORK.COHORT13 has 228078 observations and 10 variables.
+NOTE: There were 2682107 observations read from the data set WORK.COHORT09.
+NOTE: The data set WORK.COHORT09 has 2677752 observations and 10 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.07 seconds
-      cpu time            0.07 seconds
+      real time           0.86 seconds
+      cpu time            0.86 seconds
       
 
 
-NOTE: There were 228078 observations read from the data set WORK.COHORT13.
-NOTE: The data set WORK.COHORT13 has 228078 observations and 8 variables.
-28                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: DATA statement used (Total process time):
-      real time           0.03 seconds
-      cpu time            0.03 seconds
-      
-
-532        %getcohort(year=14, yeartag=1sam); *1sam;
-
-NOTE: There were 650881 observations read from the data set DAT14.CCAET141SAM.
-      WHERE (RX='1') and (AGE<=5);
-NOTE: The data set WORK.COHORT14 has 650881 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.52 seconds
-      cpu time            0.52 seconds
-      
-
-
-NOTE: There were 650881 observations read from the data set WORK.COHORT14.
-NOTE: The data set WORK.COHORT14 has 650881 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.09 seconds
-      cpu time            0.27 seconds
-      
-
-
-WARNING: The variable BIRTH_DATE in the DROP, KEEP, or RENAME list has never been referenced.
-NOTE: There were 51 observations read from the data set WORK.EGEOLOCLIST.
-NOTE: There were 650881 observations read from the data set WORK.COHORT14.
-NOTE: The data set WORK.COHORT14 has 636772 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.12 seconds
-      cpu time            0.11 seconds
-      
-
-
-NOTE: There were 636772 observations read from the data set WORK.COHORT14.
-NOTE: The data set WORK.COHORT14 has 636772 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.12 seconds
-      cpu time            0.28 seconds
-      
-
-
-NOTE: There were 73573 observations read from the data set WORK.COHORTBIRTHDATES.
-NOTE: There were 636772 observations read from the data set WORK.COHORT14.
-NOTE: The data set WORK.COHORT14 has 183455 observations and 9 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.11 seconds
-      cpu time            0.10 seconds
-      
-
-
-NOTE: There were 183455 observations read from the data set WORK.COHORT14.
-NOTE: The data set WORK.COHORT14 has 183455 observations and 9 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.06 seconds
-      cpu time            0.05 seconds
-      
-
-29                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-
-NOTE: There were 12 observations read from the data set WORK.DAYSPERMONTH.
-NOTE: There were 183455 observations read from the data set WORK.COHORT14.
-NOTE: The data set WORK.COHORT14 has 183405 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.06 seconds
-      cpu time            0.05 seconds
-      
-
-
-NOTE: There were 183405 observations read from the data set WORK.COHORT14.
-NOTE: The data set WORK.COHORT14 has 183405 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.03 seconds
-      
-
-533        %getcohort(year=15, yeartag=1sam); *1sam;
-
-NOTE: There were 550135 observations read from the data set DAT15.CCAET151SAM.
-      WHERE (RX='1') and (AGE<=5);
-NOTE: The data set WORK.COHORT15 has 550135 observations and 8 variables.
+NOTE: There were 2677752 observations read from the data set WORK.COHORT09.
+NOTE: The data set WORK.COHORT09 has 2677752 observations and 8 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.41 seconds
       cpu time            0.41 seconds
       
 
-
-NOTE: There were 550135 observations read from the data set WORK.COHORT15.
-NOTE: The data set WORK.COHORT15 has 550135 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.08 seconds
-      cpu time            0.23 seconds
-      
+528        %getcohort(year=10, yeartag=1); *1sam;
+NOTE: Data file DAT10.CCAET101.DATA is in a format that is native to another host, or the file encoding does not match the session 
+      encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+24                                                         The SAS System                            13:36 Monday, September 5, 2022
 
 
-WARNING: The variable BIRTH_DATE in the DROP, KEEP, or RENAME list has never been referenced.
-NOTE: There were 51 observations read from the data set WORK.EGEOLOCLIST.
-NOTE: There were 550135 observations read from the data set WORK.COHORT15.
-NOTE: The data set WORK.COHORT15 has 546132 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.10 seconds
-      cpu time            0.10 seconds
-      
-
-
-NOTE: There were 546132 observations read from the data set WORK.COHORT15.
-NOTE: The data set WORK.COHORT15 has 546132 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.10 seconds
-      cpu time            0.22 seconds
-      
-
-
-NOTE: There were 73573 observations read from the data set WORK.COHORTBIRTHDATES.
-NOTE: There were 546132 observations read from the data set WORK.COHORT15.
-NOTE: The data set WORK.COHORT15 has 168745 observations and 9 variables.
-NOTE: DATA statement used (Total process time):
-30                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-      real time           0.09 seconds
-      cpu time            0.10 seconds
-      
-
-
-NOTE: There were 168745 observations read from the data set WORK.COHORT15.
-NOTE: The data set WORK.COHORT15 has 168745 observations and 9 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.05 seconds
-      cpu time            0.06 seconds
-      
-
-
-NOTE: There were 12 observations read from the data set WORK.DAYSPERMONTH.
-NOTE: There were 168745 observations read from the data set WORK.COHORT15.
-NOTE: The data set WORK.COHORT15 has 168717 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.05 seconds
-      cpu time            0.05 seconds
-      
-
-
-NOTE: There were 168717 observations read from the data set WORK.COHORT15.
-NOTE: The data set WORK.COHORT15 has 168717 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.02 seconds
-      
-
-534        %getcohort(year=16, yeartag=1sam); *1sam;
-
-NOTE: There were 545751 observations read from the data set DAT16.CCAET161SAM.
+NOTE: There were 26268900 observations read from the data set DAT10.CCAET101.
       WHERE (RX='1') and (AGE<=5);
-NOTE: The data set WORK.COHORT16 has 545751 observations and 8 variables.
+NOTE: The data set WORK.COHORT10 has 26268900 observations and 8 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.49 seconds
-      cpu time            0.37 seconds
+      real time           7:13.55
+      cpu time            7:11.39
       
 
 
-NOTE: There were 545751 observations read from the data set WORK.COHORT16.
-NOTE: The data set WORK.COHORT16 has 545751 observations and 8 variables.
+NOTE: There were 26268900 observations read from the data set WORK.COHORT10.
+NOTE: The data set WORK.COHORT10 has 26268900 observations and 8 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.08 seconds
-      cpu time            0.23 seconds
+      real time           3.75 seconds
+      cpu time            10.98 seconds
       
 
 
 WARNING: The variable BIRTH_DATE in the DROP, KEEP, or RENAME list has never been referenced.
 NOTE: There were 51 observations read from the data set WORK.EGEOLOCLIST.
-NOTE: There were 545751 observations read from the data set WORK.COHORT16.
-NOTE: The data set WORK.COHORT16 has 544115 observations and 8 variables.
+NOTE: There were 26268900 observations read from the data set WORK.COHORT10.
+NOTE: The data set WORK.COHORT10 has 25999890 observations and 8 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.10 seconds
-      cpu time            0.10 seconds
+      real time           4.95 seconds
+      cpu time            4.94 seconds
       
 
 
-31                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: There were 544115 observations read from the data set WORK.COHORT16.
-NOTE: The data set WORK.COHORT16 has 544115 observations and 8 variables.
+NOTE: There were 25999890 observations read from the data set WORK.COHORT10.
+NOTE: The data set WORK.COHORT10 has 25999890 observations and 8 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.10 seconds
-      cpu time            0.24 seconds
-      
-
-
-NOTE: There were 73573 observations read from the data set WORK.COHORTBIRTHDATES.
-NOTE: There were 544115 observations read from the data set WORK.COHORT16.
-NOTE: The data set WORK.COHORT16 has 164157 observations and 9 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.09 seconds
-      cpu time            0.09 seconds
-      
-
-
-NOTE: There were 164157 observations read from the data set WORK.COHORT16.
-NOTE: The data set WORK.COHORT16 has 164157 observations and 9 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.05 seconds
-      cpu time            0.04 seconds
-      
-
-
-NOTE: There were 12 observations read from the data set WORK.DAYSPERMONTH.
-NOTE: There were 164157 observations read from the data set WORK.COHORT16.
-NOTE: The data set WORK.COHORT16 has 164128 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.05 seconds
-      cpu time            0.05 seconds
-      
-
-
-NOTE: There were 164128 observations read from the data set WORK.COHORT16.
-NOTE: The data set WORK.COHORT16 has 164128 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.02 seconds
-      
-
-535        %getcohort(year=17, yeartag=1sam); *1sam;
-
-NOTE: There were 502880 observations read from the data set DAT17.CCAET171SAM.
-      WHERE (RX='1') and (AGE<=5);
-NOTE: The data set WORK.COHORT17 has 502880 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.30 seconds
-      cpu time            0.31 seconds
-      
-
-
-NOTE: There were 502880 observations read from the data set WORK.COHORT17.
-NOTE: The data set WORK.COHORT17 has 502880 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.08 seconds
-      cpu time            0.23 seconds
-      
-32                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-
-
-WARNING: The variable BIRTH_DATE in the DROP, KEEP, or RENAME list has never been referenced.
-NOTE: There were 51 observations read from the data set WORK.EGEOLOCLIST.
-NOTE: There were 502880 observations read from the data set WORK.COHORT17.
-NOTE: The data set WORK.COHORT17 has 433286 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.09 seconds
-      cpu time            0.08 seconds
-      
-
-
-NOTE: There were 433286 observations read from the data set WORK.COHORT17.
-NOTE: The data set WORK.COHORT17 has 433286 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.08 seconds
-      cpu time            0.20 seconds
-      
-
-
-NOTE: There were 73573 observations read from the data set WORK.COHORTBIRTHDATES.
-NOTE: There were 433286 observations read from the data set WORK.COHORT17.
-NOTE: The data set WORK.COHORT17 has 123774 observations and 9 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.08 seconds
-      cpu time            0.08 seconds
-      
-
-
-NOTE: There were 123774 observations read from the data set WORK.COHORT17.
-NOTE: The data set WORK.COHORT17 has 123774 observations and 9 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.04 seconds
-      cpu time            0.04 seconds
-      
-
-
-NOTE: There were 12 observations read from the data set WORK.DAYSPERMONTH.
-NOTE: There were 123774 observations read from the data set WORK.COHORT17.
-NOTE: The data set WORK.COHORT17 has 123751 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.04 seconds
-      cpu time            0.04 seconds
-      
-
-
-NOTE: There were 123751 observations read from the data set WORK.COHORT17.
-NOTE: The data set WORK.COHORT17 has 123751 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-536        %getcohort(year=18, yeartag=1sam); *1sam;
-
-NOTE: There were 481288 observations read from the data set DAT18.CCAET181SAM.
-      WHERE (RX='1') and (AGE<=5);
-NOTE: The data set WORK.COHORT18 has 481288 observations and 8 variables.
-33                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: DATA statement used (Total process time):
-      real time           0.26 seconds
-      cpu time            0.27 seconds
-      
-
-
-NOTE: There were 481288 observations read from the data set WORK.COHORT18.
-NOTE: The data set WORK.COHORT18 has 481288 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.08 seconds
-      cpu time            0.21 seconds
-      
-
-
-WARNING: The variable BIRTH_DATE in the DROP, KEEP, or RENAME list has never been referenced.
-NOTE: There were 51 observations read from the data set WORK.EGEOLOCLIST.
-NOTE: There were 481288 observations read from the data set WORK.COHORT18.
-NOTE: The data set WORK.COHORT18 has 433058 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.09 seconds
-      cpu time            0.08 seconds
-      
-
-
-NOTE: There were 433058 observations read from the data set WORK.COHORT18.
-NOTE: The data set WORK.COHORT18 has 433058 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.08 seconds
-      cpu time            0.20 seconds
-      
-
-
-NOTE: There were 73573 observations read from the data set WORK.COHORTBIRTHDATES.
-NOTE: There were 433058 observations read from the data set WORK.COHORT18.
-NOTE: The data set WORK.COHORT18 has 121541 observations and 9 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.08 seconds
-      cpu time            0.08 seconds
-      
-
-
-NOTE: There were 121541 observations read from the data set WORK.COHORT18.
-NOTE: The data set WORK.COHORT18 has 121541 observations and 9 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.04 seconds
-      cpu time            0.04 seconds
-      
-
-
-NOTE: There were 12 observations read from the data set WORK.DAYSPERMONTH.
-NOTE: There were 121541 observations read from the data set WORK.COHORT18.
-NOTE: The data set WORK.COHORT18 has 121505 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.04 seconds
-      cpu time            0.04 seconds
-      
-
-
-34                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: There were 121505 observations read from the data set WORK.COHORT18.
-NOTE: The data set WORK.COHORT18 has 121505 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-537        proc delete data=cohortBirthdates; run;
-
-NOTE: Deleting WORK.COHORTBIRTHDATES (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-538        
-539        * Combine yearly cohorts into a single data table -----------------------------;
-540        data cohort;
-541        	set cohort08
-542        		cohort09
-543        		cohort10
-544        		cohort11
-545        		cohort12
-546        		cohort13
-547        		cohort14
-548        		cohort15
-549        		cohort16
-550        		cohort17
-551        		cohort18;
-552        run;
-
-NOTE: There were 41258 observations read from the data set WORK.COHORT08.
-NOTE: There were 106569 observations read from the data set WORK.COHORT09.
-NOTE: There were 150800 observations read from the data set WORK.COHORT10.
-NOTE: There were 205990 observations read from the data set WORK.COHORT11.
-NOTE: There were 252373 observations read from the data set WORK.COHORT12.
-NOTE: There were 228078 observations read from the data set WORK.COHORT13.
-NOTE: There were 183405 observations read from the data set WORK.COHORT14.
-NOTE: There were 168717 observations read from the data set WORK.COHORT15.
-NOTE: There were 164128 observations read from the data set WORK.COHORT16.
-NOTE: There were 123751 observations read from the data set WORK.COHORT17.
-NOTE: There were 121505 observations read from the data set WORK.COHORT18.
-NOTE: The data set WORK.COHORT has 1746574 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.22 seconds
-      cpu time            0.20 seconds
-      
-
-553        proc delete data=cohort08; run;
-
-NOTE: Deleting WORK.COHORT08 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-554        proc delete data=cohort09; run;
-
-35                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: Deleting WORK.COHORT09 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-555        proc delete data=cohort10; run;
-
-NOTE: Deleting WORK.COHORT10 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-556        proc delete data=cohort11; run;
-
-NOTE: Deleting WORK.COHORT11 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-557        proc delete data=cohort12; run;
-
-NOTE: Deleting WORK.COHORT12 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-558        proc delete data=cohort13; run;
-
-NOTE: Deleting WORK.COHORT13 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-559        proc delete data=cohort14; run;
-
-NOTE: Deleting WORK.COHORT14 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-560        proc delete data=cohort15; run;
-
-NOTE: Deleting WORK.COHORT15 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-561        proc delete data=cohort16; run;
-
-NOTE: Deleting WORK.COHORT16 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-36                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-562        proc delete data=cohort17; run;
-
-NOTE: Deleting WORK.COHORT17 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-563        proc delete data=cohort18; run;
-
-NOTE: Deleting WORK.COHORT18 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-564        
-565        * Refine to a cohort of people present for five straight years ----------------;
-566        %refinecohort(); *1sam;
-
-NOTE: There were 1746574 observations read from the data set WORK.COHORT.
-NOTE: The data set WORK.COHORT has 1746574 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.32 seconds
-      cpu time            0.85 seconds
-      
-
-
-NOTE: There were 1746574 observations read from the data set WORK.COHORT.
-NOTE: The data set WORK.COHORT has 1746574 observations and 9 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.29 seconds
-      cpu time            0.29 seconds
-      
-
-
-NOTE: There were 1746574 observations read from the data set WORK.COHORT.
-NOTE: The data set WORK.COHORT has 1746574 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.40 seconds
-      cpu time            0.41 seconds
-      
-
-
-NOTE: There were 1746574 observations read from the data set WORK.COHORT.
-NOTE: The data set WORK.COHORT has 939237 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.31 seconds
-      cpu time            0.31 seconds
-      
-
-
-NOTE: There were 939237 observations read from the data set WORK.COHORT.
-NOTE: The data set WORK.COHORT has 939237 observations and 8 variables.
-37                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.17 seconds
-      cpu time            0.40 seconds
-      
-
-
-NOTE: There were 939237 observations read from the data set WORK.COHORT.
-NOTE: The data set WORK.COHORT has 40410 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.09 seconds
-      cpu time            0.09 seconds
-      
-
-
-NOTE: There were 40410 observations read from the data set WORK.COHORT.
-NOTE: The data set WORK.COHORT has 40410 observations and 7 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 40410 observations read from the data set WORK.COHORT.
-NOTE: The data set WORK.COHORT has 40410 observations and 7 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: There were 40410 observations read from the data set WORK.COHORT.
-NOTE: The data set WORK.COHORT has 4697 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: The data set WORK.COHORT has 4697 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: The data set WORK.COHORT has 4697 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-567        
-568        * Get prescription data -------------------------------------------------------;
-569        %getrx(year=08, yeartag=2sam)
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-38                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: The data set WORK.COHORT has 4697 observations and 6 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 10053428 observations read from the data set DAT08.CCAED082SAM.
-NOTE: The data set WORK.D08 has 2346 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           1.53 seconds
-      cpu time            1.52 seconds
-      
-
-
-NOTE: There were 2346 observations read from the data set WORK.D08.
-NOTE: The data set WORK.D08 has 2346 observations and 6 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 21220 observations read from the data set WORK.NDCTOEXTRACT.
-NOTE: There were 2346 observations read from the data set WORK.D08.
-NOTE: The data set WORK.D08 has 613 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 613 observations read from the data set WORK.D08.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.D08 has 613 observations and 4 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 613 observations read from the data set WORK.D08.
-NOTE: 4 observations with duplicate key values were deleted.
-NOTE: The data set WORK.D08 has 609 observations and 4 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.00 seconds
-      
-
-570        %getrx(year=09, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-39                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 10908978 observations read from the data set DAT09.CCAED091SAM.
-NOTE: The data set WORK.D09 has 7853 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           1.65 seconds
-      cpu time            1.64 seconds
-      
-
-
-NOTE: There were 7853 observations read from the data set WORK.D09.
-NOTE: The data set WORK.D09 has 7853 observations and 6 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 21220 observations read from the data set WORK.NDCTOEXTRACT.
-NOTE: There were 7853 observations read from the data set WORK.D09.
-NOTE: The data set WORK.D09 has 2851 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 2851 observations read from the data set WORK.D09.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.D09 has 2851 observations and 4 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 2851 observations read from the data set WORK.D09.
-NOTE: 27 observations with duplicate key values were deleted.
-NOTE: The data set WORK.D09 has 2824 observations and 4 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-571        %getrx(year=10, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 10167536 observations read from the data set DAT10.CCAED101SAM.
-NOTE: The data set WORK.D10 has 12217 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           1.53 seconds
-40                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-      cpu time            1.53 seconds
-      
-
-
-NOTE: There were 12217 observations read from the data set WORK.D10.
-NOTE: The data set WORK.D10 has 12217 observations and 6 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 21220 observations read from the data set WORK.NDCTOEXTRACT.
-NOTE: There were 12217 observations read from the data set WORK.D10.
-NOTE: The data set WORK.D10 has 4661 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: There were 4661 observations read from the data set WORK.D10.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.D10 has 4661 observations and 4 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4661 observations read from the data set WORK.D10.
-NOTE: 51 observations with duplicate key values were deleted.
-NOTE: The data set WORK.D10 has 4610 observations and 4 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-572        %getrx(year=11, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 10862031 observations read from the data set DAT11.CCAED111SAM.
-NOTE: The data set WORK.D11 has 15656 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           1.57 seconds
-      cpu time            1.55 seconds
-      
-
-
-NOTE: There were 15656 observations read from the data set WORK.D11.
-NOTE: The data set WORK.D11 has 15656 observations and 6 variables.
-41                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: There were 21220 observations read from the data set WORK.NDCTOEXTRACT.
-NOTE: There were 15656 observations read from the data set WORK.D11.
-NOTE: The data set WORK.D11 has 6090 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 6090 observations read from the data set WORK.D11.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.D11 has 6090 observations and 4 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 6090 observations read from the data set WORK.D11.
-NOTE: 47 observations with duplicate key values were deleted.
-NOTE: The data set WORK.D11 has 6043 observations and 4 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-573        %getrx(year=12, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 10992539 observations read from the data set DAT12.CCAED121SAM.
-NOTE: The data set WORK.D12 has 17943 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           1.86 seconds
-      cpu time            1.72 seconds
-      
-
-
-NOTE: There were 17943 observations read from the data set WORK.D12.
-NOTE: The data set WORK.D12 has 17943 observations and 6 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-
-42                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: There were 21220 observations read from the data set WORK.NDCTOEXTRACT.
-NOTE: There were 17943 observations read from the data set WORK.D12.
-NOTE: The data set WORK.D12 has 6814 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 6814 observations read from the data set WORK.D12.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.D12 has 6814 observations and 4 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: There were 6814 observations read from the data set WORK.D12.
-NOTE: 37 observations with duplicate key values were deleted.
-NOTE: The data set WORK.D12 has 6777 observations and 4 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-574        %getrx(year=13, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 7420923 observations read from the data set DAT13.CCAED131SAM.
-NOTE: The data set WORK.D13 has 17763 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           1.09 seconds
-      cpu time            1.09 seconds
-      
-
-
-NOTE: There were 17763 observations read from the data set WORK.D13.
-NOTE: The data set WORK.D13 has 17763 observations and 6 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 21220 observations read from the data set WORK.NDCTOEXTRACT.
-NOTE: There were 17763 observations read from the data set WORK.D13.
-NOTE: The data set WORK.D13 has 6590 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-43                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-      
-
-
-NOTE: There were 6004 observations read from the data set WORK.D13.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.D13 has 6004 observations and 4 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 6004 observations read from the data set WORK.D13.
-NOTE: 30 observations with duplicate key values were deleted.
-NOTE: The data set WORK.D13 has 5974 observations and 4 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-575        %getrx(year=14, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 6066582 observations read from the data set DAT14.CCAED141SAM.
-NOTE: The data set WORK.D14 has 15655 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.89 seconds
-      cpu time            0.89 seconds
-      
-
-
-NOTE: There were 15655 observations read from the data set WORK.D14.
-NOTE: The data set WORK.D14 has 15655 observations and 6 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 21220 observations read from the data set WORK.NDCTOEXTRACT.
-NOTE: There were 15655 observations read from the data set WORK.D14.
-NOTE: The data set WORK.D14 has 5367 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 3861 observations read from the data set WORK.D14.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.D14 has 3861 observations and 4 variables.
-44                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 3861 observations read from the data set WORK.D14.
-NOTE: 17 observations with duplicate key values were deleted.
-NOTE: The data set WORK.D14 has 3844 observations and 4 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-576        %getrx(year=15, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 5294948 observations read from the data set DAT15.CCAED151SAM.
-NOTE: The data set WORK.D15 has 14044 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.75 seconds
-      cpu time            0.75 seconds
-      
-
-
-NOTE: There were 14044 observations read from the data set WORK.D15.
-NOTE: The data set WORK.D15 has 14044 observations and 6 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 21220 observations read from the data set WORK.NDCTOEXTRACT.
-NOTE: There were 14044 observations read from the data set WORK.D15.
-NOTE: The data set WORK.D15 has 4762 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 2614 observations read from the data set WORK.D15.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.D15 has 2614 observations and 4 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-45                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: There were 2614 observations read from the data set WORK.D15.
-NOTE: 9 observations with duplicate key values were deleted.
-NOTE: The data set WORK.D15 has 2605 observations and 4 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-577        %getrx(year=16, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 4615182 observations read from the data set DAT16.CCAED161SAM.
-NOTE: The data set WORK.D16 has 12382 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.88 seconds
-      cpu time            0.75 seconds
-      
-
-
-NOTE: There were 12382 observations read from the data set WORK.D16.
-NOTE: The data set WORK.D16 has 12382 observations and 6 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: There were 21220 observations read from the data set WORK.NDCTOEXTRACT.
-NOTE: There were 12382 observations read from the data set WORK.D16.
-NOTE: The data set WORK.D16 has 4067 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 1334 observations read from the data set WORK.D16.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.D16 has 1334 observations and 4 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 1334 observations read from the data set WORK.D16.
-NOTE: 3 observations with duplicate key values were deleted.
-NOTE: The data set WORK.D16 has 1331 observations and 4 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-46                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-      
-
-578        %getrx(year=17, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 3602216 observations read from the data set DAT17.CCAED171SAM.
-NOTE: The data set WORK.D17 has 10320 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.52 seconds
-      cpu time            0.51 seconds
-      
-
-
-NOTE: There were 10320 observations read from the data set WORK.D17.
-NOTE: The data set WORK.D17 has 10320 observations and 6 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: There were 21220 observations read from the data set WORK.NDCTOEXTRACT.
-NOTE: There were 10320 observations read from the data set WORK.D17.
-NOTE: The data set WORK.D17 has 3008 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 413 observations read from the data set WORK.D17.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.D17 has 413 observations and 4 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 413 observations read from the data set WORK.D17.
-NOTE: 1 observations with duplicate key values were deleted.
-NOTE: The data set WORK.D17 has 412 observations and 4 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-579        %getrx(year=18, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-47                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 2854503 observations read from the data set DAT18.CCAED181SAM.
-NOTE: The data set WORK.D18 has 8106 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.41 seconds
-      cpu time            0.40 seconds
-      
-
-
-NOTE: There were 8106 observations read from the data set WORK.D18.
-NOTE: The data set WORK.D18 has 8106 observations and 6 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: There were 21220 observations read from the data set WORK.NDCTOEXTRACT.
-NOTE: There were 8106 observations read from the data set WORK.D18.
-NOTE: The data set WORK.D18 has 2015 observations and 6 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 16 observations read from the data set WORK.D18.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.D18 has 16 observations and 4 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 16 observations read from the data set WORK.D18.
-NOTE: 0 observations with duplicate key values were deleted.
-NOTE: The data set WORK.D18 has 16 observations and 4 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-580        
-581        * Combine prescription data into a single data table --------------------------;
-582        data rx_df;
-583        	set d08
-584        		d09
-585        		d10
-586        		d11
-587        		d12
-588        		d13
-589        		d14
-48                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-590        		d15
-591        		d16
-592        		d17
-593        		d18;
-594        run;
-
-NOTE: There were 609 observations read from the data set WORK.D08.
-NOTE: There were 2824 observations read from the data set WORK.D09.
-NOTE: There were 4610 observations read from the data set WORK.D10.
-NOTE: There were 6043 observations read from the data set WORK.D11.
-NOTE: There were 6777 observations read from the data set WORK.D12.
-NOTE: There were 5974 observations read from the data set WORK.D13.
-NOTE: There were 3844 observations read from the data set WORK.D14.
-NOTE: There were 2605 observations read from the data set WORK.D15.
-NOTE: There were 1331 observations read from the data set WORK.D16.
-NOTE: There were 412 observations read from the data set WORK.D17.
-NOTE: There were 16 observations read from the data set WORK.D18.
-NOTE: The data set WORK.RX_DF has 35045 observations and 4 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.01 seconds
-      
-
-595        proc delete data=d08; run;
-
-NOTE: Deleting WORK.D08 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-596        proc delete data=d09; run;
-
-NOTE: Deleting WORK.D09 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-597        proc delete data=d10; run;
-
-NOTE: Deleting WORK.D10 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-598        proc delete data=d11; run;
-
-NOTE: Deleting WORK.D11 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-599        proc delete data=d12; run;
-
-NOTE: Deleting WORK.D12 (memtype=DATA).
-49                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-600        proc delete data=d13; run;
-
-NOTE: Deleting WORK.D13 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-601        proc delete data=d14; run;
-
-NOTE: Deleting WORK.D14 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-602        proc delete data=d15; run;
-
-NOTE: Deleting WORK.D15 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-603        proc delete data=d16; run;
-
-NOTE: Deleting WORK.D16 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-604        proc delete data=d17; run;
-
-NOTE: Deleting WORK.D17 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-605        proc delete data=d18; run;
-
-NOTE: Deleting WORK.D18 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-606        
-607        * Get visit data --------------------------------------------------------------;
-608        %getvisits_pre10(year=08, yeartag=2sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-50                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 25879482 observations read from the data set DAT08.CCAEO082SAM.
-NOTE: The data set WORK.O08 has 28983 observations and 7 variables.
-NOTE: DATA statement used (Total process time):
-      real time           4.11 seconds
-      cpu time            3.97 seconds
-      
-
-
-NOTE: There were 28932 observations read from the data set WORK.O08.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.O08 has 28932 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 28932 observations read from the data set WORK.O08.
-NOTE: The data set WORK.VISIT_DF08 has 28932 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 28932 observations read from the data set WORK.VISIT_DF08.
-NOTE: 19835 observations with duplicate key values were deleted.
-NOTE: The data set WORK.VISIT_DF08 has 9097 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: Deleting WORK.O08 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-609        %getvisits_pre10(year=09, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 28322865 observations read from the data set DAT09.CCAEO091SAM.
-51                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: The data set WORK.O09 has 64933 observations and 7 variables.
-NOTE: DATA statement used (Total process time):
-      real time           4.86 seconds
-      cpu time            4.52 seconds
-      
-
-
-NOTE: There were 64915 observations read from the data set WORK.O09.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.O09 has 64915 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: There were 64915 observations read from the data set WORK.O09.
-NOTE: The data set WORK.VISIT_DF09 has 64915 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 64915 observations read from the data set WORK.VISIT_DF09.
-NOTE: 43921 observations with duplicate key values were deleted.
-NOTE: The data set WORK.VISIT_DF09 has 20994 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.03 seconds
-      
-
-
-NOTE: Deleting WORK.O09 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-610        %getvisits_pre15(year=10, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 25806282 observations read from the data set DAT10.CCAEO101SAM.
-NOTE: The data set WORK.O10 has 86727 observations and 9 variables.
-NOTE: DATA statement used (Total process time):
       real time           4.93 seconds
-      cpu time            4.19 seconds
+      cpu time            11.09 seconds
       
 
 
-NOTE: There were 86619 observations read from the data set WORK.O10.
-52                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.O10 has 86619 observations and 8 variables.
+NOTE: There were 2312082 observations read from the data set WORK.COHORTBIRTHDATES.
+NOTE: There were 25999890 observations read from the data set WORK.COHORT10.
+NOTE: The data set WORK.COHORT10 has 3657571 observations and 9 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.03 seconds
-      cpu time            0.03 seconds
+      real time           4.00 seconds
+      cpu time            3.99 seconds
       
 
 
-NOTE: There were 86619 observations read from the data set WORK.O10.
-NOTE: The data set WORK.VISIT_DF10 has 86619 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 86619 observations read from the data set WORK.VISIT_DF10.
-NOTE: 57559 observations with duplicate key values were deleted.
-NOTE: The data set WORK.VISIT_DF10 has 29060 observations and 8 variables.
+NOTE: There were 3657571 observations read from the data set WORK.COHORT10.
+NOTE: The data set WORK.COHORT10 has 3657571 observations and 9 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.03 seconds
-      cpu time            0.04 seconds
+      real time           0.86 seconds
+      cpu time            2.31 seconds
       
 
 
-NOTE: Deleting WORK.O10 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-611        %getvisits_pre15(year=11, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 27929111 observations read from the data set DAT11.CCAEO111SAM.
-NOTE: The data set WORK.O11 has 101084 observations and 9 variables.
+NOTE: There were 12 observations read from the data set WORK.DAYSPERMONTH.
+NOTE: There were 3657571 observations read from the data set WORK.COHORT10.
+NOTE: The data set WORK.COHORT10 has 3652373 observations and 10 variables.
 NOTE: DATA statement used (Total process time):
-      real time           4.24 seconds
-      cpu time            4.21 seconds
+      real time           1.15 seconds
+25                                                         The SAS System                            13:36 Monday, September 5, 2022
+
+      cpu time            1.15 seconds
       
 
 
-NOTE: There were 100776 observations read from the data set WORK.O11.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.O11 has 100776 observations and 8 variables.
+NOTE: There were 3652373 observations read from the data set WORK.COHORT10.
+NOTE: The data set WORK.COHORT10 has 3652373 observations and 8 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.03 seconds
-      cpu time            0.03 seconds
+      real time           0.55 seconds
+      cpu time            0.55 seconds
       
-
-
-53                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: There were 100776 observations read from the data set WORK.O11.
-NOTE: The data set WORK.VISIT_DF11 has 100776 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.03 seconds
-      
-
-
-NOTE: There were 100776 observations read from the data set WORK.VISIT_DF11.
-NOTE: 65726 observations with duplicate key values were deleted.
-NOTE: The data set WORK.VISIT_DF11 has 35050 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.04 seconds
-      cpu time            0.03 seconds
-      
-
-
-NOTE: Deleting WORK.O11 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-612        %getvisits_pre15(year=12, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 29968857 observations read from the data set DAT12.CCAEO121SAM.
-NOTE: The data set WORK.O12 has 110861 observations and 9 variables.
-NOTE: DATA statement used (Total process time):
-      real time           4.73 seconds
-      cpu time            4.47 seconds
-      
-
-
-NOTE: There were 110859 observations read from the data set WORK.O12.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.O12 has 110859 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.04 seconds
-      cpu time            0.03 seconds
-      
-
-
-NOTE: There were 110859 observations read from the data set WORK.O12.
-NOTE: The data set WORK.VISIT_DF12 has 110859 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.03 seconds
-      
-
-
-54                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: There were 110859 observations read from the data set WORK.VISIT_DF12.
-NOTE: 71707 observations with duplicate key values were deleted.
-NOTE: The data set WORK.VISIT_DF12 has 39152 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.04 seconds
-      cpu time            0.03 seconds
-      
-
-
-NOTE: Deleting WORK.O12 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-613        %getvisits_pre15(year=13, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 19468667 observations read from the data set DAT13.CCAEO131SAM.
-NOTE: The data set WORK.O13 has 98433 observations and 9 variables.
-NOTE: DATA statement used (Total process time):
-      real time           2.99 seconds
-      cpu time            2.97 seconds
-      
-
-
-NOTE: There were 88193 observations read from the data set WORK.O13.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.O13 has 88193 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.03 seconds
-      cpu time            0.04 seconds
-      
-
-
-NOTE: There were 88193 observations read from the data set WORK.O13.
-NOTE: The data set WORK.VISIT_DF13 has 88193 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 88193 observations read from the data set WORK.VISIT_DF13.
-NOTE: 56229 observations with duplicate key values were deleted.
-NOTE: The data set WORK.VISIT_DF13 has 31964 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.03 seconds
-      cpu time            0.03 seconds
-      
-
-55                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-
-NOTE: Deleting WORK.O13 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-614        %getvisits_pre15(year=14, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 15924143 observations read from the data set DAT14.CCAEO141SAM.
-NOTE: The data set WORK.O14 has 74828 observations and 9 variables.
-NOTE: DATA statement used (Total process time):
-      real time           2.46 seconds
-      cpu time            2.40 seconds
-      
-
-
-NOTE: There were 52638 observations read from the data set WORK.O14.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.O14 has 52638 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 52638 observations read from the data set WORK.O14.
-NOTE: The data set WORK.VISIT_DF14 has 52638 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 52638 observations read from the data set WORK.VISIT_DF14.
-NOTE: 32425 observations with duplicate key values were deleted.
-NOTE: The data set WORK.VISIT_DF14 has 20213 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: Deleting WORK.O14 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-615        %getvisits_post15(year=15, yeartag=1sam)
-56                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 13336161 observations read from the data set DAT15.CCAEO151SAM.
-NOTE: The data set WORK.O15 has 61409 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           2.31 seconds
-      cpu time            2.21 seconds
-      
-
-
-NOTE: There were 32105 observations read from the data set WORK.O15.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.O15 has 32105 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 32105 observations read from the data set WORK.O15.
-NOTE: The data set WORK.VISIT_DF15 has 32105 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 32105 observations read from the data set WORK.VISIT_DF15.
-NOTE: 19588 observations with duplicate key values were deleted.
-NOTE: The data set WORK.VISIT_DF15 has 12517 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: Deleting WORK.O15 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-616        %getvisits_post15(year=16, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-57                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 11739097 observations read from the data set DAT16.CCAEO161SAM.
-NOTE: The data set WORK.O16 has 57991 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           2.16 seconds
-      cpu time            1.96 seconds
-      
-
-
-NOTE: There were 19691 observations read from the data set WORK.O16.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.O16 has 19691 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: There were 19691 observations read from the data set WORK.O16.
-NOTE: The data set WORK.VISIT_DF16 has 19691 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: There were 19691 observations read from the data set WORK.VISIT_DF16.
-NOTE: 12522 observations with duplicate key values were deleted.
-NOTE: The data set WORK.VISIT_DF16 has 7169 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-
-NOTE: Deleting WORK.O16 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-617        %getvisits_post15(year=17, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 9203939 observations read from the data set DAT17.CCAEO171SAM.
-NOTE: The data set WORK.O17 has 46144 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           1.45 seconds
-      cpu time            1.44 seconds
-      
-
-58                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-
-NOTE: There were 5261 observations read from the data set WORK.O17.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.O17 has 5261 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.02 seconds
-      
-
-
-NOTE: There were 5261 observations read from the data set WORK.O17.
-NOTE: The data set WORK.VISIT_DF17 has 5261 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 5261 observations read from the data set WORK.VISIT_DF17.
-NOTE: 3150 observations with duplicate key values were deleted.
-NOTE: The data set WORK.VISIT_DF17 has 2111 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: Deleting WORK.O17 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-618        %getvisits_post15(year=18, yeartag=1sam)
-
-NOTE: Input data set is already sorted, no sorting done.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: There were 7721888 observations read from the data set DAT18.CCAEO181SAM.
-NOTE: The data set WORK.O18 has 35498 observations and 10 variables.
-NOTE: DATA statement used (Total process time):
-      real time           1.24 seconds
-      cpu time            1.21 seconds
-      
-
-
-NOTE: There were 177 observations read from the data set WORK.O18.
-      WHERE (BIRTH_DATE<=SVCDATE) and (SVCDATE<=CENSOR_DATE);
-NOTE: The data set WORK.O18 has 177 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.02 seconds
-      
-59                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-
-
-NOTE: There were 177 observations read from the data set WORK.O18.
-NOTE: The data set WORK.VISIT_DF18 has 177 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 177 observations read from the data set WORK.VISIT_DF18.
-NOTE: 115 observations with duplicate key values were deleted.
-NOTE: The data set WORK.VISIT_DF18 has 62 observations and 8 variables.
-NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: Deleting WORK.O18 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-619        
-620        
-621        * Combine visit data into a single data table ---------------------------------;
-622        data visit_df;
-623        	set visit_df08
-624        		visit_df09
-625        		visit_df10
-626        		visit_df11
-627        		visit_df12
-628        		visit_df13
-629        		visit_df14
-630        		visit_df15
-631        		visit_df16
-632        		visit_df17
-633        		visit_df18;
-634        run;
-
-NOTE: There were 9097 observations read from the data set WORK.VISIT_DF08.
-NOTE: There were 20994 observations read from the data set WORK.VISIT_DF09.
-NOTE: There were 29060 observations read from the data set WORK.VISIT_DF10.
-NOTE: There were 35050 observations read from the data set WORK.VISIT_DF11.
-NOTE: There were 39152 observations read from the data set WORK.VISIT_DF12.
-NOTE: There were 31964 observations read from the data set WORK.VISIT_DF13.
-NOTE: There were 20213 observations read from the data set WORK.VISIT_DF14.
-NOTE: There were 12517 observations read from the data set WORK.VISIT_DF15.
-NOTE: There were 7169 observations read from the data set WORK.VISIT_DF16.
-NOTE: There were 2111 observations read from the data set WORK.VISIT_DF17.
-NOTE: There were 62 observations read from the data set WORK.VISIT_DF18.
-NOTE: The data set WORK.VISIT_DF has 207389 observations and 8 variables.
-NOTE: DATA statement used (Total process time):
-      real time           0.06 seconds
-      cpu time            0.05 seconds
-      
-60                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-
-635        
-636        proc delete data=visit_df08; run;
-
-NOTE: Deleting WORK.VISIT_DF08 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-637        proc delete data=visit_df09; run;
-
-NOTE: Deleting WORK.VISIT_DF09 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-638        proc delete data=visit_df10; run;
-
-NOTE: Deleting WORK.VISIT_DF10 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-639        proc delete data=visit_df11; run;
-
-NOTE: Deleting WORK.VISIT_DF11 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-640        proc delete data=visit_df12; run;
-
-NOTE: Deleting WORK.VISIT_DF12 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-641        proc delete data=visit_df13; run;
-
-NOTE: Deleting WORK.VISIT_DF13 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-642        proc delete data=visit_df14; run;
-
-NOTE: Deleting WORK.VISIT_DF14 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-61                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-643        proc delete data=visit_df15; run;
-
-NOTE: Deleting WORK.VISIT_DF15 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-644        proc delete data=visit_df16; run;
-
-NOTE: Deleting WORK.VISIT_DF16 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-645        proc delete data=visit_df17; run;
-
-NOTE: Deleting WORK.VISIT_DF17 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-646        proc delete data=visit_df18; run;
-
-NOTE: Deleting WORK.VISIT_DF18 (memtype=DATA).
-NOTE: PROCEDURE DELETE used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-647        
-648        
-649        * Save data to output ---------------------------------------------------------;
-650        proc export data=cohort
-651        	outfile='/home/kissler/PediatricPrescribing_Chronic/output/memb_df_sam.csv'
-652        	dbms=csv
-653        	replace;
-654        run;
-
-655         /**********************************************************************
-656         *   PRODUCT:   SAS
-657         *   VERSION:   9.4
-658         *   CREATOR:   External File Interface
-659         *   DATE:      05SEP22
-660         *   DESC:      Generated SAS Datastep Code
-661         *   TEMPLATE SOURCE:  (None Specified.)
-662         ***********************************************************************/
-663            data _null_;
-664            %let _EFIERR_ = 0; /* set the ERROR detection macro variable */
-665            %let _EFIREC_ = 0;     /* clear export record count macro variable */
-666            file '/home/kissler/PediatricPrescribing_Chronic/output/memb_df_sam.csv' delimiter=',' DSD DROPOVER lrecl=32767;
-667            if _n_ = 1 then        /* write column names or labels */
-668             do;
-669               put
-670                  "ENROLID"
-671               ','
-62                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-672                  "BIRTH_DATE"
-673               ','
-674                  "STATE"
-675               ','
-676                  "MSA"
-677               ','
-678                  "SEX"
-679               ','
-680                  "CENSOR_DATE"
-681               ;
-682             end;
-683           set  COHORT   end=EFIEOD;
-684               format ENROLID best12. ;
-685               format BIRTH_DATE mmddyy10. ;
-686               format STATE $30. ;
-687               format MSA z5. ;
-688               format SEX $1. ;
-689               format CENSOR_DATE mmddyys10. ;
-690             do;
-691               EFIOUT + 1;
-692               put ENROLID @;
-693               put BIRTH_DATE @;
-694               put STATE $ @;
-695               put MSA @;
-696               put SEX $ @;
-697               put CENSOR_DATE ;
-698               ;
-699             end;
-700            if _ERROR_ then call symputx('_EFIERR_',1);  /* set ERROR detection macro variable */
-701            if EFIEOD then call symputx('_EFIREC_',EFIOUT);
-702            run;
-
-NOTE: The file '/home/kissler/PediatricPrescribing_Chronic/output/memb_df_sam.csv' is:
-      Filename=/home/kissler/PediatricPrescribing_Chronic/output/memb_df_sam.csv,
-      Owner Name=kissler,Group Name=users,
-      Access Permission=-rw-------,
-      Last Modified=05Sep2022:13:26:39
-
-NOTE: 4698 records were written to the file '/home/kissler/PediatricPrescribing_Chronic/output/memb_df_sam.csv'.
-      The minimum record length was 40.
-      The maximum record length was 56.
-NOTE: There were 4697 observations read from the data set WORK.COHORT.
-NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-4697 records created in /home/kissler/PediatricPrescribing_Chronic/output/memb_df_sam.csv from COHORT.
-  
-  
-NOTE: "/home/kissler/PediatricPrescribing_Chronic/output/memb_df_sam.csv" file was successfully created.
-NOTE: PROCEDURE EXPORT used (Total process time):
-      real time           0.06 seconds
-      cpu time            0.03 seconds
-      
-
-703        
-704        proc export data=rx_df
-63                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-705        	outfile='/home/kissler/PediatricPrescribing_Chronic/output/rx_df_sam.csv'
-706        	dbms=csv
-707        	replace;
-708        run;
-
-709         /**********************************************************************
-710         *   PRODUCT:   SAS
-711         *   VERSION:   9.4
-712         *   CREATOR:   External File Interface
-713         *   DATE:      05SEP22
-714         *   DESC:      Generated SAS Datastep Code
-715         *   TEMPLATE SOURCE:  (None Specified.)
-716         ***********************************************************************/
-717            data _null_;
-718            %let _EFIERR_ = 0; /* set the ERROR detection macro variable */
-719            %let _EFIREC_ = 0;     /* clear export record count macro variable */
-720            file '/home/kissler/PediatricPrescribing_Chronic/output/rx_df_sam.csv' delimiter=',' DSD DROPOVER lrecl=32767;
-721            if _n_ = 1 then        /* write column names or labels */
-722             do;
-723               put
-724                  "CODE"
-725               ','
-726                  "ENROLID"
-727               ','
-728                  "DATE"
-729               ','
-730                  "REFILL"
-731               ;
-732             end;
-733           set  RX_DF   end=EFIEOD;
-734               format CODE $13. ;
-735               format ENROLID best12. ;
-736               format DATE mmddyy10. ;
-737               format REFILL best12. ;
-738             do;
-739               EFIOUT + 1;
-740               put CODE $ @;
-741               put ENROLID @;
-742               put DATE @;
-743               put REFILL ;
-744               ;
-745             end;
-746            if _ERROR_ then call symputx('_EFIERR_',1);  /* set ERROR detection macro variable */
-747            if EFIEOD then call symputx('_EFIREC_',EFIOUT);
-748            run;
-
-NOTE: The file '/home/kissler/PediatricPrescribing_Chronic/output/rx_df_sam.csv' is:
-      Filename=/home/kissler/PediatricPrescribing_Chronic/output/rx_df_sam.csv,
-      Owner Name=kissler,Group Name=users,
-      Access Permission=-rw-------,
-      Last Modified=05Sep2022:13:26:39
-
-NOTE: 35046 records were written to the file '/home/kissler/PediatricPrescribing_Chronic/output/rx_df_sam.csv'.
-      The minimum record length was 24.
-      The maximum record length was 36.
-NOTE: There were 35045 observations read from the data set WORK.RX_DF.
-NOTE: DATA statement used (Total process time):
-      real time           0.03 seconds
-64                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-      cpu time            0.02 seconds
-      
-
-35045 records created in /home/kissler/PediatricPrescribing_Chronic/output/rx_df_sam.csv from RX_DF.
-  
-  
-NOTE: "/home/kissler/PediatricPrescribing_Chronic/output/rx_df_sam.csv" file was successfully created.
-NOTE: PROCEDURE EXPORT used (Total process time):
-      real time           0.07 seconds
-      cpu time            0.05 seconds
-      
-
-749        
-750        proc export data=visit_df
-751        	outfile='/home/kissler/PediatricPrescribing_Chronic/output/visit_df_sam.csv'
-752        	dbms=csv
-753        	replace;
-754        run;
-
-755         /**********************************************************************
-756         *   PRODUCT:   SAS
-757         *   VERSION:   9.4
-758         *   CREATOR:   External File Interface
-759         *   DATE:      05SEP22
-760         *   DESC:      Generated SAS Datastep Code
-761         *   TEMPLATE SOURCE:  (None Specified.)
-762         ***********************************************************************/
-763            data _null_;
-764            %let _EFIERR_ = 0; /* set the ERROR detection macro variable */
-765            %let _EFIREC_ = 0;     /* clear export record count macro variable */
-766            file '/home/kissler/PediatricPrescribing_Chronic/output/visit_df_sam.csv' delimiter=',' DSD DROPOVER lrecl=32767;
-767            if _n_ = 1 then        /* write column names or labels */
-768             do;
-769               put
-770                  "DX1"
-771               ','
-772                  "DX2"
-773               ','
-774                  "DX3"
-775               ','
-776                  "DX4"
-777               ','
-778                  "ENROLID"
-779               ','
-780                  "DATE"
-781               ','
-782                  "STDPLAC"
-783               ','
-784                  "ICD"
-785               ;
-786             end;
-787           set  VISIT_DF   end=EFIEOD;
-788               format DX1 $30. ;
-789               format DX2 $30. ;
-790               format DX3 $30. ;
-791               format DX4 $30. ;
-792               format ENROLID best12. ;
-793               format DATE mmddyy10. ;
-65                                                         The SAS System                            13:25 Monday, September 5, 2022
-
-794               format STDPLAC best12. ;
-795               format ICD $1. ;
-796             do;
-797               EFIOUT + 1;
-798               put DX1 $ @;
-799               put DX2 $ @;
-800               put DX3 $ @;
-801               put DX4 $ @;
-802               put ENROLID @;
-803               put DATE @;
-804               put STDPLAC @;
-805               put ICD $ ;
-806               ;
-807             end;
-808            if _ERROR_ then call symputx('_EFIERR_',1);  /* set ERROR detection macro variable */
-809            if EFIEOD then call symputx('_EFIREC_',EFIOUT);
-810            run;
-
-NOTE: The file '/home/kissler/PediatricPrescribing_Chronic/output/visit_df_sam.csv' is:
-      Filename=/home/kissler/PediatricPrescribing_Chronic/output/visit_df_sam.csv,
-      Owner Name=kissler,Group Name=users,
-      Access Permission=-rw-------,
-      Last Modified=05Sep2022:13:26:39
-
-NOTE: 207390 records were written to the file '/home/kissler/PediatricPrescribing_Chronic/output/visit_df_sam.csv'.
-      The minimum record length was 28.
-      The maximum record length was 58.
-NOTE: There were 207389 observations read from the data set WORK.VISIT_DF.
-NOTE: DATA statement used (Total process time):
-      real time           0.25 seconds
-      cpu time            0.18 seconds
-      
-
-207389 records created in /home/kissler/PediatricPrescribing_Chronic/output/visit_df_sam.csv from VISIT_DF.
-  
-  
-NOTE: "/home/kissler/PediatricPrescribing_Chronic/output/visit_df_sam.csv" file was successfully created.
-NOTE: PROCEDURE EXPORT used (Total process time):
-      real time           0.29 seconds
-      cpu time            0.22 seconds
-      
-
-811        
-
