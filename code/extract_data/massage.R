@@ -34,3 +34,8 @@ temp %>%
 	left_join(sasdf, by=c("ENROLID","BIRTH_DATE","DTEND")) %>% 
 	filter(is.na(INDEX.y)) %>% 
 	print(n=Inf)
+
+
+# ==============================================================
+
+sasdf <- read_csv('output/cohort_intermediate_SAS.csv')

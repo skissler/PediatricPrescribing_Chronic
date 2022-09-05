@@ -217,7 +217,7 @@ run;
 	run;
 
 	proc sort data=cohort;
-		by ENROLID COUNT;
+		by ENROLID;
 	run;
 	proc export data=cohort
 		outfile='/home/kissler/PediatricPrescribing_Chronic/output/cohort_intermediate_SAS.csv'
