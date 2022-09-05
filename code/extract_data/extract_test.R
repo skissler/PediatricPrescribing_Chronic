@@ -143,6 +143,8 @@ for(y in match(c("08","09","10","11","12"), yearlist)){
 
 	}
 
+memb_df_raw <- memb_df 
+
 write_csv(memb_df, file="output/memb_df_prereduce_R.csv")
 
 # 2010-2018 sample memb_df: 1129099 recs
