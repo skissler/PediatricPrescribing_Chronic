@@ -32,7 +32,7 @@ rx_df <- read_csv("output/rx_df.csv", col_types=list(
 	setDT() 
 
 visit_df <- read_csv("output/visit_df.csv", col_types=list(
-	col_character(), col_character(), col_character(), col_character(), col_character())) %>% 
+	col_character(), col_character(), col_character(), col_character(), col_character(),col_character(),col_character(),col_character())) %>% 
 	mutate(DATE=mdy(DATE)) %>% 
 	setDT()
 
