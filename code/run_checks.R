@@ -37,9 +37,9 @@ length(intersect(chronic_ids, memb_df$ENROLID))/nrow(memb_df)
 
 # Venue of antibiotic prescribing: ---------------------------------------------
 
-stdplac_table <- read_csv("data/stdplac_table.csv")
+stdplac_table <- read_csv("data/stdplac_table.csv", col_types=list(col_character(),col_character()))
 
-temp <- visit_df[ID %in% (rx_df$ASSOC_VISIT_ID)] %>% 
+stdplac_summary <- visit_df[ID %in% (rx_df$ASSOC_VISIT_ID)] %>% 
 	as_tibble() %>% 
 	group_by(STDPLAC) %>% 
 	summarise(NVISITS=n()) %>% 
@@ -47,3 +47,37 @@ temp <- visit_df[ID %in% (rx_df$ASSOC_VISIT_ID)] %>%
 	mutate(PCTVISITS=round(NVISITS/sum(NVISITS)*100,1)) %>% 
 	arrange(desc(NVISITS)) %>% 
 	left_join(stdplac_table, by="STDPLAC")
+
+# STDPLAC NVISITS PCTVISITS STDPLACNAME
+# <chr>     <int>     <dbl> <chr>
+# 11       711746      87.9 Office
+# 22        37329       4.6 Outpatient Hospital-On Campus
+# 20        26833       3.3 Urgent Care Facility
+# 23        11432       1.4 Emergency Room - Hospital
+# 81        10632       1.3 Independent Laboratory
+# 12         4063       0.5 Patient Home
+# 99         2663       0.3 Other/Unknown
+# 24         1670       0.2 Ambulatory Surgical Center
+# 21         1058       0.1 Inpatient Hospital
+# 72          637       0.1 Rural Health Clinic
+# 17          410       0.1 Walk-in Retail Health Clinic
+# 95          275       0   Outpatient (NEC)
+# 49          208       0   Independent Clinic
+# 25          205       0   Birthing Center
+# 41          117       0   Ambulance (land)
+# 55          105       0   Residential Subst Abuse Facil
+# 34           91       0   Hospice
+# 50           54       0   Federally Qualified Health Ctr
+# 1            42       0   Pharmacy
+# 71           42       0   State/Local Public Health Clin
+# 62           21       0   Comprehensive Outpt Rehab Fac
+# NA           18       0   NA
+# 19           10       0   Outpatient Hospital-Off Campus
+# 3             7       0   School
+# 65            6       0   End-Stage Renal Disease Facil
+# 31            5       0   Skilled Nursing Facility
+# 53            3       0   Community Mental Health Center
+# 14            2       0   Group Home
+# 32            2       0   Nursing Facility
+# 61            2       0   Comprehensive Inpt Rehab Fac
+# 60            1       0   Mass Immunization Center
