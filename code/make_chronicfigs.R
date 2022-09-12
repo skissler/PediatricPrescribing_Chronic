@@ -1,3 +1,8 @@
+superuser_ids <- rxrankdf_full %>% 
+	filter(SUPERUSER==1) %>% 
+	pull(ENROLID) %>% 
+	unique()
+
 chronic_ids <- ccmap %>% 
 	mutate(has_chronic=case_when(
 		(pulmonary_respiratory==1 | otologic==1 | immunological==1)~1, 

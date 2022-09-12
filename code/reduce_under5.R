@@ -50,13 +50,13 @@ ccs_map <- cond_priority[
 visit_df <- ccs_map[ # left-join visit_df on dx2
 	ccs_map[ # left-join visit_df on dx1
 	visit_df, on=.(DX=DX1, ICD=ICD)][
-	,.(COND1=COND,ICD,DX1=DX,DX3,DX4,PRIORITY1=PRIORITY,DX2,ENROLID,DATE,ID)]
+	,.(COND1=COND,ICD,DX1=DX,DX3,DX4,STDPLAC,PRIORITY1=PRIORITY,DX2,ENROLID,DATE,ID)]
 	,on=.(DX=DX2, ICD=ICD)][
-	,.(COND1,COND2=COND,DX1,DX2=DX,DX3,DX4,PRIORITY1,PRIORITY2=PRIORITY,ICD,ENROLID,DATE,ID)][
+	,.(COND1,COND2=COND,DX1,DX2=DX,DX3,DX4,STDPLAC,PRIORITY1,PRIORITY2=PRIORITY,ICD,ENROLID,DATE,ID)][
 	is.na(PRIORITY1),PRIORITY1:=as.integer(1e6)][ # set NA cond priority as 1M
 	is.na(PRIORITY2),PRIORITY2:=as.integer(1e6)][ # set NA cond priority as 1M
 	,COND:=if_else(PRIORITY2<PRIORITY1,COND2,COND1)][ # Prioritize conditions
-	,.(ENROLID,DATE,COND,DX1,DX2,DX3,DX4,ICD,ID)] # Choose output columns
+	,.(ENROLID,DATE,COND,DX1,DX2,DX3,DX4,STDPLAC,ICD,ID)] # Choose output columns
 
 
 # ==============================================================================
