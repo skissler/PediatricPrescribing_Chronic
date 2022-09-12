@@ -188,7 +188,7 @@ Review to-do:
 - [ ] re-label vertical axis of figure 1 to note that these are antibiotic prescriptions
 - [ ] Amend figure 2 legend to NOT refer to all prescriptions, as that has been removed. 
 - [ ] Table 2: add a column with N for each category and what proportion of the top antibiotic recipients each category accounts for. Add footnote to remark that some patients may be in more than one category. 
-- [ ] Remove Tables S5-S7 (or combine S5-S6 and remove non-antibiotic prescriptions) 
+- [x] Remove Tables S5-S7 (or combine S5-S6 and remove non-antibiotic prescriptions) 
 - [ ] lessen self-criticism about impact of covid pandemic and argue why findings are still generalizable 
 - [ ] discuss/emphasize role of children with cohronic conditions in overall antibiotic prescribing trends in the Discussion
 - [ ] tighten discussion of links with other studies, maybe remove bit about LMICs. 
@@ -203,6 +203,7 @@ Review to-do:
 - [ ] Include full list of CCS delineations in supplement 
 - [ ] In addition to lack of vaccines for some of the culprit bugs, other factors such overdiagnosis of bacterial infections and high rates of care seeking for minor self-limited viral illnesses are worth mentioning as contributors to antibiotic overuse
 - [ ] Consider mentioning in the limitations that this does not include treatments that occur in hospitals, EDs, or offices, so that the results may actually underestimate the true prevalence of antibiotic consumption
+- [ ] Update all numbers with re-run 
 
 
 
