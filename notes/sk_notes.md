@@ -154,9 +154,9 @@ I think I've cleaned the rest, minus the local geographic analysis - now to make
 Got some figures made for the repeat of Figure 1 but comparing kids with and without pulmonary/respiratory, otologic, and immunological chronic conditions. They're looking good. Next I need to: 
 
 - [x] Write code to save those figures, in `chronicfigs.R`
-- [ ] Split out `run_analysis.R` into scripts for each sub-figure 
+- [x] Split out `run_analysis.R` into scripts for each sub-figure 
 - [ ] Look at prescriptions by birth year to see if there's been a change (surely there's been a decline) 
-- [ ] Figure out how to incorporate all of these changes into the manuscript - I think shift current Figure 2 to supplement, then make new Figure 2 after Table 2 the repeat of Figure 1 by chronic/nonchronic, with corresponding updates to the text. 
+- [x] Figure out how to incorporate all of these changes into the manuscript - I think shift current Figure 2 to supplement, then make new Figure 2 after Table 2 the repeat of Figure 1 by chronic/nonchronic, with corresponding updates to the text. 
 
 And, it looks like the new extraction finished right on time, at 5:51. So, I should re-run everything using those new files. 
 

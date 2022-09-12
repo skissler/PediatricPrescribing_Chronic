@@ -208,7 +208,7 @@ fig_cumrx_summ_chronic <- cumrx_summ_chronic %>%
 		scale_linetype_manual(values=c("Yes"="solid","No"="solid")) +
 		theme_classic() + 
 		theme(text=element_text(size=10)) + 
-		labs(x="Number of antibiotic prescriptions", y="Proportion of children (as density)")
+		labs(tag="C)", x="Number of antibiotic prescriptions", y="Proportion of children (as density)")
 
 
 ggsave(fig_cumrx_summ_chronic, file="figures/cumrx_summ_chronic.pdf", width=figwidth, height=figwidth, dpi=figres)
