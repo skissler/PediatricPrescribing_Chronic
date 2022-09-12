@@ -7,11 +7,11 @@ dxprops <- tibble(
 	prop_dx4=nrow(visit_df[!is.na(DX4)])/nrow(visit_df)
 )
 
-dxprops_resp <- dxprops <- tibble(
-	prop_dx1_resp=nrow(visit_df[(!is.na(DX1))&(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media"))])/nrow(visit_df),
-	prop_dx2_resp=nrow(visit_df[(!is.na(DX2))&(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media"))])/nrow(visit_df),
-	prop_dx3_resp=nrow(visit_df[(!is.na(DX3))&(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media"))])/nrow(visit_df),
-	prop_dx4_resp=nrow(visit_df[(!is.na(DX4))&(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media"))])/nrow(visit_df)
+dxprops_resp <- tibble(
+	prop_dx1_resp=nrow(visit_df[((!is.na(DX1))&(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")))])/nrow(visit_df),
+	prop_dx2_resp=nrow(visit_df[((!is.na(DX2))&(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")))])/nrow(visit_df),
+	prop_dx3_resp=nrow(visit_df[((!is.na(DX3))&(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")))])/nrow(visit_df),
+	prop_dx4_resp=nrow(visit_df[((!is.na(DX4))&(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")))])/nrow(visit_df)
 )
 
 # Proportion of kids w/ chronic conditions in the top 20% of abx recipients: ---
