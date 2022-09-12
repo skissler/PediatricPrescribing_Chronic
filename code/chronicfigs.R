@@ -161,7 +161,6 @@ combdat_firstcumrx_chronic %>%
 	filter(AGE_DAYS_ROUNDED==1825) %>% 
 	select(AGE_DAYS_ROUNDED, Comorbidities, NRX, lwr, upr)
 
-
 # ==============================================================================
 # Chronic/non-Chronic histogram
 # ==============================================================================

@@ -8,6 +8,7 @@ __Jump to:__
 - [30 Aug 2022](#30-Aug-2022)
 - [31 Aug 2022](#31-Aug-2022)
 - [5 Sep 2022](#5-Sep-2022)
+- [12 Sep 2022](#12-Sep-2022)
 
 # 9 Aug 2022
 To do: 
@@ -159,6 +160,8 @@ Got some figures made for the repeat of Figure 1 but comparing kids with and wit
 
 And, it looks like the new extraction finished right on time, at 5:51. So, I should re-run everything using those new files. 
 
+
+# 12 Sep 2022
 
 
 
