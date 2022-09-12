@@ -176,6 +176,7 @@ Review to-do:
 - [ ] check how many claims have respiratory codes in positions 3 or 4 (and any code in positions 3 or 4) 
 - [ ] Among those in the top 20% of antibiotic recipients, what proportion were children with chronic conditions?
 - [ ] Check venue of antibiotic prescribing and include a bit about this if it's interesting. 
+- [ ] Generate data files for posting on GitHub 
 
 ## Writeup
 - [ ] Update results and discussion to account for new results 
