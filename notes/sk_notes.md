@@ -163,7 +163,7 @@ And, it looks like the new extraction finished right on time, at 5:51. So, I sho
 
 # 12 Sep 2022
 
-Review list to-do: 
+Review to-do: 
 
 ## Formatting
 - [ ] Verify that main text is under 3,000 words
