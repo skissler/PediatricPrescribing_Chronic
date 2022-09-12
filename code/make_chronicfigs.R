@@ -64,6 +64,8 @@ combdat_cumrx_chronic <- bind_rows(
 	mutate(part2_cumrx_chronic,Comorbidities="No")
 	)
 
+write_csv(combdat_cumrx_chronic, file="underlying_data/combdat_cumrx_chronic.csv")
+
 # Plot cumulative prescriptions overall and by respiratory/non-respiratory conditions: 
 fig_cumrx_chronic <-
 	ggplot(data=combdat_cumrx_chronic, aes(x=AGE_DAYS_ROUNDED, y=NRX, col=Comorbidities, fill=Comorbidities, linetype=Comorbidities)) + 
@@ -148,6 +150,8 @@ combdat_firstcumrx_chronic <- bind_rows(
 	mutate(part2_firstcumrx_chronic,Comorbidities="No")
 	) 
 
+write_csv(combdat_firstcumrx_chronic, file="underlying_data/combdat_firstcumrx_chronic.csv")
+
 # Plot age at first prescriptions overall and by respiratory/non-respiratory conditions: 
 fig_cumfirstrx_chronic <-
 	ggplot(data=combdat_firstcumrx_chronic, aes(x=AGE_DAYS_ROUNDED, y=NRX, col=Comorbidities, fill=Comorbidities, linetype=Comorbidities)) + 
@@ -196,7 +200,11 @@ cumrx_summ_nonchronic <- rx_df_nonchronic[
 	mutate(Comorbidities="No")
 
 # Combine counts into a single data frame: 
-cumrx_summ_chronic <- rbind(cumrx_summ_chronic, cumrx_summ_nonchronic)
+cumrx_summ_chronic <- rbind(cumrx_summ_chronic, cumrx_summ_nonchronic) %>% 
+	ungroup() %>% 
+	select(-ENROLID)
+
+write_csv(cumrx_summ_chronic, file="underlying_data/cumrx_summ_chronic.csv")
 
 # Plot cumulative prescriptions by condition group as densities: 
 fig_cumrx_summ_chronic <- cumrx_summ_chronic %>% 

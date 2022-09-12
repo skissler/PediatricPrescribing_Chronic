@@ -73,6 +73,8 @@ combdat_firstcumrx <- bind_rows(
 	mutate(nonrespdat_firstcumrx,Indication="Non-respiratory conditions")
 	) 
 
+write_csv(combdat_firstcumrx, file="underlying_data/combdat_firstcumrx.csv")
+
 # Plot age at first prescriptions overall and by respiratory/non-respiratory conditions: 
 fig_cumfirstrx_respnonresp <-
 	ggplot(data=combdat_firstcumrx, aes(x=AGE_DAYS_ROUNDED, y=NRX, col=Indication, fill=Indication, linetype=Indication)) + 

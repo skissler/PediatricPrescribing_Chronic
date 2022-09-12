@@ -26,7 +26,11 @@ cumrx_summ_nonresp <- rx_df_nonresp[
 	mutate(Indication="Other conditions")
 
 # Combine counts into a single data frame: 
-cumrx_summ <- rbind(cumrx_summ_overall, cumrx_summ_resp, cumrx_summ_nonresp)
+cumrx_summ <- rbind(cumrx_summ_overall, cumrx_summ_resp, cumrx_summ_nonresp) %>%
+	ungroup() %>% 
+	select(-ENROLID)
+
+write_csv(cumrx_summ, file="underlying_data/cumrx_summ.csv")
 
 # Plot cumulative prescriptions by condition group as densities: 
 fig_cumrx_summ <- cumrx_summ %>% 

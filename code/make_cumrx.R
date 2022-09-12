@@ -66,6 +66,8 @@ combdat_cumrx <- bind_rows(
 	mutate(nonrespdat_cumrx,Indication="Non-respiratory conditions")
 	)
 
+write_csv(combdat_cumrx, file="underlying_data/combdat_cumrx.csv")
+
 # Plot cumulative prescriptions overall and by respiratory/non-respiratory conditions: 
 fig_cumrx_respnonresp <-
 	ggplot(data=combdat_cumrx, aes(x=AGE_DAYS_ROUNDED, y=NRX, col=Indication, fill=Indication, linetype=Indication)) + 
