@@ -36,3 +36,14 @@ length(intersect(chronic_ids, memb_df$ENROLID))/nrow(memb_df)
 # 0.2020455
 
 # Venue of antibiotic prescribing: ---------------------------------------------
+
+stdplac_table <- read_csv("data/stdplac_table.csv")
+
+temp <- visit_df[ID %in% (rx_df$ASSOC_VISIT_ID)] %>% 
+	as_tibble() %>% 
+	group_by(STDPLAC) %>% 
+	summarise(NVISITS=n()) %>% 
+	ungroup() %>% 
+	mutate(PCTVISITS=round(NVISITS/sum(NVISITS)*100,1)) %>% 
+	arrange(desc(NVISITS)) %>% 
+	left_join(stdplac_table, by="STDPLAC")
