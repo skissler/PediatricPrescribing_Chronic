@@ -172,7 +172,7 @@ Review to-do:
 - [ ] Shift regional figures to supplement 
 
 ## Analysis
-- [ ] Make plot of trends in prescribing over time
+- [x] Make plot of trends in prescribing over time
 - [x] check how many claims have respiratory codes in positions 3 or 4 (and any code in positions 3 or 4) 
 - [x] Among those in the top 20% of antibiotic recipients, what proportion were children with chronic conditions?
 - [x] Check venue of antibiotic prescribing and include a bit about this if it's interesting. 
