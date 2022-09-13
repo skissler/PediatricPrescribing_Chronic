@@ -186,9 +186,9 @@ Review to-do:
 - [x] turn odds increases into odds ratios
 - [x] Amend figure 2 legend to NOT refer to all prescriptions, as that has been removed. 
 - [x] lessen self-criticism about impact of covid pandemic and argue why findings are still generalizable 
-- [ ] Note that kids with chronic conditions may differ between private and medicare/medicaid. 
-- [ ] adjust title to refer to first 5 years of life and to chronic conditions 
-- [ ] abstract: note that "privatey insured children" in the US receive high volumes of antibiotics. 
+- [x] Note that kids with chronic conditions may differ between private and medicare/medicaid. 
+- [x] adjust title to refer to first 5 years of life and to chronic conditions 
+- [x] abstract: note that "privatey insured children" in the US receive high volumes of antibiotics. 
 - [ ] Justify 20% cutoff for high-frequency dispensation
 - [ ] In addition to lack of vaccines for some of the culprit bugs, other factors such overdiagnosis of bacterial infections and high rates of care seeking for minor self-limited viral illnesses are worth mentioning as contributors to antibiotic overuse
 - [ ] Consider mentioning in the limitations that this does not include treatments that occur in hospitals, EDs, or offices, so that the results may actually underestimate the true prevalence of antibiotic consumption
