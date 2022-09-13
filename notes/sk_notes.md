@@ -181,12 +181,11 @@ Review to-do:
 
 ### Quick wins
 - [x] Add note in main text about rationale for using custom weights 
-- [ ] Note the size of bias in restricting to diagnosis positions 1 and 2
-- [ ] Note that some antibiotics may have been given for an appropriate, non-respiratory condition but linked to an inappropriate respiratory condition. 
-- [ ] turn odds increases into odds ratios
-- [ ] Amend figure 2 legend to NOT refer to all prescriptions, as that has been removed. 
-- [ ] lessen self-criticism about impact of covid pandemic and argue why findings are still generalizable 
-- [ ] discuss/emphasize role of children with cohronic conditions in overall antibiotic prescribing trends in the Discussion
+- [x] Note the size of bias in restricting to diagnosis positions 1 and 2
+- [x] Note that some antibiotics may have been given for an appropriate, non-respiratory condition but linked to an inappropriate respiratory condition. 
+- [x] turn odds increases into odds ratios
+- [x] Amend figure 2 legend to NOT refer to all prescriptions, as that has been removed. 
+- [x] lessen self-criticism about impact of covid pandemic and argue why findings are still generalizable 
 - [ ] Note that kids with chronic conditions may differ between private and medicare/medicaid. 
 - [ ] adjust title to refer to first 5 years of life and to chronic conditions 
 - [ ] abstract: note that "privatey insured children" in the US receive high volumes of antibiotics. 
@@ -211,6 +210,7 @@ Review to-do:
 - [ ] Update results and discussion to account for new results 
 - [ ] Update all numbers with re-run 
 - [ ] Update vocabulary to ensure we're consistent with prescribed, dispensed, refilled, etc. 
+- [ ] discuss/emphasize role of children with chronic conditions in overall antibiotic prescribing trends in the Discussion
 - [ ] tighten discussion of links with other studies, maybe remove bit about LMICs. 
 - [ ] shorten first 2-3 paragraphs to 1-2 paragraphs? 
 - [ ] Consider rewording the statement that "little is known about the extent and variation of antibiotic consumption in this group." Although I agree that this study addresses a gap, a lot is already known about antibiotic prescribing for this group. More specific language about the gap addressed could be helpful.

@@ -7,6 +7,59 @@
 # 	prop_dx4=nrow(visit_df[!is.na(DX4)])/nrow(visit_df)
 # )
 
+respcondlist <- c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")
+
+respconddf <- visit_df %>% 
+	as_tibble() %>% 
+	select(DX1, DX2, DX3, DX4, ICD) %>% 
+	left_join(select(ccs_map,-PRIORITY), by=c("DX1"="DX","ICD"="ICD")) %>% 
+	rename(COND1=COND) %>% 
+	left_join(select(ccs_map,-PRIORITY), by=c("DX2"="DX","ICD"="ICD")) %>% 
+	rename(COND2=COND) %>% 
+	left_join(select(ccs_map,-PRIORITY), by=c("DX3"="DX","ICD"="ICD")) %>% 
+	rename(COND3=COND) %>% 
+	left_join(select(ccs_map,-PRIORITY), by=c("DX4"="DX","ICD"="ICD")) %>% 
+	rename(COND4=COND)
+
+# How many visits have a respiratory condition in positions 3 or 4? 
+
+respconddf %>% 
+	mutate(haslateresp=case_when(
+		((COND3%in%respcondlist) | (COND4%in%respcondlist))~1,
+		TRUE~0)) %>% 
+	group_by(haslateresp) %>% 
+	summarise(NVISITS=n()) %>% 
+	mutate(PCT=round(NVISITS/sum(NVISITS)*100,1))
+
+#   haslateresp NVISITS   PCT
+#         <dbl>   <int> <dbl>
+# 1           0 5546941  99.2
+# 2           1   42533   0.8
+
+
+# Of those with a respiratory condition in positions 3 or 4, how many also have a respiratory condition in 1 or 2? 
+respconddf %>% 
+	mutate(haslateresp=case_when(
+		((COND3%in%respcondlist) | (COND4%in%respcondlist))~1,
+		TRUE~0)) %>% 
+	filter(haslateresp==1) %>% 
+	mutate(hasearlyresp=case_when(
+		((COND1%in%respcondlist) | (COND2%in%respcondlist))~1,
+		TRUE~0)) %>% 
+	group_by(hasearlyresp) %>% 
+	summarise(NVISITS=n()) %>% 
+	mutate(PCT=round(NVISITS/sum(NVISITS)*100,1))
+
+
+#   hasearlyresp NVISITS   PCT
+#          <dbl>   <int> <dbl>
+# 1            0    9910  23.3
+# 2            1   32623  76.7
+
+
+
+
+
 # dxprops_resp <- tibble(
 # 	prop_dx1_resp=nrow(visit_df[((!is.na(DX1))&(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")))])/nrow(visit_df),
 # 	prop_dx2_resp=nrow(visit_df[((!is.na(DX2))&(COND %in% c("Sinusitis","Strep pharyngitis","Pneumonia","Influenza","Tonsillitis","Bronchitis (acute)","URI (other)","Otitis media")))])/nrow(visit_df),
