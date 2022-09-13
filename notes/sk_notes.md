@@ -180,7 +180,7 @@ Review to-do:
 ## Writeup
 
 ### Quick wins
-- [ ] Add note in main text about rationale for using custom weights 
+- [x] Add note in main text about rationale for using custom weights 
 - [ ] Note the size of bias in restricting to diagnosis positions 1 and 2
 - [ ] Note that some antibiotics may have been given for an appropriate, non-respiratory condition but linked to an inappropriate respiratory condition. 
 - [ ] turn odds increases into odds ratios
