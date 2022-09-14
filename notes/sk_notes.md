@@ -195,7 +195,7 @@ Review to-do:
 
 
 ### Figure updates
-- [ ] Insert version of Figure 1 split by those with/without chronic conditions
+- [x] Insert version of Figure 1 split by those with/without chronic conditions
 - [ ] re-label vertical axis of figure 1 to note that these are antibiotic prescriptions
 - [ ] Table 2: add a column with N for each category and what proportion of the top antibiotic recipients each category accounts for. Add footnote to remark that some patients may be in more than one category. 
 - [ ] Aggregate and present chronic codes by ICD9 and ICD10
