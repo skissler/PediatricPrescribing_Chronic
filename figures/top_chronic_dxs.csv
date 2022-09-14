@@ -1,0 +1,166 @@
+BODY_SYSTEM,CCS,ICD,N,PCT
+cardiac,Cardiac and circulatory congenital anomalies,0,1892,59.6
+cardiac,Pulmonary heart disease,0,531,16.7
+cardiac,Nonrheumatic and unspecified valve disorders,0,165,5.2
+cardiac,Conduction disorders,0,114,3.6
+cardiac,Heart failure,0,78,2.5
+cardiac,Cardiac anom,9,22733,71.5
+cardiac,Pulm hart dx,9,1973,6.2
+cardiac,Hrt valve dx,9,1595,5
+cardiac,chf;nonhp,9,901,2.8
+cardiac,Dysrhythmia,9,881,2.8
+craniofacial,Cleft lip or palate,0,543,70.2
+craniofacial,Musculoskeletal congenital conditions,0,228,29.5
+craniofacial,Digestive congenital anomalies,0,3,0.4
+craniofacial,Ot cong anom,9,4240,100
+dermatological,Other specified and unspecified skin disorders,0,74,56.1
+dermatological,Pressure ulcer of skin,0,31,23.5
+dermatological,Other specified and unspecified congenital anomalies,0,11,8.3
+dermatological,Other specified inflammatory condition of skin,0,9,6.8
+dermatological,Non-pressure ulcer of skin,0,7,5.3
+dermatological,Ulcer skin,9,129,33.4
+dermatological,Oth skin dx,9,113,29.3
+dermatological,Ot cong anom,9,82,21.2
+dermatological,Ot infl skin,9,62,16.1
+endocrinological,"Diabetes mellitus, Type 1",0,509,25.3
+endocrinological,Thyroid disorders,0,470,23.4
+endocrinological,Pituitary disorders,0,327,16.3
+endocrinological,Diabetes mellitus with complication,0,289,14.4
+endocrinological,Diabetes mellitus without complication,0,236,11.7
+endocrinological,Thyroid dsor,9,3645,59.4
+endocrinological,Ot endo dsor,9,1295,21.1
+endocrinological,DiabMel no c,9,760,12.4
+endocrinological,DiabMel w/cm,9,400,6.5
+endocrinological,Menopausl dx,9,24,0.4
+gastrointestinal,Esophageal disorders,0,1054,36.2
+gastrointestinal,Digestive congenital anomalies,0,817,28
+gastrointestinal,Organ transplant status,0,323,11.1
+gastrointestinal,Other specified and unspecified gastrointestinal disorders,0,301,10.3
+gastrointestinal,Other aftercare encounter,0,238,8.2
+gastrointestinal,GI cong anom,9,4505,44
+gastrointestinal,Ot dx stomch,9,1498,14.6
+gastrointestinal,Esophgeal dx,9,1358,13.3
+gastrointestinal,Other GI dx,9,849,8.3
+gastrointestinal,Oth liver dx,9,702,6.9
+genetic,Chromosomal abnormalities,0,6320,87.4
+genetic,Other specified and unspecified congenital anomalies,0,829,11.5
+genetic,Immunity disorders,0,80,1.1
+genetic,Ot cong anom,9,28761,100
+genitourinary,Genitourinary congenital anomalies,0,223,87.8
+genitourinary,Other specified female genital disorders,0,9,3.5
+genitourinary,Other specified and unspecified diseases of bladder and urethra,0,7,2.8
+genitourinary,Postprocedural or postoperative genitourinary system complication,0,7,2.8
+genitourinary,Other specified male genital disorders,0,4,1.6
+genitourinary,Ot dx kidney,9,5524,50.6
+genitourinary,gu cong anom,9,5139,47.1
+genitourinary,Other GU dx,9,109,1
+genitourinary,Oth male gen,9,99,0.9
+genitourinary,Ot femal gen,9,28,0.3
+hematological,Aplastic anemia,0,414,30.3
+hematological,Coagulation and hemorrhagic disorders,0,404,29.6
+hematological,Chronic kidney disease,0,267,19.6
+hematological,Sickle cell trait/anemia,0,155,11.4
+hematological,Hemolytic anemia,0,123,9
+hematological,Anemia,9,2541,42.4
+hematological,Coag/hemr dx,9,2286,38.2
+hematological,Sickle cell,9,1125,18.8
+hematological,Unclassified,9,38,0.6
+immunological,Immunity disorders,0,593,40.4
+immunological,Juvenile arthritis,0,332,22.6
+immunological,Systemic lupus erythematosus and connective tissue disorders,0,210,14.3
+immunological,Diseases of white blood cells,0,188,12.8
+immunological,Vasculitis,0,84,5.7
+immunological,Immunity dx,9,2860,46.5
+immunological,Rheum arth,9,1143,18.6
+immunological,Wht blood dx,9,793,12.9
+immunological,Ot circul dx,9,589,9.6
+immunological,Back problem,9,359,5.8
+malignancy,Leukemia - acute lymphoblastic leukemia (ALL),0,1131,39.5
+malignancy,Endocrine system cancers - all other types,0,576,20.1
+malignancy,Nervous system cancers - brain,0,325,11.4
+malignancy,Leukemia - all other types,0,201,7
+malignancy,Nervous system cancers - all other types,0,129,4.5
+malignancy,Leukemias,9,3332,38.8
+malignancy,Ot primry ca,9,2105,24.5
+malignancy,Brain/ns can,9,1389,16.2
+malignancy,Kidny/rnl ca,9,445,5.2
+malignancy,Bone/ct cncr,9,376,4.4
+mental_health,Neurodevelopmental disorders,0,51269,96.1
+mental_health,"Disruptive, impulse-control and conduct disorders",0,1546,2.9
+mental_health,Feeding and eating disorders,0,283,0.5
+mental_health,Urinary incontinence,0,138,0.3
+mental_health,Depressive disorders,0,33,0.1
+mental_health,Developmental disorders,9,144903,73.2
+mental_health,Disorders usually diagnosed in infancy/ch,9,46191,23.3
+mental_health,Attention-deficit/conduct/disruptive beha,9,5948,3
+mental_health,Mood disorders,9,345,0.2
+mental_health,Impulse control disorders NEC,9,236,0.1
+metabolic,Other specified and unspecified nutritional and metabolic disorders,0,1610,80.5
+metabolic,Other specified hereditary and degenerative nervous system conditions,0,288,14.4
+metabolic,Nutritional deficiencies,0,40,2
+metabolic,Malnutrition,0,30,1.5
+metabolic,Obesity,0,29,1.4
+metabolic,Ot nutrit dx,9,7927,91.9
+metabolic,Hyperlipidem,9,411,4.8
+metabolic,Nutrit defic,9,257,3
+metabolic,Gout/ot crys,9,21,0.2
+metabolic,Complic proc,9,11,0.1
+musculoskeletal,Musculoskeletal congenital conditions,0,874,37.7
+musculoskeletal,Acquired foot deformities,0,278,12
+musculoskeletal,Muscle disorders,0,274,11.8
+musculoskeletal,Scoliosis and other postural dorsopathic deformities,0,255,11
+musculoskeletal,Acquired deformities (excluding foot),0,235,10.1
+musculoskeletal,Ot cong anom,9,22861,65.7
+musculoskeletal,Rehab,9,6128,17.6
+musculoskeletal,Ot acq defor,9,1664,4.8
+musculoskeletal,Ot conn tiss,9,1508,4.3
+musculoskeletal,Ot bone dx,9,814,2.3
+neurological,Neurodevelopmental disorders,0,35071,71.7
+neurological,Cerebral palsy,0,3188,6.5
+neurological,Epilepsy; convulsions,0,3008,6.1
+neurological,Nervous system congenital anomalies,0,2660,5.4
+neurological,Other specified nervous system disorders,0,1315,2.7
+neurological,Other ear dx,9,14794,24
+neurological,Paralysis,9,11877,19.3
+neurological,Nerv cong an,9,10241,16.6
+neurological,Epilepsy/cnv,9,7258,11.8
+neurological,Ot hered CNS,9,7033,11.4
+ophthalmological,Strabismus,0,3832,64.2
+ophthalmological,Other specified eye disorders,0,928,15.6
+ophthalmological,"Congenital malformations of eye, ear, face, neck",0,533,8.9
+ophthalmological,Neuro-ophthalmology,0,310,5.2
+ophthalmological,Retinal and vitreous conditions,0,146,2.4
+ophthalmological,Other eye dx,9,19909,80
+ophthalmological,Ot cong anom,9,3864,15.5
+ophthalmological,Glaucoma,9,505,2
+ophthalmological,Retinal dx,9,427,1.7
+ophthalmological,Eye infectn,9,98,0.4
+otolaryngological,Ot cong anom,9,1369,100
+otologic,Hearing loss,0,1941,77.7
+otologic,Diseases of middle ear and mastoid (except otitis media),0,269,10.8
+otologic,Other specified and unspecified disorders of the ear,0,143,5.7
+otologic,"Congenital malformations of eye, ear, face, neck",0,116,4.6
+otologic,Diseases of inner ear and related conditions,0,27,1.1
+otologic,Other ear dx,9,1922,85
+otologic,Dizziness,9,216,9.6
+otologic,Otitis media,9,122,5.4
+pulmonary_respiratory,Asthma,0,14385,82
+pulmonary_respiratory,Sleep wake disorders,0,2209,12.6
+pulmonary_respiratory,Respiratory perinatal condition,0,406,2.3
+pulmonary_respiratory,Cystic fibrosis,0,289,1.6
+pulmonary_respiratory,Respiratory congenital malformations,0,108,0.6
+pulmonary_respiratory,Asthma,9,60821,77
+pulmonary_respiratory,Ot perint dx,9,4996,6.3
+pulmonary_respiratory,Unclassified,9,4686,5.9
+pulmonary_respiratory,Ot cong anom,9,3438,4.4
+pulmonary_respiratory,Cystic fibro,9,2251,2.9
+renal,Other specified and unspecified diseases of kidney and ureters,0,404,26.2
+renal,Other specified and unspecified diseases of bladder and urethra,0,381,24.7
+renal,Vesicoureteral reflux,0,350,22.7
+renal,Chronic kidney disease,0,120,7.8
+renal,Acute and unspecified renal failure,0,103,6.7
+renal,Chr kidney disease,9,1454,38.1
+renal,Ot dx bladdr,9,1325,34.7
+renal,Ot dx kidney,9,552,14.5
+renal,Nephritis,9,295,7.7
+renal,Ac renl fail,9,145,3.8
