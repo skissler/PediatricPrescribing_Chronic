@@ -75,7 +75,7 @@ fig_cumrx_respnonresp <-
 		geom_line() + 
 		scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
 		theme_classic() + 
-		labs(tag="A)", x="Days from birth", y=paste0("Cumulative prescriptions")) + 
+		labs(tag="A)", x="Days from birth", y=paste0("Cumulative antibiotic prescriptions")) + 
 		scale_color_manual(values=c("All conditions"="Gray","Respiratory conditions"="Blue","Non-respiratory conditions"="Blue")) + 
 		scale_fill_manual(values=c("All conditions"="Gray","Respiratory conditions"="Blue","Non-respiratory conditions"="Blue")) +
 		scale_linetype_manual(values=c("All conditions"="solid","Respiratory conditions"="solid","Non-respiratory conditions"="dashed")) +

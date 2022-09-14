@@ -78,7 +78,7 @@ fig_cumrx_chronic <-
 		geom_line() + 
 		scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
 		theme_classic() + 
-		labs(tag="A)", x="Days from birth", y=paste0("Cumulative prescriptions")) + 
+		labs(tag="A)", x="Days from birth", y=paste0("Cumulative antibiotic prescriptions")) + 
 		scale_color_manual(values=c("Yes"="Red","No"="Black")) + 
 		scale_fill_manual(values=c("Yes"="Red","No"="Black")) +
 		scale_linetype_manual(values=c("Yes"="solid","No"="solid")) +
@@ -165,7 +165,7 @@ fig_cumfirstrx_chronic <-
 		scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
 		scale_y_continuous(limits=c(0,1), breaks=seq(from=0, to=1, by=0.2)) + 
 		theme_classic() + 
-		labs(tag="B)",x="Days from birth", y=paste0("Proportion who have received a prescription")) + 
+		labs(tag="B)",x="Days from birth", y=paste0("Proportion who have received\nan antibiotic prescription")) + 
 		scale_color_manual(values=c("Yes"="Red","No"="Black")) + 
 		scale_fill_manual(values=c("Yes"="Red","No"="Black")) +
 		scale_linetype_manual(values=c("Yes"="solid","No"="solid")) +

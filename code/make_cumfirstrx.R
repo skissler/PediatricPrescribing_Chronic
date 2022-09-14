@@ -83,7 +83,7 @@ fig_cumfirstrx_respnonresp <-
 		scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
 		scale_y_continuous(limits=c(0,1), breaks=seq(from=0, to=1, by=0.2)) + 
 		theme_classic() + 
-		labs(tag="B)",x="Days from birth", y=paste0("Proportion who have received a prescription")) + 
+		labs(tag="B)",x="Days from birth", y=paste0("Proportion who have received\nan antibiotic prescription")) + 
 		scale_color_manual(values=c("All conditions"="Gray","Respiratory conditions"="Blue","Non-respiratory conditions"="Blue")) + 
 		scale_fill_manual(values=c("All conditions"="Gray","Respiratory conditions"="Blue","Non-respiratory conditions"="Blue")) +
 		scale_linetype_manual(values=c("All conditions"="solid","Respiratory conditions"="solid","Non-respiratory conditions"="dashed")) +

@@ -129,4 +129,79 @@ superlogistictab <- superlogisticdf %>%
 		TRUE~"N.S."
 		))
 
+superlogisticsummary_N <- rxrankdf_full %>% 
+	summarise(across(all_of(ccnames$BODY_SYSTEM),sum)) %>% 
+	pivot_longer(everything(), names_to="BODY_SYSTEM",values_to="N") %>% 
+	mutate(PCT=round(N/nrow(memb_df)*100,1)) %>% 
+	left_join(ccnames,by="BODY_SYSTEM") %>% 
+	mutate(NLAB=paste0(N," (",PCT,")")) %>% 
+	select(NAME,NLAB)
+
+superlogisticsummary_PROPSUPER <- rxrankdf_full %>% 
+	filter(SUPERUSER==1) %>% 
+	summarise(across(all_of(ccnames$BODY_SYSTEM),sum)) %>% 
+	pivot_longer(everything(), names_to="BODY_SYSTEM",values_to="N") %>% 
+	mutate(PCTSUP=round(N/nrow(memb_df)*100,1)) %>% 
+	left_join(ccnames,by="BODY_SYSTEM") %>% 
+	select(NAME, PCTSUP)
+
+superlogistictab <- superlogistictab %>% 
+	left_join(superlogisticsummary_N, by="NAME") %>% 
+	left_join(superlogisticsummary_PROPSUPER, by="NAME")
+
 write_csv(superlogistictab, file="figures/superlogistictab.csv")
+
+
+ccs9_map_full <- read_csv("data/ccs_dxref2015.csv",
+	skip=1,
+	col_names=c("DX","CCS_CAT","CCS_DESC","ICD_DESC","OPT_CCS_CAT","OPT_CCS_DESC"),
+	col_types=list(rep(col_character(),6)),
+	quote="\'") %>% 
+	select(DX,CCS_DESC) %>% 
+	mutate(ICD="9")
+
+ccs0_map_full <- read_csv("data/ccsr_dxref2021.csv",
+	skip=1,
+	col_names=c("DX","ICD_DESC","CCS_CAT","CCS_DESC","INPT_DEFLT","OTPT_DFLT","RATIONALE","8","9"),
+	col_types=list(rep(col_character(),9))) %>% 
+	select(DX,CCS_DESC) %>% 
+	mutate(ICD="0")
+
+ccs_map_full <- bind_rows(ccs9_map_full, ccs0_map_full)
+	
+top_chronic_dxs <- visit_df %>% 
+	as_tibble() %>% 
+	select(DX1, DX2, ICD) %>% 
+	left_join(chronicconddf, by=c("DX1"="DX","ICD"="ICD")) %>% 
+	rename(BODY_SYSTEM_1=BODY_SYSTEM) %>% 
+	left_join(chronicconddf, by=c("DX2"="DX","ICD"="ICD")) %>% 
+	rename(BODY_SYSTEM_2=BODY_SYSTEM) %>% 
+	left_join(ccs_map_full, by=c("DX1"="DX","ICD"="ICD")) %>% 
+	rename(CCS_1=CCS_DESC) %>% 
+	left_join(ccs_map_full, by=c("DX2"="DX","ICD"="ICD")) %>% 
+	rename(CCS_2=CCS_DESC) %>% 
+	(function(x){return(tibble(
+		BODY_SYSTEM=c(x$BODY_SYSTEM_1,x$BODY_SYSTEM_2),
+		CCS=c(x$CCS_1,x$CCS_2),
+		ICD=c(x$ICD,x$ICD)))}) %>% 
+	filter(!is.na(BODY_SYSTEM)) %>% 
+	group_by(BODY_SYSTEM, CCS, ICD) %>% 
+	summarise(N=n()) %>% 
+	group_by(BODY_SYSTEM, ICD) %>% 
+	mutate(NTOT=sum(N)) %>% 
+	mutate(PCT=round(100*N/NTOT,1)) %>% 
+	select(-NTOT) %>% 
+	arrange(BODY_SYSTEM, desc(N)) %>% 
+	group_by(BODY_SYSTEM, ICD) %>% 
+	slice(1:5)
+
+write_csv(top_chronic_dxs,file="figures/top_chronic_dxs.csv")
+
+
+
+
+
+
+
+
+	

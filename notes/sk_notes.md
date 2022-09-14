@@ -196,9 +196,9 @@ Review to-do:
 
 ### Figure updates
 - [x] Insert version of Figure 1 split by those with/without chronic conditions
-- [ ] re-label vertical axis of figure 1 to note that these are antibiotic prescriptions
-- [ ] Table 2: add a column with N for each category and what proportion of the top antibiotic recipients each category accounts for. Add footnote to remark that some patients may be in more than one category. 
-- [ ] Aggregate and present chronic codes by ICD9 and ICD10
+- [x] re-label vertical axis of figure 1 to note that these are antibiotic prescriptions
+- [x] Table 2: add a column with N for each category and what proportion of the top antibiotic recipients each category accounts for. Add footnote to remark that some patients may be in more than one category. 
+- [ ] Aggregate and present chronic codes by ICD9 and ICD10 - maybe map ICD codes to CCS indications and report by ICD9 and ICD10? 
 - [x] Remove Tables S5-S7 (or combine S5-S6 and remove non-antibiotic prescriptions) 
 - [ ] Give full list of antibiotics included in the Supplement 
 - [ ] Include full list of CCS delineations in supplement 
