@@ -87,19 +87,6 @@ respconddf %>%
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Proportion of kids w/ chronic conditions in the top 20% of abx recipients: ---
 
 length(intersect(chronic_ids, superuser_ids))/length(superuser_ids)
@@ -154,3 +141,11 @@ stdplac_summary <- visit_df[ID %in% (rx_df$ASSOC_VISIT_ID)] %>%
 # 32            2       0   Nursing Facility
 # 61            2       0   Comprehensive Inpt Rehab Fac
 # 60            1       0   Mass Immunization Center
+
+# Generate a table of antibiotics ----------------------------------------------
+
+# abxlist <- read_csv(file="data/ndc_to_extract.csv") %>% 
+# 	split(.$THRCLDS) %>% 
+# 	map(~ split(., .$THRDTDS)) %>% 
+# 	map(~ map(., ~ pull(NDCNUM))) %>% 
+# 	imap(~ tibble(NAME=.x, NDC=.y))
