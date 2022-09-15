@@ -144,8 +144,20 @@ stdplac_summary <- visit_df[ID %in% (rx_df$ASSOC_VISIT_ID)] %>%
 
 # Generate a table of antibiotics ----------------------------------------------
 
-# abxlist <- read_csv(file="data/ndc_to_extract.csv") %>% 
-# 	split(.$THRCLDS) %>% 
-# 	map(~ split(., .$THRDTDS)) %>% 
-# 	map(~ map(., ~ pull(NDCNUM))) %>% 
-# 	imap(~ tibble(NAME=.x, NDC=.y))
+abxlist <- read_csv(file="data/ndc_to_extract.csv") %>% 
+	split(.$THRCLDS) %>% 
+	map(~ split(., .$THRDTDS)) %>% 
+	map(~ map(., ~ pull(., NDCNUM))) %>% 
+	map(~ imap(., ~ tibble(NAME=.y, NDC=.x))) %>% 
+	map(~ bind_rows(.)) %>% 
+	bind_rows(.id="CLASS") %>% 
+	group_by(CLASS,NAME) %>% 
+	summarise(NDCLIST=Reduce(paste,NDC))
+
+write_csv(abxlist, file="figures/abxlist.csv")
+
+
+
+
+
+
