@@ -197,11 +197,3 @@ top_chronic_dxs <- visit_df %>%
 
 write_csv(top_chronic_dxs,file="figures/top_chronic_dxs.csv")
 
-
-
-
-
-
-
-
-	
