@@ -364,6 +364,11 @@
 "00003773395","Antibiot, Cephalosporin & Rel.","Cefepime HCl","Injection"
 "00003773399","Antibiot, Cephalosporin & Rel.","Cefepime HCl","Injection"
 "00003870801","Antibiot, Tetracyclines","Doxycycline","Oral"
+"00004001201","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
+"00004001214","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
+"00004012701","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"00004012749","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"00004012754","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "00004196001","Antibiot, Penicillins",NA,NA
 "00004196101","Antibiot, Penicillins",NA,NA
 "00004196201","Antibiot, Cephalosporin & Rel.","Ceftriaxone","Injection"
@@ -906,6 +911,7 @@
 "00015351220","Antibiot, Aminoglycosides","Kanamycin","Injection"
 "00015351299","Antibiot, Aminoglycosides","Kanamycin","Injection"
 "00015432260","Antibiot, Tetracyclines","Tetracycline",NA
+"00015432560","Urinary Anti-Infectives, NEC","Sulfamethizole/Oxytetracycline",NA
 "00015433050","Antibiot, Tetracyclines","Tetracycline",NA
 "00015710028","Antibiot, Penicillins","Ampicillin & Comb.","Injection"
 "00015710098","Antibiot, Penicillins","Ampicillin & Comb.","Injection"
@@ -1581,6 +1587,8 @@
 "00049076009","Antibiot, Tetracyclines","Oxytetracycline & Comb.","Injection"
 "00049077009","Antibiot, Tetracyclines","Oxytetracycline & Comb.","Intramuscular"
 "00049087003","Antibiot, Tetracyclines","Oxytetracycline & Comb.",NA
+"00049092041","Urinary Anti-Infectives, NEC","Sulfamethizole/Oxytetracycline",NA
+"00049092050","Urinary Anti-Infectives, NEC","Sulfamethizole/Oxytetracycline","Oral"
 "00049096077","Antibiot, Tetracyclines","Doxycycline","Intravenous"
 "00049098081","Antibiot, Tetracyclines","Doxycycline","Intravenous"
 "00049120183","Antibiot, Cephalosporin & Rel.","Cefoperazone","Injection"
@@ -1962,6 +1970,7 @@
 "00081003510","Antibiotics, Misc","Polymyxin B","Injection"
 "00081074815","Antibiotics, Misc","Neomycin/Polymyxin B Irrigant",NA
 "00081074855","Antibiotics, Misc","Neomycin/Polymyxin B Irrigant",NA
+"00081082056","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "00084012701","Antibiot, Aminoglycosides","Neomycin Sulfate",NA
 "00084016010","Antibiot, Penicillins","Penicillin G & Comb.",NA
 "00084016101","Antibiot, Penicillins","Penicillin V",NA
@@ -2124,6 +2133,8 @@
 "00093213193","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
 "00093213356","Antibiot, Tetracyclines","Minocycline","Oral"
 "00093213456","Antibiot, Tetracyclines","Minocycline","Oral"
+"00093215801","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"00093215901","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "00093223801","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "00093224001","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "00093226301","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
@@ -2297,6 +2308,7 @@
 "00102305501","Antibiot, Tetracyclines","Doxycycline",NA
 "00102360001","Antibiot, Cephalosporin & Rel.","Cephradine",NA
 "00102360501","Antibiot, Cephalosporin & Rel.","Cephradine",NA
+"00102366501","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "00102367501","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
 "00102368001","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
 "00102369010","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
@@ -2323,6 +2335,8 @@
 "00115164501","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
 "00115211101","Antibiot, Tetracyclines","Demeclocycline","Oral"
 "00115212214","Antibiot, Tetracyclines","Demeclocycline","Oral"
+"00115239001","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"00115239003","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00115701701","Antibiot, Tetracyclines","Minocycline","Oral"
 "00115701806","Antibiot, Tetracyclines","Minocycline","Oral"
 "00115701813","Antibiot, Tetracyclines","Minocycline","Oral"
@@ -2340,6 +2354,8 @@
 "00143211001","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "00143211205","Antibiot, Tetracyclines","Doxycycline","Oral"
 "00143211250","Antibiot, Tetracyclines","Doxycycline","Oral"
+"00143217101","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"00143217110","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00143227001","Antibiot, Penicillins","Penicillin V",NA
 "00143306201","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00143306301","Antibiot, Penicillins","Ampicillin & Comb.",NA
@@ -2465,6 +2481,7 @@
 "00144068350","Antibiot, Tetracyclines","Doxycycline","Oral"
 "00144068805","Antibiot, Tetracyclines","Doxycycline","Oral"
 "00144068850","Antibiot, Tetracyclines","Doxycycline","Oral"
+"00144117003","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00144121002","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00144121201","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00144121202","Antibiot, Penicillins","Ampicillin & Comb.",NA
@@ -2478,6 +2495,8 @@
 "00144422020","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00144423020","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00144424020","Antibiot, Penicillins","Penicillin V",NA
+"00148941001","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
+"00148941002","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
 "00149000705","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
 "00149000805","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
 "00149000825","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
@@ -2519,6 +2538,8 @@
 "00150213080","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00150213160","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00150213180","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
+"00150232560","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
+"00150232580","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
 "00150240760","Antibiot, Tetracyclines","Tetracycline",NA
 "00150240780","Antibiot, Tetracyclines","Tetracycline",NA
 "00150241580","Antibiot, Tetracyclines","Tetracycline",NA
@@ -2577,6 +2598,7 @@
 "00157068410","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00157077101","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
 "00157077201","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
+"00157083701","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00157085601","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "00157085605","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "00157085701","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
@@ -2751,7 +2773,10 @@
 "00173074110","Antibiot, Cephalosporin & Rel.","Cefuroxime","Oral"
 "00173074810","Antibiotics, Misc","Neomycin/Polymyxin B Irrigant","Irrigation"
 "00173074835","Antibiotics, Misc","Neomycin/Polymyxin B Irrigant","Irrigation"
+"00173082055","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"00173082555","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "00181060100","Antibiot, Penicillins","Penicillin V","Oral"
+"00181067200","Urinary Anti-Infectives, NEC","Sulfamethizole/Oxytetracycline","Oral"
 "00182010701","Antibiot, Penicillins","Penicillin G & Comb.","Oral"
 "00182010710","Antibiot, Penicillins","Penicillin G & Comb.",NA
 "00182011201","Antibiot, Tetracyclines","Tetracycline","Oral"
@@ -2767,6 +2792,8 @@
 "00182016305","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
 "00182016310","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00182016389","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
+"00182017801","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"00182017810","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00182017901","Antibiot, Tetracyclines","Oxytetracycline & Comb.",NA
 "00182017910","Antibiot, Tetracyclines","Oxytetracycline & Comb.",NA
 "00182018401","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
@@ -2877,6 +2904,7 @@
 "00182153512","Antibiot, Tetracyclines","Doxycycline",NA
 "00182153519","Antibiot, Tetracyclines","Doxycycline","Oral"
 "00182153589","Antibiot, Tetracyclines","Doxycycline","Oral"
+"00182153601","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "00182153701","Antibiot, Penicillins","Penicillin V","Oral"
 "00182153710","Antibiot, Penicillins","Penicillin V","Oral"
 "00182156040","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
@@ -3149,6 +3177,8 @@
 "00223019001","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00223019002","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00223019101","Antibiot, Penicillins","Ampicillin & Comb.",NA
+"00223039501","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"00223039502","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00223058101","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "00223058105","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "00223058201","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
@@ -3240,6 +3270,7 @@
 "00228232883","Antibiot, Penicillins","Penicillin V","Oral"
 "00228233010","Antibiot, Penicillins","Penicillin V","Oral"
 "00228233096","Antibiot, Penicillins","Penicillin V",NA
+"00228238710","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00228240410","Antibiot, Tetracyclines","Tetracycline","Oral"
 "00228240496","Antibiot, Tetracyclines","Tetracycline","Oral"
 "00228240610","Antibiot, Tetracyclines","Tetracycline","Oral"
@@ -3329,6 +3360,8 @@
 "00302027533","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
 "00302027733","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
 "00302027739","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
+"00302033001","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
+"00302033010","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00302053501","Antibiot, Cephalosporin & Rel.","Cefadroxil","Oral"
 "00302054001","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "00302054005","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
@@ -3402,6 +3435,8 @@
 "00304002005","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00304002101","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00304002105","Antibiot, Penicillins","Ampicillin & Comb.",NA
+"00304004400","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"00304004401","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00304006601","Antibiot, Chloramphenicol&Comb","Chloramphenicol & Comb.",NA
 "00304011711","Antibiot, Tetracyclines","Doxycycline",NA
 "00304011750","Antibiot, Tetracyclines","Doxycycline",NA
@@ -3472,6 +3507,7 @@
 "00304090400","Antibiot, Penicillins","Penicillin V",NA
 "00304090401","Antibiot, Penicillins","Penicillin V",NA
 "00304090752","Antibiot, Aminoglycosides",NA,NA
+"00304092001","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "00304096998","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "00304097098","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "00304171501","Antibiot, Cephalosporin & Rel.","Cephradine",NA
@@ -3702,6 +3738,8 @@
 "00349110000","Antibiot, Tetracyclines","Doxycycline",NA
 "00349110005","Antibiot, Tetracyclines","Doxycycline","Oral"
 "00349110050","Antibiot, Tetracyclines","Doxycycline","Oral"
+"00349202601","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
+"00349202610","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
 "00349209500","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00349209501","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00349209510","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
@@ -3741,6 +3779,7 @@
 "00349827510","Antibiot, Tetracyclines","Oxytetracycline & Comb.",NA
 "00349830301","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "00349830305","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
+"00349831701","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "00349831901","Antibiot, Penicillins","Oxacillin",NA
 "00349832001","Antibiot, Penicillins","Oxacillin",NA
 "00349834800","Antibiot, Tetracyclines","Tetracycline",NA
@@ -3786,6 +3825,7 @@
 "00349893010","Antibiot, Tetracyclines","Tetracycline","Oral"
 "00349897401","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "00349897405","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
+"00351117210","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00359001523","Antibiot, Penicillins","Amoxicillin & Comb.",NA
 "00359001580","Antibiot, Penicillins","Amoxicillin & Comb.",NA
 "00359001599","Antibiot, Penicillins","Amoxicillin & Comb.",NA
@@ -3817,6 +3857,8 @@
 "00359011899","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00359011998","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00359011999","Antibiot, Penicillins","Ampicillin & Comb.",NA
+"00359012410","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"00359012440","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00359015310","Antibiot, Penicillins","Dicloxacillin Sodium",NA
 "00359015410","Antibiot, Penicillins","Dicloxacillin Sodium",NA
 "00359018054","Antibiot, Tetracyclines","Doxycycline",NA
@@ -3848,10 +3890,13 @@
 "00359105525","Anti-Infectives, Misc","Metronidazole & Comb.",NA
 "00359105550","Anti-Infectives, Misc","Metronidazole & Comb.",NA
 "00359105910","Anti-Infectives, Misc","Metronidazole & Comb.",NA
+"00359106110","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "00359110610","Antibiot, Penicillins","Cloxacillin",NA
 "00359110710","Antibiot, Penicillins","Cloxacillin",NA
 "00359111510","Antibiot, Penicillins","Oxacillin",NA
 "00359111610","Antibiot, Penicillins","Oxacillin",NA
+"00364004101","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"00364004102","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00364030901","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00364030902","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00364031001","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
@@ -3863,6 +3908,7 @@
 "00364059501","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
 "00364059504","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
 "00364059590","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
+"00364064901","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "00364068750","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
 "00364068790","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
 "00364074801","Anti-Infectives, Misc","Metronidazole & Comb.",NA
@@ -4194,6 +4240,8 @@
 "00378825091","Antibiot, Erythromycn&Macrolid","Clarithromycin","Oral"
 "00378850091","Antibiot, Erythromycn&Macrolid","Clarithromycin","Oral"
 "00378873035","Antibiotics, Misc","Clindamycin","Oral"
+"00385200301","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"00385200310","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00385201301","Antibiot, Penicillins","Penicillin V",NA
 "00385201310","Antibiot, Penicillins","Penicillin V",NA
 "00385201401","Antibiot, Penicillins","Penicillin V",NA
@@ -4850,6 +4898,7 @@
 "00463501901","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "00463502055","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "00463502310","Antibiot, Penicillins","Penicillin V","Oral"
+"00463603610","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
 "00463629010","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00467515025","Antibiot, Aminoglycosides",NA,NA
 "00467515155","Antibiot, Aminoglycosides",NA,NA
@@ -5114,6 +5163,8 @@
 "00536254084","Antibiot, Penicillins","Penicillin V","Oral"
 "00536256082","Antibiot, Penicillins","Penicillin V","Oral"
 "00536256084","Antibiot, Penicillins","Penicillin V","Oral"
+"00536334801","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"00536334810","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00536398770","Antibiotics, Misc","Lincomycin","Injection"
 "00536401801","Anti-Infectives, Misc","Metronidazole & Comb.",NA
 "00536401802","Anti-Infectives, Misc","Metronidazole & Comb.",NA
@@ -5137,7 +5188,9 @@
 "00536408210","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00536410101","Antibiot, Tetracyclines","Oxytetracycline & Comb.","Oral"
 "00536410110","Antibiot, Tetracyclines","Oxytetracycline & Comb.","Oral"
+"00536468301","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "00536468573","Antibiot, Aminoglycosides","Gentamicin Sulfate & Comb.","Injection"
+"00536468601","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "00536469067","Antibiot, Aminoglycosides","Gentamicin Sulfate & Comb.","Injection"
 "00536469073","Antibiot, Aminoglycosides","Gentamicin Sulfate & Comb.","Injection"
 "00536483101","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
@@ -5159,6 +5212,8 @@
 "00537201105","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00537201201","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00537201205","Antibiot, Penicillins","Ampicillin & Comb.",NA
+"00537203801","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"00537203810","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00537209604","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "00537209801","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "00537209805","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
@@ -5282,6 +5337,7 @@
 "00555029610","Antibiot, Tetracyclines","Doxycycline","Oral"
 "00555029704","Antibiot, Tetracyclines","Doxycycline","Oral"
 "00555029710","Antibiot, Tetracyclines","Doxycycline","Oral"
+"00555042902","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "00555044521","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "00555044522","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "00555044523","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
@@ -5325,6 +5381,7 @@
 "00556006610","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00556009201","Antibiot, Tetracyclines","Tetracycline",NA
 "00556009210","Antibiot, Tetracyclines","Tetracycline",NA
+"00556010401","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00556023401","Antibiot, Tetracyclines","Tetracycline",NA
 "00556023410","Antibiot, Tetracyclines","Tetracycline",NA
 "00556030301","Anti-Infectives, Misc","Metronidazole & Comb.",NA
@@ -5351,6 +5408,7 @@
 "00580002233","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00580002330","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00580002333","Antibiot, Penicillins","Ampicillin & Comb.",NA
+"00580005101","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00580007801","Antibiot, Chloramphenicol&Comb","Chloramphenicol & Comb.",NA
 "00580014501","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "00580014505","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
@@ -5524,6 +5582,7 @@
 "00591555303","Antibiot, Tetracyclines","Doxycycline","Oral"
 "00591555305","Antibiot, Tetracyclines","Doxycycline","Oral"
 "00591555350","Antibiot, Tetracyclines","Doxycycline","Oral"
+"00591557101","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "00591566201","Urinary Anti-Infectives, NEC","Nalidixic Acid","Oral"
 "00591566300","Urinary Anti-Infectives, NEC","Nalidixic Acid",NA
 "00591566301","Urinary Anti-Infectives, NEC","Nalidixic Acid",NA
@@ -5558,6 +5617,7 @@
 "00603229028","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
 "00603229121","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
 "00603229128","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
+"00603238521","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
 "00603258621","Antibiot, Cephalosporin & Rel.","Cefaclor","Oral"
 "00603258721","Antibiot, Cephalosporin & Rel.","Cefaclor","Oral"
 "00603259521","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
@@ -5606,6 +5666,8 @@
 "00603591932","Antibiot, Tetracyclines","Tetracycline","Oral"
 "00603592021","Antibiot, Tetracyclines","Tetracycline","Oral"
 "00603592032","Antibiot, Tetracyclines","Tetracycline","Oral"
+"00603626421","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"00603626521","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "00603650064","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "00603650066","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "00603650164","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
@@ -5673,6 +5735,7 @@
 "00615020001","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00615020005","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00615020101","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
+"00615020610","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00615035313","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "00615035338","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
 "00615035413","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
@@ -5939,6 +6002,7 @@
 "00686110090","Antibiot, Chloramphenicol&Comb","Chloramphenicol","Intravenous"
 "00686110500","Antibiot, Tetracyclines","Doxycycline",NA
 "00686117709","Antibiot, Aminoglycosides","Neomycin Sulfate","Oral"
+"00686239014","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00686310709","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "00686310907","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "00686311109","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
@@ -6057,6 +6121,8 @@
 "00719108013","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00719108110","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "00719108112","Antibiot, Penicillins","Ampicillin & Comb.",NA
+"00719110510","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"00719110513","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00719119610","Antibiot, Cephalosporin & Rel.","Cefadroxil",NA
 "00719119810","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
 "00719119812","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
@@ -6132,6 +6198,7 @@
 "00719193613","Antibiot, Tetracyclines","Tetracycline","Oral"
 "00719193710","Antibiot, Tetracyclines","Tetracycline","Oral"
 "00719193713","Antibiot, Tetracyclines","Tetracycline","Oral"
+"00719197910","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "00719310589","Antibiotics, Misc","Clindamycin",NA
 "00719310690","Antibiotics, Misc","Clindamycin",NA
 "00719310795","Antibiotics, Misc","Clindamycin",NA
@@ -6254,6 +6321,8 @@
 "00779006957","Antibiot, Penicillins","Amoxicillin & Comb.",NA
 "00779007056","Antibiot, Penicillins","Amoxicillin & Comb.",NA
 "00779007057","Antibiot, Penicillins","Amoxicillin & Comb.",NA
+"00779012525","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"00779012530","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00779022925","Antibiot, Chloramphenicol&Comb","Chloramphenicol & Comb.",NA
 "00779025325","Antibiot, Penicillins","Cloxacillin",NA
 "00779025425","Antibiot, Penicillins","Cloxacillin",NA
@@ -6316,6 +6385,8 @@
 "00781113901","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00781120501","Antibiot, Penicillins","Penicillin V","Oral"
 "00781120510","Antibiot, Penicillins","Penicillin V","Oral"
+"00781122501","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"00781122510","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00781128201","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00781140001","Antibiot, Aminoglycosides","Neomycin Sulfate","Oral"
 "00781140013","Antibiot, Aminoglycosides","Neomycin Sulfate",NA
@@ -6339,6 +6410,7 @@
 "00781174225","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
 "00781174701","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
 "00781174713","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
+"00781179501","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "00781182001","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "00781182005","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "00781183120","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
@@ -6749,6 +6821,8 @@
 "00814072560","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
 "00814072854","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
 "00814072860","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
+"00814098514","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
+"00814098530","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00814160514","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "00814160528","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "00814160614","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
@@ -6834,6 +6908,8 @@
 "00835342180","Antibiot, Tetracyclines","Oxytetracycline & Comb.",NA
 "00835357180","Antibiot, Tetracyclines","Tetracycline",NA
 "00835657116","Antibiot, Tetracyclines","Tetracycline",NA
+"00839108006","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"00839108016","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00839114006","Antibiot, Chloramphenicol&Comb","Chloramphenicol & Comb.",NA
 "00839128804","Antibiot, Tetracyclines","Doxycycline","Oral"
 "00839128809","Antibiot, Tetracyclines","Doxycycline",NA
@@ -6980,6 +7056,7 @@
 "00839726573","Antibiot, Cephalosporin & Rel.","Cephradine",NA
 "00839727773","Antibiot, Penicillins","Cloxacillin",NA
 "00839727778","Antibiot, Penicillins","Cloxacillin",NA
+"00839728406","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "00839731106","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "00839731112","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "00839731122","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
@@ -6990,6 +7067,7 @@
 "00839731378","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "00839731473","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "00839731478","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
+"00839743306","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "00839746106","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "00839746206","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "00839751473","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
@@ -7078,6 +7156,10 @@
 "00904151904","Antibiot, Penicillins","Oxacillin","Oral"
 "00904161904","Antibiot, Penicillins","Cloxacillin","Oral"
 "00904161908","Antibiot, Penicillins","Cloxacillin","Oral"
+"00904164660","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"00904164661","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"00904164760","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"00904164761","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "00904164903","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
 "00904201740","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
 "00904201760","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
@@ -7095,6 +7177,9 @@
 "00904213860","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00904213940","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "00904213960","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
+"00904232540","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
+"00904232560","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
+"00904232580","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
 "00904240760","Antibiot, Tetracyclines","Tetracycline","Oral"
 "00904240780","Antibiot, Tetracyclines","Tetracycline","Oral"
 "00904241360","Antibiot, Tetracyclines","Minocycline","Oral"
@@ -7256,6 +7341,7 @@
 "00917036510","Antibiot, Chloramphenicol&Comb","Chloramphenicol & Comb.",NA
 "00917080901","Antibiot, Tetracyclines","Tetracycline","Oral"
 "00917080910","Antibiot, Tetracyclines","Tetracycline",NA
+"00948518901","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "00948520150","Antibiot, Tetracyclines","Doxycycline",NA
 "00948523705","Antibiot, Tetracyclines","Doxycycline",NA
 "00948523750","Antibiot, Tetracyclines","Doxycycline",NA
@@ -7547,6 +7633,7 @@
 "10754058340","Antibiot, Penicillins","Penicillin G & Comb.",NA
 "10754058360","Antibiot, Penicillins","Penicillin G & Comb.",NA
 "10754061660","Antibiot, Tetracyclines","Tetracyclines & Related",NA
+"10892013510","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
 "10916010801","Antibiot, Tetracyclines","Doxycycline",NA
 "10916010803","Antibiot, Tetracyclines","Doxycycline",NA
 "10916010850","Antibiot, Tetracyclines","Doxycycline",NA
@@ -7724,6 +7811,7 @@
 "12071061501","Antibiot, Aminoglycosides","Neomycin Sulfate",NA
 "12071061901","Antibiot, Penicillins","Oxacillin",NA
 "12071062001","Antibiot, Penicillins","Oxacillin",NA
+"12106012414","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "12106015514","Antibiot, Tetracyclines","Tetracycline",NA
 "12280004300","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "12280005730","Antibiot, Erythromycn&Macrolid","Azithromycin","Oral"
@@ -7789,6 +7877,7 @@
 "13551012501","Antibiot, Cephalosporin & Rel.","Cefaclor","Oral"
 "13551025001","Antibiot, Cephalosporin & Rel.","Cefaclor","Oral"
 "13551037501","Antibiot, Cephalosporin & Rel.","Cefaclor","Oral"
+"13551050105","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "13668048201","Antibiot, Tetracyclines","Minocycline","Oral"
 "13668048301","Antibiot, Tetracyclines","Minocycline","Oral"
 "13668048405","Antibiot, Tetracyclines","Minocycline","Oral"
@@ -8113,6 +8202,8 @@
 "17236005702","Antibiot, Penicillins","Penicillin V",NA
 "17236006401","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "17236007860","Antibiot, Penicillins","Ampicillin & Comb.",NA
+"17236010901","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"17236010910","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "17236011101","Antibiot, Penicillins","Amoxicillin & Comb.",NA
 "17236011105","Antibiot, Penicillins","Amoxicillin & Comb.",NA
 "17236015201","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
@@ -8206,6 +8297,7 @@
 "17236078616","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "17236083616","Antibiot, Tetracyclines","Tetracycline",NA
 "17236087501","Antibiot, Cephalosporin & Rel.","Cefadroxil",NA
+"17236088701","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "17236089201","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
 "17236089301","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
 "17236092101","Antibiot, Tetracyclines","Minocycline",NA
@@ -9325,6 +9417,8 @@
 "35470117301","Antibiot, Penicillins","Penicillin V",NA
 "35470117309","Antibiot, Penicillins","Penicillin V",NA
 "35470120401","Antibiot, Aminoglycosides","Neomycin Sulfate",NA
+"35470120501","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
+"35470120601","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "35470130001","Antibiot, Tetracyclines","Oxytetracycline & Comb.",NA
 "35470140101","Antibiot, Tetracyclines","Tetracycline",NA
 "35470140109","Antibiot, Tetracyclines","Tetracycline",NA
@@ -9340,6 +9434,7 @@
 "35470207305","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "35470207501","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "35470208001","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
+"35470239001","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "35470242701","Antibiot, Penicillins","Penicillin G & Comb.",NA
 "35470242709","Antibiot, Penicillins","Penicillin G & Comb.",NA
 "35470242801","Antibiot, Penicillins","Penicillin G & Comb.",NA
@@ -9705,6 +9800,7 @@
 "42291062050","Antibiot, Tetracyclines","Minocycline","Oral"
 "42291079801","Antibiot, Tetracyclines","Tetracycline","Oral"
 "42291079901","Antibiot, Tetracyclines","Tetracycline","Oral"
+"42291084590","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "42292000101","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
 "42292000119","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
 "42292000120","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
@@ -10039,6 +10135,7 @@
 "43063099540","Antibiot, Penicillins","Penicillin V","Oral"
 "43063099906","Antibiot, Tetracyclines","Doxycycline","Oral"
 "43063099920","Antibiot, Tetracyclines","Doxycycline","Oral"
+"43386033001","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "43386045011","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
 "43386047060","Antibiot, Erythromycn&Macrolid","Azithromycin","Oral"
 "43386047161","Antibiot, Erythromycn&Macrolid","Azithromycin","Oral"
@@ -10255,6 +10352,8 @@
 "47202200501","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "47202200502","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "47202200601","Antibiot, Penicillins","Ampicillin & Comb.",NA
+"47202201901","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"47202201903","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "47202205301","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "47202205302","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "47202208301","Antibiot, Aminoglycosides","Neomycin Sulfate",NA
@@ -10296,6 +10395,7 @@
 "47202242201","Antibiot, Penicillins","Dicloxacillin Sodium",NA
 "47202247001","Antibiot, Penicillins","Oxacillin",NA
 "47202247101","Antibiot, Penicillins","Oxacillin",NA
+"47202267501","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "47202268101","Antibiotics, Misc","Clindamycin",NA
 "47202268201","Antibiotics, Misc","Clindamycin",NA
 "47202274201","Antibiot, Tetracyclines","Oxytetracycline & Comb.",NA
@@ -10309,6 +10409,7 @@
 "47202279701","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
 "47202279702","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
 "47202283703","Antibiot, Tetracyclines","Tetracycline",NA
+"47202284701","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "47202295701","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "47202295702","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "47202295801","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
@@ -10366,6 +10467,8 @@
 "47679081535","Antibiot, Tetracyclines","Tetracycline",NA
 "47679081601","Antibiot, Tetracyclines","Tetracycline",NA
 "47679081635","Antibiot, Tetracyclines","Tetracycline",NA
+"47679081901","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
+"47679081935","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "47679082001","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "47679082035","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "47679082101","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
@@ -10499,6 +10602,8 @@
 "49727000305","Antibiot, Tetracyclines","Tetracycline",NA
 "49727001302","Antibiot, Penicillins","Amoxicillin & Comb.",NA
 "49727001401","Antibiot, Penicillins","Amoxicillin & Comb.",NA
+"49727004402","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"49727004405","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "49727008202","Antibiot, Chloramphenicol&Comb","Chloramphenicol & Comb.",NA
 "49727015202","Antibiot, Penicillins","Dicloxacillin Sodium",NA
 "49727015402","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
@@ -11237,6 +11342,8 @@
 "50268062415","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
 "50268062511","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
 "50268062515","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
+"50268077511","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"50268077515","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "50272059920","Antibiot, Aminoglycosides",NA,NA
 "50272096301","Anti-Infectives, Misc","Metronidazole & Comb.",NA
 "50272096309","Anti-Infectives, Misc","Metronidazole & Comb.",NA
@@ -11557,6 +11664,8 @@
 "51432082616","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "51432091003","Antibiotics, Misc","Clindamycin",NA
 "51432091103","Antibiotics, Misc","Clindamycin","Oral"
+"51432097603","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"51432097803","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "51432097903","Antibiot, Aminoglycosides","Neomycin Sulfate","Oral"
 "51479002906","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
 "51479002947","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
@@ -11686,6 +11795,7 @@
 "51655025851","Antibiot, Penicillins","Ampicillin & Comb.","Oral"
 "51655026551","Antibiot, Penicillins","Dicloxacillin Sodium","Oral"
 "51655029751","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
+"51655030324","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "51655041224","Antibiot, Tetracyclines","Doxycycline","Oral"
 "51655048024","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "51655051929","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
@@ -11710,6 +11820,7 @@
 "51655096429","Antibiotics, Misc","Clindamycin","Oral"
 "51655096452","Antibiotics, Misc","Clindamycin","Oral"
 "51655096489","Antibiotics, Misc","Clindamycin","Oral"
+"51672520009","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "51728000510","Antibiot, Tetracyclines","Tetracycline",NA
 "51728000588","Antibiot, Tetracyclines","Tetracycline",NA
 "51728013701","Antibiot, Penicillins","Dicloxacillin Sodium",NA
@@ -11782,11 +11893,13 @@
 "51728056686","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "51728060401","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "51728062051","Antibiot, Penicillins","Oxacillin",NA
+"51728066901","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "51728069160","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "51862004001","Antibiot, Tetracyclines","Doxycycline","Oral"
 "51862004101","Antibiot, Tetracyclines","Doxycycline","Oral"
 "51862004205","Antibiot, Tetracyclines","Doxycycline","Oral"
 "51862019460","Antibiot, Erythromycn&Macrolid","Clarithromycin","Oral"
+"51862048601","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "51862055712","Antibiot, Tetracyclines","Doxycycline","Oral"
 "51862055806","Antibiot, Tetracyclines","Doxycycline","Oral"
 "51862055930","Antibiot, Tetracyclines","Doxycycline","Oral"
@@ -11810,6 +11923,8 @@
 "52189051473","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "52189051475","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "52189051478","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
+"52273012101","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"52273012110","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "52343006220","Antibiot, Cephalosporin & Rel.","Cefuroxime","Oral"
 "52343006320","Antibiot, Cephalosporin & Rel.","Cefuroxime","Oral"
 "52343006360","Antibiot, Cephalosporin & Rel.","Cefuroxime","Oral"
@@ -11822,6 +11937,8 @@
 "52406051910","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "52406052001","Antibiot, Penicillins","Ampicillin & Comb.",NA
 "52406052005","Antibiot, Penicillins","Ampicillin & Comb.",NA
+"52406052201","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
+"52406052210","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "52406053801","Antibiot, Chloramphenicol&Comb","Chloramphenicol & Comb.",NA
 "52406054301","Antibiot, Penicillins","Cloxacillin",NA
 "52406054401","Antibiot, Penicillins","Cloxacillin",NA
@@ -11845,6 +11962,7 @@
 "52427028601","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
 "52427028701","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
 "52427028801","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
+"52446005532","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine",NA
 "52446009421","Antibiot, Cephalosporin & Rel.","Cefadroxil",NA
 "52446030721","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "52446030821","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
@@ -12305,6 +12423,8 @@
 "52959146101","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "52959146200","Antibiot, Penicillins","Penicillin V","Oral"
 "52959146303","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
+"53020013110","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
+"53020013111","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
 "53217003010","Antibiot, Cephalosporin & Rel.","Cefdinir","Oral"
 "53217003020","Antibiot, Cephalosporin & Rel.","Cefdinir","Oral"
 "53217003030","Antibiot, Cephalosporin & Rel.","Cefdinir","Oral"
@@ -12541,6 +12661,7 @@
 "53506035428","Antibiot, Penicillins","Dicloxacillin Sodium",NA
 "53506035440","Antibiot, Penicillins","Dicloxacillin Sodium",NA
 "53506035528","Antibiot, Penicillins","Cloxacillin",NA
+"53506036214","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "53506036408","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
 "53506036420","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
 "53506036428","Antibiot, Cephalosporin & Rel.","Cephalexin",NA
@@ -12662,6 +12783,7 @@
 "54274051210","Antibiot, Penicillins","Cloxacillin",NA
 "54274051310","Antibiot, Cephalosporin & Rel.","Cephradine",NA
 "54274051410","Antibiot, Cephalosporin & Rel.","Cephradine",NA
+"54274051510","Anti-Infectives, Misc","Trimethoprim & Comb.",NA
 "54274051610","Antibiot, Cephalosporin & Rel.","Cefadroxil",NA
 "54274055410","Antibiot, Tetracyclines","Tetracycline",NA
 "54274055450","Antibiot, Tetracyclines","Tetracycline",NA
@@ -12723,9 +12845,13 @@
 "54569000000","Antibiot, Penicillins","Cloxacillin","Oral"
 "54569000001","Antibiot, Penicillins","Cloxacillin","Oral"
 "54569000002","Antibiot, Penicillins","Cloxacillin","Oral"
+"54569007101","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
+"54569007103","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
 "54569008000","Antibiot, Penicillins","Carbenicillin","Oral"
 "54569008301","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
 "54569008302","Urinary Anti-Infectives, NEC","Nitrofurantoin",NA
+"54569008700","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"54569008701","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "54569009200","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "54569009300","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "54569009400","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
@@ -13218,6 +13344,10 @@
 "54569307408","Antibiot, Tetracyclines","Doxycycline","Oral"
 "54569312000","Antibiot, Cephalosporin & Rel.","Cephradine","Oral"
 "54569314900","Antibiot, Aminoglycosides","Gentamicin Sulfate & Comb.","Injection"
+"54569315300","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"54569315301","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"54569315302","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"54569315303","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "54569316200","Antibiot, Cephalosporin & Rel.","Cefadroxil","Oral"
 "54569320700","Antibiot, Cephalosporin & Rel.","Ceftriaxone","Injection"
 "54569321400","Antibiot, Cephalosporin & Rel.","Cefadroxil","Oral"
@@ -13433,6 +13563,7 @@
 "54569511200","Antibiot, Tetracyclines","Tetracycline","Oral"
 "54569512800","Antibiot, B-Lactam Antibiotics","Aztreonam","Injection"
 "54569515000","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
+"54569515400","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "54569517500","Antibiot, Erythromycn&Macrolid","Dirithromycin","Oral"
 "54569518200","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "54569519300","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
@@ -13839,6 +13970,9 @@
 "54868142601","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "54868149100","Antibiot, Tetracyclines","Doxycycline","Oral"
 "54868156000","Antibiot, Aminoglycosides","Neomycin Sulfate","Oral"
+"54868161601","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"54868161602","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"54868161603","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "54868170901","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "54868171000","Antibiot, Cephalosporin & Rel.","Cefuroxime","Oral"
 "54868171001","Antibiot, Cephalosporin & Rel.","Cefuroxime","Oral"
@@ -14339,6 +14473,7 @@
 "55045216204","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "55045216207","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "55045216208","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
+"55045230203","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "55045233701","Antibiot, Cephalosporin & Rel.","Cefaclor","Oral"
 "55045233707","Antibiot, Cephalosporin & Rel.","Cefaclor","Oral"
 "55045233708","Antibiot, Cephalosporin & Rel.","Cefaclor","Oral"
@@ -14994,6 +15129,7 @@
 "55175287104","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
 "55175287105","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
 "55175287108","Urinary Anti-Infectives, NEC","Nitrofurantoin","Oral"
+"55175325400","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
 "55175396800","Antibiot, Tetracyclines","Tetracycline","Oral"
 "55175396801","Antibiot, Tetracyclines","Tetracycline","Oral"
 "55175396802","Antibiot, Tetracyclines","Tetracycline","Oral"
@@ -15306,6 +15442,8 @@
 "55289044660","Antibiot, Tetracyclines","Tetracycline","Oral"
 "55289049412","Antibiot, Tetracyclines","Tetracycline","Oral"
 "55289049498","Antibiot, Tetracyclines","Tetracycline","Oral"
+"55289049712","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
+"55289049720","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
 "55289050216","Antibiot, Tetracyclines","Doxycycline","Oral"
 "55289050230","Antibiot, Tetracyclines","Doxycycline","Oral"
 "55289050260","Antibiot, Tetracyclines","Doxycycline","Oral"
@@ -15370,6 +15508,9 @@
 "55289070728","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "55289072720","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "55289072730","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
+"55289074602","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"55289074606","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"55289074610","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "55289074930","Antibiot, Cephalosporin & Rel.","Cefaclor","Oral"
 "55289076710","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "55289076714","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
@@ -15999,6 +16140,7 @@
 "56126038711","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "56126039111","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "56126039711","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
+"56126040911","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "56126041811","Antibiotics, Misc","Clindamycin","Oral"
 "57237000101","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "57237000114","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
@@ -16599,6 +16741,8 @@
 "58016035690","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "58016036110","Antibiot, Cephalosporin & Rel.","Cefadroxil","Oral"
 "58016036240","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
+"58016037320","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"58016037340","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "58016038005","Antibiot, Erythromycn&Macrolid","Azithromycin","Oral"
 "58016039100","Antibiot, Erythromycn&Macrolid","Azithromycin","Oral"
 "58016039101","Antibiot, Erythromycn&Macrolid","Azithromycin","Oral"
@@ -16873,6 +17017,8 @@
 "58469025373","Antibiot, Penicillins","Penicillin V","Oral"
 "58469040322","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
 "58469040331","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
+"58469046833","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"58469046863","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "58469113030","Antibiot, Penicillins","Cloxacillin","Oral"
 "58469114030","Antibiot, Penicillins","Cloxacillin","Oral"
 "58469115030","Antibiot, Penicillins","Oxacillin","Oral"
@@ -16886,6 +17032,8 @@
 "58469403221","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
 "58469403310","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
 "58469403314","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
+"58469468330","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"58469468630","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "58657068450","Anti-Infectives, Misc","Metronidazole & Comb.","Oral"
 "58790021687","Antibiotics, Misc","Antibiotics","Oral"
 "58864002801","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
@@ -16989,6 +17137,7 @@
 "59366733801","Antibiot, Tetracyclines","Minocycline","Oral"
 "59366733901","Antibiot, Tetracyclines","Minocycline","Oral"
 "59366734005","Antibiot, Tetracyclines","Minocycline","Oral"
+"59439047802","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "59441060420","Antibiot, Aminoglycosides","Gentamicin Sulfate & Comb.","Injection"
 "59630011210","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
 "59630011310","Antibiot, Cephalosporin & Rel.","Cephalexin","Oral"
@@ -17418,6 +17567,7 @@
 "60346058040","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "60346058056","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "60346058090","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
+"60346058240","Urinary Anti-Infectives, NEC","Sulfisoxazole/Phenazopyridine","Oral"
 "60346058304","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "60346058355","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "60346058371","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
@@ -17543,6 +17693,7 @@
 "60346089634","Antibiot, Cephalosporin & Rel.","Cefprozil","Oral"
 "60346090606","Antibiot, Cephalosporin & Rel.","Cefprozil","Oral"
 "60346090620","Antibiot, Cephalosporin & Rel.","Cefprozil","Oral"
+"60346097810","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "60346098114","Antibiot, Cephalosporin & Rel.","Cefpodoxime Proxetil","Oral"
 "60346098144","Antibiot, Cephalosporin & Rel.","Cefpodoxime Proxetil","Oral"
 "60346099420","Antibiot, B-Lactam Antibiotics","Loracarbef","Oral"
@@ -17972,6 +18123,8 @@
 "61570004710","Antibiotics, Misc","Neomycin/Polymyxin B Irrigant","Urinary bladder"
 "61570004750","Antibiotics, Misc","Neomycin/Polymyxin B Irrigant","Urinary bladder"
 "61570004820","Antibiotics, Misc","Neomycin/Polymyxin B Irrigant","Urinary bladder"
+"61570005701","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"61570005801","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "61570008510","Antibiot, Penicillins","Penicillin G & Comb.","Intramuscular"
 "61570008610","Antibiot, Penicillins","Penicillin G & Comb.","Intramuscular"
 "61570013510","Antibiot, B-Lactam Antibiotics","Loracarbef","Oral"
@@ -20687,6 +20840,7 @@
 "69543010350","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "69543010410","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
 "69543010450","Antibiot, Penicillins","Amoxicillin & Comb.","Oral"
+"69654050105","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "69668045201","Antibiot, Tetracyclines","Doxycycline","Oral"
 "69677012906","Antibiot, Erythromycn&Macrolid","Azithromycin","Oral"
 "70004052230","Antibiot, Cephalosporin & Rel.","Cefazolin","Intravenous"
@@ -20766,6 +20920,7 @@
 "70860012241","Antibiot, Penicillins","Piperacillin Sodium & Comb.","Intravenous"
 "70860012250","Antibiot, Penicillins","Piperacillin Sodium & Comb.","Intravenous"
 "70860012399","Antibiot, Penicillins","Piperacillin Sodium & Comb.","Intravenous"
+"70868012016","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "70882010128","Antibiot, Tetracyclines","Doxycycline","Oral"
 "70882010706","Antibiot, Erythromycn&Macrolid","Azithromycin","Oral"
 "70882010803","Antibiot, Erythromycn&Macrolid","Azithromycin","Oral"
@@ -20942,6 +21097,7 @@
 "71288000775","Antibiot, Penicillins","Ampicillin & Comb.","Intravenous"
 "71288000815","Antibiot, Cephalosporin & Rel.","Cefepime HCl","Injection"
 "71288000920","Antibiot, Cephalosporin & Rel.","Cefepime HCl","Injection"
+"71297050016","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "71335001701","Antibiot, Erythromycn&Macrolid","Clarithromycin","Oral"
 "71335001702","Antibiot, Erythromycn&Macrolid","Clarithromycin","Oral"
 "71335001703","Antibiot, Erythromycn&Macrolid","Clarithromycin","Oral"
@@ -21212,6 +21368,8 @@
 "99999654565","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"
 "99999654566","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.",NA
 "99999656525","Antibiot, Penicillins","Cloxacillin","Oral"
+"99999777402","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
+"99999777404","Anti-Infectives, Misc","Trimethoprim & Comb.","Oral"
 "99999777504","Urinary Anti-Infectives, NEC","Nalidixic Acid","Oral"
 "99999777505","Urinary Anti-Infectives, NEC","Nalidixic Acid","Oral"
 "99999875132","Antibiot, Erythromycn&Macrolid","Erythromycin & Comb.","Oral"

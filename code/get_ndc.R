@@ -25,5 +25,5 @@ toextract <- redbook %>%
 		(THRDTDS=="Sulfisoxazole/Phenazopyridine") 
 		)
 
-write_csv(toextract, file="data/ndc_to_extract_geography.csv", quote="all")
+write_csv(toextract, file="data/ndc_to_extract.csv", quote="all")
 
