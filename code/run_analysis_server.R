@@ -16,6 +16,7 @@ source('code/utils_private.R')
 # system('sas code/extract_data/extract_data.sas')
 # source('code/get_popsizes_under5.R')
 # source('code/make_chronic.R')
+# source('code/get_ndc.R')
 
 # Data import:
 source('code/import_fulldata.R')
