@@ -36,7 +36,7 @@ fig_cumrx_birthyear <-
 		geom_line() + 
 		scale_x_continuous(breaks=seq(from=0, to=1825, by=365)) + 
 		theme_classic() + 
-		labs(x="Days from birth", y=paste0("Cumulative prescriptions")) + 
+		labs(x="Days from birth", y=paste0("Cumulative antibiotic prescriptions")) + 
 		scale_color_manual(values=c("darkblue","blue","cornflowerblue","pink","orange","darkred")) + 
 		scale_fill_manual(values=c("darkblue","blue","cornflowerblue","pink","orange","darkred")) +
 		theme(text=element_text(size=10))

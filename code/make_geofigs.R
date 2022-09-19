@@ -11,16 +11,16 @@ figwidth <- 3.2
 figheight <- 3.2*10/16
 figres <- 600
 
-rx_summ_msa_resp <- read_csv("figures/resp/rx_summ_msa_resp.csv")
-rx_summ_msa_nonresp <- read_csv("figures/resp/rx_summ_msa_nonresp.csv")
+rx_summ_msa_resp <- read_csv("figures/rx_summ_msa_resp.csv")
+rx_summ_msa_nonresp <- read_csv("figures/rx_summ_msa_nonresp.csv")
 
 rx_summ_msa <- bind_rows(
 	mutate(rx_summ_msa_resp, COND="Respiratory"),
 	mutate(rx_summ_msa_nonresp, COND="Non-respiratory")
 	)
 
-first_rx_msa_resp <- read_csv("figures/resp/first_rx_msa_resp.csv")
-first_rx_msa_nonresp <- read_csv("figures/resp/first_rx_msa_nonresp.csv")
+first_rx_msa_resp <- read_csv("figures/first_rx_msa_resp.csv")
+first_rx_msa_nonresp <- read_csv("figures/first_rx_msa_nonresp.csv")
 
 first_rx_msa <- bind_rows(
 	mutate(first_rx_msa_resp, COND="Respiratory"),
@@ -37,18 +37,17 @@ ypos_msa <- tibble(
 	MSA_NAME_SHORT=c("New York","Los Angeles","Chicago","Houston","Atlanta","Seattle"),
 	ypos=c(4,2,3,5,6,1))
 
-labeldf <- rx_summ_msa %>% 
-	filter(MSA %in% c(35644, 31084, 16974, 26420, 12060, 42644)) %>% 
-	mutate(xfrom=-(ISABX-2)) %>% 
-	left_join(ypos_msa,by=c("MSA"))
-
 bootstrap.weighted.mean <- function(x,w,n){
 	dropvec <- sample(1:length(x),size=n,replace=TRUE)
-	out <- unlist(lapply(dropvec, function(todrop){weighted.mean(x[-todrop],w[-todrop])}))
+	out <- unlist(lapply(dropvec, function(todrop){weighted.mean(x[-todrop],w[-todrop],na.rm=TRUE)}))
 	return(out)
 }
 
 rx_summ_msa_means <- rx_summ_msa %>% 
+	filter(!is.na(MSA)) %>% 
+	filter(!is.na(MSA_NAME)) %>% 
+	filter(!is.na(MSA_POP)) %>% 
+	filter(MSA!="00000") %>% 
 	makeHHS() %>% 
 	mutate(REGION=case_when(
 		HHS%in%c(1,2,3)~"Northeast",
@@ -92,11 +91,11 @@ fig_rx_summ_msa_pointsize <- rx_summ_msa %>%
 		theme(text=element_text(size=10)) + 
 		labs(tag="A)",x=element_blank(), y="Mean antibiotic prescriptions\nper person by age 5")
 
-ggsave(fig_rx_summ_msa_pointsize, file="figures/resp/rx_summ_msa.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_rx_summ_msa_pointsize, file="figures/resp/rx_summ_msa.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_rx_summ_msa_pointsize, file="figures/rx_summ_msa.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_rx_summ_msa_pointsize, file="figures/rx_summ_msa.png", width=figwidth, height=figwidth, dpi=figres)
 
-ggsave(fig_rx_summ_msa_pointsize + theme(legend.position="none"), file="figures/resp/rx_summ_msa_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_rx_summ_msa_pointsize + theme(legend.position="none"), file="figures/resp/rx_summ_msa_nokey.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_rx_summ_msa_pointsize + theme(legend.position="none"), file="figures/rx_summ_msa_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_rx_summ_msa_pointsize + theme(legend.position="none"), file="figures/rx_summ_msa_nokey.png", width=figwidth, height=figwidth, dpi=figres)
 
 
 # Proportion who have received at least one prescription: ----------------------
@@ -106,6 +105,10 @@ first_rx_df <- first_rx_msa %>%
 	summarise(NRX=sum(WEIGHT_INDIV_MSAGROUP_NOYEAR), MSA_POP=first(MSA_POP), MSA_NAME=first(MSA_NAME), STATE=first(STATE))
 
 firstrx_msa_means <- first_rx_df %>% 
+	filter(!is.na(MSA)) %>% 
+	filter(!is.na(MSA_NAME)) %>% 
+	filter(!is.na(MSA_POP)) %>% 
+	filter(MSA!="00000") %>% 
 	makeHHS() %>% 
 	mutate(REGION=case_when(
 		HHS%in%c(1,2,3)~"Northeast",
@@ -150,8 +153,8 @@ fig_first_rx_msa <- first_rx_df %>%
 		theme(text=element_text(size=10)) + 
 		labs(tag="B)",x=element_blank(), y="Proportion of children who have received\nat least one prescription by age 5")
 
-ggsave(fig_first_rx_msa, file="figures/resp/first_rx_msa.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_first_rx_msa, file="figures/resp/first_rx_msa.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_first_rx_msa, file="figures/first_rx_msa.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_first_rx_msa, file="figures/first_rx_msa.png", width=figwidth, height=figwidth, dpi=figres)
 
-ggsave(fig_first_rx_msa + theme(legend.position="none"), file="figures/resp/first_rx_msa_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
-ggsave(fig_first_rx_msa + theme(legend.position="none"), file="figures/resp/first_rx_msa_nokey.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_first_rx_msa + theme(legend.position="none"), file="figures/first_rx_msa_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_first_rx_msa + theme(legend.position="none"), file="figures/first_rx_msa_nokey.png", width=figwidth, height=figwidth, dpi=figres)
