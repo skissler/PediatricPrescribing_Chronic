@@ -194,7 +194,39 @@ write_csv(abxlist, file="figures/abxlist.csv")
 
 # Generate a list of CCS categories we're interested in ------------------------
 
-# ccs_map
+ccs9_map_full_dx <- read_csv("data/ccs_dxref2015.csv",
+	skip=1,
+	col_names=c("DX","CCS_CAT","CCS_DESC","ICD_DESC","OPT_CCS_CAT","OPT_CCS_DESC"),
+	col_types=list(rep(col_character(),6)),
+	quote="\'") %>% 
+	select(DX,CCS_DESC,ICD_DESC) %>% 
+	mutate(ICD="9")
+
+ccs0_map_full_dx <- read_csv("data/ccsr_dxref2021.csv",
+	skip=1,
+	col_names=c("DX","ICD_DESC","CCS_CAT","CCS_DESC","INPT_DEFLT","OTPT_DFLT","RATIONALE","8","9"),
+	col_types=list(rep(col_character(),9))) %>% 
+	select(DX,CCS_DESC,ICD_DESC) %>% 
+	mutate(ICD="0")
+
+substrV <- Vectorize(substr)
+revV <- Vectorize(rev)
+
+ccs_map_full_dx <- bind_rows(ccs9_map_full_dx, ccs0_map_full_dx) %>% 
+	mutate(substrstart=as.numeric(regexpr("\"",ICD_DESC))+1) %>% 
+	# mutate(substrstart=case_when(substrstart<0 ~ 0, TRUE~substrstart)) %>% 
+	mutate(ICD_DESC=substr(ICD_DESC,substrstart,10000)) %>% 
+	mutate(substrend=as.numeric(regexpr("\"",ICD_DESC))) %>% 
+	mutate(substrend=case_when(substrend<0~10000, TRUE~substrend-1)) %>% 
+	mutate(ICD_DESC=substr(ICD_DESC,1,substrend)) %>% 
+	select(-substrstart, -substrend) 
+
+ccs_map_desc <- ccs_map %>% 
+	as_tibble() %>% 
+	left_join(ccs_map_full_dx, by=c("DX","ICD")) %>% 
+	select(COND, DX, ICD, ICD_DESC)
+
+write_csv(ccs_map_desc, file="figures/ccs_map_desc.csv")
 
 # How many MSAs in the final analysis? -----------------------------------------
 
