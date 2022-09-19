@@ -1,0 +1,2322 @@
+COND,DX,ICD,ICD_DESC
+Bacterial infection (other),0200,9,BUBONIC PLAGUE
+Bacterial infection (other),0208,9,OTHER TYPES OF PLAGUE
+Bacterial infection (other),0209,9,PLAGUE NOS
+Bacterial infection (other),0218,9,TULAREMIA NEC
+Bacterial infection (other),0219,9,TULAREMIA NOS
+Bacterial infection (other),0228,9,OTHER ANTHRAX MANIFEST
+Bacterial infection (other),0229,9,ANTHRAX NOS
+Bacterial infection (other),0230,9,BRUCELLA MELITENSIS
+Bacterial infection (other),0231,9,BRUCELLA ABORTUS
+Bacterial infection (other),0232,9,BRUCELLA SUIS
+Bacterial infection (other),0233,9,BRUCELLA CANIS
+Bacterial infection (other),0238,9,BRUCELLOSIS NEC
+Bacterial infection (other),0239,9,BRUCELLOSIS NOS
+Bacterial infection (other),024,9,GLANDERS
+Bacterial infection (other),025,9,MELIOIDOSIS
+Bacterial infection (other),0260,9,SPIRILLARY FEVER
+Bacterial infection (other),0269,9,RAT-BITE FEVER NOS
+Bacterial infection (other),0270,9,LISTERIOSIS
+Bacterial infection (other),0271,9,ERYSIPELOTHRIX INFECTION
+Bacterial infection (other),0272,9,PASTEURELLOSIS
+Bacterial infection (other),0278,9,ZOONOTIC BACT DIS NEC
+Bacterial infection (other),0279,9,ZOONOTIC BACT DIS NOS
+Bacterial infection (other),0300,9,LEPROMATOUS LEPROSY
+Bacterial infection (other),0301,9,TUBERCULOID LEPROSY
+Bacterial infection (other),0302,9,INDETERMINATE LEPROSY
+Bacterial infection (other),0303,9,BORDERLINE LEPROSY
+Bacterial infection (other),0308,9,LEPROSY NEC
+Bacterial infection (other),0309,9,LEPROSY NOS
+Bacterial infection (other),0312,9,DX DUE TO DISSEM MYCOBACT (Begin 1997)
+Bacterial infection (other),0318,9,MYCOBACTERIAL DIS NEC
+Bacterial infection (other),0319,9,MYCOBACTERIAL DIS NOS
+Bacterial infection (other),03289,9,DIPHTHERIA NEC
+Bacterial infection (other),0329,9,DIPHTHERIA NOS
+Bacterial infection (other),0330,9,BORDETELLA PERTUSSIS
+Bacterial infection (other),0331,9,BORDETELLA PARAPERTUSSIS
+Bacterial infection (other),0338,9,WHOOPING COUGH NEC
+Bacterial infection (other),0339,9,WHOOPING COUGH NOS
+Bacterial infection (other),0341,9,SCARLET FEVER
+Bacterial infection (other),0363,9,MENINGOCOCC ADRENAL SYND
+Bacterial infection (other),03681,9,MENINGOCOCC OPTIC NEURIT
+Bacterial infection (other),03689,9,MENINGOCOCCAL INFECT NEC
+Bacterial infection (other),0369,9,MENINGOCOCCAL INFECT NOS
+Bacterial infection (other),037,9,TETANUS
+Bacterial infection (other),0392,9,ABDOMINAL ACTINOMYCOSIS
+Bacterial infection (other),0393,9,CERVICOFAC ACTINOMYCOSIS
+Bacterial infection (other),0394,9,MADURA FOOT
+Bacterial infection (other),0398,9,ACTINOMYCOSIS NEC
+Bacterial infection (other),0399,9,ACTINOMYCOSIS NOS
+Bacterial infection (other),0400,9,GAS GANGRENE
+Bacterial infection (other),0401,9,RHINOSCLEROMA
+Bacterial infection (other),0402,9,WHIPPLE-S DISEASE
+Bacterial infection (other),0403,9,NECROBACILLOSIS
+Bacterial infection (other),04042,9,WOUND BOTULISM (Begin 2007)
+Bacterial infection (other),04081,9,TROPICAL PYOMYOSITIS
+Bacterial infection (other),04082,9,TOXIC SHOCK SYNDROME (Begin 2002)
+Bacterial infection (other),04089,9,BACTERIAL DISEASES NEC
+Bacterial infection (other),0410,9,STREPTOCOCCUS INFECT NOS (Begin 1980 End 1992)
+Bacterial infection (other),04100,9,STREPTOCOCCUS UNSPEC (Begin 1992)
+Bacterial infection (other),04101,9,GROUP A STREPTOCOCCUS (Begin 1992)
+Bacterial infection (other),04102,9,GROUP B STREPTOCOCCUS (Begin 1992)
+Bacterial infection (other),04103,9,GROUP C STREPTOCOCCUS (Begin 1992)
+Bacterial infection (other),04104,9,GROUP D STREPTOCOCCUS (Begin 1992)
+Bacterial infection (other),04105,9,GROUP G STREPTOCOCCUS (Begin 1992)
+Bacterial infection (other),04109,9,OTHER STREPTOCOCCUS (Begin 1992)
+Bacterial infection (other),0411,9,STAPH INFECTION NOS (Begin 1980 End 1992)
+Bacterial infection (other),04110,9,STAPH UNSPEC (Begin 1992)
+Bacterial infection (other),04111,9,STAPH AUREUS (Begin 1992)
+Bacterial infection (other),04112,9,MRSA ELSEWHERE/NOS (Begin 2008)
+Bacterial infection (other),04119,9,OTHER STAPH (Begin 1992)
+Bacterial infection (other),0412,9,PNEUMOCOCCUS INFECT NOS
+Bacterial infection (other),0413,9,KLEBSIELLA INFECT NOS
+Bacterial infection (other),0414,9,E. COLI INFECT NOS (end 2011)
+Bacterial infection (other),04141,9,Shiga txn-produce E.coli (Begin 2011)
+Bacterial infection (other),04142,9,Shga txn prod E.coli NEC (Begin 2011)
+Bacterial infection (other),04143,9,Shga txn prod E.coli NOS (Begin 2011)
+Bacterial infection (other),04149,9,E.coli infection NEC/NOS (Begin 2011)
+Bacterial infection (other),0415,9,H. INFLUENZAE INFECT NOS
+Bacterial infection (other),0416,9,PROTEUS INFECTION NOS
+Bacterial infection (other),0417,9,PSEUDOMONAS INFECT NOS
+Bacterial infection (other),0418,9,BACTERIAL INFECTION NEC (Begin 1980 End 1992)
+Bacterial infection (other),04181,9,MYCOPLASMA (Begin 1992)
+Bacterial infection (other),04182,9,BACILLUS FRAGILIS (Begin 1992)
+Bacterial infection (other),04183,9,CLOSTRID PERFRINGENS (Begin 1992)
+Bacterial infection (other),04184,9,OTHER ANAEROBES (Begin 1992)
+Bacterial infection (other),04185,9,OTHER GRAM NEG ORGS (Begin 1992)
+Bacterial infection (other),04186,9,HELICOBACTER PYLORI INFECTION (Begin 1995)
+Bacterial infection (other),04189,9,OTHER SPEC BACTERIA (Begin 1992)
+Bacterial infection (other),0419,9,BACTERIAL INFECTION NOS
+Bacterial infection (other),390,9,RHEUM FEV W/O HRT INVOLV
+Bacterial infection (other),3929,9,RHEUMATIC CHOREA NOS
+Bacterial infection (other),7953,9,POSITIVE CULTURE FINDING (End 2002)
+Bacterial infection (other),79531,9,NONSPECIFIC POSITIVE FINDINGS/ANTHRAX (Begin 2002)
+Bacterial infection (other),79539,9,OTHER NONSPECIFIC POSITIVE CULTURE (Begin 2002)
+Bacterial infection (other),V090,9,INFEC-PENICILLIN-RESIST ORGS (Begin 1993)
+Bacterial infection (other),V091,9,INFEC-CEPHALOSPORIN-RESIST ORGS (Begin 1993)
+Bacterial infection (other),V092,9,INFEC-MACROLIDES-RESIST ORGS (Begin 1993)
+Bacterial infection (other),V093,9,INFEC-TETRACYCLINE-RESIST ORGS (Begin 1993)
+Bacterial infection (other),V094,9,INFEC-AMINOGLYCOSIDE-RESIST ORGS (Begin 1993)
+Bacterial infection (other),V0950,9,INFEC-UNRESIST TO MULT QUINOLONES (Begin 1993)
+Bacterial infection (other),V0951,9,INFEC-MULT QUINOLONES-RESIST ORGS (Begin 1993)
+Bacterial infection (other),V096,9,INFEC-SULFONAMIDES-RESIST ORGS (Begin 1993)
+Bacterial infection (other),V0970,9,INFEC-NOT MULTI-ANTIMYCOBACT-RESIS (Begin 1993)
+Bacterial infection (other),V0971,9,INFEC-MULTI-ANTIMYCOBAC-RESIS ORGS (Begin 1993)
+Bacterial infection (other),V0980,9,INFEC-OTH ORGS NOT MULTIDRUG-RESIS (Begin 1993)
+Bacterial infection (other),V0981,9,INFEC-OTH MULTI-DRUG-RESIST ORGS (Begin 1993)
+Bacterial infection (other),V0990,9,INFEC-UNSP ORGS NOT MULTDRUG-RESIS (Begin 1993)
+Bacterial infection (other),V0991,9,INFEC-UNSPEC MULTIDRUG-RESIST ORGS (Begin 1993)
+Bacterial infection (other),V1204,9,HX METHICLN RESIST STAPH (Begin 2008)
+Viral infection,0500,9,VARIOLA MAJOR
+Viral infection,0501,9,ALASTRIM
+Viral infection,0502,9,MODIFIED SMALLPOX
+Viral infection,0509,9,SMALLPOX NOS
+Viral infection,0510,9,COWPOX (end 2008)
+Viral infection,05101,9,COWPOX (Begin 2008)
+Viral infection,05102,9,VACCINIA N/F VACCINATION (Begin 2008)
+Viral infection,0511,9,PSEUDOCOWPOX
+Viral infection,0512,9,CONTAGIOUS PUSTULAR DERM
+Viral infection,0519,9,PARAVACCINIA NOS
+Viral infection,0522,9,POSTVARICELLA MYELITIS (Begin 2006)
+Viral infection,0527,9,VARICELLA COMPLICAT NEC
+Viral infection,0528,9,VARICELLA COMPLICAT NOS
+Viral infection,0529,9,VARICELLA UNCOMPLICATED
+Viral infection,05310,9,H ZOSTER NERV SYST NOS
+Viral infection,05311,9,GENICULATE HERPES ZOSTER
+Viral infection,05312,9,POSTHERPES TRIGEM NEURAL
+Viral infection,05313,9,POSTHERPES POLYNEUROPATH
+Viral infection,05314,9,HERPES ZOSTER MYELITIS (Begin 2006)
+Viral infection,05319,9,H ZOSTER NERV SYST NEC
+Viral infection,05371,9,H ZOSTER OTITIS EXTERNA
+Viral infection,05379,9,H ZOSTER COMPLICATED NEC
+Viral infection,0538,9,H ZOSTER COMPLICATED NOS
+Viral infection,0539,9,HERPES ZOSTER NOS
+Viral infection,0540,9,ECZEMA HERPETICUM
+Viral infection,05410,9,GENITAL HERPES NOS
+Viral infection,05411,9,HERPETIC VULVOVAGINITIS
+Viral infection,05412,9,HERPETIC ULCER OF VULVA
+Viral infection,05413,9,HERPETIC INFECT OF PENIS
+Viral infection,05419,9,GENITAL HERPES NEC
+Viral infection,0542,9,HERPETIC GINGIVOSTOMAT
+Viral infection,0546,9,HERPETIC WHITLOW
+Viral infection,05471,9,VISCERAL HERPES SIMPLEX
+Viral infection,05473,9,H SIMPLEX OTITIS EXTERNA
+Viral infection,05474,9,HERPES SIMPLEX MYELITIS (Begin 2006)
+Viral infection,05479,9,H SIMPLEX COMPLICAT NEC
+Viral infection,0548,9,H SIMPLEX COMPLICAT NOS
+Viral infection,0549,9,HERPES SIMPLEX NOS
+Viral infection,05579,9,MEASLES COMPLICATION NEC
+Viral infection,0558,9,MEASLES COMPLICATION NOS
+Viral infection,0559,9,MEASLES UNCOMPLICATED
+Viral infection,05600,9,RUBELLA NERVE COMPL NOS
+Viral infection,05609,9,RUBELLA NERVE COMPL NEC
+Viral infection,05679,9,RUBELLA COMPLICATION NEC
+Viral infection,0568,9,RUBELLA COMPLICATION NOS
+Viral infection,0569,9,RUBELLA UNCOMPLICATED
+Viral infection,0570,9,ERYTHEMA INFECTIOSUM
+Viral infection,0578,9,VIRAL EXANTHEMATA NEC
+Viral infection,0579,9,VIRAL EXANTHEMATA NOS
+Viral infection,05810,9,ROSEOLA INFANTUM NOS (Begin 2007)
+Viral infection,05811,9,ROSEOLA INFANT D/T HHV-6 (Begin 2007)
+Viral infection,05812,9,ROSEOLA INFANT D/T HHV-7 (Begin 2007)
+Viral infection,05881,9,HUMAN HERPESVIRUS 6 INFC (Begin 2007)
+Viral infection,05882,9,HUMAN HERPESVIRUS 7 INFC (Begin 2007)
+Viral infection,05889,9,HUMAN HERPESVIRS INF NEC (Begin 2007)
+Viral infection,05900,9,ORTHOPOXVIRUS INFECT NOS (Begin 2008)
+Viral infection,05901,9,MONKEYPOX (Begin 2008)
+Viral infection,05909,9,ORTHOPOXVIRUS INFECT NEC (Begin 2008)
+Viral infection,05910,9,PARAPOXVIRUS INFECTN NOS (Begin 2008)
+Viral infection,05911,9,BOVINE STOMATITIS (Begin 2008)
+Viral infection,05912,9,SEALPOX (Begin 2008)
+Viral infection,05919,9,PARAPOXVIRUS INFECTN NEC (Begin 2008)
+Viral infection,05920,9,YATAPOXVIRUS INFECTN NOS (Begin 2008)
+Viral infection,05921,9,TANAPOX (Begin 2008)
+Viral infection,05922,9,YABA MONKEY TUMOR VIRUS (Begin 2008)
+Viral infection,0598,9,POXVIRUS INFECTIONS NEC (Begin 2008)
+Viral infection,0599,9,POXVIRUS INFECTION NOS (Begin 2008)
+Viral infection,0600,9,SYLVATIC YELLOW FEVER
+Viral infection,0601,9,URBAN YELLOW FEVER
+Viral infection,0609,9,YELLOW FEVER NOS
+Viral infection,061,9,DENGUE
+Viral infection,0650,9,CRIMEAN HEMORRHAGIC FEV
+Viral infection,0651,9,OMSK HEMORRHAGIC FEVER
+Viral infection,0652,9,KYASANUR FOREST DISEASE
+Viral infection,0653,9,TICK-BORNE HEM FEVER NEC
+Viral infection,0654,9,MOSQUITO-BORNE HEM FEVER
+Viral infection,0658,9,ARTHROPOD HEM FEVER NEC
+Viral infection,0659,9,ARTHROPOD HEM FEVER NOS
+Viral infection,0660,9,PHLEBOTOMUS FEVER
+Viral infection,0661,9,TICK-BORNE FEVER
+Viral infection,0663,9,MOSQUITO-BORNE FEVER NEC
+Viral infection,0664,9,WEST NILE FEVER (Begin 2002 End 2004)
+Viral infection,06640,9,WEST NILE FEVER NOS (Begin 2004)
+Viral infection,06642,9,WEST NILE NEURO MAN NEC (Begin 2004)
+Viral infection,06649,9,WEST NILE W COMPLIC NEC (Begin 2004)
+Viral infection,0668,9,ARTHROPOD VIRUS NEC
+Viral infection,0669,9,ARTHROPOD VIRUS NOS
+Viral infection,071,9,RABIES
+Viral infection,0720,9,MUMPS ORCHITIS
+Viral infection,0723,9,MUMPS PANCREATITIS
+Viral infection,07272,9,MUMPS POLYNEUROPATHY
+Viral infection,07279,9,MUMPS COMPLICATION NEC
+Viral infection,0728,9,MUMPS COMPLICATION NOS
+Viral infection,0729,9,MUMPS UNCOMPLICATED
+Viral infection,0737,9,ORNITHOSIS COMPLICAT NEC
+Viral infection,0738,9,ORNITHOSIS COMPLICAT NOS
+Viral infection,0739,9,ORNITHOSIS NOS
+Viral infection,0740,9,HERPANGINA
+Viral infection,0741,9,EPIDEMIC PLEURODYNIA
+Viral infection,0743,9,HAND- FOOT & MOUTH DIS
+Viral infection,0748,9,COXSACKIE VIRUS NEC
+Viral infection,075,9,INFECTIOUS MONONUCLEOSIS
+Viral infection,0780,9,MOLLUSCUM CONTAGIOSUM
+Viral infection,0781,9,VIRAL WARTS (End 1993)
+Viral infection,07810,9,VIRAL WARTS UNSPEC (Begin 1993)
+Viral infection,07811,9,CONDYLOMA ACCUMINATUM (Begin 1993)
+Viral infection,07812,9,PLANTAR WART (Begin 2008)
+Viral infection,07819,9,OTHER SPEC VIRAL WARTS (Begin 1993)
+Viral infection,0782,9,SWEATING FEVER
+Viral infection,0783,9,CAT-SCRATCH DISEASE
+Viral infection,0784,9,FOOT & MOUTH DISEASE
+Viral infection,0785,9,CYTOMEGAL INCLUSION DIS
+Viral infection,0786,9,HEM NEPHROSONEPHRITIS
+Viral infection,0787,9,ARENAVIRAL HEM FEVER
+Viral infection,07881,9,EPIDEMIC VERTIGO
+Viral infection,07882,9,EPIDEMIC VOMITING SYND
+Viral infection,07888,9,OTH SPEC DISEASE DUE TO CHLAMYDIAE (Begin 1993)
+Viral infection,07889,9,VIRAL DISEASE NEC
+Viral infection,0790,9,ADENOVIRUS INFECT NOS
+Viral infection,0791,9,ECHO VIRUS INFECT NOS
+Viral infection,0792,9,COXSACKIE VIRUS INF NOS
+Viral infection,0793,9,RHINOVIRUS INFECT NOS
+Viral infection,0794,9,HUMAN PAPILLOMA VIRUS (Begin 1993)
+Viral infection,07950,9,UNSPEC RETROVIRUS (Begin 1993)
+Viral infection,07951,9,HTLV TYPE I (Begin 1993)
+Viral infection,07952,9,HTLV TYPE II (Begin 1993)
+Viral infection,07959,9,OTH SPEC RETROVIRUS (Begin 1993)
+Viral infection,0796,9,RESPIR SYNCITIAL VIRUS (Begin 1996)
+Viral infection,0798,9,VIRAL INFECTION NEC (End 1993)
+Viral infection,07981,9,HANTAVIRUS INFECTION (Begin 1995)
+Viral infection,07982,9,SARS-ASSOCIATED CORONAVIRUS (Begin 2003)
+Viral infection,07983,9,PARVOVIRUS B19 (Begin 2007)
+Viral infection,07988,9,OTH SPEC CHLAMYDIAL INFECTION (Begin 1993)
+Viral infection,07989,9,OTH SPEC VIRAL INFECTION (Begin 1993)
+Viral infection,0799,9,VIRAL INFECTION NOS (End 1993)
+Viral infection,07998,9,CHLAMYDIAL INFECTION NOS (Begin 1993)
+Viral infection,07999,9,VIRAL INFECTION NOS (Begin 1993)
+Viral infection,7908,9,VIREMIA NOS-
+Otitis media,0552,9,POSTMEASLES OTITIS MEDIA
+Otitis media,38100,9,AC NONSUP OTITIS MED NOS
+Otitis media,38101,9,AC SEROUS OTITIS MEDIA
+Otitis media,38102,9,AC MUCOID OTITIS MEDIA
+Otitis media,38103,9,AC SANGUIN OTITIS MEDIA
+Otitis media,38104,9,AC ALLERGIC SEROUS OM
+Otitis media,38105,9,AC ALLERGIC MUCOID OM
+Otitis media,38106,9,AC ALLERG SANGUINOUS OM
+Otitis media,38110,9,CHR SEROUS OM SIMP/NOS
+Otitis media,38119,9,CHR SEROUS OM NEC
+Otitis media,38120,9,CHR MUCOID OM SIMP/NOS
+Otitis media,38129,9,CHR MUCOID OM NEC
+Otitis media,3813,9,CHR NONSUP OM NOS/NEC
+Otitis media,3814,9,NONSUPP OTITIS MEDIA NOS
+Otitis media,38150,9,EUSTACHIAN SALPING NOS
+Otitis media,38151,9,AC EUSTACHIAN SALPING
+Otitis media,38152,9,CHR EUSTACHIAN SALPING
+Otitis media,38160,9,OBSTR EUSTACH TUBE NOS
+Otitis media,38161,9,OSSEOUS EUSTACHIAN OBSTR
+Otitis media,38162,9,INTRINSIC EUSTACH OBSTR
+Otitis media,38163,9,EXTRINSIC EUSTACH OBSTR
+Otitis media,3817,9,PATULOUS EUSTACHIAN TUBE
+Otitis media,38181,9,DYSFUNCT EUSTACHIAN TUBE
+Otitis media,38189,9,EUSTACHIAN TUBE DIS NEC
+Otitis media,3819,9,EUSTACHIAN TUBE DIS NOS
+Otitis media,38200,9,AC SUPP OTITIS MEDIA NOS
+Otitis media,38201,9,AC SUPP OM W DRUM RUPT
+Otitis media,38202,9,AC SUPP OM IN OTH DIS
+Otitis media,3821,9,CHR TUBOTYMPAN SUPPUR OM
+Otitis media,3822,9,CHR ATTICOANTRAL SUP OM
+Otitis media,3823,9,CHR SUP OTITIS MEDIA NOS
+Otitis media,3824,9,SUPPUR OTITIS MEDIA NOS
+Otitis media,3829,9,OTITIS MEDIA NOS
+Otitis media,38300,9,AC MASTOIDITIS W/O COMPL
+Otitis media,38301,9,SUBPERI MASTOID ABSCESS
+Otitis media,38302,9,AC MASTOIDITIS-COMPL NEC
+Otitis media,3831,9,CHRONIC MASTOIDITIS
+Otitis media,38320,9,PETROSITIS NOS
+Otitis media,38321,9,ACUTE PETROSITIS
+Otitis media,38322,9,CHRONIC PETROSITIS
+Otitis media,38330,9,POSTMASTOID COMPL NOS
+Otitis media,38331,9,POSTMASTOID MUCOSAL CYST
+Otitis media,38332,9,POSTMASTOID CHOLESTEATMA
+Otitis media,38333,9,POSTMASTOID GRANULATIONS
+Otitis media,38381,9,POSTAURICULAR FISTULA
+Otitis media,38389,9,DISORDERS OF MASTOID NEC
+Otitis media,3839,9,MASTOIDITIS NOS
+Otitis media,38420,9,PERFORAT TYMPAN MEMB NOS
+Otitis media,38421,9,CENT PERF TYMPANIC MEMB
+Otitis media,38422,9,ATTIC PERF TYMPANIC MEMB
+Otitis media,38423,9,MARGINAL PERF TYMP NEC
+Otitis media,38424,9,MULT PERF TYMPANIC MEMB
+Otitis media,38425,9,TOTAL PERF TYMPANIC MEMB
+Otitis media,38481,9,ATROPHIC FLACCID TYMPAN
+Otitis media,38482,9,ATROPHIC NONFLACCID TYMP
+Otitis media,3849,9,DIS TYMPANIC MEMB NOS
+Otitis media,38500,9,TYMPANOSCLEROSIS NOS
+Otitis media,38501,9,TYMPANOSCL-TYMPANIC MEMB
+Otitis media,38502,9,TYMPNOSCLER-TYMP/OSSICLE
+Otitis media,38503,9,TYMPANOSCLER-ALL PARTS
+Otitis media,38509,9,TYMPNSCLR-OTH SITE COMB
+Otitis media,38510,9,ADHESIVE MID EAR DIS NOS
+Otitis media,38511,9,ADHESION TYMPANUM-INCUS
+Otitis media,38512,9,ADHESION TYMPANUM-STAPES
+Otitis media,38513,9,ADHESION TYMP-PROMONTOR
+Otitis media,38519,9,ADHESIVE MID EAR DIS NEC
+Otitis media,38521,9,ANKYLOSIS MALLEUS
+Otitis media,38522,9,ANKYLOSIS EAR OSSICL NEC
+Otitis media,38523,9,DISLOCATION EAR OSSICLE
+Otitis media,38524,9,PARTIAL LOSS EAR OSSICLE
+Otitis media,3870,9,OTOSCLER-OVAL WND NONOBL
+Otitis media,3871,9,OTOSCLER-OVAL WNDW OBLIT
+Otitis media,3872,9,COCHLEAR OTOSCLEROSIS
+Otitis media,3878,9,OTOSCLEROSIS NEC
+Otitis media,3879,9,OTOSCLEROSIS NOS
+Pneumonia,00322,9,SALMONELLA PNEUMONIA
+Pneumonia,0203,9,PRIMARY PNEUMONIC PLAGUE
+Pneumonia,0204,9,SECONDARY PNEUMON PLAGUE
+Pneumonia,0205,9,PNEUMONIC PLAGUE NOS
+Pneumonia,0212,9,PULMONARY TULAREMIA
+Pneumonia,0221,9,PULMONARY ANTHRAX
+Pneumonia,0310,9,PULMONARY MYCOBACTERIA
+Pneumonia,0391,9,PULMONARY ACTINOMYCOSIS
+Pneumonia,0521,9,VARICELLA PNEUMONITIS
+Pneumonia,0551,9,POSTMEASLES PNEUMONIA
+Pneumonia,0730,9,ORNITHOSIS PNEUMONIA
+Pneumonia,0830,9,Q FEVER
+Pneumonia,1124,9,CANDIDIASIS OF LUNG
+Pneumonia,1140,9,PRIMARY COCCIDIOIDOMYCOS
+Pneumonia,1144,9,CHRONIC PULMON COCCIDIOIDOMYCOSIS (Begin 1993)
+Pneumonia,1145,9,UNSPEC PULMON COCCIDIOIDOMYCOSIS (Begin 1993)
+Pneumonia,11505,9,HISTOPLASM CAPS PNEUMON
+Pneumonia,11515,9,HISTOPLASM DUB PNEUMONIA
+Pneumonia,11595,9,HISTOPLASMOSIS PNEUMONIA
+Pneumonia,1304,9,TOXOPLASMA PNEUMONITIS
+Pneumonia,1363,9,PNEUMOCYSTOSIS
+Pneumonia,4800,9,ADENOVIRAL PNEUMONIA
+Pneumonia,4801,9,RESP SYNCYT VIRAL PNEUM
+Pneumonia,4802,9,PARINFLUENZA VIRAL PNEUM
+Pneumonia,4803,9,PNEUMONIA DUE TO SARS-ASSOCIATED CORONAVIRUS (Begin 2003)
+Pneumonia,4808,9,VIRAL PNEUMONIA NEC
+Pneumonia,4809,9,VIRAL PNEUMONIA NOS
+Pneumonia,481,9,PNEUMOCOCCAL PNEUMONIA
+Pneumonia,4820,9,K. PNEUMONIAE PNEUMONIA
+Pneumonia,4821,9,PSEUDOMONAL PNEUMONIA
+Pneumonia,4822,9,H.INFLUENZAE PNEUMONIA
+Pneumonia,4823,9,STREPTOCOCCAL PNEUMONIA (Begin 1980 End 1992)
+Pneumonia,48230,9,STREP PNEUMONIA UNSPEC (Begin 1992)
+Pneumonia,48231,9,GRP A STREP PNEUMONIA (Begin 1992)
+Pneumonia,48232,9,GRP B STREP PNEUMONIA (Begin 1992)
+Pneumonia,48239,9,OTH STREP PNEUMONIA (Begin 1992)
+Pneumonia,4824,9,STAPHYLOCOCCAL PNEUMONIA (End 1998)
+Pneumonia,48240,9,STAPH PNEUMONIA UNSP (Begin 1998)
+Pneumonia,48241,9,STAPH AUREUS PNEUMON (Begin 1998)
+Pneumonia,48242,9,METH RES PNEU D/T STAPH (Begin 2008)
+Pneumonia,48249,9,STAPH PNEUMON OTH (Begin 1998)
+Pneumonia,4828,9,BACTERIAL PNEUMONIA NEC (Begin 1980 End 1992)
+Pneumonia,48281,9,ANAEROBIC PNEUMONIA (Begin 1992)
+Pneumonia,48282,9,E COLI PNEUMONIA (Begin 1992)
+Pneumonia,48283,9,OTH GRAM NEG PNEUMONIA (Begin 1992)
+Pneumonia,48284,9,LEGIONNAIRES DX (Begin 1997)
+Pneumonia,48289,9,BACT PNEUMONIA NEC (Begin 1992)
+Pneumonia,4829,9,BACTERIAL PNEUMONIA NOS
+Pneumonia,483,9,PNEUMONIA: ORGANISM NEC (Begin 1980 End 1992)
+Pneumonia,4830,9,MYCOPLASMA PNEUMONIA (Begin 1992)
+Pneumonia,4831,9,CHLAMYDIA PNEUMONIA (Begin 1996)
+Pneumonia,4838,9,OTH SPEC ORG PNEUMONIA (Begin 1992)
+Pneumonia,4841,9,PNEUM W CYTOMEG INCL DIS
+Pneumonia,4843,9,PNEUMONIA IN WHOOP COUGH
+Pneumonia,4845,9,PNEUMONIA IN ANTHRAX
+Pneumonia,4846,9,PNEUM IN ASPERGILLOSIS
+Pneumonia,4847,9,PNEUM IN OTH SYS MYCOSES
+Pneumonia,4848,9,PNEUM IN INFECT DIS NEC
+Pneumonia,485,9,BRONCOPNEUMONIA ORG NOS
+Pneumonia,486,9,PNEUMONIA- ORGANISM NOS
+Pneumonia,5130,9,ABSCESS OF LUNG
+Pneumonia,5171,9,RHEUMATIC PNEUMONIA
+Influenza,4870,9,INFLUENZA WITH PNEUMONIA
+Influenza,4871,9,FLU W RESP MANIFEST NEC
+Influenza,4878,9,FLU W MANIFESTATION NEC
+Influenza,488,9,FLU D/T AVIAN FLU VIRUS (Begin 2007) (end 2009)
+Influenza,4880,9,Flu dt iden avian virus (Begin 2009) (end 2010)
+Influenza,48801,9,Flu dt iden avian w pneu (Begin 2010)
+Influenza,48802,9,Flu dt avian w oth resp (Begin 2010)
+Influenza,48809,9,Flu dt avian manfest NEC (Begin 2010)
+Influenza,4881,9,Flu dt iden H1N1 virus (Begin 2009) (end 2010)
+Influenza,48811,9,Flu dt H1N1 flu w pneu (Begin 2010)
+Influenza,48812,9,Flu dt H1N1 w oth resp (Begin 2010)
+Influenza,48819,9,Flu dt H1N1 manfest NEC (Begin 2010)
+Influenza,48881,9,Flu dt nvl A vrs w pneu (Begin 2011)
+Influenza,48882,9,Flu dt nvl A w oth resp (Begin 2011)
+Influenza,48889,9,Flu dt novel A w oth man (Begin 2011)
+Bronchitis (acute),4660,9,ACUTE BRONCHITIS
+Bronchitis (acute),4661,9,ACUTE BRONCHIOLITIS (End 1996)
+Bronchitis (acute),46611,9,RSV BRONCHIOLITIS (Begin 1996)
+Bronchitis (acute),46619,9,OTH ACUTE BRONCHIOL (Begin 1996)
+URI (other),0320,9,FAUCIAL DIPHTHERIA
+URI (other),0321,9,"NASOPHARYNX DIPHTHERIA"
+URI (other),0322,9,ANT NASAL DIPHTHERIA
+URI (other),0323,9,LARYNGEAL DIPHTHERIA
+Strep pharyngitis,0340,9,STREP SORE THROAT
+URI (other),460,9,ACUTE NASOPHARYNGITIS
+Sinusitis,4610,9,AC MAXILLARY SINUSITIS
+Sinusitis,4611,9,AC FRONTAL SINUSITIS
+Sinusitis,4612,9,AC ETHMOIDAL SINUSITIS
+Sinusitis,4613,9,AC SPHENOIDAL SINUSITIS
+Sinusitis,4618,9,OTHER ACUTE SINUSITIS
+Sinusitis,4619,9,ACUTE SINUSITIS NOS
+URI (other),462,9,ACUTE PHARYNGITIS
+URI (other),4640,9,ACUTE LARYNGITIS (End 2001)
+URI (other),46400,9,ACUTE LARYNGITIS- W/O OBSTR (Begin 2001)
+URI (other),46401,9,ACUTE LARYNGITIS- W OBSTR (Begin 2001)
+URI (other),46410,9,AC TRACHEITIS NO OBSTRUC
+URI (other),46411,9,AC TRACHEITIS W OBSTRUCT
+URI (other),46420,9,AC LARYNGOTRACH NO OBSTR
+URI (other),46421,9,AC LARYNGOTRACH W OBSTR
+URI (other),46430,9,AC EPIGLOTTITIS NO OBSTR
+URI (other),46431,9,AC EPIGLOTTITIS W OBSTR
+URI (other),4644,9,CROUP
+URI (other),46450,9,SUPRAGLOTTIS NOS- W/O OBSTR (Begin 2001)
+URI (other),46451,9,SUPRAGLOTTIS NOS- W/ OBSTR (Begin 2001)
+URI (other),4650,9,ACUTE LARYNGOPHARYNGITIS
+URI (other),4658,9,ACUTE URI MULT SITES NEC
+URI (other),4659,9,ACUTE URI NOS
+Sinusitis,4730,9,CHR MAXILLARY SINUSITIS
+Sinusitis,4731,9,CHR FRONTAL SINUSITIS
+Sinusitis,4732,9,CHR ETHMOIDAL SINUSITIS
+Sinusitis,4733,9,CHR SPHENOIDAL SINUSITIS
+Sinusitis,4738,9,CHRONIC SINUSITIS NEC
+Sinusitis,4739,9,CHRONIC SINUSITIS NOS-
+URI (other),78491,9,POSTNASAL DRIP (Begin 2006)
+Asthma,49300,9,EXT ASTHMA W/O STAT ASTH
+Asthma,49301,9,EXT ASTHMA W STATUS ASTH
+Asthma,49302,9,EXT ASTHMA W/ ACUTE EXACERBATION (Begin 2000)
+Asthma,49310,9,INT ASTHMA W/O STAT ASTH
+Asthma,49311,9,INT ASTHMA W STATUS ASTH
+Asthma,49312,9,INT ASTHMA W/ ACUTE EXACERBATION (Begin 2000)
+Asthma,49320,9,CH OB ASTH W/O STAT ASTH (Begin 1989)
+Asthma,49321,9,CH OB ASTHMA W STAT ASTH (Begin 1989)
+Asthma,49322,9,CH OB ASTHMA W/ACUTE EXACERBATION (Begin 2000)
+Asthma,49381,9,EXERCISE INDUCED BRONCHOSPASM (Begin 2003)
+Asthma,49382,9,COUGH VARIANT ASTHMA (Begin 2003)
+Asthma,49390,9,ASTHMA W/O STATUS ASTHM
+Asthma,49391,9,ASTHMA W/ STATUS ASTHMAT
+Asthma,49392,9,ASTHMA W/ ACUTE EXACERBATION (Begin 2000)
+Intestinal infection,0010,9,CHOLERA D/T VIB CHOLERAE
+Intestinal infection,0011,9,CHOLERA D/T VIB EL TOR
+Intestinal infection,0019,9,CHOLERA NOS
+Intestinal infection,0020,9,TYPHOID FEVER
+Intestinal infection,0021,9,PARATYPHOID FEVER A
+Intestinal infection,0022,9,PARATYPHOID FEVER B
+Intestinal infection,0023,9,PARATYPHOID FEVER C
+Intestinal infection,0029,9,PARATYPHOID FEVER NOS
+Intestinal infection,0030,9,SALMONELLA ENTERITIS
+Intestinal infection,00320,9,LOCAL SALMONELLA INF NOS
+Intestinal infection,00329,9,LOCAL SALMONELLA INF NEC
+Intestinal infection,0038,9,SALMONELLA INFECTION NEC
+Intestinal infection,0039,9,SALMONELLA INFECTION NOS
+Intestinal infection,0040,9,SHIGELLA DYSENTERIAE
+Intestinal infection,0041,9,SHIGELLA FLEXNERI
+Intestinal infection,0042,9,SHIGELLA BOYDII
+Intestinal infection,0043,9,SHIGELLA SONNEI
+Intestinal infection,0048,9,SHIGELLA INFECTION NEC
+Intestinal infection,0049,9,SHIGELLOSIS NOS
+Intestinal infection,0050,9,STAPH FOOD POISONING
+Intestinal infection,0051,9,BOTULISM
+Intestinal infection,0052,9,FOOD POIS D/T C. PERFRIN
+Intestinal infection,0053,9,FOOD POIS: CLOSTRID NEC
+Intestinal infection,0054,9,FOOD POIS: V. PARAHAEM
+Intestinal infection,0058,9,BACT FOOD POISONING NEC (End 1995)
+Intestinal infection,00581,9,FOOD POISONING VIBRIO (Begin 1995)
+Intestinal infection,00589,9,OTH BACT FOOD POISONING (Begin 1995)
+Intestinal infection,0059,9,FOOD POISONING NOS
+Intestinal infection,0060,9,AC AMEBIASIS W/O ABSCESS
+Intestinal infection,0061,9,CHR AMEBIASIS W/O ABSCES
+Intestinal infection,0062,9,AMEBIC NONDYSENT COLITIS
+Intestinal infection,0063,9,AMEBIC LIVER ABSCESS
+Intestinal infection,0064,9,AMEBIC LUNG ABSCESS
+Intestinal infection,0065,9,AMEBIC BRAIN ABSCESS
+Intestinal infection,0066,9,AMEBIC SKIN ULCERATION
+Intestinal infection,0068,9,AMEBIC INFECTION NEC
+Intestinal infection,0069,9,AMEBIASIS NOS
+Intestinal infection,0070,9,BALANTIDIASIS
+Intestinal infection,0071,9,GIARDIASIS
+Intestinal infection,0072,9,COCCIDIOSIS
+Intestinal infection,0073,9,INTEST TRICHOMONIASIS
+Intestinal infection,0074,9,OT PROTOZ INTEST DX- CRYP (Begin 1997)
+Intestinal infection,0075,9,CYCLOSPORIASIS (Begin 2000)
+Intestinal infection,0078,9,PROTOZOAL INTEST DIS NEC
+Intestinal infection,0079,9,PROTOZOAL INTEST DIS NOS
+Intestinal infection,0080,9,E. COLI ENTERITIS (Begin 1980 End 1992)
+Intestinal infection,00800,9,E. COLI ENTERITIS-NOS (Begin 1992)
+Intestinal infection,00801,9,E. COLI ENTERITIS-PATH (Begin 1992)
+Intestinal infection,00802,9,E. COLI ENTERITIS-TOX (Begin 1992)
+Intestinal infection,00803,9,E. COLI ENTERITIS-INVAS (Begin 1992)
+Intestinal infection,00804,9,E. COLI ENTERITIS-HEMOR (Begin 1992)
+Intestinal infection,00809,9,E. COLI ENTERITIS-OTHER (Begin 1992)
+Intestinal infection,0081,9,ARIZONA ENTERITIS
+Intestinal infection,0082,9,AEROBACTER ENTERITIS
+Intestinal infection,0083,9,PROTEUS ENTERITIS
+Intestinal infection,00841,9,STAPHYLOCOCC ENTERITIS
+Intestinal infection,00842,9,PSEUDOMONAS ENTERITIS
+Intestinal infection,00843,9,CAMPYLOBACTER (Begin 1992)
+Intestinal infection,00844,9,YERSINIA (Begin 1992)
+Intestinal infection,00845,9,CLOSTRIDIUM DIF (Begin 1992)
+Intestinal infection,00846,9,OTHER ANAEROBES (Begin 1992)
+Intestinal infection,00847,9,OTH GRAM NEG BACT (Begin 1992)
+Intestinal infection,00849,9,BACTERIAL ENTERITIS NEC
+Intestinal infection,0085,9,BACTERIAL ENTERITIS NOS
+Intestinal infection,0086,9,VIRAL ENTERITIS NEC (Begin 1980 End 1992)
+Intestinal infection,00861,9,ROTAVIRUS ENTERITIS (Begin 1992)
+Intestinal infection,00862,9,ADENOVIR ENTERITIS (Begin 1992)
+Intestinal infection,00863,9,NORWALK VIR ENTERITIS (Begin 1992)
+Intestinal infection,00864,9,SML ROUND VIR ENTERITIS (Begin 1992)
+Intestinal infection,00865,9,CALCIVIRUS ENTERITIS (Begin 1992)
+Intestinal infection,00866,9,ASTROVIRUS ENTERITIS (Begin 1992)
+Intestinal infection,00867,9,ENTERITIS NEC (Begin 1992)
+Intestinal infection,00869,9,ENTERITIS NOS (Begin 1992)
+Intestinal infection,0088,9,VIRAL ENTERITIS NOS
+Intestinal infection,0090,9,INFECTIOUS ENTERITIS NOS
+Intestinal infection,0091,9,ENTERITIS OF INFECT ORIG
+Intestinal infection,0092,9,INFECTIOUS DIARRHEA NOS
+Intestinal infection,0093,9,DIARRHEA OF INFECT ORIG
+Intestinal infection,0211,9,ENTERIC TULAREMIA
+Intestinal infection,0222,9,GASTROINTESTINAL ANTHRAX
+UTI,03284,9,DIPHTHERITIC CYSTITIS
+UTI,59000,9,CHR PYELONEPHRITIS NOS
+UTI,59001,9,CHR PYELONEPH W MED NECR
+UTI,59010,9,AC PYELONEPHRITIS NOS
+UTI,59011,9,AC PYELONEPHR W MED NECR
+UTI,5902,9,RENAL/PERIRENAL ABSCESS
+UTI,5903,9,PYELOURETERITIS CYSTICA
+UTI,59080,9,PYELONEPHRITIS NOS
+UTI,59081,9,PYELONEPHRIT IN OTH DIS
+UTI,5909,9,INFECTION OF KIDNEY NOS
+UTI,5950,9,ACUTE CYSTITIS
+UTI,5951,9,CHR INTERSTIT CYSTITIS
+UTI,5952,9,CHRONIC CYSTITIS NEC
+UTI,5953,9,TRIGONITIS
+UTI,5954,9,CYSTITIS IN OTH DIS
+UTI,59581,9,CYSTITIS CYSTICA
+UTI,59582,9,IRRADIATION CYSTITIS
+UTI,59589,9,CYSTITIS NEC
+UTI,5959,9,CYSTITIS NOS
+UTI,5970,9,URETHRAL ABSCESS
+UTI,59780,9,URETHRITIS NOS
+UTI,59781,9,URETHRAL SYNDROME NOS
+UTI,59789,9,URETHRITIS NEC
+UTI,59800,9,URETHR STRICT:INFECT NOS
+UTI,59801,9,URETH STRICT:OTH INFECT
+UTI,5990,9,URIN TRACT INFECTION NOS
+SSTI,0201,9,CELLULOCUTANEOUS PLAGUE
+SSTI,0210,9,ULCEROGLANDUL TULAREMIA
+SSTI,0220,9,CUTANEOUS ANTHRAX
+SSTI,0311,9,CUTANEOUS MYCOBACTERIA
+SSTI,03285,9,CUTANEOUS DIPHTHERIA
+SSTI,035,9,ERYSIPELAS
+SSTI,0390,9,CUTANEOUS ACTINOMYCOSIS
+SSTI,6800,9,CARBUNCLE OF FACE
+SSTI,6801,9,CARBUNCLE OF NECK
+SSTI,6802,9,CARBUNCLE OF TRUNK
+SSTI,6803,9,CARBUNCLE OF ARM
+SSTI,6804,9,CARBUNCLE OF HAND
+SSTI,6805,9,CARBUNCLE OF BUTTOCK
+SSTI,6806,9,CARBUNCLE OF LEG
+SSTI,6807,9,CARBUNCLE OF FOOT
+SSTI,6808,9,CARBUNCLE- SITE NEC
+SSTI,6809,9,CARBUNCLE NOS
+SSTI,68100,9,CELLULITIS- FINGER NOS
+SSTI,68101,9,FELON
+SSTI,68102,9,ONYCHIA OF FINGER
+SSTI,68110,9,CELLULITIS- TOE NOS
+SSTI,68111,9,ONYCHIA OF TOE
+SSTI,6819,9,CELLULITIS OF DIGIT NOS
+SSTI,6820,9,CELLULITIS OF FACE
+SSTI,6821,9,CELLULITIS OF NECK
+SSTI,6822,9,CELLULITIS OF TRUNK
+SSTI,6823,9,CELLULITIS OF ARM
+SSTI,6824,9,CELLULITIS OF HAND
+SSTI,6825,9,CELLULITIS OF BUTTOCK
+SSTI,6826,9,CELLULITIS OF LEG
+SSTI,6827,9,CELLULITIS OF FOOT
+SSTI,6828,9,CELLULITIS- SITE NEC
+SSTI,6829,9,CELLULITIS NOS
+SSTI,684,9,IMPETIGO
+SSTI,6850,9,PILONIDAL CYST W ABSCESS
+SSTI,6851,9,PILONIDAL CYST W/O ABSC
+SSTI,6860,9,PYODERMA (End 1997)
+SSTI,68600,9,PYODERMA NOS (Begin 1997)
+SSTI,68601,9,PYODERMA GANGREN (Begin 1997)
+SSTI,68609,9,PYODERMA NEC (Begin 1997)
+SSTI,6861,9,PYOGENIC GRANULOMA
+SSTI,6868,9,LOCAL SKIN INFECTION NEC
+SSTI,6869,9,LOCAL SKIN INFECTION NOS
+Routine child health exam,V202,9,ROUTIN CHILD HEALTH EXAM
+Intestinal infection,A000,0,"Cholera due to Vibrio cholerae 01, biovar cholerae"
+Intestinal infection,A000,0,"Cholera due to Vibrio cholerae 01, biovar cholerae"
+Intestinal infection,A001,0,"Cholera due to Vibrio cholerae 01, biovar eltor"
+Intestinal infection,A001,0,"Cholera due to Vibrio cholerae 01, biovar eltor"
+Intestinal infection,A009,0,"Cholera, unspecified"
+Intestinal infection,A009,0,"Cholera, unspecified"
+Intestinal infection,A0100,0,"Typhoid fever, unspecified"
+Intestinal infection,A0100,0,"Typhoid fever, unspecified"
+Bacterial infection (other),A0101,0,Typhoid meningitis
+Bacterial infection (other),A0101,0,Typhoid meningitis
+Bacterial infection (other),A0102,0,Typhoid fever with heart involvement
+Pneumonia,A0103,0,Typhoid pneumonia
+Pneumonia,A0103,0,Typhoid pneumonia
+Bacterial infection (other),A0104,0,Typhoid arthritis
+Bacterial infection (other),A0104,0,Typhoid arthritis
+Bacterial infection (other),A0105,0,Typhoid osteomyelitis
+Bacterial infection (other),A0105,0,Typhoid osteomyelitis
+Intestinal infection,A0109,0,Typhoid fever with other complications
+Intestinal infection,A0109,0,Typhoid fever with other complications
+Intestinal infection,A011,0,Paratyphoid fever A
+Intestinal infection,A011,0,Paratyphoid fever A
+Intestinal infection,A012,0,Paratyphoid fever B
+Intestinal infection,A012,0,Paratyphoid fever B
+Intestinal infection,A013,0,Paratyphoid fever C
+Intestinal infection,A013,0,Paratyphoid fever C
+Intestinal infection,A014,0,"Paratyphoid fever, unspecified"
+Intestinal infection,A014,0,"Paratyphoid fever, unspecified"
+Intestinal infection,A020,0,Salmonella enteritis
+Intestinal infection,A020,0,Salmonella enteritis
+Bacterial infection (other),A021,0,Salmonella sepsis
+Bacterial infection (other),A021,0,Salmonella sepsis
+Bacterial infection (other),A0220,0,"Localized salmonella infection, unspecified"
+Bacterial infection (other),A0221,0,Salmonella meningitis
+Bacterial infection (other),A0221,0,Salmonella meningitis
+Pneumonia,A0222,0,Salmonella pneumonia
+Pneumonia,A0222,0,Salmonella pneumonia
+Bacterial infection (other),A0223,0,Salmonella arthritis
+Bacterial infection (other),A0223,0,Salmonella arthritis
+Bacterial infection (other),A0224,0,Salmonella osteomyelitis
+Bacterial infection (other),A0224,0,Salmonella osteomyelitis
+UTI,A0225,0,Salmonella pyelonephritis
+UTI,A0225,0,Salmonella pyelonephritis
+Intestinal infection,A0229,0,Salmonella with other localized infection
+Intestinal infection,A0229,0,Salmonella with other localized infection
+Bacterial infection (other),A028,0,Other specified salmonella infections
+Intestinal infection,A029,0,"Salmonella infection, unspecified"
+Intestinal infection,A029,0,"Salmonella infection, unspecified"
+Intestinal infection,A030,0,Shigellosis due to Shigella dysenteriae
+Intestinal infection,A030,0,Shigellosis due to Shigella dysenteriae
+Intestinal infection,A031,0,Shigellosis due to Shigella flexneri
+Intestinal infection,A031,0,Shigellosis due to Shigella flexneri
+Intestinal infection,A032,0,Shigellosis due to Shigella boydii
+Intestinal infection,A032,0,Shigellosis due to Shigella boydii
+Intestinal infection,A033,0,Shigellosis due to Shigella sonnei
+Intestinal infection,A033,0,Shigellosis due to Shigella sonnei
+Intestinal infection,A038,0,Other shigellosis
+Intestinal infection,A038,0,Other shigellosis
+Intestinal infection,A039,0,"Shigellosis, unspecified"
+Intestinal infection,A039,0,"Shigellosis, unspecified"
+Intestinal infection,A040,0,Enteropathogenic Escherichia coli infection
+Intestinal infection,A040,0,Enteropathogenic Escherichia coli infection
+Intestinal infection,A041,0,Enterotoxigenic Escherichia coli infection
+Intestinal infection,A041,0,Enterotoxigenic Escherichia coli infection
+Intestinal infection,A042,0,Enteroinvasive Escherichia coli infection
+Intestinal infection,A042,0,Enteroinvasive Escherichia coli infection
+Intestinal infection,A043,0,Enterohemorrhagic Escherichia coli infection
+Intestinal infection,A043,0,Enterohemorrhagic Escherichia coli infection
+Intestinal infection,A044,0,Other intestinal Escherichia coli infections
+Intestinal infection,A044,0,Other intestinal Escherichia coli infections
+Intestinal infection,A045,0,Campylobacter enteritis
+Intestinal infection,A045,0,Campylobacter enteritis
+Intestinal infection,A046,0,Enteritis due to Yersinia enterocolitica
+Intestinal infection,A046,0,Enteritis due to Yersinia enterocolitica
+Intestinal infection,A047,0,Enterocolitis due to Clostridium difficile
+Intestinal infection,A047,0,Enterocolitis due to Clostridium difficile
+Intestinal infection,A0471,0,"Enterocolitis due to Clostridium difficile, recurrent"
+Intestinal infection,A0471,0,"Enterocolitis due to Clostridium difficile, recurrent"
+Intestinal infection,A0472,0,"Enterocolitis due to Clostridium difficile, not specified as recurrent"
+Intestinal infection,A0472,0,"Enterocolitis due to Clostridium difficile, not specified as recurrent"
+Intestinal infection,A048,0,Other specified bacterial intestinal infections
+Intestinal infection,A048,0,Other specified bacterial intestinal infections
+Intestinal infection,A049,0,"Bacterial intestinal infection, unspecified"
+Intestinal infection,A049,0,"Bacterial intestinal infection, unspecified"
+Intestinal infection,A060,0,Acute amebic dysentery
+Intestinal infection,A060,0,Acute amebic dysentery
+Intestinal infection,A061,0,Chronic intestinal amebiasis
+Intestinal infection,A061,0,Chronic intestinal amebiasis
+Intestinal infection,A062,0,Amebic nondysenteric colitis
+Intestinal infection,A062,0,Amebic nondysenteric colitis
+Intestinal infection,A063,0,Ameboma of intestine
+Intestinal infection,A063,0,Ameboma of intestine
+Intestinal infection,A064,0,Amebic liver abscess
+Intestinal infection,A064,0,Amebic liver abscess
+Intestinal infection,A069,0,"Amebiasis, unspecified"
+Intestinal infection,A069,0,"Amebiasis, unspecified"
+Intestinal infection,A070,0,Balantidiasis
+Intestinal infection,A070,0,Balantidiasis
+Intestinal infection,A071,0,Giardiasis [lambliasis]
+Intestinal infection,A071,0,Giardiasis [lambliasis]
+Intestinal infection,A072,0,Cryptosporidiosis
+Intestinal infection,A072,0,Cryptosporidiosis
+Intestinal infection,A073,0,Isosporiasis
+Intestinal infection,A073,0,Isosporiasis
+Intestinal infection,A074,0,Cyclosporiasis
+Intestinal infection,A074,0,Cyclosporiasis
+Intestinal infection,A078,0,Other specified protozoal intestinal diseases
+Intestinal infection,A078,0,Other specified protozoal intestinal diseases
+Intestinal infection,A079,0,"Protozoal intestinal disease, unspecified"
+Intestinal infection,A079,0,"Protozoal intestinal disease, unspecified"
+Intestinal infection,A080,0,Rotaviral enteritis
+Intestinal infection,A080,0,Rotaviral enteritis
+Intestinal infection,A0811,0,Acute gastroenteropathy due to Norwalk agent
+Intestinal infection,A0811,0,Acute gastroenteropathy due to Norwalk agent
+Intestinal infection,A0819,0,Acute gastroenteropathy due to other small round viruses
+Intestinal infection,A0819,0,Acute gastroenteropathy due to other small round viruses
+Intestinal infection,A082,0,Adenoviral enteritis
+Intestinal infection,A082,0,Adenoviral enteritis
+Intestinal infection,A0831,0,Calicivirus enteritis
+Intestinal infection,A0831,0,Calicivirus enteritis
+Intestinal infection,A0832,0,Astrovirus enteritis
+Intestinal infection,A0832,0,Astrovirus enteritis
+Intestinal infection,A0839,0,Other viral enteritis
+Intestinal infection,A0839,0,Other viral enteritis
+Intestinal infection,A084,0,"Viral intestinal infection, unspecified"
+Intestinal infection,A084,0,"Viral intestinal infection, unspecified"
+Intestinal infection,A088,0,Other specified intestinal infections
+Intestinal infection,A088,0,Other specified intestinal infections
+Intestinal infection,A09,0,"Infectious gastroenteritis and colitis, unspecified"
+Intestinal infection,A09,0,"Infectious gastroenteritis and colitis, unspecified"
+URI (other),A155,0,"Tuberculosis of larynx, trachea and bronchus"
+URI (other),A155,0,"Tuberculosis of larynx, trachea and bronchus"
+UTI,A1810,0,"Tuberculosis of genitourinary system, unspecified"
+UTI,A1810,0,"Tuberculosis of genitourinary system, unspecified"
+UTI,A1813,0,Tuberculosis of other urinary organs
+UTI,A1813,0,Tuberculosis of other urinary organs
+Intestinal infection,A1832,0,Tuberculous enteritis
+Intestinal infection,A1832,0,Tuberculous enteritis
+Bacterial infection (other),A200,0,Bubonic plague
+SSTI,A201,0,Cellulocutaneous plague
+SSTI,A201,0,Cellulocutaneous plague
+Pneumonia,A202,0,Pneumonic plague
+Pneumonia,A202,0,Pneumonic plague
+Bacterial infection (other),A203,0,Plague meningitis
+Bacterial infection (other),A203,0,Plague meningitis
+Bacterial infection (other),A207,0,Septicemic plague
+Bacterial infection (other),A207,0,Septicemic plague
+Bacterial infection (other),A208,0,Other forms of plague
+Bacterial infection (other),A209,0,"Plague, unspecified"
+SSTI,A210,0,Ulceroglandular tularemia
+SSTI,A210,0,Ulceroglandular tularemia
+Bacterial infection (other),A211,0,Oculoglandular tularemia
+Bacterial infection (other),A211,0,Oculoglandular tularemia
+Pneumonia,A212,0,Pulmonary tularemia
+Pneumonia,A212,0,Pulmonary tularemia
+Intestinal infection,A213,0,Gastrointestinal tularemia
+Intestinal infection,A213,0,Gastrointestinal tularemia
+Bacterial infection (other),A217,0,Generalized tularemia
+Bacterial infection (other),A218,0,Other forms of tularemia
+Bacterial infection (other),A219,0,"Tularemia, unspecified"
+SSTI,A220,0,Cutaneous anthrax
+SSTI,A220,0,Cutaneous anthrax
+Pneumonia,A221,0,Pulmonary anthrax
+Pneumonia,A221,0,Pulmonary anthrax
+Intestinal infection,A222,0,Gastrointestinal anthrax
+Intestinal infection,A222,0,Gastrointestinal anthrax
+Bacterial infection (other),A227,0,Anthrax sepsis
+Bacterial infection (other),A227,0,Anthrax sepsis
+Bacterial infection (other),A228,0,Other forms of anthrax
+Bacterial infection (other),A229,0,"Anthrax, unspecified"
+Bacterial infection (other),A230,0,Brucellosis due to Brucella melitensis
+Bacterial infection (other),A231,0,Brucellosis due to Brucella abortus
+Bacterial infection (other),A232,0,Brucellosis due to Brucella suis
+Bacterial infection (other),A233,0,Brucellosis due to Brucella canis
+Bacterial infection (other),A238,0,Other brucellosis
+Bacterial infection (other),A239,0,"Brucellosis, unspecified"
+Bacterial infection (other),A240,0,Glanders
+Bacterial infection (other),A241,0,Acute and fulminating melioidosis
+Bacterial infection (other),A242,0,Subacute and chronic melioidosis
+Bacterial infection (other),A243,0,Other melioidosis
+Bacterial infection (other),A249,0,"Melioidosis, unspecified"
+Bacterial infection (other),A250,0,Spirillosis
+Bacterial infection (other),A251,0,Streptobacillosis
+Bacterial infection (other),A259,0,"Rat-bite fever, unspecified"
+Bacterial infection (other),A260,0,Cutaneous erysipeloid
+Bacterial infection (other),A267,0,Erysipelothrix sepsis
+Bacterial infection (other),A267,0,Erysipelothrix sepsis
+Bacterial infection (other),A268,0,Other forms of erysipeloid
+Bacterial infection (other),A269,0,"Erysipeloid, unspecified"
+Bacterial infection (other),A270,0,Leptospirosis icterohemorrhagica
+Bacterial infection (other),A2781,0,Aseptic meningitis in leptospirosis
+Bacterial infection (other),A2781,0,Aseptic meningitis in leptospirosis
+Bacterial infection (other),A2789,0,Other forms of leptospirosis
+Bacterial infection (other),A279,0,"Leptospirosis, unspecified"
+Bacterial infection (other),A280,0,Pasteurellosis
+Bacterial infection (other),A281,0,Cat-scratch disease
+Bacterial infection (other),A282,0,Extraintestinal yersiniosis
+Bacterial infection (other),A288,0,"Other specified zoonotic bacterial diseases, not elsewhere classified"
+Bacterial infection (other),A289,0,"Zoonotic bacterial disease, unspecified"
+Bacterial infection (other),A300,0,Indeterminate leprosy
+Bacterial infection (other),A301,0,Tuberculoid leprosy
+Bacterial infection (other),A302,0,Borderline tuberculoid leprosy
+Bacterial infection (other),A303,0,Borderline leprosy
+Bacterial infection (other),A304,0,Borderline lepromatous leprosy
+Bacterial infection (other),A305,0,Lepromatous leprosy
+Bacterial infection (other),A308,0,Other forms of leprosy
+Bacterial infection (other),A309,0,"Leprosy, unspecified"
+Pneumonia,A310,0,Pulmonary mycobacterial infection
+Pneumonia,A310,0,Pulmonary mycobacterial infection
+SSTI,A311,0,Cutaneous mycobacterial infection
+SSTI,A311,0,Cutaneous mycobacterial infection
+Bacterial infection (other),A312,0,Disseminated mycobacterium avium-intracellulare complex (DMAC)
+Bacterial infection (other),A318,0,Other mycobacterial infections
+Bacterial infection (other),A319,0,"Mycobacterial infection, unspecified"
+Bacterial infection (other),A320,0,Cutaneous listeriosis
+Bacterial infection (other),A3211,0,Listerial meningitis
+Bacterial infection (other),A3211,0,Listerial meningitis
+Bacterial infection (other),A3212,0,Listerial meningoencephalitis
+Bacterial infection (other),A3212,0,Listerial meningoencephalitis
+Bacterial infection (other),A327,0,Listerial sepsis
+Bacterial infection (other),A327,0,Listerial sepsis
+Bacterial infection (other),A3281,0,Oculoglandular listeriosis
+Bacterial infection (other),A3282,0,Listerial endocarditis
+Bacterial infection (other),A3282,0,Listerial endocarditis
+Bacterial infection (other),A3289,0,Other forms of listeriosis
+Bacterial infection (other),A329,0,"Listeriosis, unspecified"
+Bacterial infection (other),A33,0,Tetanus neonatorum
+Bacterial infection (other),A33,0,Tetanus neonatorum
+Bacterial infection (other),A34,0,Obstetrical tetanus
+Bacterial infection (other),A34,0,Obstetrical tetanus
+Bacterial infection (other),A35,0,Other tetanus
+URI (other),A360,0,Pharyngeal diphtheria
+URI (other),A360,0,Pharyngeal diphtheria
+URI (other),A361,0,Nasopharyngeal diphtheria
+URI (other),A361,0,Nasopharyngeal diphtheria
+URI (other),A362,0,Laryngeal diphtheria
+URI (other),A362,0,Laryngeal diphtheria
+SSTI,A363,0,Cutaneous diphtheria
+SSTI,A363,0,Cutaneous diphtheria
+Bacterial infection (other),A3681,0,Diphtheritic cardiomyopathy
+Bacterial infection (other),A3681,0,Diphtheritic cardiomyopathy
+Bacterial infection (other),A3682,0,Diphtheritic radiculomyelitis
+Bacterial infection (other),A3683,0,Diphtheritic polyneuritis
+Bacterial infection (other),A3683,0,Diphtheritic polyneuritis
+Bacterial infection (other),A3684,0,Diphtheritic tubulo-interstitial nephropathy
+Bacterial infection (other),A3684,0,Diphtheritic tubulo-interstitial nephropathy
+UTI,A3685,0,Diphtheritic cystitis
+UTI,A3685,0,Diphtheritic cystitis
+Bacterial infection (other),A3686,0,Diphtheritic conjunctivitis
+Bacterial infection (other),A3686,0,Diphtheritic conjunctivitis
+Bacterial infection (other),A3689,0,Other diphtheritic complications
+Bacterial infection (other),A369,0,"Diphtheria, unspecified"
+Bacterial infection (other),A3700,0,Whooping cough due to Bordetella pertussis without pneumonia
+Pneumonia,A3701,0,Whooping cough due to Bordetella pertussis with pneumonia
+Pneumonia,A3701,0,Whooping cough due to Bordetella pertussis with pneumonia
+Bacterial infection (other),A3710,0,Whooping cough due to Bordetella parapertussis without pneumonia
+Pneumonia,A3711,0,Whooping cough due to Bordetella parapertussis with pneumonia
+Pneumonia,A3711,0,Whooping cough due to Bordetella parapertussis with pneumonia
+Bacterial infection (other),A3780,0,Whooping cough due to other Bordetella species without pneumonia
+Pneumonia,A3781,0,Whooping cough due to other Bordetella species with pneumonia
+Pneumonia,A3781,0,Whooping cough due to other Bordetella species with pneumonia
+Bacterial infection (other),A3790,0,"Whooping cough, unspecified species without pneumonia"
+Pneumonia,A3791,0,"Whooping cough, unspecified species with pneumonia"
+Pneumonia,A3791,0,"Whooping cough, unspecified species with pneumonia"
+Otitis media,A380,0,Scarlet fever with otitis media
+Otitis media,A380,0,Scarlet fever with otitis media
+Bacterial infection (other),A381,0,Scarlet fever with myocarditis
+Bacterial infection (other),A381,0,Scarlet fever with myocarditis
+Bacterial infection (other),A388,0,Scarlet fever with other complications
+Bacterial infection (other),A389,0,"Scarlet fever, uncomplicated"
+Bacterial infection (other),A390,0,Meningococcal meningitis
+Bacterial infection (other),A390,0,Meningococcal meningitis
+Bacterial infection (other),A391,0,Waterhouse-Friderichsen syndrome
+Bacterial infection (other),A391,0,Waterhouse-Friderichsen syndrome
+Bacterial infection (other),A392,0,Acute meningococcemia
+Bacterial infection (other),A392,0,Acute meningococcemia
+Bacterial infection (other),A393,0,Chronic meningococcemia
+Bacterial infection (other),A393,0,Chronic meningococcemia
+Bacterial infection (other),A394,0,"Meningococcemia, unspecified"
+Bacterial infection (other),A394,0,"Meningococcemia, unspecified"
+Bacterial infection (other),A3950,0,"Meningococcal carditis, unspecified"
+Bacterial infection (other),A3950,0,"Meningococcal carditis, unspecified"
+Bacterial infection (other),A3951,0,Meningococcal endocarditis
+Bacterial infection (other),A3951,0,Meningococcal endocarditis
+Bacterial infection (other),A3952,0,Meningococcal myocarditis
+Bacterial infection (other),A3952,0,Meningococcal myocarditis
+Bacterial infection (other),A3953,0,Meningococcal pericarditis
+Bacterial infection (other),A3953,0,Meningococcal pericarditis
+Bacterial infection (other),A3981,0,Meningococcal encephalitis
+Bacterial infection (other),A3981,0,Meningococcal encephalitis
+Bacterial infection (other),A3982,0,Meningococcal retrobulbar neuritis
+Bacterial infection (other),A3982,0,Meningococcal retrobulbar neuritis
+Bacterial infection (other),A3983,0,Meningococcal arthritis
+Bacterial infection (other),A3983,0,Meningococcal arthritis
+Bacterial infection (other),A3984,0,Postmeningococcal arthritis
+Bacterial infection (other),A3984,0,Postmeningococcal arthritis
+Bacterial infection (other),A3989,0,Other meningococcal infections
+Bacterial infection (other),A399,0,"Meningococcal infection, unspecified"
+Bacterial infection (other),A400,0,"Sepsis due to streptococcus, group A"
+Bacterial infection (other),A400,0,"Sepsis due to streptococcus, group A"
+Bacterial infection (other),A401,0,"Sepsis due to streptococcus, group B"
+Bacterial infection (other),A401,0,"Sepsis due to streptococcus, group B"
+Bacterial infection (other),A403,0,Sepsis due to Streptococcus pneumoniae
+Bacterial infection (other),A403,0,Sepsis due to Streptococcus pneumoniae
+Bacterial infection (other),A408,0,Other streptococcal sepsis
+Bacterial infection (other),A408,0,Other streptococcal sepsis
+Bacterial infection (other),A409,0,"Streptococcal sepsis, unspecified"
+Bacterial infection (other),A409,0,"Streptococcal sepsis, unspecified"
+Bacterial infection (other),A4101,0,Sepsis due to Methicillin susceptible Staphylococcus aureus
+Bacterial infection (other),A4101,0,Sepsis due to Methicillin susceptible Staphylococcus aureus
+Bacterial infection (other),A4102,0,Sepsis due to Methicillin resistant Staphylococcus aureus
+Bacterial infection (other),A4102,0,Sepsis due to Methicillin resistant Staphylococcus aureus
+Bacterial infection (other),A411,0,Sepsis due to other specified staphylococcus
+Bacterial infection (other),A411,0,Sepsis due to other specified staphylococcus
+Bacterial infection (other),A412,0,Sepsis due to unspecified staphylococcus
+Bacterial infection (other),A412,0,Sepsis due to unspecified staphylococcus
+Bacterial infection (other),A413,0,Sepsis due to Hemophilus influenzae
+Bacterial infection (other),A413,0,Sepsis due to Hemophilus influenzae
+Bacterial infection (other),A414,0,Sepsis due to anaerobes
+Bacterial infection (other),A414,0,Sepsis due to anaerobes
+Bacterial infection (other),A4150,0,"Gram-negative sepsis, unspecified"
+Bacterial infection (other),A4150,0,"Gram-negative sepsis, unspecified"
+Bacterial infection (other),A4151,0,Sepsis due to Escherichia coli [E. coli]
+Bacterial infection (other),A4151,0,Sepsis due to Escherichia coli [E. coli]
+Bacterial infection (other),A4152,0,Sepsis due to Pseudomonas
+Bacterial infection (other),A4152,0,Sepsis due to Pseudomonas
+Bacterial infection (other),A4153,0,Sepsis due to Serratia
+Bacterial infection (other),A4153,0,Sepsis due to Serratia
+Bacterial infection (other),A4159,0,Other Gram-negative sepsis
+Bacterial infection (other),A4159,0,Other Gram-negative sepsis
+Bacterial infection (other),A4181,0,Sepsis due to Enterococcus
+Bacterial infection (other),A4181,0,Sepsis due to Enterococcus
+Bacterial infection (other),A4189,0,Other specified sepsis
+Bacterial infection (other),A4189,0,Other specified sepsis
+Bacterial infection (other),A419,0,"Sepsis, unspecified organism"
+Bacterial infection (other),A419,0,"Sepsis, unspecified organism"
+Bacterial infection (other),A420,0,Pulmonary actinomycosis
+Bacterial infection (other),A421,0,Abdominal actinomycosis
+Bacterial infection (other),A422,0,Cervicofacial actinomycosis
+Bacterial infection (other),A427,0,Actinomycotic sepsis
+Bacterial infection (other),A427,0,Actinomycotic sepsis
+Bacterial infection (other),A4281,0,Actinomycotic meningitis
+Bacterial infection (other),A4281,0,Actinomycotic meningitis
+Bacterial infection (other),A4282,0,Actinomycotic encephalitis
+Bacterial infection (other),A4282,0,Actinomycotic encephalitis
+Bacterial infection (other),A4289,0,Other forms of actinomycosis
+Bacterial infection (other),A429,0,"Actinomycosis, unspecified"
+Pneumonia,A430,0,Pulmonary nocardiosis
+Pneumonia,A430,0,Pulmonary nocardiosis
+SSTI,A431,0,Cutaneous nocardiosis
+SSTI,A431,0,Cutaneous nocardiosis
+Bacterial infection (other),A438,0,Other forms of nocardiosis
+Bacterial infection (other),A439,0,"Nocardiosis, unspecified"
+Bacterial infection (other),A440,0,Systemic bartonellosis
+Bacterial infection (other),A441,0,Cutaneous and mucocutaneous bartonellosis
+Bacterial infection (other),A448,0,Other forms of bartonellosis
+Bacterial infection (other),A449,0,"Bartonellosis, unspecified"
+SSTI,A46,0,Erysipelas
+SSTI,A46,0,Erysipelas
+Bacterial infection (other),A480,0,Gas gangrene
+Pneumonia,A481,0,Legionnaires disease
+Pneumonia,A481,0,Legionnaires disease
+Bacterial infection (other),A482,0,Nonpneumonic Legionnaires disease [Pontiac fever]
+Bacterial infection (other),A483,0,Toxic shock syndrome
+Bacterial infection (other),A484,0,Brazilian purpuric fever
+Bacterial infection (other),A4852,0,Wound botulism
+Bacterial infection (other),A488,0,Other specified bacterial diseases
+Bacterial infection (other),A4901,0,"Methicillin susceptible Staphylococcus aureus infection, unspecified site"
+Bacterial infection (other),A4902,0,"Methicillin resistant Staphylococcus aureus infection, unspecified site"
+Bacterial infection (other),A491,0,"Streptococcal infection, unspecified site"
+Bacterial infection (other),A492,0,"Hemophilus influenzae infection, unspecified site"
+Bacterial infection (other),A493,0,"Mycoplasma infection, unspecified site"
+Bacterial infection (other),A498,0,Other bacterial infections of unspecified site
+Bacterial infection (other),A499,0,"Bacterial infection, unspecified"
+URI (other),A5003,0,Early congenital syphilitic pharyngitis
+URI (other),A5003,0,Early congenital syphilitic pharyngitis
+URI (other),A5003,0,Early congenital syphilitic pharyngitis
+Pneumonia,A5004,0,Early congenital syphilitic pneumonia
+Pneumonia,A5004,0,Early congenital syphilitic pneumonia
+Pneumonia,A5004,0,Early congenital syphilitic pneumonia
+SSTI,A5139,0,Other secondary syphilis of skin
+SSTI,A5139,0,Other secondary syphilis of skin
+Pneumonia,A5272,0,Syphilis of lung and bronchus
+Pneumonia,A5272,0,Syphilis of lung and bronchus
+URI (other),A5273,0,Symptomatic late syphilis of other respiratory organs
+URI (other),A5273,0,Symptomatic late syphilis of other respiratory organs
+UTI,A5275,0,Syphilis of kidney and ureter
+UTI,A5275,0,Syphilis of kidney and ureter
+UTI,A5401,0,"Gonococcal cystitis and urethritis, unspecified"
+UTI,A5401,0,"Gonococcal cystitis and urethritis, unspecified"
+URI (other),A545,0,Gonococcal pharyngitis
+URI (other),A545,0,Gonococcal pharyngitis
+Pneumonia,A5484,0,Gonococcal pneumonia
+Pneumonia,A5484,0,Gonococcal pneumonia
+UTI,A5601,0,Chlamydial cystitis and urethritis
+UTI,A5601,0,Chlamydial cystitis and urethritis
+URI (other),A564,0,Chlamydial infection of pharynx
+URI (other),A564,0,Chlamydial infection of pharynx
+UTI,A5903,0,Trichomonal cystitis and urethritis
+UTI,A5903,0,Trichomonal cystitis and urethritis
+UTI,A5903,0,Trichomonal cystitis and urethritis
+Viral infection,A6000,0,"Herpesviral infection of urogenital system, unspecified"
+Viral infection,A6000,0,"Herpesviral infection of urogenital system, unspecified"
+Viral infection,A6001,0,Herpesviral infection of penis
+Viral infection,A6001,0,Herpesviral infection of penis
+Viral infection,A6001,0,Herpesviral infection of penis
+Viral infection,A6002,0,Herpesviral infection of other male genital organs
+Viral infection,A6002,0,Herpesviral infection of other male genital organs
+Viral infection,A6002,0,Herpesviral infection of other male genital organs
+Viral infection,A6003,0,Herpesviral cervicitis
+Viral infection,A6003,0,Herpesviral cervicitis
+Viral infection,A6003,0,Herpesviral cervicitis
+Viral infection,A6004,0,Herpesviral vulvovaginitis
+Viral infection,A6004,0,Herpesviral vulvovaginitis
+Viral infection,A6004,0,Herpesviral vulvovaginitis
+Viral infection,A6009,0,Herpesviral infection of other urogenital tract
+Viral infection,A6009,0,Herpesviral infection of other urogenital tract
+Viral infection,A601,0,Herpesviral infection of perianal skin and rectum
+Viral infection,A601,0,Herpesviral infection of perianal skin and rectum
+Viral infection,A601,0,Herpesviral infection of perianal skin and rectum
+Viral infection,A609,0,"Anogenital herpesviral infection, unspecified"
+Viral infection,A609,0,"Anogenital herpesviral infection, unspecified"
+Viral infection,A609,0,"Anogenital herpesviral infection, unspecified"
+Viral infection,A630,0,Anogenital (venereal) warts
+Viral infection,A630,0,Anogenital (venereal) warts
+Viral infection,A630,0,Anogenital (venereal) warts
+Bacterial infection (other),A70,0,Chlamydia psittaci infections
+Bacterial infection (other),A710,0,Initial stage of trachoma
+Bacterial infection (other),A710,0,Initial stage of trachoma
+Bacterial infection (other),A711,0,Active stage of trachoma
+Bacterial infection (other),A711,0,Active stage of trachoma
+Bacterial infection (other),A719,0,"Trachoma, unspecified"
+Bacterial infection (other),A719,0,"Trachoma, unspecified"
+Bacterial infection (other),A740,0,Chlamydial conjunctivitis
+Bacterial infection (other),A740,0,Chlamydial conjunctivitis
+Bacterial infection (other),A7481,0,Chlamydial peritonitis
+Bacterial infection (other),A7481,0,Chlamydial peritonitis
+Bacterial infection (other),A7489,0,Other chlamydial diseases
+Bacterial infection (other),A749,0,"Chlamydial infection, unspecified"
+Bacterial infection (other),A78,0,Q fever
+Viral infection,A800,0,"Acute paralytic poliomyelitis, vaccine-associated"
+Viral infection,A800,0,"Acute paralytic poliomyelitis, vaccine-associated"
+Viral infection,A801,0,"Acute paralytic poliomyelitis, wild virus, imported"
+Viral infection,A801,0,"Acute paralytic poliomyelitis, wild virus, imported"
+Viral infection,A802,0,"Acute paralytic poliomyelitis, wild virus, indigenous"
+Viral infection,A802,0,"Acute paralytic poliomyelitis, wild virus, indigenous"
+Viral infection,A8030,0,"Acute paralytic poliomyelitis, unspecified"
+Viral infection,A8030,0,"Acute paralytic poliomyelitis, unspecified"
+Viral infection,A8039,0,Other acute paralytic poliomyelitis
+Viral infection,A8039,0,Other acute paralytic poliomyelitis
+Viral infection,A804,0,Acute nonparalytic poliomyelitis
+Viral infection,A804,0,Acute nonparalytic poliomyelitis
+Viral infection,A809,0,"Acute poliomyelitis, unspecified"
+Viral infection,A809,0,"Acute poliomyelitis, unspecified"
+Viral infection,A8100,0,"Creutzfeldt-Jakob disease, unspecified"
+Viral infection,A8100,0,"Creutzfeldt-Jakob disease, unspecified"
+Viral infection,A8101,0,Variant Creutzfeldt-Jakob disease
+Viral infection,A8101,0,Variant Creutzfeldt-Jakob disease
+Viral infection,A8109,0,Other Creutzfeldt-Jakob disease
+Viral infection,A8109,0,Other Creutzfeldt-Jakob disease
+Viral infection,A811,0,Subacute sclerosing panencephalitis
+Viral infection,A811,0,Subacute sclerosing panencephalitis
+Viral infection,A812,0,Progressive multifocal leukoencephalopathy
+Viral infection,A812,0,Progressive multifocal leukoencephalopathy
+Viral infection,A8181,0,Kuru
+Viral infection,A8181,0,Kuru
+Viral infection,A8182,0,Gerstmann-Straussler-Scheinker syndrome
+Viral infection,A8182,0,Gerstmann-Straussler-Scheinker syndrome
+Viral infection,A8183,0,Fatal familial insomnia
+Viral infection,A8183,0,Fatal familial insomnia
+Viral infection,A8189,0,Other atypical virus infections of central nervous system
+Viral infection,A8189,0,Other atypical virus infections of central nervous system
+Viral infection,A819,0,"Atypical virus infection of central nervous system, unspecified"
+Viral infection,A819,0,"Atypical virus infection of central nervous system, unspecified"
+Viral infection,A820,0,Sylvatic rabies
+Viral infection,A820,0,Sylvatic rabies
+Viral infection,A821,0,Urban rabies
+Viral infection,A821,0,Urban rabies
+Viral infection,A829,0,"Rabies, unspecified"
+Viral infection,A829,0,"Rabies, unspecified"
+Viral infection,A830,0,Japanese encephalitis
+Viral infection,A830,0,Japanese encephalitis
+Viral infection,A831,0,Western equine encephalitis
+Viral infection,A831,0,Western equine encephalitis
+Viral infection,A832,0,Eastern equine encephalitis
+Viral infection,A832,0,Eastern equine encephalitis
+Viral infection,A833,0,St Louis encephalitis
+Viral infection,A833,0,St Louis encephalitis
+Viral infection,A834,0,Australian encephalitis
+Viral infection,A834,0,Australian encephalitis
+Viral infection,A835,0,California encephalitis
+Viral infection,A835,0,California encephalitis
+Viral infection,A836,0,Rocio virus disease
+Viral infection,A836,0,Rocio virus disease
+Viral infection,A838,0,Other mosquito-borne viral encephalitis
+Viral infection,A838,0,Other mosquito-borne viral encephalitis
+Viral infection,A839,0,"Mosquito-borne viral encephalitis, unspecified"
+Viral infection,A839,0,"Mosquito-borne viral encephalitis, unspecified"
+Viral infection,A840,0,Far Eastern tick-borne encephalitis [Russian spring-summer encephalitis]
+Viral infection,A840,0,Far Eastern tick-borne encephalitis [Russian spring-summer encephalitis]
+Viral infection,A841,0,Central European tick-borne encephalitis
+Viral infection,A841,0,Central European tick-borne encephalitis
+Viral infection,A848,0,Other tick-borne viral encephalitis
+Viral infection,A848,0,Other tick-borne viral encephalitis
+Viral infection,A8481,0,Powassan virus disease
+Viral infection,A8481,0,Powassan virus disease
+Viral infection,A8489,0,Other tick-borne viral encephalitis
+Viral infection,A8489,0,Other tick-borne viral encephalitis
+Viral infection,A849,0,"Tick-borne viral encephalitis, unspecified"
+Viral infection,A849,0,"Tick-borne viral encephalitis, unspecified"
+Viral infection,A850,0,Enteroviral encephalitis
+Viral infection,A850,0,Enteroviral encephalitis
+Viral infection,A851,0,Adenoviral encephalitis
+Viral infection,A851,0,Adenoviral encephalitis
+Viral infection,A852,0,"Arthropod-borne viral encephalitis, unspecified"
+Viral infection,A852,0,"Arthropod-borne viral encephalitis, unspecified"
+Viral infection,A858,0,Other specified viral encephalitis
+Viral infection,A858,0,Other specified viral encephalitis
+Viral infection,A86,0,Unspecified viral encephalitis
+Viral infection,A86,0,Unspecified viral encephalitis
+Viral infection,A870,0,Enteroviral meningitis
+Viral infection,A870,0,Enteroviral meningitis
+Viral infection,A871,0,Adenoviral meningitis
+Viral infection,A871,0,Adenoviral meningitis
+Viral infection,A872,0,Lymphocytic choriomeningitis
+Viral infection,A872,0,Lymphocytic choriomeningitis
+Viral infection,A878,0,Other viral meningitis
+Viral infection,A878,0,Other viral meningitis
+Viral infection,A879,0,"Viral meningitis, unspecified"
+Viral infection,A879,0,"Viral meningitis, unspecified"
+Viral infection,A880,0,Enteroviral exanthematous fever [Boston exanthem]
+Viral infection,A880,0,Enteroviral exanthematous fever [Boston exanthem]
+Viral infection,A881,0,Epidemic vertigo
+Viral infection,A881,0,Epidemic vertigo
+Viral infection,A888,0,Other specified viral infections of central nervous system
+Viral infection,A888,0,Other specified viral infections of central nervous system
+Viral infection,A89,0,Unspecified viral infection of central nervous system
+Viral infection,A89,0,Unspecified viral infection of central nervous system
+Viral infection,A90,0,Dengue fever [classical dengue]
+Viral infection,A91,0,Dengue hemorrhagic fever
+Viral infection,A920,0,Chikungunya virus disease
+Viral infection,A921,0,Onyong-nyong fever
+Viral infection,A922,0,Venezuelan equine fever
+Viral infection,A922,0,Venezuelan equine fever
+Viral infection,A9230,0,"West Nile virus infection, unspecified"
+Viral infection,A9231,0,West Nile virus infection with encephalitis
+Viral infection,A9231,0,West Nile virus infection with encephalitis
+Viral infection,A9232,0,West Nile virus infection with other neurologic manifestation
+Viral infection,A9239,0,West Nile virus infection with other complications
+Viral infection,A924,0,Rift Valley fever
+Viral infection,A925,0,Zika virus disease
+Viral infection,A928,0,Other specified mosquito-borne viral fevers
+Viral infection,A929,0,"Mosquito-borne viral fever, unspecified"
+Viral infection,A930,0,Oropouche virus disease
+Viral infection,A931,0,Sandfly fever
+Viral infection,A932,0,Colorado tick fever
+Viral infection,A938,0,Other specified arthropod-borne viral fevers
+Viral infection,A94,0,Unspecified arthropod-borne viral fever
+Viral infection,A950,0,Sylvatic yellow fever
+Viral infection,A951,0,Urban yellow fever
+Viral infection,A959,0,"Yellow fever, unspecified"
+Viral infection,A960,0,Junin hemorrhagic fever
+Viral infection,A961,0,Machupo hemorrhagic fever
+Viral infection,A962,0,Lassa fever
+Viral infection,A968,0,Other arenaviral hemorrhagic fevers
+Viral infection,A969,0,"Arenaviral hemorrhagic fever, unspecified"
+Viral infection,A980,0,Crimean-Congo hemorrhagic fever
+Viral infection,A981,0,Omsk hemorrhagic fever
+Viral infection,A982,0,Kyasanur Forest disease
+Viral infection,A983,0,Marburg virus disease
+Viral infection,A984,0,Ebola virus disease
+Viral infection,A985,0,Hemorrhagic fever with renal syndrome
+Viral infection,A988,0,Other specified viral hemorrhagic fevers
+Viral infection,A99,0,Unspecified viral hemorrhagic fever
+Viral infection,B000,0,Eczema herpeticum
+Viral infection,B000,0,Eczema herpeticum
+Viral infection,B001,0,Herpesviral vesicular dermatitis
+Viral infection,B001,0,Herpesviral vesicular dermatitis
+URI (other),B002,0,Herpesviral gingivostomatitis and pharyngotonsillitis
+URI (other),B002,0,Herpesviral gingivostomatitis and pharyngotonsillitis
+URI (other),B002,0,Herpesviral gingivostomatitis and pharyngotonsillitis
+Viral infection,B003,0,Herpesviral meningitis
+Viral infection,B003,0,Herpesviral meningitis
+Viral infection,B004,0,Herpesviral encephalitis
+Viral infection,B004,0,Herpesviral encephalitis
+Viral infection,B0050,0,"Herpesviral ocular disease, unspecified"
+Viral infection,B0050,0,"Herpesviral ocular disease, unspecified"
+Viral infection,B0051,0,Herpesviral iridocyclitis
+Viral infection,B0051,0,Herpesviral iridocyclitis
+Viral infection,B0052,0,Herpesviral keratitis
+Viral infection,B0052,0,Herpesviral keratitis
+Viral infection,B0053,0,Herpesviral conjunctivitis
+Viral infection,B0053,0,Herpesviral conjunctivitis
+Viral infection,B0059,0,Other herpesviral disease of eye
+Viral infection,B0059,0,Other herpesviral disease of eye
+Viral infection,B007,0,Disseminated herpesviral disease
+Viral infection,B007,0,Disseminated herpesviral disease
+Viral infection,B0081,0,Herpesviral hepatitis
+Viral infection,B0081,0,Herpesviral hepatitis
+Viral infection,B0082,0,Herpes simplex myelitis
+Viral infection,B0089,0,Other herpesviral infection
+Viral infection,B009,0,"Herpesviral infection, unspecified"
+Viral infection,B010,0,Varicella meningitis
+Viral infection,B010,0,Varicella meningitis
+Viral infection,B0111,0,Varicella encephalitis and encephalomyelitis
+Viral infection,B0111,0,Varicella encephalitis and encephalomyelitis
+Viral infection,B0112,0,Varicella myelitis
+Pneumonia,B012,0,Varicella pneumonia
+Pneumonia,B012,0,Varicella pneumonia
+Viral infection,B0181,0,Varicella keratitis
+Viral infection,B0181,0,Varicella keratitis
+Viral infection,B0189,0,Other varicella complications
+Viral infection,B019,0,Varicella without complication
+Viral infection,B020,0,Zoster encephalitis
+Viral infection,B020,0,Zoster encephalitis
+Viral infection,B021,0,Zoster meningitis
+Viral infection,B021,0,Zoster meningitis
+Viral infection,B0221,0,Postherpetic geniculate ganglionitis
+Viral infection,B0221,0,Postherpetic geniculate ganglionitis
+Viral infection,B0222,0,Postherpetic trigeminal neuralgia
+Viral infection,B0222,0,Postherpetic trigeminal neuralgia
+Viral infection,B0223,0,Postherpetic polyneuropathy
+Viral infection,B0223,0,Postherpetic polyneuropathy
+Viral infection,B0224,0,Postherpetic myelitis
+Viral infection,B0229,0,Other postherpetic nervous system involvement
+Viral infection,B0230,0,"Zoster ocular disease, unspecified"
+Viral infection,B0230,0,"Zoster ocular disease, unspecified"
+Viral infection,B0231,0,Zoster conjunctivitis
+Viral infection,B0231,0,Zoster conjunctivitis
+Viral infection,B0232,0,Zoster iridocyclitis
+Viral infection,B0232,0,Zoster iridocyclitis
+Viral infection,B0233,0,Zoster keratitis
+Viral infection,B0233,0,Zoster keratitis
+Viral infection,B0234,0,Zoster scleritis
+Viral infection,B0234,0,Zoster scleritis
+Viral infection,B0239,0,Other herpes zoster eye disease
+Viral infection,B0239,0,Other herpes zoster eye disease
+Viral infection,B027,0,Disseminated zoster
+Viral infection,B028,0,Zoster with other complications
+Viral infection,B029,0,Zoster without complications
+Viral infection,B03,0,Smallpox
+Viral infection,B04,0,Monkeypox
+Viral infection,B050,0,Measles complicated by encephalitis
+Viral infection,B050,0,Measles complicated by encephalitis
+Viral infection,B051,0,Measles complicated by meningitis
+Viral infection,B051,0,Measles complicated by meningitis
+Pneumonia,B052,0,Measles complicated by pneumonia
+Pneumonia,B052,0,Measles complicated by pneumonia
+Otitis media,B053,0,Measles complicated by otitis media
+Otitis media,B053,0,Measles complicated by otitis media
+Viral infection,B054,0,Measles with intestinal complications
+Viral infection,B0581,0,Measles keratitis and keratoconjunctivitis
+Viral infection,B0581,0,Measles keratitis and keratoconjunctivitis
+Viral infection,B0589,0,Other measles complications
+Viral infection,B059,0,Measles without complication
+Viral infection,B0600,0,"Rubella with neurological complication, unspecified"
+Viral infection,B0601,0,Rubella encephalitis
+Viral infection,B0601,0,Rubella encephalitis
+Viral infection,B0602,0,Rubella meningitis
+Viral infection,B0602,0,Rubella meningitis
+Viral infection,B0609,0,Other neurological complications of rubella
+Pneumonia,B0681,0,Rubella pneumonia
+Pneumonia,B0681,0,Rubella pneumonia
+Viral infection,B0682,0,Rubella arthritis
+Viral infection,B0682,0,Rubella arthritis
+Viral infection,B0689,0,Other rubella complications
+Viral infection,B069,0,Rubella without complication
+Viral infection,B070,0,Plantar wart
+Viral infection,B078,0,Other viral warts
+Viral infection,B079,0,"Viral wart, unspecified"
+Viral infection,B08010,0,Cowpox
+Viral infection,B08011,0,Vaccinia not from vaccine
+Viral infection,B0802,0,Orf virus disease
+Viral infection,B0803,0,Pseudocowpox [milkers node]
+Viral infection,B0804,0,"Paravaccinia, unspecified"
+Viral infection,B0809,0,Other orthopoxvirus infections
+Viral infection,B081,0,Molluscum contagiosum
+Viral infection,B0820,0,"Exanthema subitum [sixth disease], unspecified"
+Viral infection,B0821,0,Exanthema subitum [sixth disease] due to human herpesvirus 6
+Viral infection,B0822,0,Exanthema subitum [sixth disease] due to human herpesvirus 7
+Viral infection,B083,0,Erythema infectiosum [fifth disease]
+Viral infection,B084,0,Enteroviral vesicular stomatitis with exanthem
+Viral infection,B084,0,Enteroviral vesicular stomatitis with exanthem
+URI (other),B085,0,Enteroviral vesicular pharyngitis
+URI (other),B085,0,Enteroviral vesicular pharyngitis
+Viral infection,B0860,0,"Parapoxvirus infection, unspecified"
+Viral infection,B0861,0,Bovine stomatitis
+Viral infection,B0861,0,Bovine stomatitis
+Viral infection,B0862,0,Sealpox
+Viral infection,B0869,0,Other parapoxvirus infections
+Viral infection,B0870,0,"Yatapoxvirus infection, unspecified"
+Viral infection,B0871,0,Tanapox virus disease
+Viral infection,B0872,0,Yaba pox virus disease
+Viral infection,B0879,0,Other yatapoxvirus infections
+Viral infection,B088,0,Other specified viral infections characterized by skin and mucous membrane lesions
+Viral infection,B09,0,Unspecified viral infection characterized by skin and mucous membrane lesions
+Viral infection,B1001,0,Human herpesvirus 6 encephalitis
+Viral infection,B1001,0,Human herpesvirus 6 encephalitis
+Viral infection,B1009,0,Other human herpesvirus encephalitis
+Viral infection,B1009,0,Other human herpesvirus encephalitis
+Viral infection,B1081,0,Human herpesvirus 6 infection
+Viral infection,B1082,0,Human herpesvirus 7 infection
+Viral infection,B1089,0,Other human herpesvirus infection
+Viral infection,B150,0,Hepatitis A with hepatic coma
+Viral infection,B150,0,Hepatitis A with hepatic coma
+Viral infection,B150,0,Hepatitis A with hepatic coma
+Viral infection,B159,0,Hepatitis A without hepatic coma
+Viral infection,B159,0,Hepatitis A without hepatic coma
+Viral infection,B160,0,Acute hepatitis B with delta-agent with hepatic coma
+Viral infection,B160,0,Acute hepatitis B with delta-agent with hepatic coma
+Viral infection,B160,0,Acute hepatitis B with delta-agent with hepatic coma
+Viral infection,B161,0,Acute hepatitis B with delta-agent without hepatic coma
+Viral infection,B161,0,Acute hepatitis B with delta-agent without hepatic coma
+Viral infection,B162,0,Acute hepatitis B without delta-agent with hepatic coma
+Viral infection,B162,0,Acute hepatitis B without delta-agent with hepatic coma
+Viral infection,B162,0,Acute hepatitis B without delta-agent with hepatic coma
+Viral infection,B169,0,Acute hepatitis B without delta-agent and without hepatic coma
+Viral infection,B169,0,Acute hepatitis B without delta-agent and without hepatic coma
+Viral infection,B170,0,Acute delta-(super) infection of hepatitis B carrier
+Viral infection,B170,0,Acute delta-(super) infection of hepatitis B carrier
+Viral infection,B1710,0,Acute hepatitis C without hepatic coma
+Viral infection,B1710,0,Acute hepatitis C without hepatic coma
+Viral infection,B1711,0,Acute hepatitis C with hepatic coma
+Viral infection,B1711,0,Acute hepatitis C with hepatic coma
+Viral infection,B1711,0,Acute hepatitis C with hepatic coma
+Viral infection,B172,0,Acute hepatitis E
+Viral infection,B172,0,Acute hepatitis E
+Viral infection,B178,0,Other specified acute viral hepatitis
+Viral infection,B178,0,Other specified acute viral hepatitis
+Viral infection,B179,0,"Acute viral hepatitis, unspecified"
+Viral infection,B179,0,"Acute viral hepatitis, unspecified"
+Viral infection,B180,0,Chronic viral hepatitis B with delta-agent
+Viral infection,B180,0,Chronic viral hepatitis B with delta-agent
+Viral infection,B181,0,Chronic viral hepatitis B without delta-agent
+Viral infection,B181,0,Chronic viral hepatitis B without delta-agent
+Viral infection,B182,0,Chronic viral hepatitis C
+Viral infection,B182,0,Chronic viral hepatitis C
+Viral infection,B188,0,Other chronic viral hepatitis
+Viral infection,B188,0,Other chronic viral hepatitis
+Viral infection,B189,0,"Chronic viral hepatitis, unspecified"
+Viral infection,B189,0,"Chronic viral hepatitis, unspecified"
+Viral infection,B190,0,Unspecified viral hepatitis with hepatic coma
+Viral infection,B190,0,Unspecified viral hepatitis with hepatic coma
+Viral infection,B190,0,Unspecified viral hepatitis with hepatic coma
+Viral infection,B1910,0,Unspecified viral hepatitis B without hepatic coma
+Viral infection,B1910,0,Unspecified viral hepatitis B without hepatic coma
+Viral infection,B1911,0,Unspecified viral hepatitis B with hepatic coma
+Viral infection,B1911,0,Unspecified viral hepatitis B with hepatic coma
+Viral infection,B1911,0,Unspecified viral hepatitis B with hepatic coma
+Viral infection,B1920,0,Unspecified viral hepatitis C without hepatic coma
+Viral infection,B1920,0,Unspecified viral hepatitis C without hepatic coma
+Viral infection,B1921,0,Unspecified viral hepatitis C with hepatic coma
+Viral infection,B1921,0,Unspecified viral hepatitis C with hepatic coma
+Viral infection,B1921,0,Unspecified viral hepatitis C with hepatic coma
+Viral infection,B199,0,Unspecified viral hepatitis without hepatic coma
+Viral infection,B199,0,Unspecified viral hepatitis without hepatic coma
+Pneumonia,B250,0,Cytomegaloviral pneumonitis
+Pneumonia,B250,0,Cytomegaloviral pneumonitis
+Viral infection,B251,0,Cytomegaloviral hepatitis
+Viral infection,B251,0,Cytomegaloviral hepatitis
+Viral infection,B252,0,Cytomegaloviral pancreatitis
+Viral infection,B252,0,Cytomegaloviral pancreatitis
+Viral infection,B258,0,Other cytomegaloviral diseases
+Viral infection,B259,0,"Cytomegaloviral disease, unspecified"
+Viral infection,B260,0,Mumps orchitis
+Viral infection,B260,0,Mumps orchitis
+Viral infection,B261,0,Mumps meningitis
+Viral infection,B261,0,Mumps meningitis
+Viral infection,B262,0,Mumps encephalitis
+Viral infection,B262,0,Mumps encephalitis
+Viral infection,B263,0,Mumps pancreatitis
+Viral infection,B263,0,Mumps pancreatitis
+Viral infection,B2681,0,Mumps hepatitis
+Viral infection,B2681,0,Mumps hepatitis
+Viral infection,B2682,0,Mumps myocarditis
+Viral infection,B2682,0,Mumps myocarditis
+Viral infection,B2683,0,Mumps nephritis
+Viral infection,B2683,0,Mumps nephritis
+Viral infection,B2684,0,Mumps polyneuropathy
+Viral infection,B2684,0,Mumps polyneuropathy
+Viral infection,B2685,0,Mumps arthritis
+Viral infection,B2685,0,Mumps arthritis
+Viral infection,B2689,0,Other mumps complications
+Viral infection,B269,0,Mumps without complication
+Viral infection,B2700,0,Gammaherpesviral mononucleosis without complication
+Viral infection,B2701,0,Gammaherpesviral mononucleosis with polyneuropathy
+Viral infection,B2701,0,Gammaherpesviral mononucleosis with polyneuropathy
+Viral infection,B2701,0,Gammaherpesviral mononucleosis with polyneuropathy
+Viral infection,B2702,0,Gammaherpesviral mononucleosis with meningitis
+Viral infection,B2702,0,Gammaherpesviral mononucleosis with meningitis
+Viral infection,B2709,0,Gammaherpesviral mononucleosis with other complications
+Viral infection,B2710,0,Cytomegaloviral mononucleosis without complications
+Viral infection,B2711,0,Cytomegaloviral mononucleosis with polyneuropathy
+Viral infection,B2711,0,Cytomegaloviral mononucleosis with polyneuropathy
+Viral infection,B2711,0,Cytomegaloviral mononucleosis with polyneuropathy
+Viral infection,B2712,0,Cytomegaloviral mononucleosis with meningitis
+Viral infection,B2712,0,Cytomegaloviral mononucleosis with meningitis
+Viral infection,B2719,0,Cytomegaloviral mononucleosis with other complication
+Viral infection,B2780,0,Other infectious mononucleosis without complication
+Viral infection,B2781,0,Other infectious mononucleosis with polyneuropathy
+Viral infection,B2781,0,Other infectious mononucleosis with polyneuropathy
+Viral infection,B2781,0,Other infectious mononucleosis with polyneuropathy
+Viral infection,B2782,0,Other infectious mononucleosis with meningitis
+Viral infection,B2782,0,Other infectious mononucleosis with meningitis
+Viral infection,B2789,0,Other infectious mononucleosis with other complication
+Viral infection,B2790,0,"Infectious mononucleosis, unspecified without complication"
+Viral infection,B2791,0,"Infectious mononucleosis, unspecified with polyneuropathy"
+Viral infection,B2791,0,"Infectious mononucleosis, unspecified with polyneuropathy"
+Viral infection,B2791,0,"Infectious mononucleosis, unspecified with polyneuropathy"
+Viral infection,B2792,0,"Infectious mononucleosis, unspecified with meningitis"
+Viral infection,B2792,0,"Infectious mononucleosis, unspecified with meningitis"
+Viral infection,B2799,0,"Infectious mononucleosis, unspecified with other complication"
+Viral infection,B300,0,Keratoconjunctivitis due to adenovirus
+Viral infection,B300,0,Keratoconjunctivitis due to adenovirus
+Viral infection,B301,0,Conjunctivitis due to adenovirus
+Viral infection,B301,0,Conjunctivitis due to adenovirus
+Viral infection,B302,0,Viral pharyngoconjunctivitis
+Viral infection,B302,0,Viral pharyngoconjunctivitis
+Viral infection,B303,0,Acute epidemic hemorrhagic conjunctivitis (enteroviral)
+Viral infection,B303,0,Acute epidemic hemorrhagic conjunctivitis (enteroviral)
+Viral infection,B308,0,Other viral conjunctivitis
+Viral infection,B308,0,Other viral conjunctivitis
+Viral infection,B309,0,"Viral conjunctivitis, unspecified"
+Viral infection,B309,0,"Viral conjunctivitis, unspecified"
+Viral infection,B330,0,Epidemic myalgia
+Viral infection,B331,0,Ross River disease
+Viral infection,B3320,0,"Viral carditis, unspecified"
+Viral infection,B3320,0,"Viral carditis, unspecified"
+Viral infection,B3321,0,Viral endocarditis
+Viral infection,B3321,0,Viral endocarditis
+Viral infection,B3322,0,Viral myocarditis
+Viral infection,B3322,0,Viral myocarditis
+Viral infection,B3323,0,Viral pericarditis
+Viral infection,B3323,0,Viral pericarditis
+Viral infection,B3324,0,Viral cardiomyopathy
+Viral infection,B3324,0,Viral cardiomyopathy
+Viral infection,B333,0,"Retrovirus infections, not elsewhere classified"
+Viral infection,B334,0,Hantavirus (cardio)-pulmonary syndrome [HPS] [HCPS]
+Viral infection,B338,0,Other specified viral diseases
+Viral infection,B340,0,"Adenovirus infection, unspecified"
+Viral infection,B341,0,"Enterovirus infection, unspecified"
+Viral infection,B342,0,"Coronavirus infection, unspecified"
+Viral infection,B343,0,"Parvovirus infection, unspecified"
+Viral infection,B344,0,"Papovavirus infection, unspecified"
+Viral infection,B348,0,Other viral infections of unspecified site
+Viral infection,B349,0,"Viral infection, unspecified"
+Pneumonia,B371,0,Pulmonary candidiasis
+Pneumonia,B371,0,Pulmonary candidiasis
+UTI,B3741,0,Candidal cystitis and urethritis
+UTI,B3741,0,Candidal cystitis and urethritis
+UTI,B3749,0,Other urogenital candidiasis
+UTI,B3749,0,Other urogenital candidiasis
+Intestinal infection,B3782,0,Candidal enteritis
+Intestinal infection,B3782,0,Candidal enteritis
+Pneumonia,B380,0,Acute pulmonary coccidioidomycosis
+Pneumonia,B380,0,Acute pulmonary coccidioidomycosis
+Pneumonia,B381,0,Chronic pulmonary coccidioidomycosis
+Pneumonia,B381,0,Chronic pulmonary coccidioidomycosis
+Pneumonia,B382,0,"Pulmonary coccidioidomycosis, unspecified"
+Pneumonia,B382,0,"Pulmonary coccidioidomycosis, unspecified"
+Pneumonia,B390,0,Acute pulmonary histoplasmosis capsulati
+Pneumonia,B390,0,Acute pulmonary histoplasmosis capsulati
+Pneumonia,B391,0,Chronic pulmonary histoplasmosis capsulati
+Pneumonia,B391,0,Chronic pulmonary histoplasmosis capsulati
+Pneumonia,B392,0,"Pulmonary histoplasmosis capsulati, unspecified"
+Pneumonia,B392,0,"Pulmonary histoplasmosis capsulati, unspecified"
+Pneumonia,B583,0,Pulmonary toxoplasmosis
+Pneumonia,B583,0,Pulmonary toxoplasmosis
+Pneumonia,B59,0,Pneumocystosis
+Pneumonia,B59,0,Pneumocystosis
+Pneumonia,B7781,0,Ascariasis pneumonia
+Pneumonia,B7781,0,Ascariasis pneumonia
+Bacterial infection (other),B950,0,"Streptococcus, group A, as the cause of diseases classified elsewhere"
+Bacterial infection (other),B951,0,"Streptococcus, group B, as the cause of diseases classified elsewhere"
+Bacterial infection (other),B952,0,Enterococcus as the cause of diseases classified elsewhere
+Bacterial infection (other),B953,0,Streptococcus pneumoniae as the cause of diseases classified elsewhere
+Bacterial infection (other),B954,0,Other streptococcus as the cause of diseases classified elsewhere
+Bacterial infection (other),B955,0,Unspecified streptococcus as the cause of diseases classified elsewhere
+Bacterial infection (other),B9561,0,Methicillin susceptible Staphylococcus aureus infection as the cause of diseases classified elsewhere
+Bacterial infection (other),B9562,0,Methicillin resistant Staphylococcus aureus infection as the cause of diseases classified elsewhere
+Bacterial infection (other),B957,0,Other staphylococcus as the cause of diseases classified elsewhere
+Bacterial infection (other),B958,0,Unspecified staphylococcus as the cause of diseases classified elsewhere
+Bacterial infection (other),B960,0,Mycoplasma pneumoniae [M. pneumoniae] as the cause of diseases classified elsewhere
+Bacterial infection (other),B961,0,Klebsiella pneumoniae [K. pneumoniae] as the cause of diseases classified elsewhere
+Bacterial infection (other),B9620,0,Unspecified Escherichia coli [E. coli] as the cause of diseases classified elsewhere
+Bacterial infection (other),B9621,0,Shiga toxin-producing Escherichia coli [E. coli] (STEC) O157 as the cause of diseases classified elsewhere
+Bacterial infection (other),B9622,0,Other specified Shiga toxin-producing Escherichia coli [E. coli] (STEC) as the cause of diseases classified elsewhere
+Bacterial infection (other),B9623,0,Unspecified Shiga toxin-producing Escherichia coli [E. coli] (STEC) as the cause of diseases classified elsewhere
+Bacterial infection (other),B9629,0,Other Escherichia coli [E. coli] as the cause of diseases classified elsewhere
+Bacterial infection (other),B963,0,Hemophilus influenzae [H. influenzae] as the cause of diseases classified elsewhere
+Bacterial infection (other),B964,0,Proteus (mirabilis) (morganii) as the cause of diseases classified elsewhere
+Bacterial infection (other),B965,0,Pseudomonas (aeruginosa) (mallei) (pseudomallei) as the cause of diseases classified elsewhere
+Bacterial infection (other),B966,0,Bacteroides fragilis [B. fragilis] as the cause of diseases classified elsewhere
+Bacterial infection (other),B967,0,Clostridium perfringens [C. perfringens] as the cause of diseases classified elsewhere
+Bacterial infection (other),B9681,0,Helicobacter pylori [H. pylori] as the cause of diseases classified elsewhere
+Bacterial infection (other),B9682,0,Vibrio vulnificus as the cause of diseases classified elsewhere
+Bacterial infection (other),B9689,0,Other specified bacterial agents as the cause of diseases classified elsewhere
+Viral infection,B970,0,Adenovirus as the cause of diseases classified elsewhere
+Viral infection,B9710,0,Unspecified enterovirus as the cause of diseases classified elsewhere
+Viral infection,B9711,0,Coxsackievirus as the cause of diseases classified elsewhere
+Viral infection,B9712,0,Echovirus as the cause of diseases classified elsewhere
+Viral infection,B9719,0,Other enterovirus as the cause of diseases classified elsewhere
+Viral infection,B9721,0,SARS-associated coronavirus as the cause of diseases classified elsewhere
+Viral infection,B9729,0,Other coronavirus as the cause of diseases classified elsewhere
+Viral infection,B9730,0,Unspecified retrovirus as the cause of diseases classified elsewhere
+Viral infection,B9731,0,Lentivirus as the cause of diseases classified elsewhere
+Viral infection,B9732,0,Oncovirus as the cause of diseases classified elsewhere
+Viral infection,B9733,0,"Human T-cell lymphotrophic virus, type I [HTLV-I] as the cause of diseases classified elsewhere"
+Viral infection,B9734,0,"Human T-cell lymphotrophic virus, type II [HTLV-II] as the cause of diseases classified elsewhere"
+Viral infection,B9739,0,Other retrovirus as the cause of diseases classified elsewhere
+Viral infection,B974,0,Respiratory syncytial virus as the cause of diseases classified elsewhere
+Viral infection,B975,0,Reovirus as the cause of diseases classified elsewhere
+Viral infection,B976,0,Parvovirus as the cause of diseases classified elsewhere
+Viral infection,B977,0,Papillomavirus as the cause of diseases classified elsewhere
+Viral infection,B9781,0,Human metapneumovirus as the cause of diseases classified elsewhere
+Viral infection,B9789,0,Other viral agents as the cause of diseases classified elsewhere
+Bacterial infection (other),G000,0,Hemophilus meningitis
+Bacterial infection (other),G000,0,Hemophilus meningitis
+Bacterial infection (other),G001,0,Pneumococcal meningitis
+Bacterial infection (other),G001,0,Pneumococcal meningitis
+Bacterial infection (other),G002,0,Streptococcal meningitis
+Bacterial infection (other),G002,0,Streptococcal meningitis
+Bacterial infection (other),G003,0,Staphylococcal meningitis
+Bacterial infection (other),G003,0,Staphylococcal meningitis
+Bacterial infection (other),G008,0,Other bacterial meningitis
+Bacterial infection (other),G008,0,Other bacterial meningitis
+Bacterial infection (other),G009,0,"Bacterial meningitis, unspecified"
+Bacterial infection (other),G009,0,"Bacterial meningitis, unspecified"
+Bacterial infection (other),G01,0,Meningitis in bacterial diseases classified elsewhere
+Bacterial infection (other),G01,0,Meningitis in bacterial diseases classified elsewhere
+Bacterial infection (other),G042,0,"Bacterial meningoencephalitis and meningomyelitis, not elsewhere classified"
+Bacterial infection (other),G042,0,"Bacterial meningoencephalitis and meningomyelitis, not elsewhere classified"
+SSTI,H05011,0,Cellulitis of right orbit
+SSTI,H05011,0,Cellulitis of right orbit
+SSTI,H05012,0,Cellulitis of left orbit
+SSTI,H05012,0,Cellulitis of left orbit
+SSTI,H05013,0,Cellulitis of bilateral orbits
+SSTI,H05013,0,Cellulitis of bilateral orbits
+SSTI,H05019,0,Cellulitis of unspecified orbit
+SSTI,H05019,0,Cellulitis of unspecified orbit
+Otitis media,H6500,0,"Acute serous otitis media, unspecified ear"
+Otitis media,H6501,0,"Acute serous otitis media, right ear"
+Otitis media,H6502,0,"Acute serous otitis media, left ear"
+Otitis media,H6503,0,"Acute serous otitis media, bilateral"
+Otitis media,H6504,0,"Acute serous otitis media, recurrent, right ear"
+Otitis media,H6505,0,"Acute serous otitis media, recurrent, left ear"
+Otitis media,H6506,0,"Acute serous otitis media, recurrent, bilateral"
+Otitis media,H6507,0,"Acute serous otitis media, recurrent, unspecified ear"
+Otitis media,H65111,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), right ear"
+Otitis media,H65111,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), right ear"
+Otitis media,H65112,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), left ear"
+Otitis media,H65112,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), left ear"
+Otitis media,H65113,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), bilateral"
+Otitis media,H65113,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), bilateral"
+Otitis media,H65114,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), recurrent, right ear"
+Otitis media,H65114,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), recurrent, right ear"
+Otitis media,H65115,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), recurrent, left ear"
+Otitis media,H65115,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), recurrent, left ear"
+Otitis media,H65116,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), recurrent, bilateral"
+Otitis media,H65116,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), recurrent, bilateral"
+Otitis media,H65117,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), recurrent, unspecified ear"
+Otitis media,H65117,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), recurrent, unspecified ear"
+Otitis media,H65119,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), unspecified ear"
+Otitis media,H65119,0,"Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), unspecified ear"
+Otitis media,H65191,0,"Other acute nonsuppurative otitis media, right ear"
+Otitis media,H65192,0,"Other acute nonsuppurative otitis media, left ear"
+Otitis media,H65193,0,"Other acute nonsuppurative otitis media, bilateral"
+Otitis media,H65194,0,"Other acute nonsuppurative otitis media, recurrent, right ear"
+Otitis media,H65195,0,"Other acute nonsuppurative otitis media, recurrent, left ear"
+Otitis media,H65196,0,"Other acute nonsuppurative otitis media, recurrent, bilateral"
+Otitis media,H65197,0,"Other acute nonsuppurative otitis media recurrent, unspecified ear"
+Otitis media,H65199,0,"Other acute nonsuppurative otitis media, unspecified ear"
+Otitis media,H6520,0,"Chronic serous otitis media, unspecified ear"
+Otitis media,H6521,0,"Chronic serous otitis media, right ear"
+Otitis media,H6522,0,"Chronic serous otitis media, left ear"
+Otitis media,H6523,0,"Chronic serous otitis media, bilateral"
+Otitis media,H6530,0,"Chronic mucoid otitis media, unspecified ear"
+Otitis media,H6531,0,"Chronic mucoid otitis media, right ear"
+Otitis media,H6532,0,"Chronic mucoid otitis media, left ear"
+Otitis media,H6533,0,"Chronic mucoid otitis media, bilateral"
+Otitis media,H65411,0,"Chronic allergic otitis media, right ear"
+Otitis media,H65411,0,"Chronic allergic otitis media, right ear"
+Otitis media,H65412,0,"Chronic allergic otitis media, left ear"
+Otitis media,H65412,0,"Chronic allergic otitis media, left ear"
+Otitis media,H65413,0,"Chronic allergic otitis media, bilateral"
+Otitis media,H65413,0,"Chronic allergic otitis media, bilateral"
+Otitis media,H65419,0,"Chronic allergic otitis media, unspecified ear"
+Otitis media,H65419,0,"Chronic allergic otitis media, unspecified ear"
+Otitis media,H65491,0,"Other chronic nonsuppurative otitis media, right ear"
+Otitis media,H65492,0,"Other chronic nonsuppurative otitis media, left ear"
+Otitis media,H65493,0,"Other chronic nonsuppurative otitis media, bilateral"
+Otitis media,H65499,0,"Other chronic nonsuppurative otitis media, unspecified ear"
+Otitis media,H6590,0,"Unspecified nonsuppurative otitis media, unspecified ear"
+Otitis media,H6591,0,"Unspecified nonsuppurative otitis media, right ear"
+Otitis media,H6592,0,"Unspecified nonsuppurative otitis media, left ear"
+Otitis media,H6593,0,"Unspecified nonsuppurative otitis media, bilateral"
+Otitis media,H66001,0,"Acute suppurative otitis media without spontaneous rupture of ear drum, right ear"
+Otitis media,H66002,0,"Acute suppurative otitis media without spontaneous rupture of ear drum, left ear"
+Otitis media,H66003,0,"Acute suppurative otitis media without spontaneous rupture of ear drum, bilateral"
+Otitis media,H66004,0,"Acute suppurative otitis media without spontaneous rupture of ear drum, recurrent, right ear"
+Otitis media,H66005,0,"Acute suppurative otitis media without spontaneous rupture of ear drum, recurrent, left ear"
+Otitis media,H66006,0,"Acute suppurative otitis media without spontaneous rupture of ear drum, recurrent, bilateral"
+Otitis media,H66007,0,"Acute suppurative otitis media without spontaneous rupture of ear drum, recurrent, unspecified ear"
+Otitis media,H66009,0,"Acute suppurative otitis media without spontaneous rupture of ear drum, unspecified ear"
+Otitis media,H66011,0,"Acute suppurative otitis media with spontaneous rupture of ear drum, right ear"
+Otitis media,H66012,0,"Acute suppurative otitis media with spontaneous rupture of ear drum, left ear"
+Otitis media,H66013,0,"Acute suppurative otitis media with spontaneous rupture of ear drum, bilateral"
+Otitis media,H66014,0,"Acute suppurative otitis media with spontaneous rupture of ear drum, recurrent, right ear"
+Otitis media,H66015,0,"Acute suppurative otitis media with spontaneous rupture of ear drum, recurrent, left ear"
+Otitis media,H66016,0,"Acute suppurative otitis media with spontaneous rupture of ear drum, recurrent, bilateral"
+Otitis media,H66017,0,"Acute suppurative otitis media with spontaneous rupture of ear drum, recurrent, unspecified ear"
+Otitis media,H66019,0,"Acute suppurative otitis media with spontaneous rupture of ear drum, unspecified ear"
+Otitis media,H6610,0,"Chronic tubotympanic suppurative otitis media, unspecified"
+Otitis media,H6611,0,"Chronic tubotympanic suppurative otitis media, right ear"
+Otitis media,H6612,0,"Chronic tubotympanic suppurative otitis media, left ear"
+Otitis media,H6613,0,"Chronic tubotympanic suppurative otitis media, bilateral"
+Otitis media,H6620,0,"Chronic atticoantral suppurative otitis media, unspecified ear"
+Otitis media,H6621,0,"Chronic atticoantral suppurative otitis media, right ear"
+Otitis media,H6622,0,"Chronic atticoantral suppurative otitis media, left ear"
+Otitis media,H6623,0,"Chronic atticoantral suppurative otitis media, bilateral"
+Otitis media,H663X1,0,"Other chronic suppurative otitis media, right ear"
+Otitis media,H663X2,0,"Other chronic suppurative otitis media, left ear"
+Otitis media,H663X3,0,"Other chronic suppurative otitis media, bilateral"
+Otitis media,H663X9,0,"Other chronic suppurative otitis media, unspecified ear"
+Otitis media,H6640,0,"Suppurative otitis media, unspecified, unspecified ear"
+Otitis media,H6641,0,"Suppurative otitis media, unspecified, right ear"
+Otitis media,H6642,0,"Suppurative otitis media, unspecified, left ear"
+Otitis media,H6643,0,"Suppurative otitis media, unspecified, bilateral"
+Otitis media,H6690,0,"Otitis media, unspecified, unspecified ear"
+Otitis media,H6691,0,"Otitis media, unspecified, right ear"
+Otitis media,H6692,0,"Otitis media, unspecified, left ear"
+Otitis media,H6693,0,"Otitis media, unspecified, bilateral"
+Otitis media,H671,0,"Otitis media in diseases classified elsewhere, right ear"
+Otitis media,H672,0,"Otitis media in diseases classified elsewhere, left ear"
+Otitis media,H673,0,"Otitis media in diseases classified elsewhere, bilateral"
+Otitis media,H679,0,"Otitis media in diseases classified elsewhere, unspecified ear"
+Bacterial infection (other),I00,0,Rheumatic fever without heart involvement
+Bacterial infection (other),I00,0,Rheumatic fever without heart involvement
+Bacterial infection (other),I029,0,Rheumatic chorea without heart involvement
+Bacterial infection (other),I029,0,Rheumatic chorea without heart involvement
+URI (other),J00,0,Acute nasopharyngitis [common cold]
+Sinusitis,J0100,0,"Acute maxillary sinusitis, unspecified"
+Sinusitis,J0101,0,Acute recurrent maxillary sinusitis
+Sinusitis,J0110,0,"Acute frontal sinusitis, unspecified"
+Sinusitis,J0111,0,Acute recurrent frontal sinusitis
+Sinusitis,J0120,0,"Acute ethmoidal sinusitis, unspecified"
+Sinusitis,J0121,0,Acute recurrent ethmoidal sinusitis
+Sinusitis,J0130,0,"Acute sphenoidal sinusitis, unspecified"
+Sinusitis,J0131,0,Acute recurrent sphenoidal sinusitis
+Sinusitis,J0140,0,"Acute pansinusitis, unspecified"
+Sinusitis,J0141,0,Acute recurrent pansinusitis
+Sinusitis,J0180,0,Other acute sinusitis
+Sinusitis,J0181,0,Other acute recurrent sinusitis
+Sinusitis,J0190,0,"Acute sinusitis, unspecified"
+Sinusitis,J0191,0,"Acute recurrent sinusitis, unspecified"
+Strep pharyngitis,J020,0,Streptococcal pharyngitis
+Strep pharyngitis,J020,0,Streptococcal pharyngitis
+URI (other),J028,0,Acute pharyngitis due to other specified organisms
+URI (other),J029,0,"Acute pharyngitis, unspecified"
+Bacterial infection (other),J0300,0,"Acute streptococcal tonsillitis, unspecified"
+Bacterial infection (other),J0300,0,"Acute streptococcal tonsillitis, unspecified"
+Bacterial infection (other),J0301,0,Acute recurrent streptococcal tonsillitis
+Bacterial infection (other),J0301,0,Acute recurrent streptococcal tonsillitis
+URI (other),J040,0,Acute laryngitis
+URI (other),J0410,0,Acute tracheitis without obstruction
+URI (other),J0411,0,Acute tracheitis with obstruction
+URI (other),J042,0,Acute laryngotracheitis
+URI (other),J0430,0,"Supraglottitis, unspecified, without obstruction"
+URI (other),J0431,0,"Supraglottitis, unspecified, with obstruction"
+URI (other),J050,0,Acute obstructive laryngitis [croup]
+URI (other),J0510,0,Acute epiglottitis without obstruction
+URI (other),J0511,0,Acute epiglottitis with obstruction
+URI (other),J060,0,Acute laryngopharyngitis
+URI (other),J069,0,"Acute upper respiratory infection, unspecified"
+Pneumonia,J09X1,0,Influenza due to identified novel influenza A virus with pneumonia
+Pneumonia,J09X1,0,Influenza due to identified novel influenza A virus with pneumonia
+Influenza,J09X2,0,Influenza due to identified novel influenza A virus with other respiratory manifestations
+Influenza,J09X3,0,Influenza due to identified novel influenza A virus with gastrointestinal manifestations
+Influenza,J09X9,0,Influenza due to identified novel influenza A virus with other manifestations
+Pneumonia,J1000,0,Influenza due to other identified influenza virus with unspecified type of pneumonia
+Pneumonia,J1000,0,Influenza due to other identified influenza virus with unspecified type of pneumonia
+Pneumonia,J1001,0,Influenza due to other identified influenza virus with the same other identified influenza virus pneumonia
+Pneumonia,J1001,0,Influenza due to other identified influenza virus with the same other identified influenza virus pneumonia
+Pneumonia,J1008,0,Influenza due to other identified influenza virus with other specified pneumonia
+Pneumonia,J1008,0,Influenza due to other identified influenza virus with other specified pneumonia
+Influenza,J101,0,Influenza due to other identified influenza virus with other respiratory manifestations
+Influenza,J102,0,Influenza due to other identified influenza virus with gastrointestinal manifestations
+Influenza,J1081,0,Influenza due to other identified influenza virus with encephalopathy
+Influenza,J1081,0,Influenza due to other identified influenza virus with encephalopathy
+Influenza,J1082,0,Influenza due to other identified influenza virus with myocarditis
+Influenza,J1082,0,Influenza due to other identified influenza virus with myocarditis
+Otitis media,J1083,0,Influenza due to other identified influenza virus with otitis media
+Otitis media,J1083,0,Influenza due to other identified influenza virus with otitis media
+Influenza,J1089,0,Influenza due to other identified influenza virus with other manifestations
+Pneumonia,J1100,0,Influenza due to unidentified influenza virus with unspecified type of pneumonia
+Pneumonia,J1100,0,Influenza due to unidentified influenza virus with unspecified type of pneumonia
+Pneumonia,J1108,0,Influenza due to unidentified influenza virus with specified pneumonia
+Pneumonia,J1108,0,Influenza due to unidentified influenza virus with specified pneumonia
+Influenza,J111,0,Influenza due to unidentified influenza virus with other respiratory manifestations
+Influenza,J112,0,Influenza due to unidentified influenza virus with gastrointestinal manifestations
+Influenza,J1181,0,Influenza due to unidentified influenza virus with encephalopathy
+Influenza,J1181,0,Influenza due to unidentified influenza virus with encephalopathy
+Influenza,J1182,0,Influenza due to unidentified influenza virus with myocarditis
+Influenza,J1182,0,Influenza due to unidentified influenza virus with myocarditis
+Otitis media,J1183,0,Influenza due to unidentified influenza virus with otitis media
+Otitis media,J1183,0,Influenza due to unidentified influenza virus with otitis media
+Influenza,J1189,0,Influenza due to unidentified influenza virus with other manifestations
+Pneumonia,J120,0,Adenoviral pneumonia
+Pneumonia,J120,0,Adenoviral pneumonia
+Pneumonia,J121,0,Respiratory syncytial virus pneumonia
+Pneumonia,J121,0,Respiratory syncytial virus pneumonia
+Pneumonia,J122,0,Parainfluenza virus pneumonia
+Pneumonia,J122,0,Parainfluenza virus pneumonia
+Pneumonia,J123,0,Human metapneumovirus pneumonia
+Pneumonia,J123,0,Human metapneumovirus pneumonia
+Pneumonia,J1281,0,Pneumonia due to SARS-associated coronavirus
+Pneumonia,J1281,0,Pneumonia due to SARS-associated coronavirus
+Pneumonia,J1289,0,Other viral pneumonia
+Pneumonia,J1289,0,Other viral pneumonia
+Pneumonia,J129,0,"Viral pneumonia, unspecified"
+Pneumonia,J129,0,"Viral pneumonia, unspecified"
+Pneumonia,J13,0,Pneumonia due to Streptococcus pneumoniae
+Pneumonia,J13,0,Pneumonia due to Streptococcus pneumoniae
+Pneumonia,J14,0,Pneumonia due to Hemophilus influenzae
+Pneumonia,J14,0,Pneumonia due to Hemophilus influenzae
+Pneumonia,J150,0,Pneumonia due to Klebsiella pneumoniae
+Pneumonia,J150,0,Pneumonia due to Klebsiella pneumoniae
+Pneumonia,J151,0,Pneumonia due to Pseudomonas
+Pneumonia,J151,0,Pneumonia due to Pseudomonas
+Pneumonia,J1520,0,"Pneumonia due to staphylococcus, unspecified"
+Pneumonia,J1520,0,"Pneumonia due to staphylococcus, unspecified"
+Pneumonia,J15211,0,Pneumonia due to Methicillin susceptible Staphylococcus aureus
+Pneumonia,J15211,0,Pneumonia due to Methicillin susceptible Staphylococcus aureus
+Pneumonia,J15212,0,Pneumonia due to Methicillin resistant Staphylococcus aureus
+Pneumonia,J15212,0,Pneumonia due to Methicillin resistant Staphylococcus aureus
+Pneumonia,J1529,0,Pneumonia due to other staphylococcus
+Pneumonia,J1529,0,Pneumonia due to other staphylococcus
+Pneumonia,J153,0,"Pneumonia due to streptococcus, group B"
+Pneumonia,J153,0,"Pneumonia due to streptococcus, group B"
+Pneumonia,J154,0,Pneumonia due to other streptococci
+Pneumonia,J154,0,Pneumonia due to other streptococci
+Pneumonia,J155,0,Pneumonia due to Escherichia coli
+Pneumonia,J155,0,Pneumonia due to Escherichia coli
+Pneumonia,J156,0,Pneumonia due to other Gram-negative bacteria
+Pneumonia,J156,0,Pneumonia due to other Gram-negative bacteria
+Pneumonia,J157,0,Pneumonia due to Mycoplasma pneumoniae
+Pneumonia,J157,0,Pneumonia due to Mycoplasma pneumoniae
+Pneumonia,J158,0,Pneumonia due to other specified bacteria
+Pneumonia,J158,0,Pneumonia due to other specified bacteria
+Pneumonia,J159,0,Unspecified bacterial pneumonia
+Pneumonia,J159,0,Unspecified bacterial pneumonia
+Pneumonia,J160,0,Chlamydial pneumonia
+Pneumonia,J160,0,Chlamydial pneumonia
+Pneumonia,J168,0,Pneumonia due to other specified infectious organisms
+Pneumonia,J17,0,Pneumonia in diseases classified elsewhere
+Pneumonia,J180,0,"Bronchopneumonia, unspecified organism"
+Pneumonia,J181,0,"Lobar pneumonia, unspecified organism"
+Pneumonia,J188,0,"Other pneumonia, unspecified organism"
+Pneumonia,J189,0,"Pneumonia, unspecified organism"
+Bacterial infection (other),J200,0,Acute bronchitis due to Mycoplasma pneumoniae
+Bacterial infection (other),J200,0,Acute bronchitis due to Mycoplasma pneumoniae
+Bacterial infection (other),J201,0,Acute bronchitis due to Hemophilus influenzae
+Bacterial infection (other),J201,0,Acute bronchitis due to Hemophilus influenzae
+Bacterial infection (other),J202,0,Acute bronchitis due to streptococcus
+Bacterial infection (other),J202,0,Acute bronchitis due to streptococcus
+Bronchitis (acute),J203,0,Acute bronchitis due to coxsackievirus
+Bronchitis (acute),J203,0,Acute bronchitis due to coxsackievirus
+Bronchitis (acute),J204,0,Acute bronchitis due to parainfluenza virus
+Bronchitis (acute),J204,0,Acute bronchitis due to parainfluenza virus
+Bronchitis (acute),J205,0,Acute bronchitis due to respiratory syncytial virus
+Bronchitis (acute),J205,0,Acute bronchitis due to respiratory syncytial virus
+Bronchitis (acute),J206,0,Acute bronchitis due to rhinovirus
+Bronchitis (acute),J206,0,Acute bronchitis due to rhinovirus
+Bronchitis (acute),J207,0,Acute bronchitis due to echovirus
+Bronchitis (acute),J207,0,Acute bronchitis due to echovirus
+Bronchitis (acute),J208,0,Acute bronchitis due to other specified organisms
+Bronchitis (acute),J209,0,"Acute bronchitis, unspecified"
+Bronchitis (acute),J210,0,Acute bronchiolitis due to respiratory syncytial virus
+Bronchitis (acute),J210,0,Acute bronchiolitis due to respiratory syncytial virus
+Bronchitis (acute),J211,0,Acute bronchiolitis due to human metapneumovirus
+Bronchitis (acute),J211,0,Acute bronchiolitis due to human metapneumovirus
+Bronchitis (acute),J218,0,Acute bronchiolitis due to other specified organisms
+Bronchitis (acute),J219,0,"Acute bronchiolitis, unspecified"
+Sinusitis,J320,0,Chronic maxillary sinusitis
+Sinusitis,J321,0,Chronic frontal sinusitis
+Sinusitis,J322,0,Chronic ethmoidal sinusitis
+Sinusitis,J323,0,Chronic sphenoidal sinusitis
+Sinusitis,J324,0,Chronic pansinusitis
+Sinusitis,J328,0,Other chronic sinusitis
+Sinusitis,J329,0,"Chronic sinusitis, unspecified"
+URI (other),J390,0,Retropharyngeal and parapharyngeal abscess
+URI (other),J391,0,Other abscess of pharynx
+Bronchitis (acute),J40,0,"Bronchitis, not specified as acute or chronic"
+Asthma,J4520,0,"Mild intermittent asthma, uncomplicated"
+Asthma,J4521,0,Mild intermittent asthma with (acute) exacerbation
+Asthma,J4522,0,Mild intermittent asthma with status asthmaticus
+Asthma,J4530,0,"Mild persistent asthma, uncomplicated"
+Asthma,J4531,0,Mild persistent asthma with (acute) exacerbation
+Asthma,J4532,0,Mild persistent asthma with status asthmaticus
+Asthma,J4540,0,"Moderate persistent asthma, uncomplicated"
+Asthma,J4541,0,Moderate persistent asthma with (acute) exacerbation
+Asthma,J4542,0,Moderate persistent asthma with status asthmaticus
+Asthma,J4550,0,"Severe persistent asthma, uncomplicated"
+Asthma,J4551,0,Severe persistent asthma with (acute) exacerbation
+Asthma,J4552,0,Severe persistent asthma with status asthmaticus
+Asthma,J45901,0,Unspecified asthma with (acute) exacerbation
+Asthma,J45902,0,Unspecified asthma with status asthmaticus
+Asthma,J45909,0,"Unspecified asthma, uncomplicated"
+Asthma,J45990,0,Exercise induced bronchospasm
+Asthma,J45991,0,Cough variant asthma
+Asthma,J45998,0,Other asthma
+Pneumonia,J851,0,Abscess of lung with pneumonia
+Pneumonia,J95851,0,Ventilator associated pneumonia
+Pneumonia,J95851,0,Ventilator associated pneumonia
+Bacterial infection (other),K652,0,Spontaneous bacterial peritonitis
+Bacterial infection (other),K652,0,Spontaneous bacterial peritonitis
+SSTI,L00,0,Staphylococcal scalded skin syndrome
+SSTI,L0100,0,"Impetigo, unspecified"
+SSTI,L0101,0,Non-bullous impetigo
+SSTI,L0102,0,Bockharts impetigo
+SSTI,L0103,0,Bullous impetigo
+SSTI,L0109,0,Other impetigo
+SSTI,L011,0,Impetiginization of other dermatoses
+SSTI,L0201,0,Cutaneous abscess of face
+SSTI,L0202,0,Furuncle of face
+SSTI,L0203,0,Carbuncle of face
+SSTI,L0211,0,Cutaneous abscess of neck
+SSTI,L0212,0,Furuncle of neck
+SSTI,L0213,0,Carbuncle of neck
+SSTI,L02211,0,Cutaneous abscess of abdominal wall
+SSTI,L02212,0,"Cutaneous abscess of back [any part, except buttock]"
+SSTI,L02213,0,Cutaneous abscess of chest wall
+SSTI,L02214,0,Cutaneous abscess of groin
+SSTI,L02215,0,Cutaneous abscess of perineum
+SSTI,L02216,0,Cutaneous abscess of umbilicus
+SSTI,L02219,0,"Cutaneous abscess of trunk, unspecified"
+SSTI,L02221,0,Furuncle of abdominal wall
+SSTI,L02222,0,"Furuncle of back [any part, except buttock]"
+SSTI,L02223,0,Furuncle of chest wall
+SSTI,L02224,0,Furuncle of groin
+SSTI,L02225,0,Furuncle of perineum
+SSTI,L02226,0,Furuncle of umbilicus
+SSTI,L02229,0,"Furuncle of trunk, unspecified"
+SSTI,L02231,0,Carbuncle of abdominal wall
+SSTI,L02232,0,"Carbuncle of back [any part, except buttock]"
+SSTI,L02233,0,Carbuncle of chest wall
+SSTI,L02234,0,Carbuncle of groin
+SSTI,L02235,0,Carbuncle of perineum
+SSTI,L02236,0,Carbuncle of umbilicus
+SSTI,L02239,0,"Carbuncle of trunk, unspecified"
+SSTI,L0231,0,Cutaneous abscess of buttock
+SSTI,L0232,0,Furuncle of buttock
+SSTI,L0233,0,Carbuncle of buttock
+SSTI,L02411,0,Cutaneous abscess of right axilla
+SSTI,L02412,0,Cutaneous abscess of left axilla
+SSTI,L02413,0,Cutaneous abscess of right upper limb
+SSTI,L02414,0,Cutaneous abscess of left upper limb
+SSTI,L02415,0,Cutaneous abscess of right lower limb
+SSTI,L02416,0,Cutaneous abscess of left lower limb
+SSTI,L02419,0,"Cutaneous abscess of limb, unspecified"
+SSTI,L02421,0,Furuncle of right axilla
+SSTI,L02422,0,Furuncle of left axilla
+SSTI,L02423,0,Furuncle of right upper limb
+SSTI,L02424,0,Furuncle of left upper limb
+SSTI,L02425,0,Furuncle of right lower limb
+SSTI,L02426,0,Furuncle of left lower limb
+SSTI,L02429,0,"Furuncle of limb, unspecified"
+SSTI,L02431,0,Carbuncle of right axilla
+SSTI,L02432,0,Carbuncle of left axilla
+SSTI,L02433,0,Carbuncle of right upper limb
+SSTI,L02434,0,Carbuncle of left upper limb
+SSTI,L02435,0,Carbuncle of right lower limb
+SSTI,L02436,0,Carbuncle of left lower limb
+SSTI,L02439,0,"Carbuncle of limb, unspecified"
+SSTI,L02511,0,Cutaneous abscess of right hand
+SSTI,L02512,0,Cutaneous abscess of left hand
+SSTI,L02519,0,Cutaneous abscess of unspecified hand
+SSTI,L02521,0,Furuncle right hand
+SSTI,L02522,0,Furuncle left hand
+SSTI,L02529,0,Furuncle unspecified hand
+SSTI,L02531,0,Carbuncle of right hand
+SSTI,L02532,0,Carbuncle of left hand
+SSTI,L02539,0,Carbuncle of unspecified hand
+SSTI,L02611,0,Cutaneous abscess of right foot
+SSTI,L02612,0,Cutaneous abscess of left foot
+SSTI,L02619,0,Cutaneous abscess of unspecified foot
+SSTI,L02621,0,Furuncle of right foot
+SSTI,L02622,0,Furuncle of left foot
+SSTI,L02629,0,Furuncle of unspecified foot
+SSTI,L02631,0,Carbuncle of right foot
+SSTI,L02632,0,Carbuncle of left foot
+SSTI,L02639,0,Carbuncle of unspecified foot
+SSTI,L02811,0,"Cutaneous abscess of head [any part, except face]"
+SSTI,L02818,0,Cutaneous abscess of other sites
+SSTI,L02821,0,"Furuncle of head [any part, except face]"
+SSTI,L02828,0,Furuncle of other sites
+SSTI,L02831,0,"Carbuncle of head [any part, except face]"
+SSTI,L02838,0,Carbuncle of other sites
+SSTI,L0291,0,"Cutaneous abscess, unspecified"
+SSTI,L0292,0,"Furuncle, unspecified"
+SSTI,L0293,0,"Carbuncle, unspecified"
+SSTI,L03011,0,Cellulitis of right finger
+SSTI,L03012,0,Cellulitis of left finger
+SSTI,L03019,0,Cellulitis of unspecified finger
+SSTI,L03021,0,Acute lymphangitis of right finger
+SSTI,L03022,0,Acute lymphangitis of left finger
+SSTI,L03029,0,Acute lymphangitis of unspecified finger
+SSTI,L03031,0,Cellulitis of right toe
+SSTI,L03032,0,Cellulitis of left toe
+SSTI,L03039,0,Cellulitis of unspecified toe
+SSTI,L03041,0,Acute lymphangitis of right toe
+SSTI,L03042,0,Acute lymphangitis of left toe
+SSTI,L03049,0,Acute lymphangitis of unspecified toe
+SSTI,L03111,0,Cellulitis of right axilla
+SSTI,L03112,0,Cellulitis of left axilla
+SSTI,L03113,0,Cellulitis of right upper limb
+SSTI,L03114,0,Cellulitis of left upper limb
+SSTI,L03115,0,Cellulitis of right lower limb
+SSTI,L03116,0,Cellulitis of left lower limb
+SSTI,L03119,0,Cellulitis of unspecified part of limb
+SSTI,L03121,0,Acute lymphangitis of right axilla
+SSTI,L03122,0,Acute lymphangitis of left axilla
+SSTI,L03123,0,Acute lymphangitis of right upper limb
+SSTI,L03124,0,Acute lymphangitis of left upper limb
+SSTI,L03125,0,Acute lymphangitis of right lower limb
+SSTI,L03126,0,Acute lymphangitis of left lower limb
+SSTI,L03129,0,Acute lymphangitis of unspecified part of limb
+SSTI,L03211,0,Cellulitis of face
+SSTI,L03212,0,Acute lymphangitis of face
+SSTI,L03213,0,Periorbital cellulitis
+SSTI,L03221,0,Cellulitis of neck
+SSTI,L03222,0,Acute lymphangitis of neck
+SSTI,L03311,0,Cellulitis of abdominal wall
+SSTI,L03312,0,Cellulitis of back [any part except buttock]
+SSTI,L03313,0,Cellulitis of chest wall
+SSTI,L03314,0,Cellulitis of groin
+SSTI,L03315,0,Cellulitis of perineum
+SSTI,L03316,0,Cellulitis of umbilicus
+SSTI,L03317,0,Cellulitis of buttock
+SSTI,L03319,0,"Cellulitis of trunk, unspecified"
+SSTI,L03321,0,Acute lymphangitis of abdominal wall
+SSTI,L03322,0,Acute lymphangitis of back [any part except buttock]
+SSTI,L03323,0,Acute lymphangitis of chest wall
+SSTI,L03324,0,Acute lymphangitis of groin
+SSTI,L03325,0,Acute lymphangitis of perineum
+SSTI,L03326,0,Acute lymphangitis of umbilicus
+SSTI,L03327,0,Acute lymphangitis of buttock
+SSTI,L03329,0,"Acute lymphangitis of trunk, unspecified"
+SSTI,L03811,0,"Cellulitis of head [any part, except face]"
+SSTI,L03818,0,Cellulitis of other sites
+SSTI,L03891,0,"Acute lymphangitis of head [any part, except face]"
+SSTI,L03898,0,Acute lymphangitis of other sites
+SSTI,L0390,0,"Cellulitis, unspecified"
+SSTI,L0391,0,"Acute lymphangitis, unspecified"
+SSTI,L040,0,"Acute lymphadenitis of face, head and neck"
+SSTI,L041,0,Acute lymphadenitis of trunk
+SSTI,L042,0,Acute lymphadenitis of upper limb
+SSTI,L043,0,Acute lymphadenitis of lower limb
+SSTI,L048,0,Acute lymphadenitis of other sites
+SSTI,L049,0,"Acute lymphadenitis, unspecified"
+SSTI,L0501,0,Pilonidal cyst with abscess
+SSTI,L0502,0,Pilonidal sinus with abscess
+SSTI,L0591,0,Pilonidal cyst without abscess
+SSTI,L0592,0,Pilonidal sinus without abscess
+SSTI,L080,0,Pyoderma
+SSTI,L081,0,Erythrasma
+SSTI,L0881,0,Pyoderma vegetans
+SSTI,L0882,0,Omphalitis not of newborn
+SSTI,L0889,0,Other specified local infections of the skin and subcutaneous tissue
+SSTI,L089,0,"Local infection of the skin and subcutaneous tissue, unspecified"
+SSTI,L303,0,Infective dermatitis
+Bacterial infection (other),M0000,0,"Staphylococcal arthritis, unspecified joint"
+Bacterial infection (other),M0000,0,"Staphylococcal arthritis, unspecified joint"
+Bacterial infection (other),M00011,0,"Staphylococcal arthritis, right shoulder"
+Bacterial infection (other),M00011,0,"Staphylococcal arthritis, right shoulder"
+Bacterial infection (other),M00012,0,"Staphylococcal arthritis, left shoulder"
+Bacterial infection (other),M00012,0,"Staphylococcal arthritis, left shoulder"
+Bacterial infection (other),M00019,0,"Staphylococcal arthritis, unspecified shoulder"
+Bacterial infection (other),M00019,0,"Staphylococcal arthritis, unspecified shoulder"
+Bacterial infection (other),M00021,0,"Staphylococcal arthritis, right elbow"
+Bacterial infection (other),M00021,0,"Staphylococcal arthritis, right elbow"
+Bacterial infection (other),M00022,0,"Staphylococcal arthritis, left elbow"
+Bacterial infection (other),M00022,0,"Staphylococcal arthritis, left elbow"
+Bacterial infection (other),M00029,0,"Staphylococcal arthritis, unspecified elbow"
+Bacterial infection (other),M00029,0,"Staphylococcal arthritis, unspecified elbow"
+Bacterial infection (other),M00031,0,"Staphylococcal arthritis, right wrist"
+Bacterial infection (other),M00031,0,"Staphylococcal arthritis, right wrist"
+Bacterial infection (other),M00032,0,"Staphylococcal arthritis, left wrist"
+Bacterial infection (other),M00032,0,"Staphylococcal arthritis, left wrist"
+Bacterial infection (other),M00039,0,"Staphylococcal arthritis, unspecified wrist"
+Bacterial infection (other),M00039,0,"Staphylococcal arthritis, unspecified wrist"
+Bacterial infection (other),M00041,0,"Staphylococcal arthritis, right hand"
+Bacterial infection (other),M00041,0,"Staphylococcal arthritis, right hand"
+Bacterial infection (other),M00042,0,"Staphylococcal arthritis, left hand"
+Bacterial infection (other),M00042,0,"Staphylococcal arthritis, left hand"
+Bacterial infection (other),M00049,0,"Staphylococcal arthritis, unspecified hand"
+Bacterial infection (other),M00049,0,"Staphylococcal arthritis, unspecified hand"
+Bacterial infection (other),M00051,0,"Staphylococcal arthritis, right hip"
+Bacterial infection (other),M00051,0,"Staphylococcal arthritis, right hip"
+Bacterial infection (other),M00052,0,"Staphylococcal arthritis, left hip"
+Bacterial infection (other),M00052,0,"Staphylococcal arthritis, left hip"
+Bacterial infection (other),M00059,0,"Staphylococcal arthritis, unspecified hip"
+Bacterial infection (other),M00059,0,"Staphylococcal arthritis, unspecified hip"
+Bacterial infection (other),M00061,0,"Staphylococcal arthritis, right knee"
+Bacterial infection (other),M00061,0,"Staphylococcal arthritis, right knee"
+Bacterial infection (other),M00062,0,"Staphylococcal arthritis, left knee"
+Bacterial infection (other),M00062,0,"Staphylococcal arthritis, left knee"
+Bacterial infection (other),M00069,0,"Staphylococcal arthritis, unspecified knee"
+Bacterial infection (other),M00069,0,"Staphylococcal arthritis, unspecified knee"
+Bacterial infection (other),M00071,0,"Staphylococcal arthritis, right ankle and foot"
+Bacterial infection (other),M00071,0,"Staphylococcal arthritis, right ankle and foot"
+Bacterial infection (other),M00072,0,"Staphylococcal arthritis, left ankle and foot"
+Bacterial infection (other),M00072,0,"Staphylococcal arthritis, left ankle and foot"
+Bacterial infection (other),M00079,0,"Staphylococcal arthritis, unspecified ankle and foot"
+Bacterial infection (other),M00079,0,"Staphylococcal arthritis, unspecified ankle and foot"
+Bacterial infection (other),M0008,0,"Staphylococcal arthritis, vertebrae"
+Bacterial infection (other),M0008,0,"Staphylococcal arthritis, vertebrae"
+Bacterial infection (other),M0009,0,Staphylococcal polyarthritis
+Bacterial infection (other),M0009,0,Staphylococcal polyarthritis
+Bacterial infection (other),M0010,0,"Pneumococcal arthritis, unspecified joint"
+Bacterial infection (other),M0010,0,"Pneumococcal arthritis, unspecified joint"
+Bacterial infection (other),M00111,0,"Pneumococcal arthritis, right shoulder"
+Bacterial infection (other),M00111,0,"Pneumococcal arthritis, right shoulder"
+Bacterial infection (other),M00112,0,"Pneumococcal arthritis, left shoulder"
+Bacterial infection (other),M00112,0,"Pneumococcal arthritis, left shoulder"
+Bacterial infection (other),M00119,0,"Pneumococcal arthritis, unspecified shoulder"
+Bacterial infection (other),M00119,0,"Pneumococcal arthritis, unspecified shoulder"
+Bacterial infection (other),M00121,0,"Pneumococcal arthritis, right elbow"
+Bacterial infection (other),M00121,0,"Pneumococcal arthritis, right elbow"
+Bacterial infection (other),M00122,0,"Pneumococcal arthritis, left elbow"
+Bacterial infection (other),M00122,0,"Pneumococcal arthritis, left elbow"
+Bacterial infection (other),M00129,0,"Pneumococcal arthritis, unspecified elbow"
+Bacterial infection (other),M00129,0,"Pneumococcal arthritis, unspecified elbow"
+Bacterial infection (other),M00131,0,"Pneumococcal arthritis, right wrist"
+Bacterial infection (other),M00131,0,"Pneumococcal arthritis, right wrist"
+Bacterial infection (other),M00132,0,"Pneumococcal arthritis, left wrist"
+Bacterial infection (other),M00132,0,"Pneumococcal arthritis, left wrist"
+Bacterial infection (other),M00139,0,"Pneumococcal arthritis, unspecified wrist"
+Bacterial infection (other),M00139,0,"Pneumococcal arthritis, unspecified wrist"
+Bacterial infection (other),M00141,0,"Pneumococcal arthritis, right hand"
+Bacterial infection (other),M00141,0,"Pneumococcal arthritis, right hand"
+Bacterial infection (other),M00142,0,"Pneumococcal arthritis, left hand"
+Bacterial infection (other),M00142,0,"Pneumococcal arthritis, left hand"
+Bacterial infection (other),M00149,0,"Pneumococcal arthritis, unspecified hand"
+Bacterial infection (other),M00149,0,"Pneumococcal arthritis, unspecified hand"
+Bacterial infection (other),M00151,0,"Pneumococcal arthritis, right hip"
+Bacterial infection (other),M00151,0,"Pneumococcal arthritis, right hip"
+Bacterial infection (other),M00152,0,"Pneumococcal arthritis, left hip"
+Bacterial infection (other),M00152,0,"Pneumococcal arthritis, left hip"
+Bacterial infection (other),M00159,0,"Pneumococcal arthritis, unspecified hip"
+Bacterial infection (other),M00159,0,"Pneumococcal arthritis, unspecified hip"
+Bacterial infection (other),M00161,0,"Pneumococcal arthritis, right knee"
+Bacterial infection (other),M00161,0,"Pneumococcal arthritis, right knee"
+Bacterial infection (other),M00162,0,"Pneumococcal arthritis, left knee"
+Bacterial infection (other),M00162,0,"Pneumococcal arthritis, left knee"
+Bacterial infection (other),M00169,0,"Pneumococcal arthritis, unspecified knee"
+Bacterial infection (other),M00169,0,"Pneumococcal arthritis, unspecified knee"
+Bacterial infection (other),M00171,0,"Pneumococcal arthritis, right ankle and foot"
+Bacterial infection (other),M00171,0,"Pneumococcal arthritis, right ankle and foot"
+Bacterial infection (other),M00172,0,"Pneumococcal arthritis, left ankle and foot"
+Bacterial infection (other),M00172,0,"Pneumococcal arthritis, left ankle and foot"
+Bacterial infection (other),M00179,0,"Pneumococcal arthritis, unspecified ankle and foot"
+Bacterial infection (other),M00179,0,"Pneumococcal arthritis, unspecified ankle and foot"
+Bacterial infection (other),M0018,0,"Pneumococcal arthritis, vertebrae"
+Bacterial infection (other),M0018,0,"Pneumococcal arthritis, vertebrae"
+Bacterial infection (other),M0019,0,Pneumococcal polyarthritis
+Bacterial infection (other),M0019,0,Pneumococcal polyarthritis
+Bacterial infection (other),M0020,0,"Other streptococcal arthritis, unspecified joint"
+Bacterial infection (other),M0020,0,"Other streptococcal arthritis, unspecified joint"
+Bacterial infection (other),M00211,0,"Other streptococcal arthritis, right shoulder"
+Bacterial infection (other),M00211,0,"Other streptococcal arthritis, right shoulder"
+Bacterial infection (other),M00212,0,"Other streptococcal arthritis, left shoulder"
+Bacterial infection (other),M00212,0,"Other streptococcal arthritis, left shoulder"
+Bacterial infection (other),M00219,0,"Other streptococcal arthritis, unspecified shoulder"
+Bacterial infection (other),M00219,0,"Other streptococcal arthritis, unspecified shoulder"
+Bacterial infection (other),M00221,0,"Other streptococcal arthritis, right elbow"
+Bacterial infection (other),M00221,0,"Other streptococcal arthritis, right elbow"
+Bacterial infection (other),M00222,0,"Other streptococcal arthritis, left elbow"
+Bacterial infection (other),M00222,0,"Other streptococcal arthritis, left elbow"
+Bacterial infection (other),M00229,0,"Other streptococcal arthritis, unspecified elbow"
+Bacterial infection (other),M00229,0,"Other streptococcal arthritis, unspecified elbow"
+Bacterial infection (other),M00231,0,"Other streptococcal arthritis, right wrist"
+Bacterial infection (other),M00231,0,"Other streptococcal arthritis, right wrist"
+Bacterial infection (other),M00232,0,"Other streptococcal arthritis, left wrist"
+Bacterial infection (other),M00232,0,"Other streptococcal arthritis, left wrist"
+Bacterial infection (other),M00239,0,"Other streptococcal arthritis, unspecified wrist"
+Bacterial infection (other),M00239,0,"Other streptococcal arthritis, unspecified wrist"
+Bacterial infection (other),M00241,0,"Other streptococcal arthritis, right hand"
+Bacterial infection (other),M00241,0,"Other streptococcal arthritis, right hand"
+Bacterial infection (other),M00242,0,"Other streptococcal arthritis, left hand"
+Bacterial infection (other),M00242,0,"Other streptococcal arthritis, left hand"
+Bacterial infection (other),M00249,0,"Other streptococcal arthritis, unspecified hand"
+Bacterial infection (other),M00249,0,"Other streptococcal arthritis, unspecified hand"
+Bacterial infection (other),M00251,0,"Other streptococcal arthritis, right hip"
+Bacterial infection (other),M00251,0,"Other streptococcal arthritis, right hip"
+Bacterial infection (other),M00252,0,"Other streptococcal arthritis, left hip"
+Bacterial infection (other),M00252,0,"Other streptococcal arthritis, left hip"
+Bacterial infection (other),M00259,0,"Other streptococcal arthritis, unspecified hip"
+Bacterial infection (other),M00259,0,"Other streptococcal arthritis, unspecified hip"
+Bacterial infection (other),M00261,0,"Other streptococcal arthritis, right knee"
+Bacterial infection (other),M00261,0,"Other streptococcal arthritis, right knee"
+Bacterial infection (other),M00262,0,"Other streptococcal arthritis, left knee"
+Bacterial infection (other),M00262,0,"Other streptococcal arthritis, left knee"
+Bacterial infection (other),M00269,0,"Other streptococcal arthritis, unspecified knee"
+Bacterial infection (other),M00269,0,"Other streptococcal arthritis, unspecified knee"
+Bacterial infection (other),M00271,0,"Other streptococcal arthritis, right ankle and foot"
+Bacterial infection (other),M00271,0,"Other streptococcal arthritis, right ankle and foot"
+Bacterial infection (other),M00272,0,"Other streptococcal arthritis, left ankle and foot"
+Bacterial infection (other),M00272,0,"Other streptococcal arthritis, left ankle and foot"
+Bacterial infection (other),M00279,0,"Other streptococcal arthritis, unspecified ankle and foot"
+Bacterial infection (other),M00279,0,"Other streptococcal arthritis, unspecified ankle and foot"
+Bacterial infection (other),M0028,0,"Other streptococcal arthritis, vertebrae"
+Bacterial infection (other),M0028,0,"Other streptococcal arthritis, vertebrae"
+Bacterial infection (other),M0029,0,Other streptococcal polyarthritis
+Bacterial infection (other),M0029,0,Other streptococcal polyarthritis
+Bacterial infection (other),M0080,0,"Arthritis due to other bacteria, unspecified joint"
+Bacterial infection (other),M0080,0,"Arthritis due to other bacteria, unspecified joint"
+Bacterial infection (other),M00811,0,"Arthritis due to other bacteria, right shoulder"
+Bacterial infection (other),M00811,0,"Arthritis due to other bacteria, right shoulder"
+Bacterial infection (other),M00812,0,"Arthritis due to other bacteria, left shoulder"
+Bacterial infection (other),M00812,0,"Arthritis due to other bacteria, left shoulder"
+Bacterial infection (other),M00819,0,"Arthritis due to other bacteria, unspecified shoulder"
+Bacterial infection (other),M00819,0,"Arthritis due to other bacteria, unspecified shoulder"
+Bacterial infection (other),M00821,0,"Arthritis due to other bacteria, right elbow"
+Bacterial infection (other),M00821,0,"Arthritis due to other bacteria, right elbow"
+Bacterial infection (other),M00822,0,"Arthritis due to other bacteria, left elbow"
+Bacterial infection (other),M00822,0,"Arthritis due to other bacteria, left elbow"
+Bacterial infection (other),M00829,0,"Arthritis due to other bacteria, unspecified elbow"
+Bacterial infection (other),M00829,0,"Arthritis due to other bacteria, unspecified elbow"
+Bacterial infection (other),M00831,0,"Arthritis due to other bacteria, right wrist"
+Bacterial infection (other),M00831,0,"Arthritis due to other bacteria, right wrist"
+Bacterial infection (other),M00832,0,"Arthritis due to other bacteria, left wrist"
+Bacterial infection (other),M00832,0,"Arthritis due to other bacteria, left wrist"
+Bacterial infection (other),M00839,0,"Arthritis due to other bacteria, unspecified wrist"
+Bacterial infection (other),M00839,0,"Arthritis due to other bacteria, unspecified wrist"
+Bacterial infection (other),M00841,0,"Arthritis due to other bacteria, right hand"
+Bacterial infection (other),M00841,0,"Arthritis due to other bacteria, right hand"
+Bacterial infection (other),M00842,0,"Arthritis due to other bacteria, left hand"
+Bacterial infection (other),M00842,0,"Arthritis due to other bacteria, left hand"
+Bacterial infection (other),M00849,0,"Arthritis due to other bacteria, unspecified hand"
+Bacterial infection (other),M00849,0,"Arthritis due to other bacteria, unspecified hand"
+Bacterial infection (other),M00851,0,"Arthritis due to other bacteria, right hip"
+Bacterial infection (other),M00851,0,"Arthritis due to other bacteria, right hip"
+Bacterial infection (other),M00852,0,"Arthritis due to other bacteria, left hip"
+Bacterial infection (other),M00852,0,"Arthritis due to other bacteria, left hip"
+Bacterial infection (other),M00859,0,"Arthritis due to other bacteria, unspecified hip"
+Bacterial infection (other),M00859,0,"Arthritis due to other bacteria, unspecified hip"
+Bacterial infection (other),M00861,0,"Arthritis due to other bacteria, right knee"
+Bacterial infection (other),M00861,0,"Arthritis due to other bacteria, right knee"
+Bacterial infection (other),M00862,0,"Arthritis due to other bacteria, left knee"
+Bacterial infection (other),M00862,0,"Arthritis due to other bacteria, left knee"
+Bacterial infection (other),M00869,0,"Arthritis due to other bacteria, unspecified knee"
+Bacterial infection (other),M00869,0,"Arthritis due to other bacteria, unspecified knee"
+Bacterial infection (other),M00871,0,"Arthritis due to other bacteria, right ankle and foot"
+Bacterial infection (other),M00871,0,"Arthritis due to other bacteria, right ankle and foot"
+Bacterial infection (other),M00872,0,"Arthritis due to other bacteria, left ankle and foot"
+Bacterial infection (other),M00872,0,"Arthritis due to other bacteria, left ankle and foot"
+Bacterial infection (other),M00879,0,"Arthritis due to other bacteria, unspecified ankle and foot"
+Bacterial infection (other),M00879,0,"Arthritis due to other bacteria, unspecified ankle and foot"
+Bacterial infection (other),M0088,0,"Arthritis due to other bacteria, vertebrae"
+Bacterial infection (other),M0088,0,"Arthritis due to other bacteria, vertebrae"
+Bacterial infection (other),M0089,0,Polyarthritis due to other bacteria
+Bacterial infection (other),M0089,0,Polyarthritis due to other bacteria
+Bacterial infection (other),M009,0,"Pyogenic arthritis, unspecified"
+Bacterial infection (other),M009,0,"Pyogenic arthritis, unspecified"
+UTI,N10,0,Acute pyelonephritis
+UTI,N110,0,Nonobstructive reflux-associated chronic pyelonephritis
+UTI,N111,0,Chronic obstructive pyelonephritis
+UTI,N118,0,Other chronic tubulo-interstitial nephritis
+UTI,N119,0,"Chronic tubulo-interstitial nephritis, unspecified"
+UTI,N12,0,"Tubulo-interstitial nephritis, not specified as acute or chronic"
+UTI,N136,0,Pyonephrosis
+UTI,N151,0,Renal and perinephric abscess
+UTI,N3000,0,Acute cystitis without hematuria
+UTI,N3001,0,Acute cystitis with hematuria
+UTI,N3001,0,Acute cystitis with hematuria
+UTI,N3010,0,Interstitial cystitis (chronic) without hematuria
+UTI,N3011,0,Interstitial cystitis (chronic) with hematuria
+UTI,N3011,0,Interstitial cystitis (chronic) with hematuria
+UTI,N3020,0,Other chronic cystitis without hematuria
+UTI,N3021,0,Other chronic cystitis with hematuria
+UTI,N3021,0,Other chronic cystitis with hematuria
+UTI,N3030,0,Trigonitis without hematuria
+UTI,N3031,0,Trigonitis with hematuria
+UTI,N3031,0,Trigonitis with hematuria
+UTI,N3040,0,Irradiation cystitis without hematuria
+UTI,N3041,0,Irradiation cystitis with hematuria
+UTI,N3041,0,Irradiation cystitis with hematuria
+UTI,N3080,0,Other cystitis without hematuria
+UTI,N3081,0,Other cystitis with hematuria
+UTI,N3081,0,Other cystitis with hematuria
+UTI,N3090,0,"Cystitis, unspecified without hematuria"
+UTI,N3091,0,"Cystitis, unspecified with hematuria"
+UTI,N3091,0,"Cystitis, unspecified with hematuria"
+UTI,N340,0,Urethral abscess
+UTI,N341,0,Nonspecific urethritis
+UTI,N342,0,Other urethritis
+UTI,N343,0,"Urethral syndrome, unspecified"
+UTI,N390,0,"Urinary tract infection, site not specified"
+UTI,O2300,0,"Infections of kidney in pregnancy, unspecified trimester"
+UTI,O2300,0,"Infections of kidney in pregnancy, unspecified trimester"
+UTI,O2301,0,"Infections of kidney in pregnancy, first trimester"
+UTI,O2301,0,"Infections of kidney in pregnancy, first trimester"
+UTI,O2302,0,"Infections of kidney in pregnancy, second trimester"
+UTI,O2302,0,"Infections of kidney in pregnancy, second trimester"
+UTI,O2303,0,"Infections of kidney in pregnancy, third trimester"
+UTI,O2303,0,"Infections of kidney in pregnancy, third trimester"
+UTI,O2310,0,"Infections of bladder in pregnancy, unspecified trimester"
+UTI,O2310,0,"Infections of bladder in pregnancy, unspecified trimester"
+UTI,O2311,0,"Infections of bladder in pregnancy, first trimester"
+UTI,O2311,0,"Infections of bladder in pregnancy, first trimester"
+UTI,O2312,0,"Infections of bladder in pregnancy, second trimester"
+UTI,O2312,0,"Infections of bladder in pregnancy, second trimester"
+UTI,O2313,0,"Infections of bladder in pregnancy, third trimester"
+UTI,O2313,0,"Infections of bladder in pregnancy, third trimester"
+UTI,O2320,0,"Infections of urethra in pregnancy, unspecified trimester"
+UTI,O2320,0,"Infections of urethra in pregnancy, unspecified trimester"
+UTI,O2321,0,"Infections of urethra in pregnancy, first trimester"
+UTI,O2321,0,"Infections of urethra in pregnancy, first trimester"
+UTI,O2322,0,"Infections of urethra in pregnancy, second trimester"
+UTI,O2322,0,"Infections of urethra in pregnancy, second trimester"
+UTI,O2323,0,"Infections of urethra in pregnancy, third trimester"
+UTI,O2323,0,"Infections of urethra in pregnancy, third trimester"
+UTI,O2330,0,"Infections of other parts of urinary tract in pregnancy, unspecified trimester"
+UTI,O2330,0,"Infections of other parts of urinary tract in pregnancy, unspecified trimester"
+UTI,O2331,0,"Infections of other parts of urinary tract in pregnancy, first trimester"
+UTI,O2331,0,"Infections of other parts of urinary tract in pregnancy, first trimester"
+UTI,O2332,0,"Infections of other parts of urinary tract in pregnancy, second trimester"
+UTI,O2332,0,"Infections of other parts of urinary tract in pregnancy, second trimester"
+UTI,O2333,0,"Infections of other parts of urinary tract in pregnancy, third trimester"
+UTI,O2333,0,"Infections of other parts of urinary tract in pregnancy, third trimester"
+UTI,O2340,0,"Unspecified infection of urinary tract in pregnancy, unspecified trimester"
+UTI,O2340,0,"Unspecified infection of urinary tract in pregnancy, unspecified trimester"
+UTI,O2341,0,"Unspecified infection of urinary tract in pregnancy, first trimester"
+UTI,O2341,0,"Unspecified infection of urinary tract in pregnancy, first trimester"
+UTI,O2342,0,"Unspecified infection of urinary tract in pregnancy, second trimester"
+UTI,O2342,0,"Unspecified infection of urinary tract in pregnancy, second trimester"
+UTI,O2343,0,"Unspecified infection of urinary tract in pregnancy, third trimester"
+UTI,O2343,0,"Unspecified infection of urinary tract in pregnancy, third trimester"
+Viral infection,O2640,0,"Herpes gestationis, unspecified trimester"
+Viral infection,O2640,0,"Herpes gestationis, unspecified trimester"
+Viral infection,O2641,0,"Herpes gestationis, first trimester"
+Viral infection,O2641,0,"Herpes gestationis, first trimester"
+Viral infection,O2642,0,"Herpes gestationis, second trimester"
+Viral infection,O2642,0,"Herpes gestationis, second trimester"
+Viral infection,O2643,0,"Herpes gestationis, third trimester"
+Viral infection,O2643,0,"Herpes gestationis, third trimester"
+UTI,O8620,0,"Urinary tract infection following delivery, unspecified"
+UTI,O8620,0,"Urinary tract infection following delivery, unspecified"
+UTI,O8621,0,Infection of kidney following delivery
+UTI,O8621,0,Infection of kidney following delivery
+UTI,O8622,0,Infection of bladder following delivery
+UTI,O8622,0,Infection of bladder following delivery
+UTI,O8629,0,Other urinary tract infection following delivery
+UTI,O8629,0,Other urinary tract infection following delivery
+Viral infection,P230,0,Congenital pneumonia due to viral agent
+Viral infection,P230,0,Congenital pneumonia due to viral agent
+Viral infection,P230,0,Congenital pneumonia due to viral agent
+Bacterial infection (other),P231,0,Congenital pneumonia due to Chlamydia
+Bacterial infection (other),P231,0,Congenital pneumonia due to Chlamydia
+Bacterial infection (other),P231,0,Congenital pneumonia due to Chlamydia
+Bacterial infection (other),P232,0,Congenital pneumonia due to staphylococcus
+Bacterial infection (other),P232,0,Congenital pneumonia due to staphylococcus
+Bacterial infection (other),P232,0,Congenital pneumonia due to staphylococcus
+Bacterial infection (other),P233,0,"Congenital pneumonia due to streptococcus, group B"
+Bacterial infection (other),P233,0,"Congenital pneumonia due to streptococcus, group B"
+Bacterial infection (other),P233,0,"Congenital pneumonia due to streptococcus, group B"
+Bacterial infection (other),P234,0,Congenital pneumonia due to Escherichia coli
+Bacterial infection (other),P234,0,Congenital pneumonia due to Escherichia coli
+Bacterial infection (other),P234,0,Congenital pneumonia due to Escherichia coli
+Bacterial infection (other),P235,0,Congenital pneumonia due to Pseudomonas
+Bacterial infection (other),P235,0,Congenital pneumonia due to Pseudomonas
+Bacterial infection (other),P235,0,Congenital pneumonia due to Pseudomonas
+Bacterial infection (other),P236,0,Congenital pneumonia due to other bacterial agents
+Bacterial infection (other),P236,0,Congenital pneumonia due to other bacterial agents
+Bacterial infection (other),P236,0,Congenital pneumonia due to other bacterial agents
+Viral infection,P350,0,Congenital rubella syndrome
+Viral infection,P350,0,Congenital rubella syndrome
+Viral infection,P351,0,Congenital cytomegalovirus infection
+Viral infection,P351,0,Congenital cytomegalovirus infection
+Viral infection,P352,0,Congenital herpesviral [herpes simplex] infection
+Viral infection,P352,0,Congenital herpesviral [herpes simplex] infection
+Viral infection,P354,0,Congenital Zika virus disease
+Viral infection,P354,0,Congenital Zika virus disease
+Viral infection,P358,0,Other congenital viral diseases
+Viral infection,P358,0,Other congenital viral diseases
+Viral infection,P359,0,"Congenital viral disease, unspecified"
+Viral infection,P359,0,"Congenital viral disease, unspecified"
+Bacterial infection (other),P360,0,"Sepsis of newborn due to streptococcus, group B"
+Bacterial infection (other),P360,0,"Sepsis of newborn due to streptococcus, group B"
+Bacterial infection (other),P360,0,"Sepsis of newborn due to streptococcus, group B"
+Bacterial infection (other),P3610,0,Sepsis of newborn due to unspecified streptococci
+Bacterial infection (other),P3610,0,Sepsis of newborn due to unspecified streptococci
+Bacterial infection (other),P3610,0,Sepsis of newborn due to unspecified streptococci
+Bacterial infection (other),P3619,0,Sepsis of newborn due to other streptococci
+Bacterial infection (other),P3619,0,Sepsis of newborn due to other streptococci
+Bacterial infection (other),P3619,0,Sepsis of newborn due to other streptococci
+Bacterial infection (other),P362,0,Sepsis of newborn due to Staphylococcus aureus
+Bacterial infection (other),P362,0,Sepsis of newborn due to Staphylococcus aureus
+Bacterial infection (other),P362,0,Sepsis of newborn due to Staphylococcus aureus
+Bacterial infection (other),P3630,0,Sepsis of newborn due to unspecified staphylococci
+Bacterial infection (other),P3630,0,Sepsis of newborn due to unspecified staphylococci
+Bacterial infection (other),P3630,0,Sepsis of newborn due to unspecified staphylococci
+Bacterial infection (other),P3639,0,Sepsis of newborn due to other staphylococci
+Bacterial infection (other),P3639,0,Sepsis of newborn due to other staphylococci
+Bacterial infection (other),P3639,0,Sepsis of newborn due to other staphylococci
+Bacterial infection (other),P364,0,Sepsis of newborn due to Escherichia coli
+Bacterial infection (other),P364,0,Sepsis of newborn due to Escherichia coli
+Bacterial infection (other),P364,0,Sepsis of newborn due to Escherichia coli
+Bacterial infection (other),P365,0,Sepsis of newborn due to anaerobes
+Bacterial infection (other),P365,0,Sepsis of newborn due to anaerobes
+Bacterial infection (other),P365,0,Sepsis of newborn due to anaerobes
+Bacterial infection (other),P368,0,Other bacterial sepsis of newborn
+Bacterial infection (other),P368,0,Other bacterial sepsis of newborn
+Bacterial infection (other),P368,0,Other bacterial sepsis of newborn
+Bacterial infection (other),P369,0,"Bacterial sepsis of newborn, unspecified"
+Bacterial infection (other),P369,0,"Bacterial sepsis of newborn, unspecified"
+Bacterial infection (other),P369,0,"Bacterial sepsis of newborn, unspecified"
+Bacterial infection (other),P372,0,Neonatal (disseminated) listeriosis
+Bacterial infection (other),P372,0,Neonatal (disseminated) listeriosis
+Routine child health exam,Z00129,0,Encounter for routine child health examination without abnormal findings
