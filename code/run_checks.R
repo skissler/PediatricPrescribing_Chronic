@@ -144,20 +144,23 @@ stdplac_summary <- visit_df[ID %in% (rx_df$ASSOC_VISIT_ID)] %>%
 
 # Generate a table of antibiotics ----------------------------------------------
 
-abxlist <- read_csv(file="data/ndc_to_extract.csv") %>% 
+abxlist_long <- read_csv(file="data/ndc_to_extract.csv") %>% 
 	split(.$THRCLDS) %>% 
 	map(~ split(., .$THRDTDS)) %>% 
 	map(~ map(., ~ pull(., NDCNUM))) %>% 
 	map(~ imap(., ~ tibble(NAME=.y, NDC=.x))) %>% 
 	map(~ bind_rows(.)) %>% 
-	bind_rows(.id="CLASS") %>% 
+	bind_rows(.id="CLASS") 
+
+abxlist <- abxlist_long %>% 
 	group_by(CLASS,NAME) %>% 
 	summarise(NDCLIST=Reduce(paste,NDC))
 
+write_csv(abxlist, file="figures/abxlist_long.csv")
 write_csv(abxlist, file="figures/abxlist.csv")
 
 
+# Generate a list of CCS categories we're interested in ------------------------
 
-
-
+ccs_map
 
