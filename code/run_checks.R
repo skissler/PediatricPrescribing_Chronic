@@ -1,3 +1,35 @@
+# Population summary: ----------------------------------------------------------
+
+memb_by_tot <- memb_df %>% 
+	as_tibble() %>% 
+	summarise(NMEMB=n()) %>% 
+	mutate(PCT=round(NMEMB/sum(NMEMB)*100,1)) %>% 
+	mutate(CAT="Total") %>% 
+	select(CAT, NMEMB, PCT)
+
+memb_by_sex <- memb_df %>% 
+	as_tibble() %>% 
+	group_by(SEX) %>% 
+	summarise(NMEMB=n()) %>% 
+	mutate(PCT=round(NMEMB/sum(NMEMB)*100,1)) %>% 
+	mutate(CAT=case_when(SEX==1~"Male",TRUE~"Female")) %>% 
+	select(CAT, NMEMB, PCT)
+
+memb_by_birthyear <- memb_df %>% 
+	as_tibble() %>% 
+	group_by(BIRTH_YEAR) %>% 
+	summarise(NMEMB=n()) %>% 
+	mutate(PCT=round(NMEMB/sum(NMEMB)*100,1)) %>% 
+	mutate(CAT=as.character(BIRTH_YEAR)) %>% 
+	select(CAT, NMEMB, PCT)
+
+sepdf <- tibble(CAT="---",NMEMB=NA_real_, PCT=NA_real_)
+
+memb_summary <- bind_rows(memb_by_tot, sepdf, memb_by_sex, sepdf, memb_by_birthyear)
+
+
+
+
 # Diagnosis codes in positions 3 and 4: ----------------------------------------
 
 # dxprops <- tibble(
@@ -162,5 +194,16 @@ write_csv(abxlist, file="figures/abxlist.csv")
 
 # Generate a list of CCS categories we're interested in ------------------------
 
-ccs_map
+# ccs_map
+
+# How many MSAs in the final analysis? -----------------------------------------
+
+msadf <- memb_df %>% 
+	as_tibble() %>% 
+	filter(!is.na(MSA)) %>% 
+	filter(MSA!="00000") %>% 
+	group_by(MSA) %>% 
+	summarise(NMEMB=n()) %>% 
+	arrange(desc(NMEMB))
+
 

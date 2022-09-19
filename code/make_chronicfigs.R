@@ -90,6 +90,11 @@ ggsave(fig_cumrx_chronic, file="figures/cumrx_chronic.png", width=figwidth, heig
 ggsave(fig_cumrx_chronic + theme(legend.position='none'), file="figures/cumrx_chronic_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
 ggsave(fig_cumrx_chronic + theme(legend.position='none'), file="figures/cumrx_chronic_nokey.png", width=figwidth, height=figwidth, dpi=figres)
 
+# Extract prescriptions by age 5: 
+combdat_cumrx_chronic %>% 
+	filter(AGE_DAYS_ROUNDED==1825) %>% 
+	select(AGE_DAYS_ROUNDED, Comorbidities, NRX, lwr, upr)
+
 # ==============================================================================
 # Time to first prescription
 # ==============================================================================
@@ -179,8 +184,14 @@ ggsave(fig_cumfirstrx_chronic + theme(legend.position='none'), file="figures/cum
 
 # Extract prescriptions by age 5: 
 combdat_firstcumrx_chronic %>% 
+	filter(AGE_DAYS_ROUNDED==365) %>% 
+	select(AGE_DAYS_ROUNDED, Comorbidities, NRX, lwr, upr)
+
+combdat_firstcumrx_chronic %>% 
 	filter(AGE_DAYS_ROUNDED==1825) %>% 
 	select(AGE_DAYS_ROUNDED, Comorbidities, NRX, lwr, upr)
+
+
 
 # ==============================================================================
 # Chronic/non-Chronic histogram

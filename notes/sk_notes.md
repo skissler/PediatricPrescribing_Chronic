@@ -201,9 +201,9 @@ Review to-do:
 - [x] Aggregate and present chronic codes by ICD9 and ICD10 - maybe map ICD codes to CCS indications and report by ICD9 and ICD10? 
 - [x] Remove Tables S5-S7 (or combine S5-S6 and remove non-antibiotic prescriptions) 
 - [x] Give full list of antibiotics included in the Supplement (__still need to include the table, but it's generated - put it on Github__)
-- [ ] Include full list of CCS delineations in supplement 
+- [x] Include full list of CCS delineations in supplement 
 - [ ] Export figures as TIF with 600dpi, 9-10pt font. 
-- [ ] Shift regional figures to supplement 
+- [x] Shift regional figures to supplement 
 
 ### Comprehensive checks
 - [ ] Update results and discussion to account for new results 
