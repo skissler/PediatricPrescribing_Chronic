@@ -182,11 +182,12 @@ ggsave(fig_cumfirstrx_chronic, file="figures/cumfirstrx_chronic.png", width=figw
 ggsave(fig_cumfirstrx_chronic + theme(legend.position='none'), file="figures/cumfirstrx_chronic_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
 ggsave(fig_cumfirstrx_chronic + theme(legend.position='none'), file="figures/cumfirstrx_chronic_nokey.png", width=figwidth, height=figwidth, dpi=figres)
 
-# Extract prescriptions by age 5: 
+# Extract prescriptions by age 1: 
 combdat_firstcumrx_chronic %>% 
 	filter(AGE_DAYS_ROUNDED==365) %>% 
 	select(AGE_DAYS_ROUNDED, Comorbidities, NRX, lwr, upr)
 
+# Extract prescriptions by age 5: 
 combdat_firstcumrx_chronic %>% 
 	filter(AGE_DAYS_ROUNDED==1825) %>% 
 	select(AGE_DAYS_ROUNDED, Comorbidities, NRX, lwr, upr)

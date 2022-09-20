@@ -195,5 +195,9 @@ top_chronic_dxs <- visit_df %>%
 	group_by(BODY_SYSTEM, ICD) %>% 
 	slice(1:5)
 
+top_chronic_dxs %>% 
+	filter(BODY_SYSTEM %in% c("pulmonary_respiratory","otologic","immunological")) %>% 
+	print(n=Inf)
+
 write_csv(top_chronic_dxs,file="figures/top_chronic_dxs.csv")
 
