@@ -256,6 +256,14 @@ newweights_noyear <- cohort_sizes_state_sex_noyear[
 	,WEIGHT_INDIV_NOYEAR:=POPFRAC/NMEMB][
 	,.(STATE,SEX,WEIGHT_INDIV_NOYEAR)]
 
+newweights_noyear_popfrac <- cohort_sizes_state_sex_noyear[
+	popsizes_under5[,.(STATE,SEX,POPSIZE)],on=.(STATE,SEX)][
+	is.na(NMEMB),NMEMB:=0][
+	,WEIGHT:=POPSIZE/NMEMB][
+	,POPFRAC:=POPSIZE/sum(POPSIZE)][
+	,WEIGHT_INDIV_NOYEAR:=POPFRAC/NMEMB][
+	,.(STATE,SEX,POPSIZE,POPFRAC,WEIGHT_INDIV_NOYEAR)]
+
 newweights_stategroup_noyear <- cohort_sizes_state_sex_noyear[
 	popsizes_under5[,.(STATE,SEX,POPSIZE)],on=.(STATE,SEX)][
 	is.na(NMEMB),NMEMB:=0][
@@ -303,4 +311,19 @@ rx_df <- rx_df[CLASS=="Antibiotics",ISABX:=1]
 rx_df <- rx_df[is.na(ISABX),ISABX:=0]
 rx_df <- rx_df[,AGE_DAYS:=as.numeric(difftime(DATE,BIRTH_DATE,units="days"))]
 
+# ==============================================================================
+# Generate a detailed population table
+# ==============================================================================
+
+pop_detail <- memb_df %>% 
+	as_tibble() %>% 
+	group_by(STATE,SEX) %>% 
+	summarise(NMEMB=n()) %>% 
+	left_join(newweights_noyear_popfrac, by=c("STATE","SEX")) %>% 
+	mutate(SEX=case_when(SEX==1~"M",TRUE~"F")) %>% 
+	rename(WEIGHT=WEIGHT_INDIV_NOYEAR) %>% 
+	mutate(WEIGHT=round(WEIGHT*10^5,1)) %>% 
+	mutate(POPFRAC=round(POPFRAC,4)) %>% 
+	select(STATE,SEX,NMEMB,POPSIZE,POPFRAC,WEIGHT) %>% 
+	arrange(STATE,SEX) 
 

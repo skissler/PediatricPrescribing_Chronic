@@ -86,9 +86,11 @@ fig_cumrx_chronic <-
 
 ggsave(fig_cumrx_chronic, file="figures/cumrx_chronic.pdf", width=figwidth, height=figwidth, dpi=figres)
 ggsave(fig_cumrx_chronic, file="figures/cumrx_chronic.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumrx_chronic, file="figures/cumrx_chronic.tif", width=figwidth, height=figwidth, dpi=figres)
 
 ggsave(fig_cumrx_chronic + theme(legend.position='none'), file="figures/cumrx_chronic_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
 ggsave(fig_cumrx_chronic + theme(legend.position='none'), file="figures/cumrx_chronic_nokey.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumrx_chronic + theme(legend.position='none'), file="figures/cumrx_chronic_nokey.tif", width=figwidth, height=figwidth, dpi=figres)
 
 # Extract prescriptions by age 5: 
 combdat_cumrx_chronic %>% 
@@ -178,9 +180,11 @@ fig_cumfirstrx_chronic <-
 
 ggsave(fig_cumfirstrx_chronic, file="figures/cumfirstrx_chronic.pdf", width=figwidth, height=figwidth, dpi=figres)
 ggsave(fig_cumfirstrx_chronic, file="figures/cumfirstrx_chronic.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumfirstrx_chronic, file="figures/cumfirstrx_chronic.tif", width=figwidth, height=figwidth, dpi=figres)
 
 ggsave(fig_cumfirstrx_chronic + theme(legend.position='none'), file="figures/cumfirstrx_chronic_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
 ggsave(fig_cumfirstrx_chronic + theme(legend.position='none'), file="figures/cumfirstrx_chronic_nokey.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumfirstrx_chronic + theme(legend.position='none'), file="figures/cumfirstrx_chronic_nokey.tif", width=figwidth, height=figwidth, dpi=figres)
 
 # Extract prescriptions by age 1: 
 combdat_firstcumrx_chronic %>% 
@@ -238,7 +242,9 @@ fig_cumrx_summ_chronic <- cumrx_summ_chronic %>%
 
 ggsave(fig_cumrx_summ_chronic, file="figures/cumrx_summ_chronic.pdf", width=figwidth, height=figwidth, dpi=figres)
 ggsave(fig_cumrx_summ_chronic, file="figures/cumrx_summ_chronic.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumrx_summ_chronic, file="figures/cumrx_summ_chronic.tif", width=figwidth, height=figwidth, dpi=figres)
 
 ggsave(fig_cumrx_summ_chronic + theme(legend.position='none'), file="figures/cumrx_summ_chronic_nokey.pdf", width=figwidth, height=figwidth, dpi=figres)
 ggsave(fig_cumrx_summ_chronic + theme(legend.position='none'), file="figures/cumrx_summ_chronic_nokey.png", width=figwidth, height=figwidth, dpi=figres)
+ggsave(fig_cumrx_summ_chronic + theme(legend.position='none'), file="figures/cumrx_summ_chronic_nokey.tif", width=figwidth, height=figwidth, dpi=figres)
 
