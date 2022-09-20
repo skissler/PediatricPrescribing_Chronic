@@ -1,4 +1,4 @@
-1                                                          The SAS System                            13:36 Monday, September 5, 2022
+1                                                          The SAS System                           18:34 Monday, September 19, 2022
 
 NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
 NOTE: SAS (r) Proprietary Software 9.4 (TS1M7) 
@@ -15,12 +15,6 @@ NOTE: Analytical products:
       SAS/IML 15.2
       SAS/QC 15.2
 
-WARNING: Your system is scheduled to expire on October 12, 2022, which is 37 days from now. The SAS System will no longer function 
-         on or after that date. Please contact your SAS Installation Representative to obtain your updated SAS Installation Data 
-         (SID) file, which includes SETINIT information.
-To locate the name of your SAS Installation Representative go to http://support.sas.com/repfinder and provide your site number 
-70106881 and company name as HARVARD UNIVERSITY - SFA T&R. On the SAS REP list provided, locate the REP for operating system LIN 
-X64.
 NOTE: Additional host information:
 
  Linux LIN X64 4.18.0-372.19.1.el8_6.x86_64 #1 SMP Mon Jul 18 11:14:02 EDT 2022 x86_64 Red Hat Enterprise Linux release 8.6 (Ootpa) 
@@ -44,8 +38,8 @@ The command line option "-nonews" will prevent this display.
 
 
 NOTE: SAS initialization used:
-      real time           0.11 seconds
-      cpu time            0.03 seconds
+      real time           0.07 seconds
+      cpu time            0.04 seconds
       
 1          * ============================================================================;
 2          * Setup;
@@ -53,25 +47,23 @@ NOTE: SAS initialization used:
 4          
 5          * Make sure there's nothing in the 'work' library;
 6          proc datasets lib=work nolist kill;
-WARNING: The Base SAS Software product with which DATASETS is associated will be expiring soon, and is currently in warning mode to 
-         indicate this upcoming expiration. Please run PROC SETINIT to obtain more information on your warning period.
 6        !                                     quit;
 
 NOTE: PROCEDURE DATASETS used (Total process time):
-2                                                          The SAS System                            13:36 Monday, September 5, 2022
-
       real time           0.03 seconds
-      cpu time            0.02 seconds
+      cpu time            0.03 seconds
       
 
 6        !                                           run;
 7          
 8          * Set path for log;
 9          proc printto log="/home/kissler/PediatricPrescribing_Chronic/logs/extract_data_log.txt" new;
+2                                                          The SAS System                           18:34 Monday, September 19, 2022
+
 10         run;
 
 NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
 NOTE: The SAS System used:
-      real time           4:15:40.90
-      cpu time            4:15:38.63
+      real time           4:34:14.85
+      cpu time            4:31:03.25
       
