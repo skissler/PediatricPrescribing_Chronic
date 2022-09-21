@@ -15,10 +15,10 @@ The next set of lines, initially commented out, are needed to build the datasets
 Once the data files have been built, they can be imported and formatted using `code/import_fulldata.R` and `code/reduce_under5.R`. 
 
 
-## Running the analysis
+### Generating calculations 
 
 The next collection of scripts in `run_analysis_server.R` walk sequentially through the steps needed to run the analysis presented in the manuscript. The early portions of each script generally need access to the files built from the raw MarketScan data. However, summarized files have been extracted and saved in the `underlying_data/` directory. By loading these files, you can safely skip the first parts of each analysis script (down to where the data file has been written to csv) and instead load the data from `underlying_data/`. This allows the user to reproduce the figures without needed access to the full MarketScan dataset. 
 
-## Output and figures
+### Output and figures
 
 All output and figures are sent to the `figures/` directory. 
